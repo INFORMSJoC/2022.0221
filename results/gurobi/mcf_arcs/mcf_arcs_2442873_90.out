@@ -1,0 +1,83 @@
+solving instance mcf arcs c25_100_10_V_L_5 3 6 log
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 700 rows, 1550 columns and 4775 nonzeros
+Model fingerprint: 0x72b6110c
+Model has 100 function constraints treated as nonlinear
+  100 LOG
+Variable types: 1425 continuous, 125 integer (125 binary)
+Coefficient statistics:
+  Matrix range     [6e-01, 2e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+00, 5e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Warning: x < 1e-10 in domain of log(x).
+         Setting lower bound to 1e-10.
+Presolve removed 326 rows and 350 columns
+Presolve time: 0.01s
+Presolved: 874 rows, 1201 columns, 5090 nonzeros
+Presolved model has 100 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 1201 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 1.963911e+04, 805 iterations, 0.02 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 19639.1090    0   20          - 19639.1090      -     -    1s
+H    0     0                    27042.970303 19639.1090  27.4%     -    1s
+     0     0 20966.3167    0   20 27042.9703 20966.3167  22.5%     -    1s
+H    0     0                    26806.932259 20966.3167  21.8%     -    1s
+     0     2 20966.3167    0   20 26806.9323 20966.3167  21.8%     -    1s
+H  125    95                    26806.932211 22666.9065  15.4%  50.9    2s
+H  445   347                    26806.931511 22794.6515  15.0%  39.6    3s
+   601   461 25539.2042   21    0 26806.9315 22794.6515  15.0%  39.5    5s
+H  629   454                    26746.739670 23629.9670  11.7%  41.3    5s
+  1863   924 26565.2326   48   17 26746.7397 24822.0681  7.20%  37.9   10s
+  3261  1417     cutoff   37      26746.7397 25418.2031  4.97%  38.5   15s
+  4665  1767 26095.9066   20   19 26746.7397 25626.2733  4.19%  37.6   20s
+  6049  2025 26520.3940   28   19 26746.7397 25729.0655  3.80%  37.6   25s
+H 6890  2094                    26746.739258 25779.9488  3.61%  37.7   28s
+  7309  2139 26271.6658   22   14 26746.7393 25800.5859  3.54%  37.8   30s
+H 7948  2180                    26746.738641 25845.0037  3.37%  37.8   32s
+  8710  2190     cutoff   23      26746.7386 25887.2679  3.21%  37.9   35s
+ 10136  2166     cutoff   28      26746.7386 25975.1402  2.88%  37.8   40s
+ 11595  2091 26588.0720   34   16 26746.7386 26049.9641  2.61%  37.9   45s
+ 13072  1964 26719.2238   23   15 26746.7386 26113.2961  2.37%  37.8   50s
+ 14530  1792 26353.1639   25   20 26746.7386 26178.7221  2.12%  37.8   55s
+ 16018  1528 26689.1159   28   21 26746.7386 26270.8006  1.78%  37.7   60s
+ 17484  1128     cutoff   31      26746.7386 26374.4192  1.39%  37.6   65s
+ 19060   566     cutoff   52      26746.7386 26543.7059  0.76%  37.1   70s
+
+Explored 20001 nodes (731089 simplex iterations) in 72.69 seconds (36.14 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 3: 26746.7 26806.9 27043 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 2.674673864111e+04, best bound 2.674673864111e+04, gap 0.0000%
+
+User-callback calls 72331, time in user-callback 0.22 sec
+primal_bound = 26746.73864111057, dual_bound = 26746.738641110573, gap = 1.3601579078131141e-14, time = 72.71

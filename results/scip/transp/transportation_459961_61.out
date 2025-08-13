@@ -1,0 +1,59 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance transportation 2 7 exp
+presolving:
+(round 1, fast)       4 del vars, 4 del conss, 0 add conss, 8 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 4 del vars, 5 del conss, 0 add conss, 8 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, fast)       5 del vars, 6 del conss, 0 add conss, 8 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 4, exhaustive) 5 del vars, 6 del conss, 0 add conss, 8 chg bounds, 0 chg sides, 0 chg coeffs, 2 upgd conss, 0 impls, 0 clqs
+   (0.0s) probing cycle finished: starting next cycle
+   (0.0s) symmetry computation started: requiring (bin +, int -, cont -), (fixed: bin -, int +, cont +)
+   (0.0s) no symmetry present
+presolving (5 rounds: 5 fast, 3 medium, 3 exhaustive):
+ 5 deleted vars, 6 deleted constraints, 0 added constraints, 8 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 6 implications, 1 cliques
+presolved problem has 7 variables (2 bin, 0 int, 0 impl, 5 cont) and 6 constraints
+      2 constraints of type <varbound>
+      4 constraints of type <nonlinear>
+Presolving Time: 0.00
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t 0.0s|     1 |     0 |     0 |     - | trivial|   0 |   7 |   6 |   0 |   0 |  0 |   0 |   0 | 2.495903e+02 | 4.000000e+10 |  Large | unknown
+p 0.0s|     1 |     0 |     4 |     - |  clique|   0 |  19 |   6 |  30 |   0 |  0 |   0 |   0 | 2.495903e+02 | 3.210392e+02 |  28.63%| unknown
+  0.0s|     1 |     0 |    45 |     - |   888k |   0 |  19 |   6 |  30 |   0 |  0 |   0 |   0 | 2.746399e+02 | 3.210392e+02 |  16.89%| unknown
+  0.0s|     1 |     0 |    51 |     - |   909k |   0 |  19 |   6 |  31 |   1 |  1 |   0 |   0 | 2.811602e+02 | 3.210392e+02 |  14.18%| unknown
+  0.0s|     1 |     0 |    56 |     - |   954k |   0 |  19 |   6 |  33 |   3 |  2 |   0 |   0 | 2.866715e+02 | 3.210392e+02 |  11.99%| unknown
+  0.0s|     1 |     0 |    57 |     - |   959k |   0 |  19 |   6 |  35 |   5 |  3 |   0 |   0 | 2.871926e+02 | 3.210392e+02 |  11.79%| unknown
+  0.0s|     1 |     0 |    63 |     - |   964k |   0 |  19 |   6 |  36 |   6 |  4 |   0 |   0 | 2.924726e+02 | 3.210392e+02 |   9.77%| unknown
+  0.0s|     1 |     0 |    67 |     - |   977k |   0 |  19 |   6 |  37 |   7 |  5 |   0 |   0 | 2.937421e+02 | 3.210392e+02 |   9.29%| unknown
+r 0.0s|     1 |     0 |   108 |     - |shifting|   0 |  19 |   6 |  37 |   7 |  7 |   0 |   0 | 2.937421e+02 | 3.039562e+02 |   3.48%| unknown
+  0.0s|     1 |     0 |   108 |     - |   987k |   0 |  19 |   6 |  37 |   7 |  7 |   0 |   0 | 2.937421e+02 | 3.039562e+02 |   3.48%| unknown
+  0.0s|     1 |     0 |   108 |     - |   988k |   0 |  19 |   6 |  36 |   7 |  7 |   0 |   0 | 2.937421e+02 | 3.039562e+02 |   3.48%| unknown
+(run 1, node 1) restarting after 1 global fixings of integer variables
+
+(restart) converted 1 cuts from the global cut pool into linear constraints
+
+presolving:
+(round 1, fast)       13 del vars, 0 del conss, 0 add conss, 2 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 6 impls, 0 clqs
+(round 2, fast)       13 del vars, 0 del conss, 0 add conss, 7 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 6 impls, 0 clqs
+(round 3, fast)       13 del vars, 1 del conss, 0 add conss, 15 chg bounds, 0 chg sides, 1 chg coeffs, 0 upgd conss, 6 impls, 0 clqs
+(round 4, fast)       14 del vars, 2 del conss, 0 add conss, 22 chg bounds, 0 chg sides, 1 chg coeffs, 0 upgd conss, 6 impls, 0 clqs
+(round 5, fast)       15 del vars, 2 del conss, 0 add conss, 26 chg bounds, 0 chg sides, 1 chg coeffs, 4 upgd conss, 6 impls, 0 clqs
+(round 6, fast)       15 del vars, 6 del conss, 0 add conss, 30 chg bounds, 0 chg sides, 1 chg coeffs, 4 upgd conss, 6 impls, 0 clqs
+presolving (7 rounds: 7 fast, 0 medium, 0 exhaustive):
+ 19 deleted vars, 6 deleted constraints, 0 added constraints, 30 tightened bounds, 0 added holes, 0 changed sides, 1 changed coefficients
+ 6 implications, 0 cliques
+transformed 1/4 original solutions to the transformed problem space
+Presolving Time: 0.00
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 0.03
+Solving Nodes      : 0 (total of 1 nodes in 2 runs)
+Primal Bound       : +3.03956174747540e+02 (4 solutions)
+Dual Bound         : +3.03956174747540e+02
+Gap                : 0.00 %
+primal_bound = 303.95617474754, dual_bound = 303.95617474754, gap = 0.0, time = 3.04

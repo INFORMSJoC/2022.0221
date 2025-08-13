@@ -1,0 +1,87 @@
+solving instance mcf nodes c36 3 6 sinabc3
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 1360 rows, 9800 columns and 37690 nonzeros
+Model fingerprint: 0x4e8075ff
+Model has 40 function constraints treated as nonlinear
+  20 POW, 20 SIN
+Variable types: 9550 continuous, 250 integer (250 binary)
+Coefficient statistics:
+  Matrix range     [1e-03, 5e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [2e+02, 7e+02]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 312 rows and 540 columns
+Presolve time: 0.04s
+Presolved: 1208 rows, 9261 columns, 36320 nonzeros
+Presolved model has 20 quadratic objective terms
+Presolved model has 20 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 9261 continuous, 0 integer (0 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   29390    7.2204142e+00   2.319317e+05   0.000000e+00      5s
+   65010    1.3587188e+03   8.316278e+02   0.000000e+00     10s
+   72539    5.4412376e+03   0.000000e+00   0.000000e+00     11s
+
+Root relaxation: objective 5.441238e+03, 72539 iterations, 10.71 seconds (7.30 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 5441.23765    0   20          - 5441.23765      -     -   10s
+     0     0 5455.50807    0   19          - 5455.50807      -     -   10s
+     0     0 5461.27356    0   19          - 5461.27356      -     -   10s
+     0     0 5462.40043    0   19          - 5462.40043      -     -   10s
+     0     0 5462.94518    0   19          - 5462.94518      -     -   10s
+     0     0 5462.94594    0   19          - 5462.94594      -     -   10s
+     0     0 5521.76919    0   19          - 5521.76919      -     -   10s
+     0     2 5521.76919    0   19          - 5521.76919      -     -   10s
+*  246   144             126    6996.0842539 6182.04416  11.6%  29.8   12s
+*  247   143             126    6996.0837851 6182.04416  11.6%  29.7   12s
+   427   217 6939.73891   19   19 6996.08379 6418.36812  8.26%  41.4   15s
+   733   339 6991.94608   52    0 6996.08379 6456.85706  7.71%  45.0   27s
+   741   346 6785.42404   11    0 6996.08379 6785.42404  3.01%   124   33s
+   877   399 6977.15580   88   13 6996.08379 6887.93279  1.55%   159   35s
+*  981   354             140    6973.1641556 6887.93279  1.22%   144   36s
+  1295   282     cutoff   80      6973.16416 6972.34242  0.01%   119   40s
+  1800   256 6973.13250   78   14 6973.16416 6972.77264  0.01%  90.9   45s
+  2305   323     cutoff   74      6973.16416 6973.02269  0.00%  75.1   50s
+  2847   363     cutoff  105      6973.16416 6973.07444  0.00%  63.4   55s
+  3364   320 6973.15443  111   12 6973.16416 6973.11830  0.00%  56.4   60s
+  3881   237 6973.15129  109   13 6973.16416 6973.14362  0.00%  51.8   65s
+  4366   226     cutoff  117      6973.16416 6973.14992  0.00%  48.6   70s
+
+Explored 4803 nodes (294035 simplex iterations) in 74.44 seconds (35.96 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 3: 6973.16 6996.08 6996.08 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 6.973164155551e+03, best bound 6.973157191845e+03, gap 0.0001%
+
+User-callback calls 17380, time in user-callback 0.03 sec
+primal_bound = 6973.1641555513725, dual_bound = 6973.157191844533, gap = 9.986437553665923e-5, time = 74.45

@@ -1,0 +1,70 @@
+solving instance uflp nlass holmberg 52 square
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 3100 rows, 4010 columns and 7000 nonzeros
+Model fingerprint: 0xc3b55510
+Model has 1000 function constraints treated as nonlinear
+  1000 POW
+Variable types: 3000 continuous, 1010 integer (1010 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+02]
+  Objective range  [1e+00, 5e+02]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+00, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 2000 rows and 3000 columns
+Presolve time: 0.01s
+Presolved: 1100 rows, 1010 columns, 3000 nonzeros
+Presolved model has 1000 quadratic objective terms
+Variable types: 1000 continuous, 10 integer (10 binary)
+Found heuristic solution: objective 5444.3368309
+
+Root relaxation: objective 2.332710e+03, 1459 iterations, 0.02 seconds (0.02 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2332.70991    0   10 5444.33683 2332.70991  57.2%     -    0s
+     0     0 2343.43295    0   10 5444.33683 2343.43295  57.0%     -    0s
+H    0     0                    5148.0487758 2343.43295  54.5%     -    0s
+H    0     0                    4903.1461556 2343.43295  52.2%     -    0s
+     0     2 2343.43295    0   10 4903.14616 2343.43295  52.2%     -    0s
+H   12    12                    4886.3845699 2682.80947  45.1%   108    0s
+H   13    13                    4855.5663254 2682.80947  44.7%   110    0s
+H   15    15                    4834.7489614 2682.80947  44.5%   109    0s
+H   17    17                    4829.1464914 2682.80947  44.4%   108    0s
+*   19    19              10    4800.1021982 2682.80947  44.1%   107    0s
+H   35    25                    4662.3370776 2693.91289  42.2%  97.0    0s
+*   37    25              10    4653.2384019 2693.91289  42.1%  97.5    0s
+*   38    24              10    4639.0309115 2693.91289  41.9%  98.3    0s
+*  593    35              10    4626.0194759 4182.53609  9.59%  71.7    1s
+
+Explored 665 nodes (46851 simplex iterations) in 1.92 seconds (1.45 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 7: 4626.02 4639.03 4653.24 ... 5444.34
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 4.626019475917e+03, best bound 4.626019475917e+03, gap 0.0000%
+
+User-callback calls 2296, time in user-callback 0.00 sec
+reading holmberg data file ../../../../../instances/uflp/holmberg/p52
+primal_bound = 4626.0194759171445, dual_bound = 4626.0194759171445, gap = 0.0, time = 1.93

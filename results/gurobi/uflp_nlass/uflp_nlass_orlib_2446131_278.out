@@ -1,0 +1,65 @@
+solving instance uflp nlass orlib 113 sqrt
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 10050 rows, 12550 columns and 22499 nonzeros
+Model fingerprint: 0xe7435c5a
+Model has 2500 function constraints treated as nonlinear
+  2500 POW
+Variable types: 10000 continuous, 2550 integer (2550 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+06]
+  Objective range  [1e+00, 2e+04]
+  Bounds range     [1e-16, 1e+10]
+  RHS range        [1e+00, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Warning: Completing partial solution with 2550 unfixed non-continuous variables out of 2550
+User MIP start did not produce a new incumbent solution
+User MIP start violates constraint ass[1] by 0.999500000
+
+Presolve removed 7550 rows and 7501 columns
+Presolve time: 0.05s
+Presolved: 15000 rows, 5050 columns, 32400 nonzeros
+Presolved model has 2500 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 5001 continuous, 49 integer (49 binary)
+Found heuristic solution: objective 1248142.9000
+
+Root relaxation: objective 8.930767e+05, 6986 iterations, 0.78 seconds (1.18 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    893076.71250 893076.712  0.00%     -    0s
+
+Explored 1 nodes (6986 simplex iterations) in 0.89 seconds (1.22 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 2: 893077 1.24814e+06 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 8.930767125000e+05, best bound 8.930767125000e+05, gap 0.0000%
+
+User-callback calls 376, time in user-callback 0.00 sec
+reading orlib data file ../../../../../instances/uflp/orlib/cap113.txt
+primal_bound = 893076.7124999999, dual_bound = 893076.7124999999, gap = 0.0, time = 0.9

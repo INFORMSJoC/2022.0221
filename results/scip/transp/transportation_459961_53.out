@@ -1,0 +1,41 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance transportation 2 6 sinabc1
+presolving:
+(round 1, fast)       6 del vars, 6 del conss, 0 add conss, 6 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 6 del vars, 7 del conss, 0 add conss, 6 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, fast)       7 del vars, 8 del conss, 0 add conss, 7 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (2.4s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (2.4s) no symmetry present
+presolving (4 rounds: 4 fast, 2 medium, 2 exhaustive):
+ 7 deleted vars, 8 deleted constraints, 0 added constraints, 7 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 5 variables (0 bin, 0 int, 0 impl, 5 cont) and 4 constraints
+      4 constraints of type <nonlinear>
+Presolving Time: 2.36
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t 2.4s|     1 |     0 |     0 |     - | trivial|   0 |   5 |   4 |   0 |   0 |  0 |   0 |   0 |-2.095032e+01 | 4.000000e+10 |    Inf | unknown
+t 2.4s|     1 |     0 |     0 |     - |  trysol|   0 |   5 |   4 |   0 |   0 |  0 |   0 |   0 |-2.095032e+01 | 1.445773e+02 |    Inf | unknown
+  2.4s|     1 |     0 |     6 |     - |   867k |   0 |  13 |   4 |  39 |   0 |  0 |   0 |   0 | 5.667804e+01 | 1.445773e+02 | 155.09%| unknown
+L 2.4s|     1 |     0 |     6 |     - |  subnlp|   0 |  13 |   4 |  39 |   0 |  0 |   0 |   0 | 5.667804e+01 | 7.485393e+01 |  32.07%| unknown
+  2.4s|     1 |     0 |    12 |     - |   871k |   0 |  13 |   4 |  42 |   3 |  1 |   0 |   0 | 7.211455e+01 | 7.485393e+01 |   3.80%| unknown
+  2.4s|     1 |     0 |    12 |     - |   871k |   0 |  13 |   4 |  42 |   3 |  1 |   0 |   0 | 7.211455e+01 | 7.485393e+01 |   3.80%| unknown
+  2.4s|     1 |     0 |    14 |     - |   886k |   0 |  13 |   4 |  46 |   7 |  2 |   0 |   0 | 7.456789e+01 | 7.485393e+01 |   0.38%| unknown
+  2.4s|     1 |     0 |    17 |     - |   889k |   0 |  13 |   4 |  49 |  10 |  3 |   0 |   0 | 7.461379e+01 | 7.485393e+01 |   0.32%| unknown
+  2.4s|     1 |     0 |    19 |     - |   890k |   0 |  13 |   4 |  50 |  11 |  4 |   0 |   0 | 7.463107e+01 | 7.485393e+01 |   0.30%| unknown
+  2.4s|     1 |     0 |    40 |     - |   892k |   0 |  13 |   4 |  50 |  11 |  6 |   0 |   0 | 7.484396e+01 | 7.485393e+01 |   0.01%| unknown
+  2.4s|     1 |     0 |    42 |     - |   892k |   0 |  13 |   4 |  55 |  16 |  7 |   0 |   0 | 7.485393e+01 | 7.485393e+01 |   0.00%| unknown
+  2.4s|     1 |     0 |    42 |     - |   892k |   0 |  13 |   4 |  55 |  16 |  7 |   0 |   0 | 7.485393e+01 | 7.485393e+01 |   0.00%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 2.38
+Solving Nodes      : 1
+Primal Bound       : +7.48539272834644e+01 (5 solutions)
+Dual Bound         : +7.48539272834644e+01
+Gap                : 0.00 %
+primal_bound = 74.85392728346442, dual_bound = 74.85392728346442, gap = 0.0, time = 7.28

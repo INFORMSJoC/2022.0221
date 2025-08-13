@@ -1,0 +1,85 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 1000 10 exp
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Reformulating problem: Couenne: new cutoff value 0.0000000000e+00 (1.50315 seconds)
+1.5 seconds
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1      FAILED -63022.062     3000 136.34846
+NLP0014I             1      FAILED -63022.062     3000 136.32518   resolve robustness
+NLP3006W Warning : continuing branching, while there are unrecovered failures at nodes
+Loaded instance "/tmp/jl_kQWWKz/model.nl"
+Constraints:         3001
+Variables:           3000 (1000 integer)
+Auxiliaries:         7002 (0 integer)
+
+Coin0506I Presolve 15000 (-4002) rows, 4999 (-5003) columns and 32997 (-9004) elements
+Clp0006I 0  Obj -72648.05 Primal inf 95060.067 (11999)
+Clp0006I 300  Obj -72648.05 Primal inf 79277.097 (11699)
+Clp0006I 600  Obj -72648.05 Primal inf 67422.873 (11446)
+Clp0006I 900  Obj -72648.05 Primal inf 59964.446 (11213)
+Clp0006I 1200  Obj -72648.05 Primal inf 53526.341 (10888)
+Clp0006I 1500  Obj -72648.05 Primal inf 40946.927 (10373)
+Clp0006I 1800  Obj -72648.05 Primal inf 37920.965 (10107)
+Clp0006I 2100  Obj -72648.05 Primal inf 37811.089 (9843)
+Clp0006I 2400  Obj -72648.05 Primal inf 36674.95 (9528)
+Clp0006I 2700  Obj -72648.05 Primal inf 35972.949 (9282)
+Clp0006I 3000  Obj -72648.05 Primal inf 42443.94 (8481)
+Clp0006I 3300  Obj -72648.05 Primal inf 36091.917 (7259)
+Clp0006I 3600  Obj -72648.05 Primal inf 30556.197 (6108)
+Clp0006I 3900  Obj -72648.05 Primal inf 25389.239 (5004)
+Clp0006I 4200  Obj -72648.05 Primal inf 20749.225 (3922)
+Clp0006I 4500  Obj -72648.05 Primal inf 15361.918 (2896)
+Clp0006I 4800  Obj -72648.05 Primal inf 9144.0492 (1996)
+Clp0006I 5100  Obj -72648.05 Primal inf 5047.229 (1391)
+Clp0006I 5400  Obj -72648.05 Primal inf 4999.6388 (1477)
+Clp0006I 5700  Obj -72648.05 Primal inf 5729.6445 (1575)
+Clp0006I 6000  Obj -72648.05 Primal inf 5324.4213 (1872)
+Clp0006I 6300  Obj -72648.05 Primal inf 6603.816 (2161)
+Clp0006I 6600  Obj -72648.05 Primal inf 9158.2137 (2359)
+Clp0006I 6900  Obj -72648.05 Primal inf 9995.2066 (2434)
+Clp0006I 7200  Obj -72648.05 Primal inf 9592.2408 (2508)
+Clp0006I 7500  Obj -72648.05 Primal inf 4553.0768 (2618)
+Clp0006I 7800  Obj -72648.047 Primal inf 4038.0768 (2462)
+Clp0006I 8100  Obj -72648.044 Primal inf 4681.1512 (2308)
+Clp0006I 8400  Obj -72625.837 Primal inf 4491.1039 (2029)
+Clp0006I 8700  Obj -72597.489 Primal inf 1589.7231 (1381)
+Clp0006I 9000  Obj -72563.131 Primal inf 535.8128 (860)
+Clp0006I 9300  Obj -72550.68 Primal inf 164.25301 (348)
+Clp0006I 9554  Obj -72549.207
+Clp0000I Optimal - objective value -72549.216
+Clp0032I Optimal objective -72549.21573 - 9554 iterations time 1.452, Presolve 0.05
+Clp0000I Optimal - objective value -72549.216
+NLP Heuristic: NLP0014I             3         OPT -67901.827      253 12.390845
+no solution.
+Clp0000I Optimal - objective value -72549.216
+Optimality Based BT: 1000 improved bounds
+Probing: 0 improved bounds
+NLP Heuristic: no solution.
+Cbc0031I 1947 added rows had average density of 2
+Cbc0013I At root node, 1947 cuts changed objective from -72549.216 to -72484.424 in 20 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 11935 row cuts average 2.0 elements, 21 column cuts (1875 active)
+Cbc0010I After 0 nodes, 1 on tree, 1e+50 best solution, best possible -1.7976931e+308 (1677.32 seconds)
+Optimality Based BT: 997 improved bounds
+Optimality Based BT: 0 improved bounds
+Cbc0020I Exiting on maximum time
+Cbc0005I Partial search - best objective 1e+50 (best possible -1.7976931e+308), took 14010 iterations and 2 nodes (3323.10 seconds)
+Cbc0035I Maximum depth 1, 0 variables fixed on reduced cost
+
+ 	"Not finished"
+
+Linearization cuts added at root node:      19002
+Linearization cuts added in total:          19002  (separation time: 0.227548s)
+Total solve time:                         3324.57s (3324.57s in branch-and-bound)
+Lower bound:                                 -inf
+Upper bound:                                    0  (gap: --)
+Branch-and-bound nodes:                         2
+Stats: /tmp/jl_kQWWKz/model.nl 3000 [var] 1000 [int] 3001 [con] 7002 [aux]  19002 [root]    19002 [tot] 0.227548 [sep]  3324.57 [time]  3324.58 [bb]       -1.797693e+308 [lower]         0.000000e+00 [upper]       2 [nodes]
+Performance of                           FBBT:	    2.61859s,       28 runs. fix:          0 shrnk:    1256.05 ubd:          0 2ubd:          1 infeas:          0
+Performance of                           OBBT:	     611.25s,        3 runs. fix:          0 shrnk:   0.662149 ubd:          0 2ubd:          1 infeas:          0
+primal_bound = 0.0, dual_bound = 0.0, gap = NaN, time = 3631.2

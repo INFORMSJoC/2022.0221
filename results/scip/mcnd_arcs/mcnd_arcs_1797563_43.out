@@ -1,0 +1,50 @@
+solving instance mcnd arcs c100_400_30_F_T_10 3 6 sinabc1
+presolving:
+(round 1, fast)       128 del vars, 376 del conss, 0 add conss, 887 chg bounds, 0 chg sides, 17 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       231 del vars, 441 del conss, 0 add conss, 1166 chg bounds, 0 chg sides, 726 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, exhaustive) 231 del vars, 441 del conss, 0 add conss, 1166 chg bounds, 0 chg sides, 726 chg coeffs, 12073 upgd conss, 0 impls, 0 clqs
+   (0.3s) probing: 51/390 (13.1%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.3s) probing aborted: 50/50 successive totally useless probings
+   (0.3s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (0.4s) no symmetry present (symcode time: 0.03)
+presolving (4 rounds: 4 fast, 2 medium, 2 exhaustive):
+ 231 deleted vars, 441 deleted constraints, 0 added constraints, 1166 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 12073 implications, 0 cliques
+presolved problem has 13169 variables (390 bin, 0 int, 0 impl, 12779 cont) and 16359 constraints
+  12073 constraints of type <varbound>
+   3886 constraints of type <linear>
+    400 constraints of type <nonlinear>
+Presolving Time: 0.34
+
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 3600.02
+Solving Nodes      : 1
+Primal Bound       : +1.00000000000000e+20 (0 solutions)
+Dual Bound         : +1.03240481147766e+04
+Gap                : infinite
+ERROR: LoadError: Result index of attribute MathOptInterface.ObjectiveValue(1) out of bounds. There are currently 0 solution(s) in the model.
+Stacktrace:
+  [1] check_result_index_bounds
+    @ ~/.julia/packages/MathOptInterface/gLl4d/src/attributes.jl:207 [inlined]
+  [2] get(o::SCIP.Optimizer, attr::MathOptInterface.ObjectiveValue)
+    @ SCIP ~/.julia/packages/SCIP/PqPX5/src/MOI_wrapper/results.jl:89
+  [3] get(b::MathOptInterface.Bridges.LazyBridgeOptimizer{SCIP.Optimizer}, attr::MathOptInterface.ObjectiveValue)
+    @ MathOptInterface.Bridges ~/.julia/packages/MathOptInterface/gLl4d/src/Bridges/bridge_optimizer.jl:1098
+  [4] _get_model_attribute(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{SCIP.Optimizer}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveValue)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:833
+  [5] get
+    @ ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:900 [inlined]
+  [6] _moi_get_result(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{SCIP.Optimizer}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, args::MathOptInterface.ObjectiveValue)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/optimizer_interface.jl:1053
+  [7] get(model::JuMP.Model, attr::MathOptInterface.ObjectiveValue)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/optimizer_interface.jl:1073
+  [8] objective_value(model::JuMP.Model; result::Int64)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/objective.jl:122
+  [9] objective_value
+    @ ~/.julia/packages/JuMP/i68GU/src/objective.jl:118 [inlined]
+ [10] nl_mcnd(ptype::String, graph::String, commodities::String, nodes::String, incr::Int64, cost::Symbol, solver::SCIP.Optimizer, solver_params::Dict{String, Real}; solve::Bool, write_nl::Bool)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/nlsolver.jl:1193
+ [11] top-level scope
+    @ ~/git/ipwlb/code/sources/IterativePWLB/test/scip/mcnd_arcs/script.jl:10
+in expression starting at /home/ccontard/git/ipwlb/code/sources/IterativePWLB/test/scip/mcnd_arcs/script.jl:10

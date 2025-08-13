@@ -1,0 +1,102 @@
+solving instance mcf nodes c61 3 6 square
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 13460 rows, 275490 columns and 1098205 nonzeros
+Model fingerprint: 0x9e4daaaf
+Model has 30 function constraints treated as nonlinear
+  30 POW
+Variable types: 274775 continuous, 715 integer (715 binary)
+Coefficient statistics:
+  Matrix range     [5e-05, 4e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [2e+01, 1e+10]
+  RHS range        [2e+01, 7e+01]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 745 rows and 1460 columns (presolve time = 5s)...
+Presolve removed 745 rows and 1460 columns
+Presolve time: 5.37s
+Presolved: 12715 rows, 274030 columns, 1096030 nonzeros
+Presolved model has 30 quadratic objective terms
+Variable types: 274030 continuous, 0 integer (0 binary)
+Root relaxation presolve removed 400 rows and 0 columns
+Root relaxation presolve time: 6.72s
+Root relaxation presolved: 12315 rows, 274030 columns, 1080818 nonzeros
+Root relaxation presolved model has 30 quadratic objective terms
+Root barrier log...
+
+Ordering time: 1.67s
+
+Barrier statistics:
+ AA' NZ     : 9.695e+05
+ Factor NZ  : 8.456e+06 (roughly 200 MB of memory)
+ Factor Ops : 6.086e+09 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   9.72199801e+06 -1.50920182e+09  2.77e+06 9.69e+02  1.00e+06    10s
+   1   2.70091134e+06 -1.77905584e+09  1.03e+06 3.61e+02  4.46e+05    10s
+   2   1.53469607e+04 -1.71408213e+09  6.08e+03 3.60e+00  7.53e+03    11s
+   3   1.26814432e+04 -1.04259431e+09  2.99e+03 1.05e+00  2.81e+03    12s
+   4   1.39692413e+04 -7.49783957e+08  1.83e+03 6.52e-01  1.93e+03    13s
+   5   1.50501106e+04 -1.84539530e+08  1.39e+02 4.89e-02  3.81e+02    14s
+   6   1.50483044e+04 -6.00114974e+07  3.21e+01 1.13e-02  1.20e+02    15s
+   7   1.50478253e+04 -2.25276795e+07  3.81e+00 1.34e-03  4.22e+01    16s
+   8   1.50461662e+04 -2.86250770e+05  1.24e-08 1.34e-09  5.49e-01    16s
+   9   1.50439947e+04 -8.18111754e+04  3.70e-09 3.98e-10  1.76e-01    17s
+  10   1.50357057e+04 -8.06851317e+04  3.66e-09 3.93e-10  1.74e-01    18s
+  11   1.48159560e+04 -7.68503497e+04  3.38e-09 3.63e-10  1.67e-01    19s
+  12   1.43567671e+04 -6.11377279e+04  2.20e-09 2.36e-10  1.38e-01    19s
+  13   1.37309736e+04 -4.44675010e+04  1.04e-09 1.12e-10  1.06e-01    20s
+  14   1.25767815e+04 -3.23553492e+04  6.77e-10 7.27e-11  8.19e-02    22s
+  15   1.16030610e+04 -2.45146038e+04  4.56e-10 4.90e-11  6.58e-02    23s
+  16   1.02568680e+04 -1.92907801e+04  3.37e-10 3.62e-11  5.38e-02    23s
+  17   8.71182787e+03 -1.67445205e+04  2.47e-10 2.65e-11  4.64e-02    24s
+  18   7.74671262e+03 -1.35949815e+04  1.88e-10 2.02e-11  3.89e-02    25s
+  19   6.09414741e+03 -1.02767230e+04  8.05e-11 8.65e-12  2.98e-02    26s
+  20   3.12585771e+03 -2.06602444e+02  6.82e-12 7.19e-13  6.07e-03    27s
+  21   2.04256961e+03  1.12739376e+03  8.76e-13 2.67e-15  1.67e-03    28s
+  22   1.71971323e+03  1.55965820e+03  5.95e-13 2.05e-15  2.92e-04    28s
+  23   1.64553539e+03  1.64463623e+03  1.05e-12 1.78e-15  1.64e-06    29s
+  24   1.64507676e+03  1.64507586e+03  1.13e-12 2.13e-15  1.65e-09    30s
+  25   1.64507630e+03  1.64507630e+03  6.05e-11 1.78e-15  1.95e-12    31s
+
+Barrier solved model in 25 iterations and 30.51 seconds (12.97 work units)
+Optimal objective 1.64507630e+03
+
+
+Root relaxation: objective 1.645076e+03, 0 iterations, 24.87 seconds (10.92 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1645.0762986 1645.07630  0.00%     -   30s
+
+Explored 1 nodes (0 simplex iterations) in 30.74 seconds (13.14 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 1: 1645.08 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 1.645076298569e+03, best bound 1.645076298569e+03, gap 0.0000%
+
+User-callback calls 3514, time in user-callback 0.01 sec
+primal_bound = 1645.0762985687534, dual_bound = 1645.0762985687531, gap = 1.3821466860901912e-14, time = 30.88

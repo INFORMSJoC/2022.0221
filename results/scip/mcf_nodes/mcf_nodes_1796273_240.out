@@ -1,0 +1,36 @@
+solving instance mcf nodes c45 3 6 log
+presolving:
+(round 1, fast)       314 del vars, 314 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       608 del vars, 314 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, fast)       608 del vars, 314 del conss, 0 add conss, 20 chg bounds, 294 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (0.6s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (0.7s) no symmetry present (symcode time: 0.03)
+presolving (4 rounds: 4 fast, 1 medium, 1 exhaustive):
+ 608 deleted vars, 314 deleted constraints, 0 added constraints, 20 tightened bounds, 0 added holes, 294 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 58840 variables (0 bin, 0 int, 0 impl, 58840 cont) and 4334 constraints
+   4314 constraints of type <linear>
+     20 constraints of type <nonlinear>
+Presolving Time: 0.57
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+ 10.5s|     1 |     0 | 16686 |     - |   325M |   0 |  58k|4334 |4354 |   0 |  0 |   0 |   0 | 3.591090e+03 |      --      |    Inf | unknown
+L70.8s|     1 |     0 | 16686 |     - |  subnlp|   0 |  58k|4334 |4354 |   0 |  0 |   0 |   0 | 3.591090e+03 | 7.230205e+03 | 101.34%| unknown
+ 70.9s|     1 |     0 | 16686 |     - |   328M |   0 |  58k|4334 |4354 |   0 |  1 |   0 |   0 | 3.591090e+03 | 7.230205e+03 | 101.34%| unknown
+L 114s|     1 |     0 | 16686 |     - |  subnlp|   0 |  58k|4334 |4354 |   0 |  2 |   0 |   0 | 3.591090e+03 | 7.230205e+03 | 101.34%| unknown
+  117s|     1 |     0 | 16686 |     - |   330M |   0 |  58k|4334 |4354 |   0 |  2 |   0 |   0 | 3.591090e+03 | 7.230205e+03 | 101.34%| unknown
+  132s|     1 |     0 | 29281 |     - |   335M |   0 |  58k|4334 |4354 |   0 |  3 |   0 |   0 | 6.891306e+03 | 7.230205e+03 |   4.92%| unknown
+  149s|     1 |     0 | 41562 |     - |   335M |   0 |  58k|4334 |4374 |  20 |  4 |   0 |   0 | 7.177277e+03 | 7.230205e+03 |   0.74%| unknown
+  149s|     1 |     2 | 41562 |     - |   337M |   0 |  58k|4334 |4374 |  20 |  5 |   0 |   0 | 7.177277e+03 | 7.230205e+03 |   0.74%| unknown
+  249s|   100 |    33 | 47051 |  64.6 |   359M |  19 |  58k|4334 |4367 | 195 |  2 |   0 |   0 | 7.221692e+03 | 7.230205e+03 |   0.12%|  81.16%
+  263s|   200 |     1 | 48805 |  41.0 |   360M |  22 |  58k|4334 |4368 | 314 |  0 |   0 |   0 | 7.229311e+03 | 7.230205e+03 |   0.01%|  98.22%
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 263.21
+Solving Nodes      : 201
+Primal Bound       : +7.23020478344900e+03 (3 solutions)
+Dual Bound         : +7.23020478344900e+03
+Gap                : 0.00 %
+solution violates original bounds of variable <w[7]> [0,323] solution value <-1.95186e-06>
+best solution is not feasible in original problem
+primal_bound = 7230.2047834489995, dual_bound = 7230.2047834489995, gap = 0.0, time = 265.83

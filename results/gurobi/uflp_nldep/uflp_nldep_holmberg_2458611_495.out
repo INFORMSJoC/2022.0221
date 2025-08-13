@@ -1,0 +1,202 @@
+solving instance uflp nldep holmberg 50 sinabc3
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 1140 rows, 1070 columns and 4080 nonzeros
+Model fingerprint: 0xb3174a53
+Model has 20 function constraints treated as nonlinear
+  10 POW, 10 SIN
+Variable types: 1060 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [3e-03, 4e+01]
+  Objective range  [1e+00, 4e+02]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+00, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 1020 rows and 40 columns
+Presolve time: 0.00s
+Presolved: 200 rows, 1031 columns, 2200 nonzeros
+Presolved model has 10 quadratic objective terms
+Presolved model has 10 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 1031 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 5.246760e+03, 253 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 5246.76022    0   10          - 5246.76022      -     -    0s
+     0     0 5246.76022    0   10          - 5246.76022      -     -    0s
+H    0     0                    5460.9781487 5246.76022  3.92%     -    0s
+H    0     0                    5460.4817698 5246.76022  3.91%     -    0s
+     0     2 5260.16136    0   10 5460.48177 5260.16136  3.67%     -    0s
+*   49    25              25    5460.4817669 5294.93855  3.03%   9.0    0s
+
+Explored 401 nodes (2244 simplex iterations) in 0.76 seconds (0.44 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 2: 5460.48 5460.98 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 5.460481766887e+03, best bound 5.460481766887e+03, gap 0.0000%
+
+User-callback calls 1299, time in user-callback 0.00 sec
+reading holmberg data file ../../../../../instances/uflp/holmberg/p50
+primal_bound = 5460.481766887289, dual_bound = 5460.481766887289, gap = 0.0, time = 0.77
+OPTIMAL LOCATIONS:
+y[1] = 1.0
+y[2] = 1.0
+y[3] = 1.0
+y[4] = 1.0
+y[5] = 1.0
+y[6] = 1.0
+y[7] = 1.0
+y[8] = 1.0
+y[9] = 1.0
+y[10] = 1.0
+OPTIMAL WAREHOUSING:
+f[1] = 238.0
+f[3] = 41.0
+f[4] = 216.0
+f[5] = 116.0
+f[6] = 171.0
+f[7] = 57.0
+f[8] = 154.0
+f[9] = 22.0
+f[10] = 443.0
+OPTIMAL WAREHOUSING COSTS:
+nlobj[1] = 44.31613271685663
+nlobj[2] = 0.0
+nlobj[3] = 2.98315592540375
+nlobj[4] = 51.46984868223474
+nlobj[5] = 23.57235739810167
+nlobj[6] = 33.56537399228344
+nlobj[7] = 5.255632517751366
+nlobj[8] = 35.67652719334088
+nlobj[9] = 0.6124109443690964
+nlobj[10] = 32.03032751694798
+OPTIMAL ASSIGNMENTS:
+x[1, 4] = 1.0
+x[1, 21] = 1.0
+x[1, 22] = 1.0
+x[1, 23] = 1.0
+x[1, 25] = 1.0
+x[1, 26] = 1.0
+x[1, 39] = 1.0
+x[1, 41] = 1.0
+x[1, 54] = 1.0
+x[1, 55] = 1.0
+x[1, 56] = 1.0
+x[1, 67] = 1.0
+x[1, 72] = 1.0
+x[1, 74] = 1.0
+x[1, 75] = 1.0
+x[3, 18] = 1.0
+x[3, 60] = 1.0
+x[3, 83] = 1.0
+x[3, 89] = 1.0
+x[4, 1] = 1.0
+x[4, 3] = 1.0
+x[4, 9] = 1.0
+x[4, 20] = 1.0
+x[4, 33] = 1.0
+x[4, 34] = 1.0
+x[4, 35] = 1.0
+x[4, 50] = 1.0
+x[4, 51] = 1.0
+x[4, 65] = 1.0
+x[4, 66] = 1.0
+x[4, 71] = 1.0
+x[4, 78] = 1.0
+x[4, 79] = 1.0
+x[4, 81] = 1.0
+x[5, 12] = 1.0
+x[5, 24] = 1.0
+x[5, 28] = 1.0
+x[5, 29] = 1.0
+x[5, 68] = 1.0
+x[5, 76] = 1.0
+x[5, 77] = 1.0
+x[5, 80] = 1.0
+x[6, 7] = 1.0
+x[6, 8] = 1.0
+x[6, 19] = 1.0
+x[6, 36] = 1.0
+x[6, 45] = 1.0
+x[6, 46] = 1.0
+x[6, 47] = 1.0
+x[6, 48] = 1.0
+x[6, 49] = 1.0
+x[6, 52] = 1.0
+x[6, 82] = 1.0
+x[7, 2] = 1.0
+x[7, 40] = 1.0
+x[7, 53] = 1.0
+x[7, 58] = 1.0
+x[7, 73] = 1.0
+x[8, 10] = 1.0
+x[8, 11] = 1.0
+x[8, 30] = 1.0
+x[8, 31] = 1.0
+x[8, 32] = 1.0
+x[8, 62] = 1.0
+x[8, 63] = 1.0
+x[8, 64] = 1.0
+x[8, 70] = 1.0
+x[8, 88] = 1.0
+x[8, 90] = 1.0
+x[9, 27] = 1.0
+x[9, 69] = 1.0
+x[10, 5] = 1.0
+x[10, 6] = 1.0
+x[10, 13] = 1.0
+x[10, 14] = 1.0
+x[10, 15] = 1.0
+x[10, 16] = 1.0
+x[10, 17] = 1.0
+x[10, 37] = 1.0
+x[10, 38] = 1.0
+x[10, 42] = 1.0
+x[10, 43] = 1.0
+x[10, 44] = 1.0
+x[10, 57] = 1.0
+x[10, 59] = 1.0
+x[10, 61] = 1.0
+x[10, 84] = 1.0
+x[10, 85] = 1.0
+x[10, 86] = 1.0
+x[10, 87] = 1.0
+x[10, 91] = 1.0
+x[10, 92] = 1.0
+x[10, 93] = 1.0
+x[10, 94] = 1.0
+x[10, 95] = 1.0
+x[10, 96] = 1.0
+x[10, 97] = 1.0
+x[10, 98] = 1.0
+x[10, 99] = 1.0
+x[10, 100] = 1.0
+fixed costs = 3877.0
+assignment costs = 5231.0
+warehousing costs = 229.48176688728955
+total cost = 5460.481766887289

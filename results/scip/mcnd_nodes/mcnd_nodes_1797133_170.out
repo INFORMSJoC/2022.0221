@@ -1,0 +1,33 @@
+solving instance mcnd nodes c38 3 6 log
+presolving:
+(round 1, fast)       250 del vars, 250 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 250 del vars, 480 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, exhaustive) 250 del vars, 480 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 46000 upgd conss, 0 impls, 0 clqs
+   (1.3s) probing: 51/230 (22.2%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (1.3s) probing aborted: 50/50 successive totally useless probings
+   (1.3s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (1.6s) no symmetry present (symcode time: 0.10)
+presolving (4 rounds: 4 fast, 3 medium, 3 exhaustive):
+ 250 deleted vars, 480 deleted constraints, 0 added constraints, 20 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 46000 implications, 0 cliques
+presolved problem has 46270 variables (230 bin, 0 int, 0 impl, 46040 cont) and 50270 constraints
+  46000 constraints of type <varbound>
+   4250 constraints of type <linear>
+     20 constraints of type <nonlinear>
+Presolving Time: 1.35
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t19.3s|     1 |     0 | 24106 |     - |  trysol|   0 |  46k|  50k|  50k|   0 |  0 |   0 |   0 |-3.814697e-05 | 6.239549e+05 |    Inf | unknown
+  573s|     1 |     0 | 89213 |     - |   369M |   0 |  46k|  50k|  50k|   0 |  0 |   0 |   0 | 6.495381e+04 | 6.239549e+05 | 860.61%| unknown
+t 853s|     1 |     0 |127242 |     - |  trysol|   0 |  46k|  50k|  50k|   0 |  0 |   0 |   0 | 6.495381e+04 | 1.723629e+05 | 165.36%| unknown
+  925s|     1 |     0 |135178 |     - |   386M |   0 |  46k|  50k|  50k|   1 |  1 |   0 |   0 | 6.498826e+04 | 1.723629e+05 | 165.22%| unknown
+t 926s|     1 |     0 |135178 |     - |  trysol|   0 |  46k|  50k|  50k|   1 |  1 |   0 |   0 | 6.498826e+04 | 1.655481e+05 | 154.74%| unknown
+  926s|     1 |     0 |135178 |     - |   387M |   0 |  46k|  50k|  50k|   1 |  1 |   0 |   0 | 6.498826e+04 | 1.655481e+05 | 154.74%| unknown
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 3600.04
+Solving Nodes      : 1
+Primal Bound       : +1.65548066423132e+05 (3 solutions)
+Dual Bound         : +6.49882642140938e+04
+Gap                : 154.74 %
+primal_bound = 165548.06642313206, dual_bound = 64988.2642140938, gap = 60.74356794480025, time = 3603.29

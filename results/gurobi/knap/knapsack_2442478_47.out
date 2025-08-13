@@ -1,0 +1,120 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 10 5 divexp
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 51 rows, 70 columns and 110 nonzeros
+Model fingerprint: 0x718989a9
+Model has 20 function constraints treated as nonlinear
+  10 EXP, 10 POW
+Variable types: 60 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [3e-09, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+02, 1e+10]
+  RHS range        [3e-09, 2e+04]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 40 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 102 rows, 41 columns, 206 nonzeros
+Presolved model has 9 bilinear constraint(s)
+Presolved model has 11 nonlinear constraint(s)
+Warning: Model contains variables with very large bounds participating
+         in nonlinear terms.
+         Presolve was not able to compute smaller bounds for these variables.
+         Consider bounding these variables or reformulating the model.
+
+
+Solving non-convex MINLP
+
+Variable types: 41 continuous, 0 integer (0 binary)
+
+Root relaxation: objective -4.209250e+02, 47 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -420.92505    0   17          - -420.92505      -     -    0s
+     0     0 -420.92035    0   18          - -420.92035      -     -    0s
+     0     0 -420.91543    0   19          - -420.91543      -     -    0s
+     0     0 -420.91379    0   19          - -420.91379      -     -    0s
+     0     0 -420.91250    0   20          - -420.91250      -     -    0s
+     0     0 -420.91137    0   20          - -420.91137      -     -    0s
+     0     0 -420.91134    0   20          - -420.91134      -     -    0s
+     0     0 -420.91048    0   20          - -420.91048      -     -    0s
+H    0     0                    -265.3469952 -420.91048  58.6%     -    0s
+H    0     0                    -272.7158023 -420.91048  54.3%     -    0s
+     0     2 -420.91048    0   20 -272.71580 -420.91048  54.3%     -    0s
+H    3     3                    -348.7644789 -420.88138  20.7%   8.0    0s
+H    6     6                    -362.5296964 -419.11967  15.6%  15.2    0s
+H   32    22                    -363.6132725 -417.22339  14.7%  12.6    0s
+H   40    22                    -386.8613761 -417.22339  7.85%  11.0    0s
+H   43    21                    -388.5394297 -417.22339  7.38%  10.5    0s
+H   51    27                    -388.9389187 -417.22339  7.27%   9.6    0s
+H   54    30                    -388.9682336 -417.22339  7.26%   9.4    0s
+H   76    14                    -394.8659416 -413.88445  4.82%   8.5    0s
+H  103    19                    -394.8659958 -413.88445  4.82%   9.2    0s
+H  130    34                    -394.8659963 -413.88445  4.82%   8.2    0s
+*  140    38              39    -396.0489645 -413.88445  4.50%   7.9    0s
+H  212    53                    -396.9731185 -412.85277  4.00%   5.8    0s
+H  212    53                    -397.3101684 -412.85277  3.91%   5.8    0s
+H  212    53                    -397.4210691 -412.85277  3.88%   5.8    0s
+H  212    53                    -397.4210846 -412.85277  3.88%   5.8    0s
+H  212    53                    -397.4990265 -412.85277  3.86%   5.8    0s
+H  212    53                    -397.5237259 -412.85277  3.86%   5.8    0s
+H  285    64                    -397.5274621 -407.57699  2.53%   6.4    0s
+*  612   267              88    -397.6838253 -404.11672  1.62%   4.5    0s
+H  721   322                    -397.7646035 -400.42342  0.67%   4.6    0s
+H  729   311                    -397.7653001 -399.41744  0.42%   4.6    0s
+H  985   393                    -397.7654007 -398.44223  0.17%   4.0    0s
+ 26012  7684     cutoff  124      -397.76540 -398.01967  0.06%   3.4    5s
+H35581  9614                    -397.7678744 -397.99267  0.06%   3.6    6s
+ 52025 11584 -397.78040  131   12 -397.76787 -397.95383  0.05%   3.8   10s
+ 77049 12720     cutoff  133      -397.76787 -397.91487  0.04%   3.9   15s
+ 102785 12118     cutoff  125      -397.76787 -397.87325  0.03%   4.0   20s
+ 129241 10290 -397.82659  122   10 -397.76787 -397.82659  0.01%   3.9   25s
+ 154138  8801 -397.79441  129   10 -397.76787 -397.79714  0.01%   3.9   30s
+ 178026  9237 -397.77125  141    5 -397.76787 -397.78726  0.00%   3.8   35s
+ 201734  9189     cutoff  141      -397.76787 -397.78145  0.00%   3.8   40s
+ 224837  7258     cutoff  137      -397.76787 -397.77686  0.00%   3.9   45s
+ 248140  3387 -397.76940  134    5 -397.76787 -397.77186  0.00%   3.9   50s
+
+Explored 257402 nodes (989147 simplex iterations) in 52.00 seconds (20.76 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 10: -397.768 -397.765 -397.765 ... -397.421
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective -3.977678744177e+02, best bound -3.977682719526e+02, gap 0.0001%
+
+User-callback calls 515798, time in user-callback 0.14 sec
+expr 1, 1 = 64.708597 / (1 + 10.407366 * exp(-0.107263 * (x + -97.650557)))
+expr 1, 2 = 99.150248 / (1 + 1.148802 * exp(-0.113538 * (x + -37.82099)))
+expr 1, 3 = 5.417246 / (1 + 49.734769 * exp(-0.191835 * (x + -91.342198)))
+expr 1, 4 = 98.077733 / (1 + 43.678028 * exp(-0.172847 * (x + -20.073624)))
+expr 1, 5 = 14.129879 / (1 + 3.568411 * exp(-0.168442 * (x + -15.479389)))
+expr 1, 6 = 40.657623 / (1 + 21.329085 * exp(-0.199868 * (x + -40.394429)))
+expr 1, 7 = 60.569844 / (1 + 71.58997 * exp(-0.196327 * (x + -59.04789)))
+expr 1, 8 = 16.583485 / (1 + 54.036021 * exp(-0.173501 * (x + -36.925295)))
+expr 1, 9 = 44.858795 / (1 + 56.424982 * exp(-0.161501 * (x + -28.246244)))
+expr 1, 10 = 42.99847 / (1 + 45.753023 * exp(-0.181162 * (x + -62.831688)))
+primal_bound = -397.76787441772365, dual_bound = 0.0, gap = 100.0, time = 52.28

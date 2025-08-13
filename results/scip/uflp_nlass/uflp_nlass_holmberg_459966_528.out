@@ -1,0 +1,37 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nlass holmberg 53 sqrt
+presolving:
+(round 1, fast)       2000 del vars, 2000 del conss, 0 add conss, 2000 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 2000 del vars, 2000 del conss, 0 add conss, 2000 chg bounds, 0 chg sides, 0 chg coeffs, 2000 upgd conss, 0 impls, 0 clqs
+   (2.2s) probing cycle finished: starting next cycle
+   (2.2s) symmetry computation started: requiring (bin +, int -, cont -), (fixed: bin -, int +, cont +)
+   (2.2s) no symmetry present
+presolving (3 rounds: 3 fast, 2 medium, 2 exhaustive):
+ 2000 deleted vars, 2000 deleted constraints, 0 added constraints, 2000 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 2000 implications, 0 cliques
+presolved problem has 4020 variables (20 bin, 0 int, 0 impl, 4000 cont) and 4100 constraints
+   2000 constraints of type <varbound>
+    100 constraints of type <linear>
+   2000 constraints of type <nonlinear>
+Presolving Time: 2.17
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  2.9s|     1 |     0 | 17335 |     - |    84M |   0 |8020 |4100 |6100 |   0 |  0 |   0 |   0 | 7.730998e+03 |      --      |    Inf | unknown
+L 3.1s|     1 |     0 | 17335 |     - |undercov|   0 |8020 |4100 |6100 |   0 |  0 |   0 |   0 | 7.730998e+03 | 7.731482e+03 |   0.01%| unknown
+  9.5s|     1 |     0 | 17335 |     - |    87M |   0 |8020 |4100 |6100 |   0 |  2 |   0 |   0 | 7.731000e+03 | 7.731482e+03 |   0.01%| unknown
+L 9.7s|     1 |     0 | 17335 |     - |    alns|   0 |8020 |4100 |6100 |   0 |  4 |   0 |   0 | 7.731000e+03 | 7.731000e+03 |   0.00%| unknown
+  9.7s|     1 |     0 | 17335 |     - |    87M |   0 |8020 |4100 |6100 |   0 |  4 |   0 |   0 | 7.731000e+03 | 7.731000e+03 |   0.00%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 9.70
+Solving Nodes      : 1
+Primal Bound       : +7.73100000000000e+03 (2 solutions)
+Dual Bound         : +7.73100000000000e+03
+Gap                : 0.00 %
+reading holmberg data file ../../../../../instances/uflp/holmberg/p53
+primal_bound = 7731.0, dual_bound = 7731.0, gap = 0.0, time = 17.87

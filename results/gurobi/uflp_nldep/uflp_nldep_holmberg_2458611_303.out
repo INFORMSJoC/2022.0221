@@ -1,0 +1,321 @@
+solving instance uflp nldep holmberg 31 sinabc1
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 4770 rows, 4710 columns and 18240 nonzeros
+Model fingerprint: 0x01f30f23
+Model has 60 function constraints treated as nonlinear
+  30 POW, 30 SIN
+Variable types: 4680 continuous, 30 integer (30 binary)
+Coefficient statistics:
+  Matrix range     [3e-04, 1e+02]
+  Objective range  [1e+00, 3e+03]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+00, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 4560 rows and 120 columns
+Presolve time: 0.01s
+Presolved: 360 rows, 4591 columns, 9420 nonzeros
+Presolved model has 30 quadratic objective terms
+Presolved model has 30 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 4591 continuous, 0 integer (0 binary)
+Found heuristic solution: objective 7965.8852231
+
+Root relaxation: objective 7.921038e+03, 539 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 7921.03817    0   30 7965.88522 7921.03817  0.56%     -    0s
+     0     0 7954.83502    0   30 7965.88522 7954.83502  0.14%     -    0s
+     0     0 7962.72458    0   30 7965.88522 7962.72458  0.04%     -    0s
+     0     0 7965.08028    0   29 7965.88522 7965.08028  0.01%     -    0s
+H    0     0                    7965.8845085 7965.08028  0.01%     -    0s
+     0     2 7965.76404    0   28 7965.88451 7965.76404  0.00%     -    0s
+
+Explored 3 nodes (751 simplex iterations) in 0.65 seconds (0.26 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 2: 7965.88 7965.89 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 7.965884508503e+03, best bound 7.965882419528e+03, gap 0.0000%
+
+User-callback calls 396, time in user-callback 0.00 sec
+reading holmberg data file ../../../../../instances/uflp/holmberg/p31
+primal_bound = 7965.8845085028315, dual_bound = 7965.882419527871, gap = 2.622401766038533e-5, time = 0.66
+OPTIMAL LOCATIONS:
+y[1] = 1.0
+y[2] = 1.0
+y[3] = 1.0
+y[4] = 1.0
+y[5] = 1.0
+y[6] = 1.0
+y[7] = 1.0
+y[8] = 1.0
+y[9] = 1.0
+y[10] = 1.0
+y[11] = 1.0
+y[12] = 1.0
+y[13] = 1.0
+y[14] = 1.0
+y[15] = 1.0
+y[16] = 1.0
+y[17] = 1.0
+y[18] = 1.0
+y[19] = 1.0
+y[20] = 1.0
+y[21] = 1.0
+y[22] = 1.0
+y[23] = 1.0
+y[24] = 1.0
+y[25] = 1.0
+y[26] = 1.0
+y[27] = 1.0
+y[28] = 1.0
+y[29] = 1.0
+y[30] = 1.0
+OPTIMAL WAREHOUSING:
+f[1] = 137.0
+f[2] = 30.0
+f[3] = 183.77506926952543
+f[4] = 55.113200158355774
+f[5] = 50.53982559787226
+f[6] = 283.0
+f[7] = 54.0
+f[8] = 50.564129953022196
+f[9] = 175.0
+f[10] = 76.9823809683968
+f[11] = 19.0
+f[12] = 207.0
+f[13] = 27.0
+f[14] = 106.0
+f[15] = 271.0
+f[16] = 47.0
+f[17] = 20.000818544395422
+f[18] = 241.89604444910555
+f[19] = 19.999181455604578
+f[20] = 55.1117305721188
+f[21] = 274.0
+f[22] = 32.0020700802886
+f[23] = 77.0176190316032
+f[24] = 26.0
+f[25] = 230.0
+f[26] = 95.0
+f[27] = 17.0
+f[28] = 31.9979299197114
+f[29] = 25.0
+f[30] = 52.0
+OPTIMAL WAREHOUSING COSTS:
+nlobj[1] = 2.621634392106846
+nlobj[2] = 0.12593764327427773
+nlobj[3] = 4.710287814828534
+nlobj[4] = 0.42494308397710895
+nlobj[5] = 0.3573618039151448
+nlobj[6] = 11.117818380141582
+nlobj[7] = 0.40795507733872916
+nlobj[8] = 0.35770550507252935
+nlobj[9] = 4.2725598600134775
+nlobj[10] = 0.8288496446249604
+nlobj[11] = 0.050517731851759284
+nlobj[12] = 5.970595883940793
+nlobj[13] = 0.1020112488818495
+nlobj[14] = 1.5706246982571517
+nlobj[15] = 10.201789129870601
+nlobj[16] = 0.3090661772812796
+nlobj[17] = 0.0559796878851512
+nlobj[18] = 8.140457105571794
+nlobj[19] = 0.0559705246326352
+nlobj[20] = 0.424920429112546
+nlobj[21] = 10.427190433087645
+nlobj[22] = 0.14330579862131876
+nlobj[23] = 0.8296081630705968
+nlobj[24] = 0.09459529842164266
+nlobj[25] = 7.363642210000946
+nlobj[26] = 1.2618411035068207
+nlobj[27] = 0.04044246657403184
+nlobj[28] = 0.1432687254303565
+nlobj[29] = 0.0874591203577893
+nlobj[30] = 0.3783038737669588
+OPTIMAL ASSIGNMENTS:
+x[1, 22] = 1.0
+x[1, 41] = 1.0
+x[1, 59] = 1.0
+x[1, 61] = 1.0
+x[1, 68] = 1.0
+x[1, 126] = 1.0
+x[1, 129] = 1.0
+x[1, 131] = 1.0
+x[1, 141] = 1.0
+x[2, 79] = 1.0
+x[2, 112] = 1.0
+x[3, 4] = 1.0
+x[3, 7] = 0.3133953310544797
+x[3, 21] = 1.0
+x[3, 91] = 1.0
+x[3, 97] = 1.0
+x[3, 105] = 1.0
+x[3, 113] = 1.0
+x[3, 149] = 1.0
+x[4, 15] = 1.0
+x[4, 24] = 1.0
+x[4, 98] = 0.6174000087975426
+x[5, 47] = 0.9151663999266296
+x[5, 88] = 1.0
+x[6, 6] = 1.0
+x[6, 19] = 1.0
+x[6, 23] = 1.0
+x[6, 25] = 1.0
+x[6, 29] = 1.0
+x[6, 31] = 1.0
+x[6, 54] = 1.0
+x[6, 62] = 1.0
+x[6, 90] = 1.0
+x[6, 121] = 1.0
+x[6, 127] = 1.0
+x[6, 138] = 1.0
+x[6, 148] = 1.0
+x[6, 150] = 1.0
+x[7, 33] = 1.0
+x[7, 72] = 1.0
+x[8, 47] = 0.08483360007337032
+x[8, 82] = 1.0
+x[8, 107] = 0.32126081846812926
+x[8, 137] = 1.0
+x[9, 13] = 1.0
+x[9, 26] = 1.0
+x[9, 50] = 1.0
+x[9, 76] = 1.0
+x[9, 101] = 1.0
+x[9, 122] = 1.0
+x[9, 135] = 1.0
+x[9, 142] = 1.0
+x[9, 145] = 1.0
+x[10, 8] = 1.0
+x[10, 30] = 0.9575992070165332
+x[10, 96] = 1.0
+x[10, 128] = 1.0
+x[11, 44] = 1.0
+x[12, 2] = 1.0
+x[12, 20] = 1.0
+x[12, 64] = 1.0
+x[12, 65] = 1.0
+x[12, 66] = 1.0
+x[12, 73] = 1.0
+x[12, 94] = 1.0
+x[12, 108] = 1.0
+x[12, 114] = 1.0
+x[12, 115] = 1.0
+x[12, 132] = 1.0
+x[13, 130] = 1.0
+x[14, 3] = 1.0
+x[14, 48] = 1.0
+x[14, 55] = 1.0
+x[14, 83] = 1.0
+x[14, 124] = 1.0
+x[15, 9] = 1.0
+x[15, 16] = 1.0
+x[15, 17] = 1.0
+x[15, 40] = 1.0
+x[15, 42] = 1.0
+x[15, 46] = 1.0
+x[15, 52] = 1.0
+x[15, 53] = 1.0
+x[15, 60] = 1.0
+x[15, 109] = 1.0
+x[15, 111] = 1.0
+x[15, 136] = 1.0
+x[15, 144] = 1.0
+x[16, 38] = 1.0
+x[16, 43] = 1.0
+x[17, 12] = 1.0
+x[17, 125] = 0.7273471403995838
+x[18, 10] = 1.0
+x[18, 18] = 1.0
+x[18, 57] = 1.0
+x[18, 74] = 1.0
+x[18, 84] = 1.0
+x[18, 86] = 1.0
+x[18, 87] = 1.0
+x[18, 93] = 1.0
+x[18, 95] = 1.0
+x[18, 102] = 1.0
+x[18, 103] = 1.0
+x[18, 107] = 0.6787391815318708
+x[18, 140] = 1.0
+x[19, 100] = 1.0
+x[19, 125] = 0.2726528596004162
+x[20, 7] = 0.6866046689455203
+x[20, 27] = 1.0
+x[20, 85] = 1.0
+x[20, 98] = 0.3825999912024574
+x[21, 1] = 1.0
+x[21, 5] = 1.0
+x[21, 14] = 1.0
+x[21, 35] = 1.0
+x[21, 36] = 1.0
+x[21, 56] = 1.0
+x[21, 63] = 1.0
+x[21, 71] = 1.0
+x[21, 78] = 1.0
+x[21, 81] = 1.0
+x[21, 89] = 1.0
+x[21, 139] = 1.0
+x[21, 143] = 1.0
+x[22, 99] = 1.0
+x[22, 116] = 0.6667816711271443
+x[23, 11] = 1.0
+x[23, 30] = 0.042400792983466884
+x[23, 67] = 1.0
+x[23, 69] = 1.0
+x[23, 70] = 1.0
+x[24, 39] = 1.0
+x[25, 28] = 1.0
+x[25, 37] = 1.0
+x[25, 45] = 1.0
+x[25, 75] = 1.0
+x[25, 80] = 1.0
+x[25, 92] = 1.0
+x[25, 117] = 1.0
+x[25, 118] = 1.0
+x[25, 119] = 1.0
+x[25, 120] = 1.0
+x[25, 133] = 1.0
+x[26, 32] = 1.0
+x[26, 34] = 1.0
+x[26, 104] = 1.0
+x[26, 123] = 1.0
+x[26, 146] = 1.0
+x[26, 147] = 1.0
+x[27, 77] = 1.0
+x[28, 49] = 1.0
+x[28, 58] = 1.0
+x[28, 116] = 0.33321832887285574
+x[29, 110] = 1.0
+x[30, 51] = 1.0
+x[30, 106] = 1.0
+x[30, 134] = 1.0
+fixed costs = 15000.0
+assignment costs = 7893.007865487414
+warehousing costs = 72.87664301541686
+total cost = 7965.884508502831

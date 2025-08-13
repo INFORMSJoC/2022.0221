@@ -1,0 +1,125 @@
+solving instance uflp nlass orlib 64 square
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 2450 rows, 3216 columns and 5599 nonzeros
+Model fingerprint: 0x42b1d108
+Model has 800 function constraints treated as nonlinear
+  800 POW
+Variable types: 2400 continuous, 816 integer (816 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+06]
+  Objective range  [1e+00, 2e+04]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+00, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 1666 rows and 2417 columns
+Presolve time: 0.01s
+Presolved: 784 rows, 799 columns, 2254 nonzeros
+Presolved model has 784 quadratic objective terms
+Variable types: 784 continuous, 15 integer (15 binary)
+Found heuristic solution: objective 479023.12146
+
+Root relaxation: objective 1.367787e+05, 1154 iterations, 0.02 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 136778.730    0   15 479023.121 136778.730  71.4%     -    0s
+     0     0 137496.388    0   15 479023.121 137496.388  71.3%     -    0s
+     0     0  postponed    0      479023.121 137496.388  71.3%     -    1s
+     0     0  postponed    0      479023.121 137496.388  71.3%     -    2s
+     0     2  postponed    0      479023.121 137496.388  71.3%     -    7s
+     2     5  postponed    2      479023.121 137496.388  71.3%   0.0   10s
+     7     9  postponed    5      479023.121 137496.388  71.3%   0.0   16s
+    11    13  postponed    7      479023.121 137496.388  71.3%   0.0   21s
+    16    18  postponed    9      479023.121 137496.388  71.3%   0.0   25s
+*   21    21              12    416758.25389 137496.388  67.0%   0.0   29s
+    22    22 416048.184   12    3 416758.254 137496.388  67.0%   0.0   30s
+    31    21  postponed    1      416758.254 137496.388  67.0%   0.0   37s
+    33    23  postponed    2      416758.254 137496.388  67.0%   0.0   40s
+    37    27  postponed    4      416758.254 137496.388  67.0%   0.0   45s
+    41    31  postponed    7      416758.254 137496.388  67.0%   0.0   50s
+*   47    33              10    361466.77485 137496.388  62.0%   0.0   54s
+    50    36  postponed   11      361466.775 137496.388  62.0%   0.0   55s
+*   54    32              13    358301.82270 137496.388  61.6%   0.0   57s
+H   56    32                    358301.81641 137496.388  61.6%   0.0   58s
+    59    35  postponed   13      358301.816 137496.388  61.6%   0.0   60s
+*   62    32              13    355995.49854 137496.388  61.4%   0.0   61s
+    67    35  postponed    5      355995.499 137496.388  61.4%   0.0   65s
+    72    38     cutoff    5      355995.499 137496.388  61.4%   0.0   70s
+    77    41  postponed   10      355995.499 137496.388  61.4%   0.0   75s
+    85    39  postponed    3      355995.499 137496.388  61.4%   0.0   80s
+    91    45  postponed    6      355995.499 137496.388  61.4%   0.0   86s
+    96    48     cutoff    9      355995.499 137496.388  61.4%   0.0   90s
+   103    53  postponed   10      355995.499 137496.388  61.4%   0.0   95s
+   110    52  postponed   12      355995.499 137496.388  61.4%   0.0  100s
+   119    55  postponed    7      355995.499 137496.388  61.4%   0.0  105s
+   126    58     cutoff   10      355995.499 137496.388  61.4%   0.0  110s
+   132    60     cutoff   11      355995.499 137496.388  61.4%   0.0  115s
+   145    59     cutoff    6      355995.499 137496.388  61.4%   0.0  120s
+   151    65  postponed    9      355995.499 137496.388  61.4%   0.0  125s
+   160    66  postponed   12      355995.499 137496.388  61.4%   0.0  130s
+   168    64  postponed    9      355995.499 137496.388  61.4%   0.0  135s
+   176    64     cutoff   11      355995.499 137496.388  61.4%   0.0  140s
+   186    66     cutoff   13      355995.499 137496.388  61.4%   0.0  145s
+   199    64  postponed   15      355995.499 137496.388  61.4%   0.0  150s
+   208    62  postponed   10      355995.499 137496.388  61.4%   0.0  155s
+   218    64  postponed   13      355995.499 137496.388  61.4%   0.0  160s
+   230    60     cutoff   14      355995.499 137496.388  61.4%   0.0  165s
+   240    64  postponed   11      355995.499 137496.388  61.4%   0.0  170s
+   252    66  postponed   14      355995.499 137496.388  61.4%   0.0  175s
+   262    66  postponed   13      355995.499 137496.388  61.4%   0.0  180s
+   271    67  postponed   13      355995.499 137496.388  61.4%   0.0  185s
+   283    68  postponed   15      355995.499 137496.388  61.4%   0.0  190s
+   296    64  postponed   13      355995.499 137496.388  61.4%   0.0  195s
+   308    61  postponed   15      355995.499 137496.388  61.4%   0.0  200s
+   316    60     cutoff   12      355995.499 137496.388  61.4%   0.0  205s
+   324    62  postponed   12      355995.499 137496.388  61.4%   0.0  210s
+   335    60  postponed   15      355995.499 137496.388  61.4%   0.0  215s
+   349    57  postponed   13      355995.499 137496.388  61.4%   0.0  220s
+   359    59  postponed    9      355995.499 137496.388  61.4%   0.0  225s
+   372    63  postponed   15      355995.499 137496.388  61.4%   0.0  230s
+   381    65  postponed   11      355995.499 137496.388  61.4%   0.0  235s
+   394    66  postponed   14      355995.499 137496.388  61.4%   0.0  240s
+   405    70  postponed   15      355995.499 137496.388  61.4%   0.0  245s
+   417    69  postponed   10      355995.499 137496.388  61.4%   0.0  250s
+   427    71  postponed   13      355995.499 137496.388  61.4%   0.0  255s
+   438    71  postponed   15      355995.499 137496.388  61.4%   0.0  260s
+   452    72  postponed   14      355995.499 137496.388  61.4%   0.0  265s
+   467    69  postponed   11      355995.499 137496.388  61.4%   0.0  270s
+   477    69  postponed   12      355995.499 137496.388  61.4%   0.0  275s
+   484    71 137496.388    0   15 355995.499 137496.388  61.4%   0.0  280s
+   515    92 335928.874    0    3 355995.499 335928.874  5.64%   0.0  285s
+H  524    92                    346437.59722 344994.149  0.42%   0.0  285s
+*  524    92              14    346437.59722 344994.149  0.42%   0.0  285s
+   547   110  postponed   44      346437.597 346436.469  0.00%   138  292s
+
+Explored 549 nodes (76799 simplex iterations) in 292.18 seconds (134.44 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 8: 346438 355995 358302 ... 479023
+
+Sub-optimal termination (unable to solve some node relaxations)
+Best objective 3.464373040980e+05, best bound 3.464364694796e+05, gap 0.0002%
+
+User-callback calls 2935, time in user-callback 0.00 sec
+reading orlib data file ../../../../../instances/uflp/orlib/cap64.txt
+primal_bound = 346437.3040980281, dual_bound = 346436.4694796161, gap = 0.00024091470581940022, time = 292.19

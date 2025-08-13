@@ -1,0 +1,50 @@
+
+Note: the module "julia" cannot be unloaded because it was not loaded.
+
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nldep gunluk ../../../../../instances/uflp/gunluk/gunluk-30-60-6.txt exp
+The latest version of Julia in the `1.10` channel is 1.10.6+0.x64.linux.gnu. You currently have `1.10.5+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.10.6+0.x64.linux.gnu and update the `1.10` channel to that version.
+presolving:
+(round 1, fast)       30 del vars, 30 del conss, 0 add conss, 30 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 30 del vars, 30 del conss, 0 add conss, 30 chg bounds, 0 chg sides, 0 chg coeffs, 1800 upgd conss, 0 impls, 0 clqs
+   (0.1s) probing cycle finished: starting next cycle
+   (0.1s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (0.1s) no symmetry present (symcode time: 0.00)
+presolving (3 rounds: 3 fast, 2 medium, 2 exhaustive):
+ 30 deleted vars, 30 deleted constraints, 0 added constraints, 30 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 1830 implications, 0 cliques
+presolved problem has 1860 variables (30 bin, 0 int, 0 impl, 1830 cont) and 1890 constraints
+   1800 constraints of type <varbound>
+     60 constraints of type <linear>
+     30 constraints of type <nonlinear>
+Presolving Time: 0.07
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+p 0.1s|     1 |     0 |   269 |     - |shiftand|   0 |1980 |1890 |2100 |   0 |  0 |   0 |   0 |-1.144409e-04 | 1.631927e+03 |    Inf | unknown
+t 0.1s|     1 |     0 |   269 |     - |  trysol|   0 |1980 |1890 |2100 |   0 |  0 |   0 |   0 |-1.144409e-04 | 1.071724e+03 |    Inf | unknown
+  0.2s|     1 |     0 |   635 |     - |    21M |   0 |1980 |1890 |2100 |   0 |  0 |   0 |   0 | 5.183266e+02 | 1.071724e+03 | 106.77%| unknown
+L 0.4s|     1 |     0 |   635 |     - |  subnlp|   0 |1980 |1890 |2100 |   0 |  0 |   0 |   0 | 5.183266e+02 | 5.184632e+02 |   0.03%| unknown
+  0.4s|     1 |     0 |   644 |     - |    21M |   0 |1980 |1890 |2109 |   9 |  1 |   0 |   0 | 5.183266e+02 | 5.184632e+02 |   0.03%| unknown
+  0.4s|     1 |     0 |   644 |     - |    21M |   0 |1980 |1890 |2109 |   9 |  1 |   0 |   0 | 5.183266e+02 | 5.184632e+02 |   0.03%| unknown
+  0.4s|     1 |     0 |   653 |     - |    21M |   0 |1980 |1890 |2118 |  18 |  2 |   0 |   0 | 5.183266e+02 | 5.184632e+02 |   0.03%| unknown
+  0.4s|     1 |     0 |   664 |     - |    21M |   0 |1980 |1890 |2127 |  27 |  3 |   0 |   0 | 5.183278e+02 | 5.184632e+02 |   0.03%| unknown
+  1.3s|     1 |     0 |  5727 |     - |    40M |   0 |1980 |1350 |2127 |  27 |  4 |   0 |   0 | 5.184316e+02 | 5.184632e+02 |   0.01%| unknown
+  1.4s|     1 |     0 |  5776 |     - |    40M |   0 |1980 |1350 |2136 |  36 |  5 |   0 |   0 | 5.184466e+02 | 5.184632e+02 |   0.00%| unknown
+  1.4s|     1 |     0 |  5784 |     - |    40M |   0 |1980 |1350 |2143 |  43 |  6 |   0 |   0 | 5.184502e+02 | 5.184632e+02 |   0.00%| unknown
+  3.4s|     1 |     0 | 10079 |     - |    85M |   0 |1980 | 210 |2143 |  43 |  7 |   0 |   0 | 5.184602e+02 | 5.184632e+02 |   0.00%| unknown
+  3.4s|     1 |     0 | 10092 |     - |    85M |   0 |1980 | 210 |2153 |  53 |  8 |   0 |   0 | 5.184631e+02 | 5.184632e+02 |   0.00%| unknown
+
+SCIP Status        : solving was interrupted [gap limit reached]
+Solving Time (sec) : 3.38
+Solving Nodes      : 1
+Primal Bound       : +5.18463218271123e+02 (4 solutions)
+Dual Bound         : +5.18463132403513e+02
+Gap                : 0.00 %
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-30-60-6.txt
+primal_bound = 518.4632182711233, dual_bound = 518.4631324035133, gap = 1.6561948264864542e-5, time = 5.91

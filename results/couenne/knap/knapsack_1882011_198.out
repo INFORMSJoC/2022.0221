@@ -1,0 +1,48 @@
+solving instance knapsack 20 10 sqrt
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1         OPT -820.84367       33 0.041554
+NLP0014I             2         OPT -749.79965       31 0.036509
+Couenne: new cutoff value -7.4979964537e+02 (0.093112 seconds)
+Loaded instance "/tmp/jl_XVL0bS/model.nl"
+Constraints:           61
+Variables:             60 (20 integer)
+Auxiliaries:           42 (0 integer)
+
+Coin0506I Presolve 141 (-41) rows, 60 (-42) columns and 319 (-82) elements
+Clp0006I 0  Obj -941.17018 Primal inf 18.689439 (20)
+Clp0006I 39  Obj -941.17018 Primal inf 1581.0307 (40)
+Clp0006I 86  Obj -832.99766 Primal inf 2.9299393 (17)
+Clp0006I 102  Obj -829.50442
+Clp0000I Optimal - objective value -829.50442
+Clp0032I Optimal objective -829.5044182 - 102 iterations time 0.002, Presolve 0.00
+Clp0000I Optimal - objective value -829.50442
+NLP Heuristic: time limit reached.
+Clp0000I Optimal - objective value -829.50442
+Optimality Based BT: 0 improved bounds
+Probing: 0 improved bounds
+Couenne: new cutoff value -8.2084367422e+02 (0.227372 seconds)
+NLP Heuristic: time limit reached.
+Cbc0031I 17 added rows had average density of 2
+Cbc0013I At root node, 17 cuts changed objective from -829.50442 to -820.84367 in 20 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 134 row cuts average 2.0 elements, 18 column cuts (18 active)
+Cbc0010I After 0 nodes, 1 on tree, 1e+50 best solution, best possible -1.7976931e+308 (0.14 seconds)
+Cbc0001I Search completed - best objective 1e+50, took 125 iterations and 2 nodes (0.14 seconds)
+Cbc0035I Maximum depth 0, 0 variables fixed on reduced cost
+
+ 	"Finished"
+
+Linearization cuts added at root node:        182
+Linearization cuts added in total:            182  (separation time: 0.000493s)
+Total solve time:                        0.140039s (0.140038s in branch-and-bound)
+Lower bound:                             -820.844
+Upper bound:                             -820.844  (gap: 0.00%)
+Branch-and-bound nodes:                         2
+Stats: /tmp/jl_XVL0bS/model.nl   60 [var]   20 [int]   61 [con]   42 [aux]    182 [root]      182 [tot] 0.000493 [sep] 0.140042 [time] 0.140261 [bb]        -8.208437e+02 [lower]        -8.208437e+02 [upper]       2 [nodes]
+Performance of                           FBBT:	   0.001167s,       23 runs. fix:          0 shrnk:    22.2948 ubd:          0 2ubd:          1 infeas:          0
+Performance of                           OBBT:	   0.020701s,        1 runs. fix:          0 shrnk:          0 ubd:          0 2ubd:          1 infeas:          0
+primal_bound = -820.84367422102, dual_bound = 0.0, gap = 100.0, time = 5.42

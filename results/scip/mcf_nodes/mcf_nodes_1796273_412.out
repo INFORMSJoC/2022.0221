@@ -1,0 +1,33 @@
+solving instance mcf nodes c63 3 6 cubic
+presolving:
+(round 1, fast)       678 del vars, 678 del conss, 0 add conss, 30 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       1356 del vars, 678 del conss, 0 add conss, 30 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, fast)       1356 del vars, 678 del conss, 0 add conss, 30 chg bounds, 678 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 4, exhaustive) 1356 del vars, 678 del conss, 0 add conss, 30 chg bounds, 678 chg sides, 0 chg coeffs, 30 upgd conss, 0 impls, 0 clqs
+   (9.8s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (10.9s) no symmetry present (symcode time: 0.30)
+presolving (5 rounds: 5 fast, 2 medium, 2 exhaustive):
+ 1381 deleted vars, 678 deleted constraints, 0 added constraints, 30 tightened bounds, 0 added holes, 678 changed sides, 0 changed coefficients
+ 30 implications, 0 cliques
+presolved problem has 271265 variables (5 bin, 0 int, 0 impl, 271260 cont) and 12768 constraints
+     30 constraints of type <varbound>
+  12708 constraints of type <linear>
+     30 constraints of type <nonlinear>
+Presolving Time: 9.37
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t2060s|     1 |     0 |172741 |     - |  trysol|   0 | 271k|  12k|  12k|   0 |  0 |   0 |   0 |-1.969875e+04 | 1.252800e+04 |    Inf | unknown
+ 2476s|     1 |     0 |221616 |     - |  1236M |   0 | 271k|  12k|  12k|   0 |  0 |   0 |   0 |-1.904443e+04 | 1.252800e+04 |    Inf | unknown
+L3227s|     1 |     0 |221616 |     - |  subnlp|   0 | 271k|  12k|  12k|   0 |  0 |   0 |   0 |-1.904443e+04 | 4.695662e+03 |    Inf | unknown
+ 3600s|     1 |     0 |280555 |     - |  1254M |   0 | 271k|  12k|  12k|  13 |  1 |   0 |   0 |-1.904443e+04 | 4.695662e+03 |    Inf | unknown
+(node 1) LP solver hit time limit in LP 4 -- using pseudo solution instead
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 3600.01
+Solving Nodes      : 1
+Primal Bound       : +4.69566191703841e+03 (2 solutions)
+Dual Bound         : -1.90444290413253e+04
+Gap                : infinite
+solution violates original bounds of variable <w[139]> [0,277] solution value <-3.15263e-06>
+best solution is not feasible in original problem
+primal_bound = 4695.661917038407, dual_bound = -19044.429041325253, gap = 124.65635439555109, time = 3611.79

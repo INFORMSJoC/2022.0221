@@ -1,0 +1,68 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 200 7 square
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Couenne: new cutoff value -4.0019806993e+01 (0.062149 seconds)
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1      FAILED -2643.471     3000 33.493844
+NLP0014I             1      FAILED -2643.471     3000 33.412682   resolve robustness
+NLP3006W Warning : continuing branching, while there are unrecovered failures at nodes
+Loaded instance "/tmp/jl_nyQRLQ/model.nl"
+Constraints:          601
+Variables:            600 (200 integer)
+Auxiliaries:          202 (0 integer)
+
+Coin0506I Presolve 1201 (-201) rows, 600 (-202) columns and 2799 (-402) elements
+Clp0006I 0  Obj -7357.9398 Primal inf 220003.19 (200)
+Clp0006I 99  Obj -7357.9398 Primal inf 143245.57 (200)
+Clp0006I 198  Obj -7357.9398 Primal inf 78530.189 (140)
+Clp0006I 297  Obj -6736.5311 Primal inf 46872.344 (75)
+Clp0006I 396  Obj -6440.4654 Primal inf 9186.8282 (16)
+Clp0006I 421  Obj -6434.528
+Clp0000I Optimal - objective value -6434.528
+Clp0032I Optimal objective -6434.527985 - 421 iterations time 0.012, Presolve 0.00
+Clp0000I Optimal - objective value -6434.528
+NLP Heuristic: NLP0014I             3         OPT -6422.714       64 0.611146
+no solution.
+Clp0000I Optimal - objective value -6434.528
+Optimality Based BT: Couenne: new cutoff value -6.3641506849e+03 (67.9939 seconds)
+0 improved bounds
+Probing: Couenne: new cutoff value -6.4227139419e+03 (68.6179 seconds)
+0 improved bounds
+NLP Heuristic: no solution.
+Cbc0013I At root node, 0 cuts changed objective from -6434.528 to -6434.528 in 1 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 0 row cuts average 0.0 elements, 87 column cuts (87 active)
+Cbc0010I After 0 nodes, 1 on tree, 1e+50 best solution, best possible -1.7976931e+308 (2.67 seconds)
+Optimality Based BT: 53 improved bounds
+Optimality Based BT: 91 improved bounds
+Optimality Based BT: 92 improved bounds
+Couenne: new cutoff value -6.4329383819e+03 (74.6808 seconds)
+Optimality Based BT: 44 improved bounds
+Couenne: new cutoff value -6.4338243593e+03 (79.2138 seconds)
+Optimality Based BT: 39 improved bounds
+Optimality Based BT: 110 improved bounds
+Couenne: new cutoff value -6.4338371816e+03 (108.467 seconds)
+Optimality Based BT: 111 improved bounds
+Cbc0010I After 100 nodes, 1 on tree, 1e+50 best solution, best possible -6433.8372 (85.08 seconds)
+Cbc0010I After 200 nodes, 1 on tree, 1e+50 best solution, best possible -6433.8372 (85.96 seconds)
+Cbc0004I Integer solution of -6433.8372 found after 6944 iterations and 221 nodes (86.13 seconds)
+Cbc0001I Search completed - best objective -6433.837181571738, took 6944 iterations and 221 nodes (86.13 seconds)
+Cbc0035I Maximum depth 104, 0 variables fixed on reduced cost
+
+ 	"Finished"
+
+Linearization cuts added at root node:       1402
+Linearization cuts added in total:           1402  (separation time: 0.002205s)
+Total solve time:                         86.1489s (86.1489s in branch-and-bound)
+Lower bound:                             -6433.84
+Upper bound:                             -6433.84  (gap: 0.00%)
+Branch-and-bound nodes:                       221
+Stats: /tmp/jl_nyQRLQ/model.nl  600 [var]  200 [int]  601 [con]  202 [aux]   1402 [root]     1402 [tot] 0.002205 [sep]  86.1489 [time]  86.1498 [bb]        -6.433837e+03 [lower]        -6.433837e+03 [upper]     221 [nodes]
+Performance of                           FBBT:	   0.060758s,      181 runs. fix:          0 shrnk:    98.0731 ubd:          0 2ubd:          1 infeas:          0
+Performance of                           OBBT:	    8.74816s,        8 runs. fix:    9.97959 shrnk:    132.567 ubd:          0 2ubd:          1 infeas:          0
+primal_bound = -6433.837181571743, dual_bound = 0.0, gap = 100.0, time = 158.06

@@ -1,0 +1,65 @@
+solving instance uflp nlass holmberg 50 sqrt
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 4100 rows, 5010 columns and 9000 nonzeros
+Model fingerprint: 0x3f5a7886
+Model has 1000 function constraints treated as nonlinear
+  1000 POW
+Variable types: 4000 continuous, 1010 integer (1010 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+02]
+  Objective range  [1e+00, 5e+02]
+  Bounds range     [1e-16, 1e+10]
+  RHS range        [1e+00, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Warning: Completing partial solution with 1010 unfixed non-continuous variables out of 1010
+User MIP start did not produce a new incumbent solution
+User MIP start violates constraint ass[1] by 0.999900000
+
+Presolve removed 3000 rows and 3000 columns
+Presolve time: 0.02s
+Presolved: 6100 rows, 2011 columns, 13000 nonzeros
+Presolved model has 1000 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 2001 continuous, 10 integer (10 binary)
+Found heuristic solution: objective 15162.000000
+
+Root relaxation: objective 7.307000e+03, 2409 iterations, 0.07 seconds (0.09 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    7307.0000000 7307.00000  0.00%     -    0s
+
+Explored 1 nodes (2409 simplex iterations) in 0.11 seconds (0.11 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 2: 7307 15162 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 7.307000000000e+03, best bound 7.307000000000e+03, gap 0.0000%
+
+User-callback calls 299, time in user-callback 0.00 sec
+reading holmberg data file ../../../../../instances/uflp/holmberg/p50
+primal_bound = 7307.0, dual_bound = 7307.0, gap = 0.0, time = 0.12

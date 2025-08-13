@@ -1,0 +1,36 @@
+solving instance mcf arcs c52 3 6 cubic
+presolving:
+(round 1, fast)       30 del vars, 30 del conss, 0 add conss, 517 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 60 del vars, 30 del conss, 0 add conss, 517 chg bounds, 0 chg sides, 0 chg coeffs, 517 upgd conss, 0 impls, 0 clqs
+   (4.3s) probing cycle finished: starting next cycle
+(round 3, exhaustive) 60 del vars, 30 del conss, 0 add conss, 1034 chg bounds, 0 chg sides, 0 chg coeffs, 517 upgd conss, 52734 impls, 0 clqs
+   (4.7s) probing: 51/517 (9.9%) - 0 fixings, 0 aggregations, 52217 implications, 517 bound changes
+   (4.7s) probing aborted: 50/50 successive totally useless probings
+   (4.7s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (4.8s) no symmetry present (symcode time: 0.03)
+presolving (4 rounds: 4 fast, 3 medium, 3 exhaustive):
+ 60 deleted vars, 30 deleted constraints, 0 added constraints, 1034 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 52734 implications, 0 cliques
+presolved problem has 53251 variables (517 bin, 0 int, 0 impl, 52734 cont) and 4581 constraints
+    517 constraints of type <varbound>
+   3547 constraints of type <linear>
+    517 constraints of type <nonlinear>
+Presolving Time: 4.73
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t 429s|     1 |     0 |213465 |     - |  trysol|   0 |  54k|4581 |6649 |   0 |  0 |   0 |   0 |-1.935174e+06 | 4.490405e+05 |    Inf | unknown
+  769s|     1 |     0 |382098 |     - |   338M |   0 |  54k|4581 |6649 |   0 |  0 |   0 |   0 |-4.142611e+05 | 4.490405e+05 |    Inf | unknown
+  994s|     1 |     0 |481878 |     - |   349M |   0 |  54k|4581 |7171 | 522 |  1 |   0 |   0 |-3.872751e+05 | 4.490405e+05 |    Inf | unknown
+ 1203s|     1 |     0 |577763 |     - |   353M |   0 |  54k|4581 |7643 | 994 |  2 |   0 |   0 |-3.401146e+05 | 4.490405e+05 |    Inf | unknown
+ 1443s|     1 |     0 |684433 |     - |   354M |   0 |  54k|4581 |8088 |1439 |  3 |   0 |   0 |-3.119523e+05 | 4.490405e+05 |    Inf | unknown
+ 1665s|     1 |     0 |782618 |     - |   357M |   0 |  54k|4581 |8505 |1856 |  4 |   0 |   0 |-2.906120e+05 | 4.490405e+05 |    Inf | unknown
+ 3600s|     1 |     0 |  1078k|     - |   360M |   0 |  54k|4581 |8905 |2256 |  5 |   0 |   0 |-2.906120e+05 | 4.490405e+05 |    Inf | unknown
+(node 1) LP solver hit time limit in LP 7 -- using pseudo solution instead
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 3600.00
+Solving Nodes      : 1
+Primal Bound       : +4.49040460583419e+05 (1 solutions)
+Dual Bound         : -2.90612043392082e+05
+Gap                : infinite
+primal_bound = 449040.46058341936, dual_bound = -290612.043392082, gap = 164.71845388152818, time = 3602.94

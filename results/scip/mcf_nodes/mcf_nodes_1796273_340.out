@@ -1,0 +1,35 @@
+solving instance mcf nodes c55 3 6 log
+presolving:
+(round 1, fast)       546 del vars, 546 del conss, 0 add conss, 30 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       1062 del vars, 546 del conss, 0 add conss, 30 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, fast)       1062 del vars, 546 del conss, 0 add conss, 30 chg bounds, 516 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (3.6s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (4.3s) no symmetry present (symcode time: 0.18)
+presolving (4 rounds: 4 fast, 1 medium, 1 exhaustive):
+ 1062 deleted vars, 546 deleted constraints, 0 added constraints, 30 tightened bounds, 0 added holes, 516 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 206460 variables (0 bin, 0 int, 0 impl, 206460 cont) and 12576 constraints
+  12546 constraints of type <linear>
+     30 constraints of type <nonlinear>
+Presolving Time: 3.77
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  925s|     1 |     0 |187274 |     - |   861M |   0 | 206k|  12k|  12k|   0 |  0 |   0 |   0 | 5.787777e+03 |      --      |    Inf | unknown
+L1670s|     1 |     0 |187274 |     - |  subnlp|   0 | 206k|  12k|  12k|   0 |  0 |   0 |   0 | 5.787777e+03 | 9.844380e+03 |  70.09%| unknown
+ 1670s|     1 |     0 |187274 |     - |   873M |   0 | 206k|  12k|  12k|   0 |  1 |   0 |   0 | 5.787777e+03 | 9.844380e+03 |  70.09%| unknown
+ 1894s|     1 |     2 |187274 |     - |   885M |   0 | 206k|  12k|  12k|   0 |  2 |   0 |   0 | 5.787777e+03 | 9.844380e+03 |  70.09%| unknown
+ 2080s|   100 |   101 |251433 | 648.1 |   905M |  13 | 206k|  12k|  12k|  99 |  2 |   0 |   0 | 6.169988e+03 | 9.844380e+03 |  59.55%| unknown
+ 2298s|   200 |   199 |322394 | 679.0 |   936M |  14 | 206k|  12k|  12k| 200 |  2 |   1 |   0 | 6.255539e+03 | 9.844380e+03 |  57.37%| unknown
+ 2583s|   300 |   297 |418606 | 773.7 |   940M |  14 | 206k|  12k|  12k| 304 |  2 |   1 |   0 | 6.319168e+03 | 9.844380e+03 |  55.79%|   9.12%
+ 2982s|   400 |   397 |548661 | 905.7 |   945M |  14 | 206k|  12k|  12k| 410 |  2 |   1 |   0 | 6.349215e+03 | 9.844380e+03 |  55.05%|   9.62%
+ 3331s|   500 |   497 |665721 | 958.8 |   948M |  14 | 206k|  12k|  12k| 516 |  2 |   1 |   0 | 6.427560e+03 | 9.844380e+03 |  53.16%|  10.60%
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 3601.71
+Solving Nodes      : 540
+Primal Bound       : +9.84437952994909e+03 (2 solutions)
+Dual Bound         : +6.43790873246637e+03
+Gap                : 52.91 %
+solution violates original bounds of variable <w[1]> [0,445] solution value <-3.02689e-06>
+best solution is not feasible in original problem
+primal_bound = 9844.379529949092, dual_bound = 6437.9087324663715, gap = 34.603204672466916, time = 3609.75

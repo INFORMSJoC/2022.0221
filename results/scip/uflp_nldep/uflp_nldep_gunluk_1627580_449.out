@@ -1,0 +1,44 @@
+
+Note: the module "julia" cannot be unloaded because it was not loaded.
+
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nldep gunluk ../../../../../instances/uflp/gunluk/gunluk-50-100-4.txt square
+The latest version of Julia in the `1.10` channel is 1.10.6+0.x64.linux.gnu. You currently have `1.10.5+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.10.6+0.x64.linux.gnu and update the `1.10` channel to that version.
+presolving:
+(round 1, fast)       100 del vars, 5050 del conss, 0 add conss, 50 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (8.6s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (17.5s) no symmetry present (symcode time: 7.13)
+presolving (2 rounds: 2 fast, 1 medium, 1 exhaustive):
+ 100 deleted vars, 5050 deleted constraints, 0 added constraints, 50 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 5050 variables (0 bin, 0 int, 0 impl, 5050 cont) and 150 constraints
+    100 constraints of type <linear>
+     50 constraints of type <nonlinear>
+Presolving Time: 17.80
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+ 20.6s|     1 |     0 |   103 |     - |   856M |   0 |5100 | 150 | 350 |   0 |  0 |   0 |   0 | 3.490560e+02 |      --      |    Inf | unknown
+L44.4s|     1 |     0 |   103 |     - |undercov|   0 |5100 | 150 | 350 |   0 |  0 |   0 |   0 | 3.490560e+02 | 3.501081e+02 |   0.30%| unknown
+L98.4s|     1 |     0 |   103 |     - |undercov|   0 |5100 | 150 | 350 |   0 |  0 |   0 |   0 | 3.490560e+02 | 3.499995e+02 |   0.27%| unknown
+  144s|     1 |     0 |   152 |     - |   901M |   0 |5100 | 150 | 400 |  50 |  1 |   0 |   0 | 3.499595e+02 | 3.499995e+02 |   0.01%| unknown
+  144s|     1 |     0 |   152 |     - |   901M |   0 |5100 | 150 | 400 |  50 |  1 |   0 |   0 | 3.499595e+02 | 3.499995e+02 |   0.01%| unknown
+  144s|     1 |     0 |   155 |     - |   901M |   0 |5100 | 150 | 403 |  53 |  2 |   0 |   0 | 3.499951e+02 | 3.499995e+02 |   0.00%| unknown
+  144s|     1 |     0 |   156 |     - |   902M |   0 |5100 | 150 | 404 |  54 |  3 |   0 |   0 | 3.499995e+02 | 3.499995e+02 |   0.00%| unknown
+  144s|     1 |     0 |   156 |     - |   902M |   0 |5100 | 150 | 404 |  54 |  3 |   0 |   0 | 3.499995e+02 | 3.499995e+02 |   0.00%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 144.08
+Solving Nodes      : 1
+Primal Bound       : +3.49999539679743e+02 (2 solutions)
+Dual Bound         : +3.49999539679743e+02
+Gap                : 0.00 %
+solution violates original bounds of variable <f[6]> [0,5547] solution value <-5.00739e-05>
+best solution is not feasible in original problem
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-50-100-4.txt
+primal_bound = 349.9995396797431, dual_bound = 349.9995396797431, gap = 0.0, time = 146.58

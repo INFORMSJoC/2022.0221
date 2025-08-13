@@ -1,1 +1,87 @@
 # 2022.0221
+[![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
+
+# On the approximation of separable non-convex optimization programs to an arbitrary numerical tolerance
+
+This archive is distributed in association with the [INFORMS Journal on
+Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
+
+The software and data in this repository are a snapshot of the software and data that were used in the research reported in the paper On the approximation of separable non-convex optimization programs to an arbitrary numerical tolerance by Claudio Contardo and Sandra U. Ngueveu. The upstream repository (including a potentially more up-to-date version of this code) can be found at https://redmine.laas.fr/laas/users/ngueveu/r/ipwlb.git. This snapshot has been built from [this commit](https://redmine.laas.fr/laas/users/ngueveu/r/ipwlb.git/commit/d63e265e1a6fa8606bf5319f989ba03f845eca6d).
+
+
+## Cite
+
+To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
+
+https://doi.org/10.1287/ijoc.2022.0221
+
+https://doi.org/10.1287/ijoc.2022.0221.cd
+
+Below is the BibTex for citing this snapshot of the respoitory.
+
+```
+@article{ContardoNgueveuIPWLB2025,
+  author =        {Claudio Contardo and Sandra U. Ngueveu},
+  publisher =     {INFORMS Journal on Computing},
+  title =         {On the approximation of separable non-convex optimization programs to an arbitrary numerical tolerance},
+  year =          {2025},
+  doi =           {10.1287/ijoc.2022.0221.cd},
+  url =           {https://github.com/INFORMSJoC/2022.0221},
+  note =          {Available for download at https://github.com/INFORMSJoC/2022.0221},
+}
+```
+
+## Description
+
+This repository provides the source code, data files and detailed results as reported in the article.
+
+The main folders are 'data', 'results', 'src' and 'test'.
+- '[inst](inst)': This folder includes instances of the multiple MINLPs benchmark problems.
+- '[src](src)': The source code.
+- '[results](results)': Detailed results, please see the README.md included in that folder for more information.
+
+
+## Installation
+
+To install this Julia package, simply execute from a Julia Pkg REPL (by pressing `]` within a regular Julia REPL) the following:
+```julia
+(@v1.10) pkg> add https://github.com/INFORMSJoC/2022.0221
+```
+
+This package depends on `LinA.jl`, a greedy method for constructing piecewise linear approximations to univariate functions of minimum size. We make use of the code available at https://github.com/claud10cv/LinA.jl. The official repository and a more up-to-date version of this method can be found at https://github.com/LICO-labs/PiecewiseLinApprox.jl. LinA.jl and PiecewiseLinApprox.jl implement the code decsribed in [this paper](https://link.springer.com/article/10.1007/s12532-024-00274-8).
+
+# Basic usage
+
+To solve a nonlinear transportation problem, the following script reads the instance name and the type of cost function from the command line and solves the associated problem using our solver
+```julia
+using IterativePWLB
+using LinA
+using Gurobi
+
+INSTANCE = ARGS[1]
+CTYPE = Symbol(ARGS[2])
+
+with_fixed_charge = (CTYPE in [:exp, :divexp, :pardivexp, :cubic, :sincos])
+
+params = IterativePWLB.Parameters(Gurobi.Optimizer,
+                                IterativePWLB.gurobi_parameters,
+                                LinA.ExactLin,
+                                CTYPE,
+                                :transp,
+                                1e+1,
+                                1e-4,
+                                3600.0,
+                                false,
+                                2.0,
+                                false,
+                                false,
+                                true,
+                                :grb,
+                                with_fixed_charge)
+
+res = solve_transp_from_file(INSTANCE,
+                             params)
+
+println("WRITING LOG...")
+println.(res)
+```

@@ -1,0 +1,61 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 20 1 square
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Couenne: new cutoff value -6.1938309469e+01 (0.006566 seconds)
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1         OPT -717.43661      688 1.016238
+Couenne: new cutoff value -7.1743659850e+02 (1.02767 seconds)
+NLP0014I             2         OPT -717.4366       15 0.016832
+Couenne: new cutoff value -7.1743660342e+02 (1.04528 seconds)
+Loaded instance "/tmp/jl_BgaCkm/model.nl"
+Constraints:           61
+Variables:             60 (20 integer)
+Auxiliaries:           22 (0 integer)
+
+Coin0506I Presolve 121 (-21) rows, 60 (-22) columns and 279 (-42) elements
+Clp0006I 0  Obj -827.89011 Primal inf 16556.957 (20)
+Clp0006I 48  Obj -726.87692 Primal inf 85.738704 (1)
+Clp0006I 50  Obj -726.5269
+Clp0000I Optimal - objective value -726.5269
+Clp0032I Optimal objective -726.5269032 - 50 iterations time 0.002, Presolve 0.00
+Clp0000I Optimal - objective value -726.5269
+NLP Heuristic: NLP0014I             3         OPT -717.89438       12 0.013757
+no solution.
+Clp0000I Optimal - objective value -726.5269
+Optimality Based BT: 3 improved bounds
+Probing: Couenne: new cutoff value -7.1789437461e+02 (1.07613 seconds)
+0 improved bounds
+NLP Heuristic: time limit reached.
+Cbc0013I At root node, 0 cuts changed objective from -726.5269 to -726.5269 in 1 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 0 row cuts average 0.0 elements, 9 column cuts (9 active)
+Cbc0010I After 0 nodes, 1 on tree, 1e+50 best solution, best possible -1.7976931e+308 (0.05 seconds)
+Optimality Based BT: 8 improved bounds
+Optimality Based BT: 9 improved bounds
+Optimality Based BT: 9 improved bounds
+Couenne: new cutoff value -7.2212841227e+02 (1.21217 seconds)
+Optimality Based BT: 9 improved bounds
+Optimality Based BT: 4 improved bounds
+Optimality Based BT: 9 improved bounds
+Couenne: new cutoff value -7.2279538999e+02 (1.48627 seconds)
+Cbc0004I Integer solution of -722.79539 found after 55 iterations and 19 nodes (0.47 seconds)
+Cbc0001I Search completed - best objective -722.7953900519987, took 55 iterations and 19 nodes (0.47 seconds)
+Cbc0035I Maximum depth 6, 0 variables fixed on reduced cost
+
+ 	"Finished"
+
+Linearization cuts added at root node:        142
+Linearization cuts added in total:            142  (separation time: 0.000346s)
+Total solve time:                        0.468063s (0.468062s in branch-and-bound)
+Lower bound:                             -722.795
+Upper bound:                             -722.795  (gap: 0.00%)
+Branch-and-bound nodes:                        19
+Stats: /tmp/jl_BgaCkm/model.nl   60 [var]   20 [int]   61 [con]   22 [aux]    142 [root]      142 [tot] 0.000346 [sep] 0.468065 [time] 0.468209 [bb]        -7.227954e+02 [lower]        -7.227954e+02 [upper]      19 [nodes]
+Performance of                           FBBT:	   0.001418s,       37 runs. fix:          0 shrnk:    20.3138 ubd:          0 2ubd:          1 infeas:          0
+Performance of                           OBBT:	   0.096295s,        7 runs. fix:   0.461538 shrnk:    7.79841 ubd:          0 2ubd:          1 infeas:          0
+primal_bound = -722.7953900519985, dual_bound = 0.0, gap = 100.0, time = 5.03

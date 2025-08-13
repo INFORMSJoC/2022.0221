@@ -1,0 +1,58 @@
+solving instance mcf arcs c25_100_30_F_L_5 3 6 pardivexp
+ERROR: LoadError: MethodError: no method matching zero(::Type{Vector{Float64}})
+
+Closest candidates are:
+  zero(!Matched::Type{Union{}}, Any...)
+   @ Base number.jl:310
+  zero(!Matched::Type{Dates.Time})
+   @ Dates ~/.julia/juliaup/julia-1.10.7+0.x64.linux.gnu/share/julia/stdlib/v1.10/Dates/src/types.jl:440
+  zero(!Matched::Type{Pkg.Resolve.VersionWeight})
+   @ Pkg ~/.julia/juliaup/julia-1.10.7+0.x64.linux.gnu/share/julia/stdlib/v1.10/Pkg/src/Resolve/versionweights.jl:15
+  ...
+
+Stacktrace:
+  [1] reduce_empty(::typeof(+), ::Type{Vector{Float64}})
+    @ Base ./reduce.jl:343
+  [2] reduce_empty(::typeof(Base.add_sum), ::Type{Vector{Float64}})
+    @ Base ./reduce.jl:352
+  [3] mapreduce_empty
+    @ ./reduce.jl:372
+  [4] reduce_empty(op::Base.MappingRF{typeof(identity), typeof(Base.add_sum)}, ::Type{Vector{Float64}})
+    @ Base ./reduce.jl:361
+  [5] reduce_empty_iter
+    @ ./reduce.jl:384 [inlined]
+  [6] mapreduce_empty_iter(f::Function, op::Function, itr::Vector{Vector{Float64}}, ItrEltype::Base.HasEltype)
+    @ Base ./reduce.jl:380
+  [7] _mapreduce(f::typeof(identity), op::typeof(Base.add_sum), ::IndexLinear, A::Vector{Vector{Float64}})
+    @ Base ./reduce.jl:432
+  [8] _mapreduce_dim
+    @ ./reducedim.jl:367 [inlined]
+  [9] mapreduce
+    @ ./reducedim.jl:359 [inlined]
+ [10] _sum
+    @ ./reducedim.jl:1017 [inlined]
+ [11] _sum
+    @ ./reducedim.jl:1016 [inlined]
+ [12] sum(a::Vector{Vector{Float64}})
+    @ Base ./reducedim.jl:1012
+ [13] ORourke(pts::Vector{LinA.dataError})
+    @ LinA ~/git/LinA.jl/src/oRourke.jl:36
+ [14] ExactPiece(start::Float64, maximum::Float64, lower::LinA.Shift{LinA.Scale{LinA.var"#f#44"{LinA.var"#18#19"{IterativePWLB.var"#fn#42"{Vector{Float64}}, Float64, Float64, Int64}}, Float64}, Float64}, upper::LinA.var"#f#44"{LinA.var"#18#19"{IterativePWLB.var"#fn#42"{Vector{Float64}}, Float64, Float64, Int64}})
+    @ LinA ~/git/LinA.jl/src/exactPiece.jl:37
+ [15] ExactLin(expr_fct::LinA.var"#18#19"{IterativePWLB.var"#fn#42"{Vector{Float64}}, Float64, Float64, Int64}, x1::Float64, x2::Float64, e::Relative; bounding::Under, ConcavityChanges::Vector{Float64})
+    @ LinA ~/git/LinA.jl/src/exactMethod.jl:31
+ [16] ScaledLinearize(f::IterativePWLB.var"#fn#42"{Vector{Float64}}, x1::Float64, x2::Int64, e::Relative, LinAlg::Type{ExactLin}, bounding::Under, concavity_changes::Vector{Float64})
+    @ LinA ~/git/LinA.jl/src/linearizeDispatch.jl:126
+ [17] #Linearize#73
+    @ ~/git/LinA.jl/src/linearizeDispatch.jl:85 [inlined]
+ [18] construct_linear_expressions(exprs1::Vector{Any}, pdata::IterativePWLB.MCNDData, params::IterativePWLB.Parameters)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/util.jl:112
+ [19] ipwlb(exprs::Vector{Expr}, expr1::Vector{Expr}, expr2::Vector{Expr}, functions::Vector{Any}, func1::Vector{Any}, func2::Vector{Any}, pdata::IterativePWLB.MCNDData, _params::IterativePWLB.Parameters)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/ipwlb.jl:24
+ [20] solve_mcnd_or_mcf_from_file(graphfilepathname::String, commodityfilemathname::String, nodefilepathname::String, incremcost::Int64, params::IterativePWLB.Parameters, congestioncoef::Float64, restrict_to_commodities::Int64, minlpsolver::String)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/solve.jl:70
+ [21] solve_mcnd_or_mcf_from_file(graphfilepathname::String, commodityfilemathname::String, nodefilepathname::String, incremcost::Int64, params::IterativePWLB.Parameters)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/solve.jl:53
+ [22] top-level scope
+    @ ~/git/ipwlb/code/sources/IterativePWLB/test/naive/mcf_arcs/script.jl:29
+in expression starting at /home/ccontard/git/ipwlb/code/sources/IterativePWLB/test/naive/mcf_arcs/script.jl:29

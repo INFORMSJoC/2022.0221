@@ -1,0 +1,106 @@
+solving instance mcf arcs c62 3 6 pardivexp
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 15455 rows, 276413 columns and 1093280 nonzeros
+Model fingerprint: 0xa594cd8c
+Model has 1358 function constraints treated as nonlinear
+  679 EXP, 679 POW
+Variable types: 275704 continuous, 709 integer (709 binary)
+Coefficient statistics:
+  Matrix range     [2e-02, 8e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [2e+01, 1e+10]
+  RHS range        [3e-01, 7e+01]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 1388 rows and 1418 columns
+Presolve time: 3.20s
+Presolved: 20178 rows, 274996 columns, 831096 nonzeros
+Presolved model has 679 bilinear constraint(s)
+Presolved model has 679 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 274317 continuous, 679 integer (679 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    4234    1.6006526e+02   9.893137e+03   0.000000e+00      5s
+    7439    1.8795249e+02   0.000000e+00   0.000000e+00      6s
+    7439    1.8795249e+02   0.000000e+00   0.000000e+00      6s
+
+Root relaxation: objective 1.879525e+02, 7439 iterations, 2.36 seconds (0.95 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  187.95249    0  720          -  187.95249      -     -    6s
+H    0     0                    59123.849477  187.95249   100%     -    7s
+     0     0  218.77891    0  759 59123.8495  218.77891   100%     -   33s
+     0     0  218.82397    0  759 59123.8495  218.82397   100%     -   39s
+     0     0  225.88531    0  717 59123.8495  225.88531   100%     -   73s
+     0     0  226.46762    0  699 59123.8495  226.46762   100%     -   90s
+     0     0  229.07843    0  644 59123.8495  229.07843   100%     -  128s
+     0     0  229.82197    0  661 59123.8495  229.82197   100%     -  159s
+     0     0  231.00207    0  618 59123.8495  231.00207   100%     -  195s
+     0     0  231.31218    0  632 59123.8495  231.31218   100%     -  226s
+     0     0  231.90974    0  594 59123.8495  231.90974   100%     -  264s
+     0     0  232.03673    0  610 59123.8495  232.03673   100%     -  290s
+     0     0  232.27844    0  583 59123.8495  232.27844   100%     -  322s
+     0     0  232.32153    0  586 59123.8495  232.32153   100%     -  346s
+     0     0  232.39419    0  589 59123.8495  232.39419   100%     -  368s
+     0     0  232.41472    0  563 59123.8495  232.41472   100%     -  385s
+     0     0  232.43549    0  550 59123.8495  232.43549   100%     -  399s
+     0     0  232.43578    0  550 59123.8495  232.43578   100%     -  400s
+  NLP heuristic elapsed time = 5.04s
+     0     2  232.43578    0  550 59123.8495  232.43578   100%     -  423s
+     1     3  232.56327    1  569 59123.8495  232.43590   100% 26664  606s
+     2     4  232.60079    2  567 59123.8495  232.43590   100% 28358  810s
+     3     5  233.04231    2  566 59123.8495  232.43590   100% 20063  850s
+     4     6  232.82757    3  550 59123.8495  232.43590   100% 26688 1263s
+     5     7  232.83202    3  573 59123.8495  232.43590   100% 21998 1302s
+     6     8  232.86844    4  571 59123.8495  232.43590   100% 19150 1345s
+     7     9  238.25381    4  559 59123.8495  232.43590   100% 17028 1396s
+     8    10  232.93061    5  550 59123.8495  232.43590   100% 23242 2030s
+     9    11  233.59625    5  544 59123.8495  232.43590   100% 21220 2083s
+    10    12  233.40684    6  576 59123.8495  232.43590   100% 19855 2178s
+    11    13  232.97183    6  586 59123.8495  232.43590   100% 35129 2453s
+    12    14  233.09129    7  579 59123.8495  232.43590   100% 32519 2503s
+    13    15  233.26667    7  578 59123.8495  232.43590   100% 36053 3047s
+    14    16  233.14616    8  590 59123.8495  232.43590   100% 36496 3544s
+
+Cutting planes:
+  Implied bound: 1344
+  MIR: 21
+  Flow cover: 34
+  Flow path: 1116
+  RLT: 42
+
+Explored 15 nodes (556314 simplex iterations) in 3600.03 seconds (1305.94 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 1: 59123.8 
+
+Time limit reached
+Best objective 5.912384947679e+04, best bound 2.324358997303e+02, gap 99.6069%
+
+User-callback calls 35668, time in user-callback 0.18 sec
+primal_bound = 59123.849476792384, dual_bound = 232.43589973031763, gap = 99.60686609246991, time = 3600.07

@@ -1,0 +1,118 @@
+solving instance uflp nldep gunluk ../../../../../instances/uflp/gunluk/gunluk-10-20-3.txt exp
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 260 rows, 270 columns and 880 nonzeros
+Model fingerprint: 0x7d59f79f
+Model has 20 function constraints treated as nonlinear
+  10 EXP, 10 POW
+Variable types: 260 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [9e-03, 6e+02]
+  Objective range  [1e+00, 6e+01]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [4e-03, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Warning: 0 <= x < 1e-10 in domain of pow(x,a) with a=-1.000.
+         Setting lower bound to 1e-10.
+Presolve removed 20 rows and 20 columns
+Presolve time: 0.00s
+Presolved: 330 rows, 251 columns, 1010 nonzeros
+Presolved model has 10 bilinear constraint(s)
+Presolved model has 10 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 241 continuous, 10 integer (10 binary)
+Found heuristic solution: objective 555.6150334
+
+Root relaxation: objective 2.763698e+02, 83 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  276.36985    0    8  555.61503  276.36985  50.3%     -    0s
+H    0     0                     484.1159258  276.36985  42.9%     -    0s
+     0     0  276.36985    0    8  484.11593  276.36985  42.9%     -    0s
+H    0     0                     277.4801732  276.36985  0.40%     -    0s
+     0     0  276.60109    0    8  277.48017  276.60109  0.32%     -    0s
+     0     0  276.71958    0    8  277.48017  276.71958  0.27%     -    0s
+     0     0  276.79166    0    8  277.48017  276.79166  0.25%     -    0s
+     0     0  276.80247    0    8  277.48017  276.80247  0.24%     -    0s
+     0     2  276.92117    0    8  277.48017  276.92117  0.20%     -    0s
+*   14     4               6     277.4801716  277.00046  0.17%   3.1    0s
+
+Explored 19 nodes (165 simplex iterations) in 0.04 seconds (0.01 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 4: 277.48 277.48 484.116 555.615 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 2.774801716161e+02, best bound 2.774801716161e+02, gap 0.0000%
+
+User-callback calls 436, time in user-callback 0.00 sec
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-10-20-3.txt
+primal_bound = 277.4801716161211, dual_bound = 277.4801716161211, gap = 0.0, time = 0.05
+OPTIMAL LOCATIONS:
+y[2] = 1.0
+y[4] = 1.0
+y[5] = 1.0
+y[9] = 1.0
+OPTIMAL WAREHOUSING:
+f[2] = 282.0
+f[4] = 265.0
+f[5] = 159.0
+f[9] = 419.0
+OPTIMAL WAREHOUSING COSTS:
+nlobj[1] = 0.0
+nlobj[2] = 6.143224418690311
+nlobj[3] = 0.0
+nlobj[4] = 5.102729326770879
+nlobj[5] = 2.0160831574945823
+nlobj[6] = 0.0
+nlobj[7] = 0.0
+nlobj[8] = 0.0
+nlobj[9] = 12.410523630647681
+nlobj[10] = 0.0
+OPTIMAL ASSIGNMENTS:
+x[2, 8] = 1.0
+x[2, 9] = 1.0
+x[2, 10] = 1.0
+x[2, 18] = 1.0
+x[2, 19] = 1.0
+x[4, 1] = 1.0
+x[4, 4] = 1.0
+x[4, 6] = 1.0
+x[4, 16] = 1.0
+x[4, 17] = 1.0
+x[5, 11] = 1.0
+x[5, 12] = 1.0
+x[5, 13] = 1.0
+x[5, 20] = 1.0
+x[9, 2] = 1.0
+x[9, 3] = 1.0
+x[9, 5] = 1.0
+x[9, 7] = 1.0
+x[9, 14] = 1.0
+x[9, 15] = 1.0
+fixed costs = 49.0
+assignment costs = 251.80761108251764
+warehousing costs = 25.672560533603452
+total cost = 277.4801716161211

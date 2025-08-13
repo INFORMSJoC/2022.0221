@@ -1,0 +1,53 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 20 7 log
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Couenne: new cutoff value -4.9566692238e+01 (0.007921 seconds)
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1         OPT -548.16168       21 0.025552
+NLP0014I             2         OPT -435.55723       19 0.021245
+Couenne: new cutoff value -4.3555722755e+02 (0.062595 seconds)
+Loaded instance "/tmp/jl_8N9RxH/model.nl"
+Constraints:           61
+Variables:             60 (20 integer)
+Auxiliaries:           42 (0 integer)
+
+Coin0506I Presolve 141 (-41) rows, 60 (-42) columns and 319 (-82) elements
+Clp0006I 0  Obj -611.25217 Primal inf 220.21846 (20)
+Clp0006I 43  Obj -611.25217 Primal inf 332.2671 (46)
+Clp0006I 79  Obj -575.03558 Primal inf 344.66848 (35)
+Clp0006I 114  Obj -550.2731
+Clp0000I Optimal - objective value -550.2731
+Clp0032I Optimal objective -550.273096 - 114 iterations time 0.002, Presolve 0.00
+Clp0000I Optimal - objective value -550.2731
+Cbc0012I Integer solution of -435.55723 found by Couenne Rounding NLP after 0 iterations and 0 nodes (0.00 seconds)
+NLP Heuristic: time limit reached.
+Clp0000I Optimal - objective value -550.2731
+Optimality Based BT: 0 improved bounds
+Probing: 0 improved bounds
+Couenne: new cutoff value -5.4816168071e+02 (0.135689 seconds)
+NLP Heuristic: time limit reached.
+Cbc0031I 23 added rows had average density of 2
+Cbc0013I At root node, 23 cuts changed objective from -550.2731 to -548.16168 in 15 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 128 row cuts average 2.0 elements, 3 column cuts (3 active)
+Cbc0004I Integer solution of -548.16168 found after 126 iterations and 0 nodes (0.07 seconds)
+Cbc0001I Search completed - best objective -548.161680706736, took 126 iterations and 0 nodes (0.07 seconds)
+Cbc0035I Maximum depth 0, 0 variables fixed on reduced cost
+
+ 	"Finished"
+
+Linearization cuts added at root node:        182
+Linearization cuts added in total:            182  (separation time: 0.000438s)
+Total solve time:                        0.074301s (0.074299s in branch-and-bound)
+Lower bound:                             -548.162
+Upper bound:                             -548.162  (gap: 0.00%)
+Branch-and-bound nodes:                         0
+Stats: /tmp/jl_8N9RxH/model.nl   60 [var]   20 [int]   61 [con]   42 [aux]    182 [root]      182 [tot] 0.000438 [sep] 0.074303 [time] 0.074488 [bb]        -5.481617e+02 [lower]        -5.481617e+02 [upper]       0 [nodes]
+Performance of                           FBBT:	    0.00095s,       18 runs. fix:          0 shrnk:     30.203 ubd:          0 2ubd:          1 infeas:          0
+Performance of                           OBBT:	   0.019772s,        1 runs. fix:          0 shrnk:          0 ubd:          0 2ubd:          1 infeas:          0
+primal_bound = -548.1616807067359, dual_bound = 0.0, gap = 100.0, time = 3.9

@@ -1,0 +1,153 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance knapsack 10 5 sinabc2
+feasible solution found by trivial heuristic after 0.0 seconds, objective value 0.000000e+00
+presolving:
+(round 1, fast)       10 del vars, 20 del conss, 0 add conss, 10 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       10 del vars, 20 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (0.0s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (0.0s) no symmetry present
+presolving (3 rounds: 3 fast, 1 medium, 1 exhaustive):
+ 10 deleted vars, 20 deleted constraints, 0 added constraints, 20 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 20 variables (0 bin, 0 int, 0 impl, 20 cont) and 11 constraints
+      1 constraints of type <linear>
+     10 constraints of type <nonlinear>
+Presolving Time: 0.00
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t 0.0s|     1 |     0 |     0 |     - | trivial|   0 |  20 |  11 |   0 |   0 |  0 |   0 |   0 |-9.279365e+02 | 0.000000e+00 |    Inf | unknown
+  0.0s|     1 |     0 |    52 |     - |  1255k |   0 |  80 |  11 |  81 |   0 |  0 |   0 |   0 |-6.242154e+02 | 0.000000e+00 |    Inf | unknown
+L 0.0s|     1 |     0 |    52 |     - |undercov|   0 |  80 |  11 |  81 |   0 |  0 |   0 |   0 |-6.242154e+02 |-2.510609e+02 | 148.63%| unknown
+L 0.1s|     1 |     0 |    52 |     - |undercov|   0 |  80 |  11 |  81 |   0 |  0 |   0 |   0 |-6.242154e+02 |-2.540324e+02 | 145.72%| unknown
+  0.1s|     1 |     0 |    64 |     - |  1379k |   0 |  80 |  11 | 102 |  21 |  1 |   0 |   0 |-5.824830e+02 |-2.540324e+02 | 129.29%| unknown
+  0.1s|     1 |     0 |    64 |     - |  1379k |   0 |  80 |  11 | 102 |  21 |  1 |   0 |   0 |-5.824830e+02 |-2.540324e+02 | 129.29%| unknown
+  0.1s|     1 |     0 |   255 |     - |  1408k |   0 |  80 |  11 | 102 |  21 |  3 |   0 |   0 |-5.824830e+02 |-2.540324e+02 | 129.29%| unknown
+  0.1s|     1 |     0 |   266 |     - |  1408k |   0 |  80 |  11 | 111 |  30 |  4 |   0 |   0 |-4.890662e+02 |-2.540324e+02 |  92.52%| unknown
+  0.1s|     1 |     0 |   276 |     - |  1408k |   0 |  80 |  11 | 119 |  38 |  5 |   0 |   0 |-4.761623e+02 |-2.540324e+02 |  87.44%| unknown
+  0.1s|     1 |     0 |   286 |     - |  1412k |   0 |  80 |  11 | 128 |  47 |  6 |   0 |   0 |-4.707561e+02 |-2.540324e+02 |  85.31%| unknown
+  0.1s|     1 |     0 |   296 |     - |  1412k |   0 |  80 |  11 | 137 |  56 |  7 |   0 |   0 |-4.701028e+02 |-2.540324e+02 |  85.06%| unknown
+  0.1s|     1 |     0 |   298 |     - |  1412k |   0 |  80 |  11 | 139 |  58 |  8 |   0 |   0 |-4.700977e+02 |-2.540324e+02 |  85.05%| unknown
+  0.1s|     1 |     0 |   299 |     - |  1412k |   0 |  80 |  11 | 140 |  59 |  9 |   0 |   0 |-4.700977e+02 |-2.540324e+02 |  85.05%| unknown
+L 0.1s|     1 |     0 |   299 |     - |  subnlp|   0 |  80 |  11 | 140 |  59 | 11 |   0 |   0 |-4.700977e+02 |-2.929838e+02 |  60.45%| unknown
+  0.1s|     1 |     0 |   299 |     - |  1412k |   0 |  80 |  11 | 140 |  59 | 11 |   0 |   0 |-4.700977e+02 |-2.929838e+02 |  60.45%| unknown
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  0.1s|     1 |     2 |   299 |     - |  1416k |   0 |  80 |  11 | 140 |  59 | 13 |   0 |   0 |-4.700977e+02 |-2.929838e+02 |  60.45%| unknown
+L 0.1s|     2 |     3 |   312 | 204.0 |  subnlp|   1 |  80 |  11 |  69 |  69 |  4 |   0 |   0 |-4.700977e+02 |-2.929838e+02 |  60.45%| unknown
+L 0.2s|     4 |     5 |   362 |  84.7 |  subnlp|   2 |  80 |  11 |  84 | 106 |  7 |   0 |   0 |-4.700977e+02 |-3.051251e+02 |  54.07%| unknown
+L 0.2s|     6 |     7 |   393 |  57.0 |  subnlp|   3 |  80 |  11 |  85 | 128 |  3 |   0 |   0 |-4.700977e+02 |-3.433061e+02 |  36.93%| unknown
+d 0.2s|     7 |     8 |   405 |  49.5 |fracdivi|   4 |  80 |  11 |  93 | 137 |  3 |   0 |   0 |-4.700977e+02 |-3.589680e+02 |  30.96%| unknown
+L 0.3s|    10 |    11 |   443 |  37.2 |  subnlp|   4 |  80 |  11 |  81 | 164 |  5 |   0 |   0 |-4.690073e+02 |-3.704614e+02 |  26.60%| unknown
+d 0.3s|    11 |    12 |   461 |  35.3 |adaptive|   4 |  80 |  11 |  92 | 179 |  7 |   0 |   0 |-4.690073e+02 |-3.749630e+02 |  25.08%| unknown
+  0.5s|   100 |    89 |  2752 |  26.7 |  2314k |   9 |  80 |  11 | 134 |1435 |  9 |   0 |   0 |-4.006732e+02 |-3.749630e+02 |   6.86%|  43.82%
+  0.6s|   200 |   103 |  4534 |  22.2 |  2470k |  12 |  80 |  11 | 126 |2373 |  4 |   0 |   0 |-3.871353e+02 |-3.749630e+02 |   3.25%|  73.46%
+  0.7s|   300 |    71 |  5720 |  18.8 |  2660k |  15 |  80 |  11 | 137 |2960 |  1 |   0 |   0 |-3.799153e+02 |-3.749630e+02 |   1.32%|  88.19%
+  0.8s|   400 |    45 |  6677 |  16.5 |  2998k |  21 |  80 |  11 | 184 |3419 |  3 |   0 |   0 |-3.765673e+02 |-3.749630e+02 |   0.43%|  95.88%
+  1.0s|   500 |    37 |  7145 |  14.1 |  3355k |  36 |  80 |  11 | 226 |3673 |  3 |   0 |   0 |-3.763023e+02 |-3.749630e+02 |   0.36%|  97.68%
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 1.03
+Solving Nodes      : 545
+Primal Bound       : -3.74962999569653e+02 (27 solutions)
+Dual Bound         : -3.74962999569653e+02
+Gap                : 0.00 %
+Min nlobj[1,1] + nlobj[1,2] + nlobj[1,3] + nlobj[1,4] + nlobj[1,5] + nlobj[1,6] + nlobj[1,7] + nlobj[1,8] + nlobj[1,9] + nlobj[1,10]
+Subject to
+ x[1,1] - 100 onoff[1,1] ≤ 0
+ x[1,2] - 100 onoff[1,2] ≤ 0
+ x[1,3] - 100 onoff[1,3] ≤ 0
+ x[1,4] - 100 onoff[1,4] ≤ 0
+ x[1,5] - 100 onoff[1,5] ≤ 0
+ x[1,6] - 100 onoff[1,6] ≤ 0
+ x[1,7] - 100 onoff[1,7] ≤ 0
+ x[1,8] - 100 onoff[1,8] ≤ 0
+ x[1,9] - 100 onoff[1,9] ≤ 0
+ x[1,10] - 100 onoff[1,10] ≤ 0
+ 68 x[1,1] + 25 x[1,2] + 71 x[1,3] + 94 x[1,4] + 5 x[1,5] + 8 x[1,6] + 71 x[1,7] + 58 x[1,8] + 41 x[1,9] + 5 x[1,10] ≤ 22300
+ x[1,1] ≤ 100
+ x[1,2] ≤ 100
+ x[1,3] ≤ 100
+ x[1,4] ≤ 100
+ x[1,5] ≤ 100
+ x[1,6] ≤ 100
+ x[1,7] ≤ 100
+ x[1,8] ≤ 100
+ x[1,9] ≤ 100
+ x[1,10] ≤ 100
+ x[1,1] ≥ 0
+ x[1,2] ≥ 0
+ x[1,3] ≥ 0
+ x[1,4] ≥ 0
+ x[1,5] ≥ 0
+ x[1,6] ≥ 0
+ x[1,7] ≥ 0
+ x[1,8] ≥ 0
+ x[1,9] ≥ 0
+ x[1,10] ≥ 0
+ nlobj[1,1] ≥ -10000000000
+ nlobj[1,2] ≥ -10000000000
+ nlobj[1,3] ≥ -10000000000
+ nlobj[1,4] ≥ -10000000000
+ nlobj[1,5] ≥ -10000000000
+ nlobj[1,6] ≥ -10000000000
+ nlobj[1,7] ≥ -10000000000
+ nlobj[1,8] ≥ -10000000000
+ nlobj[1,9] ≥ -10000000000
+ nlobj[1,10] ≥ -10000000000
+ x[1,1] ≤ 100
+ x[1,2] ≤ 100
+ x[1,3] ≤ 100
+ x[1,4] ≤ 100
+ x[1,5] ≤ 100
+ x[1,6] ≤ 100
+ x[1,7] ≤ 100
+ x[1,8] ≤ 100
+ x[1,9] ≤ 100
+ x[1,10] ≤ 100
+ nlobj[1,1] ≤ 10000000000
+ nlobj[1,2] ≤ 10000000000
+ nlobj[1,3] ≤ 10000000000
+ nlobj[1,4] ≤ 10000000000
+ nlobj[1,5] ≤ 10000000000
+ nlobj[1,6] ≤ 10000000000
+ nlobj[1,7] ≤ 10000000000
+ nlobj[1,8] ≤ 10000000000
+ nlobj[1,9] ≤ 10000000000
+ nlobj[1,10] ≤ 10000000000
+ onoff[1,1] binary
+ onoff[1,2] binary
+ onoff[1,3] binary
+ onoff[1,4] binary
+ onoff[1,5] binary
+ onoff[1,6] binary
+ onoff[1,7] binary
+ onoff[1,8] binary
+ onoff[1,9] binary
+ onoff[1,10] binary
+ (subexpression[1] - nlobj[1,1]) - 0.0 ≤ 0
+ (subexpression[2] - nlobj[1,2]) - 0.0 ≤ 0
+ (subexpression[3] - nlobj[1,3]) - 0.0 ≤ 0
+ (subexpression[4] - nlobj[1,4]) - 0.0 ≤ 0
+ (subexpression[5] - nlobj[1,5]) - 0.0 ≤ 0
+ (subexpression[6] - nlobj[1,6]) - 0.0 ≤ 0
+ (subexpression[7] - nlobj[1,7]) - 0.0 ≤ 0
+ (subexpression[8] - nlobj[1,8]) - 0.0 ≤ 0
+ (subexpression[9] - nlobj[1,9]) - 0.0 ≤ 0
+ (subexpression[10] - nlobj[1,10]) - 0.0 ≤ 0
+With NL expressions
+ subexpression[1]: -1.0 * (0.435965116613408 * (sin(0.05 * x[1,1]) + 0.05 * x[1,1]) ^ 2.0)
+ subexpression[2]: -1.0 * (6.065567453733298 * (sin(0.05 * x[1,2]) + 0.05 * x[1,2]) ^ 2.0)
+ subexpression[3]: -1.0 * (0.03174965028596133 * (sin(0.05 * x[1,3]) + 0.05 * x[1,3]) ^ 2.0)
+ subexpression[4]: -1.0 * (6.00561460247789 * (sin(0.05 * x[1,4]) + 0.05 * x[1,4]) ^ 2.0)
+ subexpression[5]: -1.0 * (0.8652536571943118 * (sin(0.05 * x[1,5]) + 0.05 * x[1,5]) ^ 2.0)
+ subexpression[6]: -1.0 * (2.4893498389373843 * (sin(0.05 * x[1,6]) + 0.05 * x[1,6]) ^ 2.0)
+ subexpression[7]: -1.0 * (3.6253958696349144 * (sin(0.05 * x[1,7]) + 0.05 * x[1,7]) ^ 2.0)
+ subexpression[8]: -1.0 * (1.0145356150915081 * (sin(0.05 * x[1,8]) + 0.05 * x[1,8]) ^ 2.0)
+ subexpression[9]: -1.0 * (2.7455314462788323 * (sin(0.05 * x[1,9]) + 0.05 * x[1,9]) ^ 2.0)
+ subexpression[10]: -1.0 * (2.497051755630295 * (sin(0.05 * x[1,10]) + 0.05 * x[1,10]) ^ 2.0)
+
+primal_bound = -374.96299956965345, dual_bound = -374.96299956965345, gap = 0.0, time = 4.25

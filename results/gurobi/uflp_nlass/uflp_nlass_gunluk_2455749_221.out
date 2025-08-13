@@ -1,0 +1,93 @@
+solving instance uflp nlass gunluk ../../../../../instances/uflp/gunluk/gunluk-30-60-2.txt exp
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 9060 rows, 12630 columns and 21600 nonzeros
+Model fingerprint: 0xec010632
+Model has 3600 function constraints treated as nonlinear
+  1800 EXP, 1800 POW
+Variable types: 10800 continuous, 1830 integer (1830 binary)
+Coefficient statistics:
+  Matrix range     [3e-01, 9e+01]
+  Objective range  [1e+00, 9e+01]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e-01, 4e+01]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Warning: 0 <= x < 1e-10 in domain of pow(x,a) with a=-1.000.
+         Setting lower bound to 1e-10.
+Presolve removed 3600 rows and 3600 columns
+Presolve time: 0.05s
+Presolved: 21660 rows, 9031 columns, 45000 nonzeros
+Presolved model has 1800 bilinear constraint(s)
+Presolved model has 1800 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 7201 continuous, 1830 integer (1830 binary)
+Found heuristic solution: objective 3261.5777296
+
+Root relaxation: objective 7.964728e+02, 9870 iterations, 0.10 seconds (0.10 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  796.47279    0  349 3261.57773  796.47279  75.6%     -    0s
+H    0     0                     929.3485019  796.47279  14.3%     -    0s
+H    0     0                     928.1132209  796.47279  14.2%     -    0s
+     0     0  886.74131    0  210  928.11322  886.74131  4.46%     -    0s
+     0     0  888.32175    0  236  928.11322  888.32175  4.29%     -    0s
+     0     0  908.04837    0  224  928.11322  908.04837  2.16%     -    0s
+     0     0  908.82401    0  224  928.11322  908.82401  2.08%     -    0s
+     0     0  917.14850    0  192  928.11322  917.14850  1.18%     -    0s
+     0     0  917.14850    0  340  928.11322  917.14850  1.18%     -    0s
+     0     0  917.14850    0  188  928.11322  917.14850  1.18%     -    1s
+     0     0  917.14850    0  183  928.11322  917.14850  1.18%     -    1s
+     0     0  917.14850    0  183  928.11322  917.14850  1.18%     -    1s
+     0     0  923.87516    0  102  928.11322  923.87516  0.46%     -    1s
+     0     0  923.87516    0  318  928.11322  923.87516  0.46%     -    1s
+     0     0  923.87516    0  168  928.11322  923.87516  0.46%     -    1s
+     0     0  925.44634    0  113  928.11322  925.44634  0.29%     -    1s
+     0     0  925.44634    0  113  928.11322  925.44634  0.29%     -    1s
+     0     0  928.07458    0   10  928.11322  928.07458  0.00%     -    1s
+     0     0  928.07458    0  119  928.11322  928.07458  0.00%     -    1s
+     0     0  928.07458    0   51  928.11322  928.07458  0.00%     -    1s
+     0     0  928.07458    0   51  928.11322  928.07458  0.00%     -    1s
+     0     0  928.09124    0   10  928.11322  928.09124  0.00%     -    1s
+     0     0  928.09124    0   10  928.11322  928.09124  0.00%     -    1s
+     0     0     cutoff    0       928.11322  928.11322  0.00%     -    1s
+
+Cutting planes:
+  Gomory: 17
+  Implied bound: 2
+  Flow cover: 45
+  RLT: 21
+  Relax-and-lift: 42
+
+Explored 1 nodes (18014 simplex iterations) in 1.29 seconds (0.72 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 3: 928.113 929.349 3261.58 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 9.281132208918e+02, best bound 9.281132208634e+02, gap 0.0000%
+
+User-callback calls 833, time in user-callback 0.00 sec
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-30-60-2.txt
+primal_bound = 928.1132208918233, dual_bound = 928.1132208633601, gap = 3.0667815612864697e-9, time = 1.3

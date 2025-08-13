@@ -1,0 +1,39 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nlass orlib 133 log
+presolving:
+(round 1, fast)       2451 del vars, 2501 del conss, 0 add conss, 2500 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       2502 del vars, 2551 del conss, 0 add conss, 2500 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, exhaustive) 2503 del vars, 2551 del conss, 0 add conss, 2549 chg bounds, 1 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 4, fast)       2552 del vars, 2650 del conss, 0 add conss, 2598 chg bounds, 1 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 5, fast)       2601 del vars, 2650 del conss, 0 add conss, 2598 chg bounds, 1 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 6, exhaustive) 2601 del vars, 2650 del conss, 0 add conss, 2598 chg bounds, 1 chg sides, 0 chg coeffs, 2401 upgd conss, 0 impls, 0 clqs
+   (1.0s) probing cycle finished: starting next cycle
+   (1.0s) symmetry computation started: requiring (bin +, int -, cont -), (fixed: bin -, int +, cont +)
+   (1.0s) no symmetry present
+presolving (7 rounds: 7 fast, 3 medium, 3 exhaustive):
+ 2601 deleted vars, 2650 deleted constraints, 0 added constraints, 2598 tightened bounds, 0 added holes, 1 changed sides, 0 changed coefficients
+ 2401 implications, 0 cliques
+presolved problem has 4949 variables (49 bin, 0 int, 0 impl, 4900 cont) and 4900 constraints
+   2401 constraints of type <varbound>
+     49 constraints of type <linear>
+   2450 constraints of type <nonlinear>
+Presolving Time: 0.98
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+p 1.4s|     1 |     0 |  4949 |     - |   locks|   0 |9849 |4900 |7350 |   0 |  0 |   0 |   0 |-4.673005e-03 | 1.481571e+06 |    Inf | unknown
+* 2.2s|     1 |     0 | 15821 |     - |    LP  |   0 |9849 |4900 |7350 |   0 |  0 |   0 |   0 | 8.930767e+05 | 8.930767e+05 |   0.00%| unknown
+  2.2s|     1 |     0 | 15821 |     - |   114M |   0 |9849 |4900 |7350 |   0 |  0 |   0 |   0 | 8.930767e+05 | 8.930767e+05 |   0.00%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 2.25
+Solving Nodes      : 1
+Primal Bound       : +8.93076712499999e+05 (2 solutions)
+Dual Bound         : +8.93076712499999e+05
+Gap                : 0.00 %
+reading orlib data file ../../../../../instances/uflp/orlib/cap133.txt
+primal_bound = 893076.712499999, dual_bound = 893076.712499999, gap = 0.0, time = 6.0

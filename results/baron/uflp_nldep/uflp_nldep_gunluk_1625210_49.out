@@ -1,0 +1,68 @@
+
+Note: the module "julia" cannot be unloaded because it was not loaded.
+
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nldep gunluk ../../../../../instances/uflp/gunluk/gunluk-10-20-8.txt cost exp
+The latest version of Julia in the `1.10` channel is 1.10.6+0.x64.linux.gnu. You currently have `1.10.5+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.10.6+0.x64.linux.gnu and update the `1.10` channel to that version.
+===========================================================================
+ BARON version 23.11.13. Built: LNX-64 Mon Nov 13 23:14:09 EST 2023
+
+ BARON is a product of The Optimization Firm.
+ For information on BARON, see https://minlp.com/about-baron
+ Licensee: Claudio Contardo at Concordia University, claudio.contardo@concordia.ca.
+
+ If you use this software, please cite publications from
+ https://minlp.com/baron-publications, such as: 
+
+ Khajavirad, A. and N. V. Sahinidis,
+ A hybrid LP/NLP paradigm for global optimization relaxations,
+ Mathematical Programming Computation, 10, 383-421, 2018.
+===========================================================================
+ This BARON run may utilize the following subsolver(s)
+ For LP/MIP/QP: CLP/CBC, ILOG CPLEX                             
+ For NLP: IPOPT, FILTERSQP
+===========================================================================
+ Doing local search
+ Solving bounding LP
+ Preprocessing found feasible solution with value 0.100000E+12
+ Starting multi-start local search
+ Done with local search
+===========================================================================
+  Iteration    Open nodes         Time (s)    Lower bound      Upper bound
+*         1+            1             0.35      297.821          681.536       
+*         1+            1             0.43      297.821          681.535       
+          1             1             0.43      297.821          681.535       
+*         2+            2             0.44      297.821          658.470       
+*         3+            2             0.45      297.821          583.906       
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+*         8             5             0.50      297.978          330.221       
+Failure to change feasibility, error 1014.
+*         9+            4             0.54      297.978          313.085       
+*        11             3             0.55      297.978          309.557       
+*        14             3             0.58      297.978          305.847       
+*        16             3             0.60      297.978          305.827       
+*        17             1             0.62      297.978          303.293       
+         21             0             0.65      303.293          303.293       
+
+ Calculating duals
+
+                         *** Normal completion ***            
+
+ Wall clock time:                     0.71
+ Total CPU time used:                 0.66
+
+ Total no. of BaR iterations:      21
+ Best solution found at node:      17
+ Max. no. of nodes in memory:       5
+ 
+ All done
+===========================================================================
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-10-20-8.txt
+primal_bound = 303.293097707, dual_bound = 303.292794414, gap = 9.999996778520774e-5, time = 2.83

@@ -1,0 +1,58 @@
+
+Note: the module "julia" cannot be unloaded because it was not loaded.
+
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nldep gunluk ../../../../../instances/uflp/gunluk/gunluk-10-20-9.txt cost log
+The latest version of Julia in the `1.10` channel is 1.10.6+0.x64.linux.gnu. You currently have `1.10.5+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.10.6+0.x64.linux.gnu and update the `1.10` channel to that version.
+===========================================================================
+ BARON version 23.11.13. Built: LNX-64 Mon Nov 13 23:14:09 EST 2023
+
+ BARON is a product of The Optimization Firm.
+ For information on BARON, see https://minlp.com/about-baron
+ Licensee: Claudio Contardo at Concordia University, claudio.contardo@concordia.ca.
+
+ If you use this software, please cite publications from
+ https://minlp.com/baron-publications, such as: 
+
+ Khajavirad, A. and N. V. Sahinidis,
+ A hybrid LP/NLP paradigm for global optimization relaxations,
+ Mathematical Programming Computation, 10, 383-421, 2018.
+===========================================================================
+ This BARON run may utilize the following subsolver(s)
+ For LP/MIP/QP: CLP/CBC, ILOG CPLEX                             
+ For NLP: IPOPT, FILTERSQP
+===========================================================================
+ Doing local search
+ Preprocessing found feasible solution with value 303.764
+ Solving bounding LP
+ Starting multi-start local search
+ Done with local search
+===========================================================================
+  Iteration    Open nodes         Time (s)    Lower bound      Upper bound
+          1             1             0.11      229.659          303.764       
+*         9             5             0.16      232.140          303.694       
+*        11             7             0.18      232.140          303.561       
+*        28            11             0.30      237.196          303.315       
+*        81            19             0.59      251.554          303.255       
+*       298            43             1.84      279.262          302.879       
+        780             0             2.74      302.879          302.879       
+
+                         *** Normal completion ***            
+
+ Wall clock time:                     2.77
+ Total CPU time used:                 2.74
+
+ Total no. of BaR iterations:     780
+ Best solution found at node:     298
+ Max. no. of nodes in memory:      72
+ 
+ All done
+===========================================================================
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-10-20-9.txt
+primal_bound = 302.878910007, dual_bound = 302.878607128, gap = 0.0001000000297135351, time = 4.9

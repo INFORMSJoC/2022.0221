@@ -1,0 +1,67 @@
+
+Note: the module "julia" cannot be unloaded because it was not loaded.
+
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nlass gunluk ../../../../../instances/uflp/gunluk/gunluk-50-100-7.txt cubic
+The latest version of Julia in the `1.10` channel is 1.10.6+0.x64.linux.gnu. You currently have `1.10.5+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.10.6+0.x64.linux.gnu and update the `1.10` channel to that version.
+presolving:
+(round 1, fast)       0 del vars, 0 del conss, 0 add conss, 5000 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 5000 clqs
+(round 2, exhaustive) 0 del vars, 0 del conss, 0 add conss, 5000 chg bounds, 0 chg sides, 0 chg coeffs, 10000 upgd conss, 0 impls, 5000 clqs
+   (7.9s) probing: 1000/5050 (19.8%) - 0 fixings, 0 aggregations, 999 implications, 999 bound changes
+   (8.0s) probing: 1001/5050 (19.8%) - 0 fixings, 0 aggregations, 1000 implications, 1000 bound changes
+   (8.0s) probing aborted: 1000/1000 successive useless probings
+(round 3, exhaustive) 0 del vars, 0 del conss, 0 add conss, 6000 chg bounds, 0 chg sides, 0 chg coeffs, 10000 upgd conss, 6000 impls, 5000 clqs
+   (9.3s) probing: 1101/5050 (21.8%) - 0 fixings, 0 aggregations, 1100 implications, 1100 bound changes
+   (9.3s) probing aborted: 1000/1000 successive useless probings
+   (9.3s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (9.5s) no symmetry present (symcode time: 0.07)
+presolving (4 rounds: 4 fast, 3 medium, 3 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 6100 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 6100 implications, 5000 cliques
+presolved problem has 15050 variables (5050 bin, 0 int, 0 impl, 10000 cont) and 15100 constraints
+   5000 constraints of type <varbound>
+   5000 constraints of type <setppc>
+    100 constraints of type <linear>
+   5000 constraints of type <nonlinear>
+Presolving Time: 9.39
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t12.1s|     1 |     0 |   300 |     - |  trysol|   0 |  30k|  15k|  35k|   0 |  0 |   0 |   0 |-2.290024e+05 | 2.224009e+03 |    Inf | unknown
+ 14.2s|     1 |     0 | 14886 |     - |   309M |   0 |  30k|  15k|  35k|   0 |  0 |   0 |   0 |-6.512717e+03 | 2.224009e+03 |    Inf | unknown
+ 31.9s|     1 |     0 | 25410 |     - |   328M |   0 |  30k|  15k|  35k| 653 |  1 |   0 |   0 |-5.824834e+03 | 2.224009e+03 |    Inf | unknown
+ 64.4s|     1 |     0 | 36751 |     - |   334M |   0 |  30k|  15k|  36k|1560 |  2 |   0 |   0 |-5.232064e+03 | 2.224009e+03 |    Inf | unknown
+  114s|     1 |     0 | 49787 |     - |   339M |   0 |  30k|  15k|  37k|2591 |  3 |   0 |   0 |-4.656826e+03 | 2.224009e+03 |    Inf | unknown
+  175s|     1 |     0 | 63290 |     - |   345M |   0 |  30k|  15k|  38k|3650 |  4 |   0 |   0 |-4.229756e+03 | 2.224009e+03 |    Inf | unknown
+  252s|     1 |     0 | 77521 |     - |   350M |   0 |  30k|  15k|  39k|4691 |  5 |   0 |   0 |-3.858150e+03 | 2.224009e+03 |    Inf | unknown
+  329s|     1 |     0 | 90852 |     - |   356M |   0 |  30k|  15k|  40k|5839 |  6 |   0 |   0 |-3.588903e+03 | 2.224009e+03 |    Inf | unknown
+  397s|     1 |     0 |102875 |     - |   362M |   0 |  30k|  15k|  41k|6636 |  7 |   0 |   0 |-3.413559e+03 | 2.224009e+03 |    Inf | unknown
+  449s|     1 |     0 |113561 |     - |   367M |   0 |  30k|  15k|  42k|7265 |  8 |   0 |   0 |-3.333026e+03 | 2.224009e+03 |    Inf | unknown
+  489s|     1 |     0 |122682 |     - |   376M |   0 |  30k|  15k|  42k|7777 |  9 |   0 |   0 |-3.284651e+03 | 2.224009e+03 |    Inf | unknown
+  522s|     1 |     0 |129774 |     - |   387M |   0 |  30k|  15k|  43k|8181 | 10 |   0 |   0 |-3.247904e+03 | 2.224009e+03 |    Inf | unknown
+  533s|     1 |     0 |132689 |     - |   392M |   0 |  30k|  15k|  43k|8390 | 11 |   0 |   0 |-3.238291e+03 | 2.224009e+03 |    Inf | unknown
+  539s|     1 |     0 |134364 |     - |   396M |   0 |  30k|  15k|  43k|8572 | 12 |   0 |   0 |-3.233381e+03 | 2.224009e+03 |    Inf | unknown
+  543s|     1 |     0 |135546 |     - |   402M |   0 |  30k|  15k|  43k|8810 | 13 |   0 |   0 |-3.231753e+03 | 2.224009e+03 |    Inf | unknown
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  544s|     1 |     0 |135997 |     - |   406M |   0 |  30k|  15k|  29k|8938 | 14 |   0 |   0 |-3.230978e+03 | 2.224009e+03 |    Inf | unknown
+  545s|     1 |     0 |136194 |     - |   409M |   0 |  30k|  15k|  29k|9025 | 15 |   0 |   0 |-3.230609e+03 | 2.224009e+03 |    Inf | unknown
+  545s|     1 |     0 |136262 |     - |   412M |   0 |  30k|  15k|  29k|9073 | 16 |   0 |   0 |-3.230537e+03 | 2.224009e+03 |    Inf | unknown
+  546s|     1 |     0 |136307 |     - |   415M |   0 |  30k|  15k|  29k|9106 | 17 |   0 |   0 |-3.230522e+03 | 2.224009e+03 |    Inf | unknown
+  546s|     1 |     0 |136324 |     - |   418M |   0 |  30k|  15k|  29k|9121 | 18 |   0 |   0 |-3.230512e+03 | 2.224009e+03 |    Inf | unknown
+  546s|     1 |     0 |136331 |     - |   422M |   0 |  30k|  15k|  29k|9127 | 19 |   0 |   0 |-3.230504e+03 | 2.224009e+03 |    Inf | unknown
+  547s|     1 |     0 |136334 |     - |   425M |   0 |  30k|  15k|  26k|9130 | 20 |   0 |   0 |-3.230504e+03 | 2.224009e+03 |    Inf | unknown
+ 3626s|     1 |     2 |300815 |     - |   443M |   0 |  30k|  15k|  26k|9130 | 22 |   0 |   0 |-3.230504e+03 | 2.224009e+03 |    Inf | unknown
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 3625.78
+Solving Nodes      : 1
+Primal Bound       : +2.22400874912748e+03 (2 solutions)
+Dual Bound         : -3.23050386468939e+03
+Gap                : infinite
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-50-100-7.txt
+primal_bound = 2224.008749127477, dual_bound = -3230.503864689386, gap = 168.84402069400767, time = 3630.67

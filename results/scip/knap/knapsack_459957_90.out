@@ -1,0 +1,138 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance knapsack 10 9 log
+feasible solution found by trivial heuristic after 0.0 seconds, objective value 0.000000e+00
+presolving:
+(round 1, fast)       10 del vars, 20 del conss, 0 add conss, 10 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       10 del vars, 20 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (0.0s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (0.0s) no symmetry present
+presolving (3 rounds: 3 fast, 1 medium, 1 exhaustive):
+ 10 deleted vars, 20 deleted constraints, 0 added constraints, 20 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 20 variables (0 bin, 0 int, 0 impl, 20 cont) and 11 constraints
+      1 constraints of type <linear>
+     10 constraints of type <nonlinear>
+Presolving Time: 0.00
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t 0.0s|     1 |     0 |     0 |     - | trivial|   0 |  20 |  11 |   0 |   0 |  0 |   0 |   0 |-2.567984e+02 | 0.000000e+00 |    Inf | unknown
+  0.0s|     1 |     0 |    45 |     - |  1230k |   0 |  40 |  11 |  61 |   0 |  0 |   0 |   0 |-2.305406e+02 | 0.000000e+00 |    Inf | unknown
+L 0.0s|     1 |     0 |    45 |     - |undercov|   0 |  40 |  11 |  61 |   0 |  0 |   0 |   0 |-2.305406e+02 |-2.200888e+02 |   4.75%| unknown
+L 0.0s|     1 |     0 |    45 |     - |undercov|   0 |  40 |  11 |  61 |   0 |  0 |   0 |   0 |-2.305406e+02 |-2.225743e+02 |   3.58%| unknown
+  0.0s|     1 |     0 |    59 |     - |  1259k |   0 |  40 |  11 |  71 |  10 |  1 |   0 |   0 |-2.236954e+02 |-2.225743e+02 |   0.50%| unknown
+  0.0s|     1 |     0 |    59 |     - |  1259k |   0 |  40 |  11 |  71 |  10 |  1 |   0 |   0 |-2.236954e+02 |-2.225743e+02 |   0.50%| unknown
+  0.0s|     1 |     0 |    72 |     - |  1259k |   0 |  40 |  11 |  80 |  19 |  2 |   0 |   0 |-2.228650e+02 |-2.225743e+02 |   0.13%| unknown
+  0.0s|     1 |     0 |    82 |     - |  1265k |   0 |  40 |  11 |  89 |  28 |  3 |   0 |   0 |-2.226535e+02 |-2.225743e+02 |   0.04%| unknown
+  0.0s|     1 |     0 |    91 |     - |  1295k |   0 |  40 |  11 |  97 |  36 |  4 |   0 |   0 |-2.225904e+02 |-2.225743e+02 |   0.01%| unknown
+  0.0s|     1 |     0 |   100 |     - |  1295k |   0 |  40 |  11 | 105 |  44 |  5 |   0 |   0 |-2.225794e+02 |-2.225743e+02 |   0.00%| unknown
+  0.0s|     1 |     0 |   108 |     - |  1295k |   0 |  40 |  11 | 113 |  52 |  6 |   0 |   0 |-2.225758e+02 |-2.225743e+02 |   0.00%| unknown
+  0.0s|     1 |     0 |   118 |     - |  1296k |   0 |  40 |  11 | 121 |  60 |  7 |   0 |   0 |-2.225746e+02 |-2.225743e+02 |   0.00%| unknown
+  0.0s|     1 |     0 |   128 |     - |  1301k |   0 |  40 |  11 | 129 |  68 |  8 |   0 |   0 |-2.225744e+02 |-2.225743e+02 |   0.00%| unknown
+
+SCIP Status        : solving was interrupted [gap limit reached]
+Solving Time (sec) : 0.05
+Solving Nodes      : 1
+Primal Bound       : -2.22574299643500e+02 (7 solutions)
+Dual Bound         : -2.22574382396587e+02
+Gap                : 0.00 %
+Min nlobj[1,1] + nlobj[1,2] + nlobj[1,3] + nlobj[1,4] + nlobj[1,5] + nlobj[1,6] + nlobj[1,7] + nlobj[1,8] + nlobj[1,9] + nlobj[1,10]
+Subject to
+ x[1,1] - 100 onoff[1,1] ≤ 0
+ x[1,2] - 100 onoff[1,2] ≤ 0
+ x[1,3] - 100 onoff[1,3] ≤ 0
+ x[1,4] - 100 onoff[1,4] ≤ 0
+ x[1,5] - 100 onoff[1,5] ≤ 0
+ x[1,6] - 100 onoff[1,6] ≤ 0
+ x[1,7] - 100 onoff[1,7] ≤ 0
+ x[1,8] - 100 onoff[1,8] ≤ 0
+ x[1,9] - 100 onoff[1,9] ≤ 0
+ x[1,10] - 100 onoff[1,10] ≤ 0
+ 84 x[1,1] + 8 x[1,2] + 100 x[1,3] + 27 x[1,4] + 62 x[1,5] + 89 x[1,6] + 6 x[1,7] + 68 x[1,8] + 100 x[1,9] + 78 x[1,10] ≤ 31100
+ x[1,1] ≤ 100
+ x[1,2] ≤ 100
+ x[1,3] ≤ 100
+ x[1,4] ≤ 100
+ x[1,5] ≤ 100
+ x[1,6] ≤ 100
+ x[1,7] ≤ 100
+ x[1,8] ≤ 100
+ x[1,9] ≤ 100
+ x[1,10] ≤ 100
+ x[1,1] ≥ 0
+ x[1,2] ≥ 0
+ x[1,3] ≥ 0
+ x[1,4] ≥ 0
+ x[1,5] ≥ 0
+ x[1,6] ≥ 0
+ x[1,7] ≥ 0
+ x[1,8] ≥ 0
+ x[1,9] ≥ 0
+ x[1,10] ≥ 0
+ nlobj[1,1] ≥ -10000000000
+ nlobj[1,2] ≥ -10000000000
+ nlobj[1,3] ≥ -10000000000
+ nlobj[1,4] ≥ -10000000000
+ nlobj[1,5] ≥ -10000000000
+ nlobj[1,6] ≥ -10000000000
+ nlobj[1,7] ≥ -10000000000
+ nlobj[1,8] ≥ -10000000000
+ nlobj[1,9] ≥ -10000000000
+ nlobj[1,10] ≥ -10000000000
+ x[1,1] ≤ 100
+ x[1,2] ≤ 100
+ x[1,3] ≤ 100
+ x[1,4] ≤ 100
+ x[1,5] ≤ 100
+ x[1,6] ≤ 100
+ x[1,7] ≤ 100
+ x[1,8] ≤ 100
+ x[1,9] ≤ 100
+ x[1,10] ≤ 100
+ nlobj[1,1] ≤ 10000000000
+ nlobj[1,2] ≤ 10000000000
+ nlobj[1,3] ≤ 10000000000
+ nlobj[1,4] ≤ 10000000000
+ nlobj[1,5] ≤ 10000000000
+ nlobj[1,6] ≤ 10000000000
+ nlobj[1,7] ≤ 10000000000
+ nlobj[1,8] ≤ 10000000000
+ nlobj[1,9] ≤ 10000000000
+ nlobj[1,10] ≤ 10000000000
+ onoff[1,1] binary
+ onoff[1,2] binary
+ onoff[1,3] binary
+ onoff[1,4] binary
+ onoff[1,5] binary
+ onoff[1,6] binary
+ onoff[1,7] binary
+ onoff[1,8] binary
+ onoff[1,9] binary
+ onoff[1,10] binary
+ (subexpression[1] - nlobj[1,1]) - 0.0 ≤ 0
+ (subexpression[2] - nlobj[1,2]) - 0.0 ≤ 0
+ (subexpression[3] - nlobj[1,3]) - 0.0 ≤ 0
+ (subexpression[4] - nlobj[1,4]) - 0.0 ≤ 0
+ (subexpression[5] - nlobj[1,5]) - 0.0 ≤ 0
+ (subexpression[6] - nlobj[1,6]) - 0.0 ≤ 0
+ (subexpression[7] - nlobj[1,7]) - 0.0 ≤ 0
+ (subexpression[8] - nlobj[1,8]) - 0.0 ≤ 0
+ (subexpression[9] - nlobj[1,9]) - 0.0 ≤ 0
+ (subexpression[10] - nlobj[1,10]) - 0.0 ≤ 0
+With NL expressions
+ subexpression[1]: -1.0 * 14.466608194254391 * log(1.0 + 0.19085536923187668 * x[1,1])
+ subexpression[2]: -1.0 * 0.322084952786677 * log(1.0 + 0.19085536923187668 * x[1,2])
+ subexpression[3]: -1.0 * 4.343326622758854 * log(1.0 + 0.19085536923187668 * x[1,3])
+ subexpression[4]: -1.0 * 4.239726101818588 * log(1.0 + 0.19085536923187668 * x[1,4])
+ subexpression[5]: -1.0 * 4.2120491157008635 * log(1.0 + 0.19085536923187668 * x[1,5])
+ subexpression[6]: -1.0 * 16.56213070895334 * log(1.0 + 0.19085536923187668 * x[1,6])
+ subexpression[7]: -1.0 * 7.6622179570862095 * log(1.0 + 0.19085536923187668 * x[1,7])
+ subexpression[8]: -1.0 * 0.6970740613548227 * log(1.0 + 0.19085536923187668 * x[1,8])
+ subexpression[9]: -1.0 * 23.574036564141736 * log(1.0 + 0.19085536923187668 * x[1,9])
+ subexpression[10]: -1.0 * 9.520193619544928 * log(1.0 + 0.19085536923187668 * x[1,10])
+
+primal_bound = -222.57429964349998, dual_bound = -222.5743823965866, gap = 3.717996910742557e-5, time = 3.26

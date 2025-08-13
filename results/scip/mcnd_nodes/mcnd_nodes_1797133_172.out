@@ -1,0 +1,35 @@
+solving instance mcnd nodes c39 3 6 cubic
+presolving:
+(round 1, fast)       229 del vars, 229 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 229 del vars, 458 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, exhaustive) 229 del vars, 458 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 45820 upgd conss, 0 impls, 0 clqs
+   (1.6s) probing: 71/249 (28.5%) - 20 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (1.6s) probing aborted: 50/50 successive totally useless probings
+   (1.6s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (1.9s) no symmetry present (symcode time: 0.10)
+presolving (4 rounds: 4 fast, 3 medium, 3 exhaustive):
+ 249 deleted vars, 458 deleted constraints, 0 added constraints, 20 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 45820 implications, 0 cliques
+presolved problem has 46069 variables (229 bin, 0 int, 0 impl, 45840 cont) and 50089 constraints
+  45820 constraints of type <varbound>
+   4249 constraints of type <linear>
+     20 constraints of type <nonlinear>
+Presolving Time: 1.71
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t63.3s|     1 |     0 | 30558 |     - |  trysol|   0 |  46k|  50k|  50k|   0 |  0 |   0 |   0 |-2.662078e+04 | 2.599670e+05 |    Inf | unknown
+  872s|     1 |     0 |123061 |     - |   379M |   0 |  46k|  50k|  50k|   0 |  0 |   0 |   0 |-2.658931e+03 | 2.599670e+05 |    Inf | unknown
+t1131s|     1 |     0 |160088 |     - |  trysol|   0 |  46k|  50k|  50k|   0 |  0 |   0 |   0 |-2.658931e+03 | 7.002000e+04 |    Inf | unknown
+ 1312s|     1 |     0 |180820 |     - |   395M |   0 |  46k|  50k|  50k|  10 |  1 |   0 |   0 | 3.579957e+02 | 7.002000e+04 |  Large | unknown
+t1329s|     1 |     0 |180820 |     - |  trysol|   0 |  46k|  50k|  50k|  10 |  1 |   0 |   0 | 3.579957e+02 | 6.753355e+04 |  Large | unknown
+ 1329s|     1 |     0 |180820 |     - |   395M |   0 |  46k|  50k|  50k|  10 |  1 |   0 |   0 | 3.579957e+02 | 6.753355e+04 |  Large | unknown
+ 3600s|     1 |     0 |383320 |     - |   400M |   0 |  46k|  50k|  50k|  17 |  2 |   0 |   0 | 3.579957e+02 | 6.753355e+04 |  Large | unknown
+(node 1) LP solver hit time limit in LP 6 -- using pseudo solution instead
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 3600.03
+Solving Nodes      : 1
+Primal Bound       : +6.75335542642695e+04 (3 solutions)
+Dual Bound         : +3.57995732693778e+02
+Gap                : 18764.35 %
+primal_bound = 67533.55426426946, dual_bound = 357.9957326937779, gap = 99.46989946465297, time = 3603.23

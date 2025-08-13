@@ -1,0 +1,407 @@
+solving instance mcnd arcs c44 3 6 pardivexp
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Reading problem: 0.0 seconds
+Reformulating problem: 74.1 seconds
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1         OPT 166061.08      136 205.67378
+NLP0014I             2        TIME 0      132 3204.5331
+Loaded instance "/tmp/jl_1u5tFu/model.nl"
+Constraints:        13776
+Variables:          12682 (314 integer)
+Auxiliaries:         3134 (0 integer)
+
+Clp0000I Optimal - objective value 0
+Clp0032I Optimal objective 0 - 0 iterations time 0.002
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Cbc0013I At root node, 0 cuts changed objective from 0 to 0 in 1 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 0 row cuts average 0.0 elements, 0 column cuts (0 active)
+Cbc0010I After 0 nodes, 1 on tree, 1e+50 best solution, best possible -1.7976931e+308 (0.04 seconds)
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Clp0000I Optimal - objective value 0
+Cbc0020I Exiting on maximum time
+Cbc0005I Partial search - best objective 1e+50 (best possible -1.7976931e+308), took 0 iterations and 49 nodes (1.01 seconds)
+Cbc0035I Maximum depth 25, 0 variables fixed on reduced cost
+
+ 	"Not finished"
+
+Linearization cuts added at root node:          0
+Linearization cuts added in total:              0  (separation time: 0s)
+Total solve time:                         1.00982s (1.00982s in branch-and-bound)
+Lower bound:                                 -inf
+Upper bound:                                  inf  (gap: --)
+Branch-and-bound nodes:                        49
+Stats: /tmp/jl_1u5tFu/model.nl 12682 [var]  314 [int] 13776 [con] 3134 [aux]      0 [root]        0 [tot]      0 [sep]  1.00983 [time]  3636.05 [bb]       -1.797693e+308 [lower]         1.000000e+50 [upper]      49 [nodes]
+Performance of                           FBBT:	   0.186548s,        1 runs. fix:          0 shrnk:        295 ubd:          0 2ubd:          0 infeas:          0
+ERROR: LoadError: MathOptInterface.GetAttributeNotAllowed{MathOptInterface.ObjectiveBound}: Getting attribute MathOptInterface.ObjectiveBound() cannot be performed: AmplNLWriter.Optimizer does not support getting the attribute MathOptInterface.ObjectiveBound(). You may want to use a `CachingOptimizer` in `AUTOMATIC` mode or you may need to call `reset_optimizer` before doing this operation if the `CachingOptimizer` is in `MANUAL` mode.
+Stacktrace:
+  [1] get_fallback(model::AmplNLWriter.Optimizer, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface ~/.julia/packages/MathOptInterface/gLl4d/src/attributes.jl:409
+  [2] get(::AmplNLWriter.Optimizer, ::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface ~/.julia/packages/MathOptInterface/gLl4d/src/attributes.jl:390
+  [3] _get_model_attribute(model::MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:865
+  [4] get(model::MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:900
+  [5] get(b::MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Bridges ~/.julia/packages/MathOptInterface/gLl4d/src/Bridges/bridge_optimizer.jl:889
+  [6] _get_model_attribute(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:865
+  [7] get(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:900
+  [8] _moi_get_result(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, args::MathOptInterface.ObjectiveBound)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/optimizer_interface.jl:1053
+  [9] get(model::JuMP.Model, attr::MathOptInterface.ObjectiveBound)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/optimizer_interface.jl:1073
+ [10] objective_bound(model::JuMP.Model)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/objective.jl:78
+ [11] nl_mcnd(ptype::String, graph::String, commodities::String, nodes::String, incr::Int64, cost::Symbol, solver::AmplNLWriter.Optimizer, solver_params::Vector{Any}; solve::Bool, write_nl::Bool)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/nlsolver.jl:1192
+ [12] top-level scope
+    @ ~/git/ipwlb/code/sources/IterativePWLB/test/couenne/mcnd_arcs/script.jl:18
+in expression starting at /home/ccontard/git/ipwlb/code/sources/IterativePWLB/test/couenne/mcnd_arcs/script.jl:18
+f0 = 24.295153242434626
+f0 = 62.637348024779314
+f0 = 50.1483441283488
+f0 = 30.881964706884386
+f0 = 28.529910144304278
+f0 = 49.33491790678135
+f0 = 44.22674239390107
+f0 = 41.21918275255242
+f0 = 29.64947400023607
+f0 = 17.33515382600763
+f0 = 4.5629505617645405
+f0 = 24.142525545763082
+f0 = 20.137151309411376
+f0 = 21.2699487806615
+f0 = 52.624794674921304
+f0 = 32.67820742609409
+f0 = 65.13585459688245
+f0 = 44.981940708067846
+f0 = 21.35729064176257
+f0 = 65.25848609883242
+f0 = 15.626252967898985
+f0 = 53.03239002672626
+f0 = 62.24651525237767
+f0 = 27.81705939915622
+f0 = 26.227261078912647
+f0 = 12.177572815938888
+f0 = 51.716086423061775
+f0 = 41.26064808054988
+f0 = 33.135208275087514
+f0 = 14.23584111845178
+f0 = 47.29694114775658
+f0 = 48.168595276724744
+f0 = 68.02342945934483
+f0 = 8.232190969030338
+f0 = 61.197530678143686
+f0 = 39.619679781075405
+f0 = 18.67263121418145
+f0 = 18.58705383512285
+f0 = 14.084977903822672
+f0 = 32.68438311324263
+f0 = 35.9116207688758
+f0 = 45.27572696813503
+f0 = 57.64121712159439
+f0 = 22.41862659029365
+f0 = 56.579881173063285
+f0 = 32.28384568960745
+f0 = 60.64083659375207
+f0 = 38.64568569364539
+f0 = 19.18344876546949
+f0 = 27.212724299618575
+f0 = 42.106717219902585
+f0 = 25.21268390450638
+f0 = 11.073007057367894
+f0 = 65.03439687944183
+f0 = 29.512726641946514
+f0 = 13.93852589429968
+f0 = 24.950658321203193
+f0 = 52.03192870865957
+f0 = 19.14021895542957
+f0 = 58.24466998011083
+f0 = 49.18229021010978
+f0 = 13.081869862692303
+f0 = 50.92824519110978
+f0 = 29.59036385181413
+f0 = 27.730599779076385
+f0 = 16.17500688309959
+f0 = 16.521727604440162
+f0 = 4.929080585572021
+f0 = 22.12660481226889
+f0 = 33.434287981282026
+f0 = 17.600708373395708
+f0 = 39.13621170144528
+f0 = 13.416239209735764
+f0 = 28.280235935298204
+f0 = 41.28005738301678
+f0 = 10.74304891543055
+f0 = 28.16907356662413
+f0 = 29.213646935751985
+f0 = 31.21633405392783
+f0 = 8.629199428580618
+f0 = 15.448040281611968
+f0 = 48.264759548038015
+f0 = 51.75755175105927
+f0 = 9.760232417788302
+f0 = 27.91763487557561
+f0 = 9.984321637178908
+f0 = 41.65059861193039
+f0 = 20.899407551747913
+f0 = 28.532556867367944
+f0 = 36.7038732059339
+f0 = 8.126322046483601
+f0 = 12.035532011522015
+f0 = 40.60778972484499
+f0 = 26.5422211234892
+f0 = 32.01123321404962
+f0 = 16.5190808813765
+f0 = 31.191631305333598
+f0 = 61.82215732116947
+f0 = 52.199554502691896
+f0 = 12.716622079906047
+f0 = 20.135386827368936
+f0 = 45.665677499515546
+f0 = 41.84292715455695
+f0 = 30.059716075104674
+f0 = 59.98092030987737
+f0 = 56.08053275505117
+f0 = 26.31195621695004
+f0 = 9.073848903276934
+f0 = 52.58950503407242
+f0 = 68.19105525337716
+f0 = 20.389472241481112
+f0 = 54.957439935034536
+f0 = 11.307683169013172
+f0 = 12.339022922822668
+f0 = 17.78156778274639
+f0 = 18.142404360426518
+f0 = 10.095484005852985
+f0 = 34.93321547633967
+f0 = 17.71628194717589
+f0 = 41.69471066299151
+f0 = 16.88873986926887
+f0 = 50.03453503661106
+f0 = 18.253566729100616
+f0 = 42.72516817577981
+f0 = 10.466025234766574
+f0 = 18.112408165704952
+f0 = 19.133161027259785
+f0 = 13.9738155351486
+f0 = 9.447036855254197
+f0 = 24.881843521547825
+f0 = 55.8873219714034
+f0 = 54.01608876538975
+f0 = 10.05490091887673
+f0 = 34.783234502731766
+f0 = 63.25844570372024
+f0 = 20.359476046759532
+f0 = 64.54739983572678
+f0 = 11.50618739878831
+f0 = 43.29156691140486
+f0 = 16.929322956245123
+f0 = 26.37635981149932
+f0 = 74.12853732620685
+f0 = 11.868788458510899
+f0 = 56.556060665490314
+f0 = 32.1497450543816
+f0 = 18.2650358623765
+f0 = 26.726609496924777
+f0 = 7.184088635817606
+f0 = 18.123877298980844
+f0 = 68.36397449353683
+f0 = 20.471520656454818
+f0 = 11.808796069067746
+f0 = 26.902175460148136
+f0 = 54.35663379958176
+f0 = 31.12722771078431
+f0 = 23.40850101610569
+f0 = 79.66018852927408
+f0 = 32.57586746763222
+f0 = 33.731603205434155
+f0 = 71.98645612667785
+f0 = 55.91202471999765
+f0 = 41.18036414761863
+f0 = 22.910034839114772
+f0 = 14.120267544671586
+f0 = 16.73522993157609
+f0 = 27.30183064276208
+f0 = 14.843705182074311
+f0 = 72.93662970653484
+f0 = 23.8999092649268
+f0 = 9.207949538502806
+f0 = 7.60844656702579
+f0 = 31.3469057250688
+f0 = 38.73038083168279
+f0 = 67.16500894569499
+f0 = 15.995029714770135
+f0 = 3.666593684202131
+f0 = 42.27875421904103
+f0 = 42.18611891181264
+f0 = 35.32581273078383
+f0 = 8.11132394912281
+f0 = 65.45610808758632
+f0 = 39.63644236047865
+f0 = 12.140518693047534
+f0 = 22.287172678131448
+f0 = 39.14150514757261
+f0 = 44.69874134025529
+f0 = 27.95116003438208
+f0 = 8.356586953022763
+f0 = 58.49875539422302
+f0 = 31.451892406594325
+f0 = 50.97500396523459
+f0 = 32.26796535122546
+f0 = 33.81982730755644
+f0 = 18.627636922099086
+f0 = 18.51647455342501
+f0 = 17.06518807351344
+f0 = 30.694047369363904
+f0 = 41.26505928565597
+f0 = 7.9295822987509075
+f0 = 18.849079418426022
+f0 = 62.73086557302901
+f0 = 23.26381348862513
+f0 = 28.502560672646357
+f0 = 54.56484268059034
+f0 = 83.01976233809069
+f0 = 53.16296169786726
+f0 = 52.96886867319819
+f0 = 67.92550070598908
+f0 = 42.861915534069354
+f0 = 8.760653340742826
+f0 = 5.023480374842863
+f0 = 41.1141960710269
+f0 = 10.906263504356778
+f0 = 52.735957043595405
+f0 = 23.39614964180856
+f0 = 37.18822352658525
+f0 = 20.03481135094953
+f0 = 29.016024946998062
+f0 = 7.378181660486631
+f0 = 60.53232094814166
+f0 = 24.929484536693856
+f0 = 32.26002518203447
+f0 = 35.03379095275907
+f0 = 9.066790975107148
+f0 = 6.442123936969193
+f0 = 84.35723972626452
+f0 = 19.36783713890506
+f0 = 38.11810556295411
+f0 = 12.422835819838838
+f0 = 51.64815386442765
+f0 = 49.61723503357265
+f0 = 52.31953928157823
+f0 = 70.9798191214625
+f0 = 52.30807014830233
+f0 = 49.97542488818915
+f0 = 8.870051227374454
+f0 = 53.179724277270495
+f0 = 15.982678340473012
+f0 = 18.976122125482107
+f0 = 10.006377662709479
+f0 = 51.66315196178841
+f0 = 9.097669410849951
+f0 = 12.838371340834808
+f0 = 18.596758486356297
+f0 = 15.103084042313839
+f0 = 61.36427423115479
+f0 = 17.24163627775801
+f0 = 71.9273459782559
+f0 = 9.624367300519987
+f0 = 38.93417850758524
+f0 = 84.03786847658185
+f0 = 19.054641576370955
+f0 = 8.688309577002551
+f0 = 73.49067706786276
+f0 = 11.45148845547249
+f0 = 55.18417587748881
+f0 = 40.81070515972624
+f0 = 27.951160034382095
+f0 = 23.282340550070813
+f0 = 17.64217370139318
+f0 = 6.6847402178054764
+f0 = 16.192651703524042
+f0 = 26.43194099583635
+f0 = 20.673553850314857
+f0 = 17.450727399787823
+f0 = 13.040404534694835
+f0 = 45.83242105252666
+f0 = 48.36357054241502
+f0 = 20.415939472117795
+f0 = 48.74822762766816
+f0 = 10.12459795955334
+f0 = 8.359233676086433
+f0 = 18.006539243158215
+f0 = 16.00914557110969
+f0 = 13.363304748462399
+f0 = 20.391236723523566
+f0 = 36.33244973599909
+f0 = 25.975822387864138
+f0 = 66.09220386388799
+f0 = 60.281764498114384
+f0 = 54.27811434869293
+f0 = 52.72095894623462
+f0 = 17.97566080741541
+f0 = 51.03940755978386
+f0 = 81.58964964268843
+f0 = 26.545750087574106
+f0 = 53.8414050431876
+f0 = 25.375016252411392
+f0 = 83.45558940257474
+f0 = 10.856858007168295
+f0 = 28.3614021092507
+f0 = 39.605563924735826
+f0 = 18.810260813492224
+f0 = 20.515632707515977

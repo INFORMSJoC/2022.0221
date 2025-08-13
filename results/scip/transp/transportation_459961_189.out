@@ -1,0 +1,35 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance transportation 3 9 sqrt
+presolving:
+(round 1, fast)       11 del vars, 11 del conss, 0 add conss, 11 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (0.0s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (0.0s) no symmetry present
+presolving (2 rounds: 2 fast, 1 medium, 1 exhaustive):
+ 11 deleted vars, 11 deleted constraints, 0 added constraints, 11 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 16 variables (0 bin, 0 int, 0 impl, 16 cont) and 13 constraints
+      4 constraints of type <linear>
+      9 constraints of type <nonlinear>
+Presolving Time: 0.00
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  0.0s|     1 |     0 |    28 |     - |   976k |   0 |  36 |  13 |  24 |   0 |  0 |   0 |   0 | 3.010481e+02 |      --      |    Inf | unknown
+L 0.0s|     1 |     0 |    28 |     - |undercov|   0 |  36 |  13 |  24 |   0 |  0 |   0 |   0 | 3.010481e+02 | 3.286944e+02 |   9.18%| unknown
+t 0.3s|     1 |     0 |    28 |     - |  trysol|   0 |  36 |  13 |  24 |   0 |  0 |   0 |   0 | 3.010481e+02 | 3.286944e+02 |   9.18%| unknown
+  0.3s|     1 |     0 |    28 |     - |   999k |   0 |  36 |  13 |  24 |   0 |  2 |   0 |   0 | 3.010481e+02 | 3.286944e+02 |   9.18%| unknown
+  0.3s|     1 |     2 |    28 |     - |  1001k |   0 |  36 |  13 |  24 |   0 |  4 |   0 |   0 | 3.010481e+02 | 3.286944e+02 |   9.18%| unknown
+t 0.3s|     7 |     2 |    53 |   4.2 |  trysol|   3 |  36 |  13 |   0 |  13 |  0 |   0 |   0 | 3.133109e+02 | 3.239812e+02 |   3.41%|  73.21%
+* 0.3s|     8 |     1 |    72 |   6.3 |    LP  |   4 |  36 |  13 |  31 |  22 |  4 |   0 |   0 | 3.239244e+02 | 3.239812e+02 |   0.02%|  95.23%
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 0.33
+Solving Nodes      : 9
+Primal Bound       : +3.23981176660409e+02 (4 solutions)
+Dual Bound         : +3.23981176660409e+02
+Gap                : 0.00 %
+primal_bound = 323.9811766604087, dual_bound = 323.9811766604087, gap = 0.0, time = 3.23
