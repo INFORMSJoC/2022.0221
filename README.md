@@ -50,6 +50,29 @@ To install this Julia package, simply execute from a Julia Pkg REPL (by pressing
 
 This package depends on `LinA.jl`, a greedy method for constructing piecewise linear approximations to univariate functions of minimum size. We make use of the code available at https://github.com/claud10cv/LinA.jl. The official repository and a more up-to-date implementation of this method can be found at https://github.com/LICO-labs/PiecewiseLinApprox.jl. LinA.jl and PiecewiseLinApprox.jl implement the code described in [this paper](https://link.springer.com/article/10.1007/s12532-024-00274-8).
 
+# Parameters available
+
+The following struct is passed to the optimizer and can be used to control its behavior
+
+```julia
+mutable struct Parameters
+    with_solver::DataType # Optimization solver, default = GLPK.Optimizer,
+    with_solver_parameters::Any # Parameters passed to the solver, default = empty_parameters,
+    with_lina_solver::DataType # Type of LinA method, either LinA.HeuristicLin or LinA.ExactLin
+    with_cost_type::Symbol # type of cost function
+    ptype::Symbol # problem type
+    eps0::Float64 # INitial tolerance, default = 1e-1,
+    eps::Float64 # final desired relative tolerance
+    tilim::Float64 # Time limit, default = 3600,
+    printon::Bool # Verbosity level, default = false,
+    stepdiv::Float64 # Divisor of the tolrance when upadting a linear section, default =2.0,
+    dynstep::Bool # Not relevant, not used, default = false,
+    activeUpdateLargePwlf::Bool # Not relevant, not used, default =false,
+    warmstartMILP::Bool # Solution of previous MILP is passed as warmstart the next call, default =false,
+    miptype::Symbol # Not used, default = :grb,
+    with_fixed_charge::Bool # Whether a fixed charge term is necessary at the origin, default = false
+end
+```
 # Basic usage
 
 To solve a nonlinear transportation problem, the following script reads the instance name and the type of cost function from the command line and solves the associated problem using our solver
