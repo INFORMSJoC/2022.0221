@@ -17,7 +17,7 @@ https://doi.org/10.1287/ijoc.2022.0221
 
 https://doi.org/10.1287/ijoc.2022.0221.cd
 
-Below is the BibTex for citing this snapshot of the respoitory.
+Below is the BibTex for citing this snapshot of the repository.
 
 ```
 @article{ContardoNgueveuIPWLB2025,
