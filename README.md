@@ -1,4 +1,3 @@
-# 2022.0221
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
 # On the approximation of separable non-convex optimization programs to an arbitrary numerical tolerance
@@ -6,8 +5,9 @@
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
-The software and data in this repository are a snapshot of the software and data that were used in the research reported in the paper _On the approximation of separable non-convex optimization programs to an arbitrary numerical tolerance_ by Claudio Contardo and Sandra U. Ngueveu. The upstream repository (including a potentially more up-to-date version of this code) can be found at https://redmine.laas.fr/laas/users/ngueveu/r/ipwlb.git. This snapshot has been built from [this commit](https://redmine.laas.fr/laas/users/ngueveu/r/ipwlb.git/commit/d63e265e1a6fa8606bf5319f989ba03f845eca6d).
+The software and data in this repository are a snapshot of the software and data that were used in the research reported in the paper [On the approximation of separable non-convex optimization programs to an arbitrary numerical tolerance](https://doi.org/10.1287/ijoc.2022.0221) by Claudio Contardo and Sandra U. Ngueveu.
 
+The upstream repository (including a potentially more up-to-date version of this code) can be found at https://redmine.laas.fr/laas/users/ngueveu/r/ipwlb.git. This snapshot has been built from [this commit](https://redmine.laas.fr/laas/users/ngueveu/r/ipwlb.git/commit/d63e265e1a6fa8606bf5319f989ba03f845eca6d).
 
 ## Cite
 
@@ -35,7 +35,7 @@ Below is the BibTex for citing this snapshot of the repository.
 
 This repository provides the source code, data files and detailed results as reported in the article.
 
-The main folders are 'data', 'results', 'src' and 'test'.
+The main folders are 'data', 'results', and 'src'.
 - '[data](data)': This folder includes instances of the multiple MINLPs benchmark problems.
 - '[src](src)': The source code.
 - '[results](results)': Detailed results, please see the README.md included in that folder for more information.
@@ -48,7 +48,7 @@ To install this Julia package, simply execute from a Julia Pkg REPL (by pressing
 (@v1.10) pkg> add https://github.com/INFORMSJoC/2022.0221
 ```
 
-This package depends on `LinA.jl`, a greedy method for constructing piecewise linear approximations to univariate functions of minimum size. We make use of the code available at https://github.com/claud10cv/LinA.jl. The official repository and a more up-to-date implementation of this method can be found at https://github.com/LICO-labs/PiecewiseLinApprox.jl. LinA.jl and PiecewiseLinApprox.jl implement the code described in [this paper](https://link.springer.com/article/10.1007/s12532-024-00274-8).
+This package depends on `LinA.jl`, a greedy method for constructing piecewise linear approximations to univariate functions of minimum size. We make use of the code available at https://github.com/claud10cv/LinA.jl. The official repository and a more up-to-date implementation of this method can be found at https://github.com/LICO-labs/PiecewiseLinApprox.jl. LinA.jl and PiecewiseLinApprox.jl implement the method described in [this paper](https://link.springer.com/article/10.1007/s12532-024-00274-8).
 
 # Parameters available
 
