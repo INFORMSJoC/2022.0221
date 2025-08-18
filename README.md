@@ -36,7 +36,8 @@ Below is the BibTex for citing this snapshot of the repository.
 This repository provides the source code, data files and detailed results as reported in the article.
 
 The main folders are 'data', 'results', and 'src'.
-- '[data](data)': This folder includes instances of the multiple MINLPs benchmark problems.
+- '[instances](instances)': This folder includes instances of the multiple MINLPs benchmark problems.
+- '[data](data)': This folder contains toy instances used by the method for precompilation.
 - '[src](src)': The source code.
 - '[results](results)': Detailed results, please see the README.md included in that folder for more information.
 
