@@ -200,7 +200,7 @@ function mip_piecewise_knap_grb(pwl,
             @assert(size(prevx, 1) == old_nbreaks[1], "sizes mismatch! $(size(prevx, 1)) != $(old_nbreaks[1])")
         end
         if nbreaks == old_nbreaks[1] && length(breakx) == length(prevx) && length(breaky) == length(prevy) && maximum(abs.(breakx - prevx)) < 1e-5 && maximum(abs.(breaky - prevy)) < 1e-5
-            if print
+            if params.printon
                 println("objective for this variable did not change!")
             end
         else

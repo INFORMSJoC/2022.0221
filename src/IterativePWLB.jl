@@ -16,8 +16,6 @@ module IterativePWLB
     using Ipopt
     using Juniper
     using Gurobi
-    using BARON
-    # using Roots
     using IntervalArithmetic
     using IntervalRootFinding
     using Random
@@ -38,7 +36,6 @@ module IterativePWLB
     include("instance_gen.jl")
     include("instance_reader.jl")
     include("gurobifns.jl")
-    #include("mainSUN.jl")
     include("minlpsolvers.jl")
     include("nlsolver.jl")
     include("optimizer.jl")
