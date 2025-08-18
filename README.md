@@ -1,4 +1,3 @@
-# 2022.0221
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
 # On the approximation of separable non-convex optimization programs to an arbitrary numerical tolerance
@@ -6,8 +5,9 @@
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
-The software and data in this repository are a snapshot of the software and data that were used in the research reported in the paper _On the approximation of separable non-convex optimization programs to an arbitrary numerical tolerance_ by Claudio Contardo and Sandra U. Ngueveu. The upstream repository (including a potentially more up-to-date version of this code) can be found at https://redmine.laas.fr/laas/users/ngueveu/r/ipwlb.git. This snapshot has been built from [this commit](https://redmine.laas.fr/laas/users/ngueveu/r/ipwlb.git/commit/d63e265e1a6fa8606bf5319f989ba03f845eca6d).
+The software and data in this repository are a snapshot of the software and data that were used in the research reported in the paper [On the approximation of separable non-convex optimization programs to an arbitrary numerical tolerance](https://doi.org/10.1287/ijoc.2022.0221) by Claudio Contardo and Sandra U. Ngueveu.
 
+The upstream repository (including a potentially more up-to-date version of this code) can be found at https://redmine.laas.fr/laas/users/ngueveu/r/ipwlb.git. This snapshot has been built from [this commit](https://redmine.laas.fr/laas/users/ngueveu/r/ipwlb.git/commit/d63e265e1a6fa8606bf5319f989ba03f845eca6d).
 
 ## Cite
 
