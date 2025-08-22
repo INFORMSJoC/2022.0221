@@ -1,0 +1,102 @@
+2023/05/23
+Julia is now 1.9.4
+previous version was 1.9.0
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance mcf c100_400_30_V_T_10 3 6 cubic
+===========================================================================
+ BARON version 23.11.13. Built: LNX-64 Mon Nov 13 23:14:09 EST 2023
+
+ BARON is a product of The Optimization Firm.
+ For information on BARON, see https://minlp.com/about-baron
+ Licensee: Claudio Contardo at Concordia University, claudio.contardo@concordia.ca.
+
+ If you use this software, please cite publications from
+ https://minlp.com/baron-publications, such as: 
+
+ Khajavirad, A. and N. V. Sahinidis,
+ A hybrid LP/NLP paradigm for global optimization relaxations,
+ Mathematical Programming Computation, 10, 383-421, 2018.
+===========================================================================
+ This BARON run may utilize the following subsolver(s)
+ For LP/MIP/QP: CLP/CBC, ILOG CPLEX                             
+ For NLP: IPOPT, FILTERSQP
+===========================================================================
+ Doing local search
+ Solving bounding LP
+ Starting multi-start local search
+ Estimated remaining time for local search is 239 secs
+ Estimated remaining time for local search is 389 secs
+ Done with local search
+===========================================================================
+  Iteration    Open nodes         Time (s)    Lower bound      Upper bound
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+          1             1          1966.10     -9920.96         0.100000E+52   
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+          1             1          2269.62     -9681.45         0.100000E+52   
+          1             1          2506.43     -7399.39         0.100000E+52   
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+          1             1          2740.86     -5683.44         0.100000E+52   
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+          1             1          2981.30     -3114.94         0.100000E+52   
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+          1             1          3106.95     -2432.91         0.100000E+52   
+          1             0          3106.96     0.100000E+13     0.100000E+52   
+
+                         *** Normal completion ***            
+
+                       *** Problem is infeasible ***
+
+ Wall clock time:                  3121.88
+ Total CPU time used:              3106.96
+
+ Total no. of BaR iterations:       1
+ Best solution found at node:      -3
+ Max. no. of nodes in memory:       1
+ 
+ All done
+===========================================================================
+ERROR: LoadError: Result index of attribute MathOptInterface.ObjectiveValue(1) out of bounds. There are currently 0 solution(s) in the model.
+Stacktrace:
+  [1] check_result_index_bounds
+    @ ~/.julia/packages/MathOptInterface/wW7fs/src/attributes.jl:207 [inlined]
+  [2] get
+    @ ~/.julia/packages/BARON/0gno4/src/moi/results.jl:70 [inlined]
+  [3] get(b::MathOptInterface.Bridges.LazyBridgeOptimizer{BARON.Optimizer}, attr::MathOptInterface.ObjectiveValue)
+    @ MathOptInterface.Bridges ~/.julia/packages/MathOptInterface/wW7fs/src/Bridges/bridge_optimizer.jl:1086
+  [4] _get_model_attribute(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{BARON.Optimizer}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveValue)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/wW7fs/src/Utilities/cachingoptimizer.jl:828
+  [5] get
+    @ ~/.julia/packages/MathOptInterface/wW7fs/src/Utilities/cachingoptimizer.jl:876 [inlined]
+  [6] _moi_get_result(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{BARON.Optimizer}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, args::MathOptInterface.ObjectiveValue)
+    @ JuMP ~/.julia/packages/JuMP/D44Aq/src/optimizer_interface.jl:663
+  [7] get(model::JuMP.Model, attr::MathOptInterface.ObjectiveValue)
+    @ JuMP ~/.julia/packages/JuMP/D44Aq/src/optimizer_interface.jl:683
+  [8] objective_value(model::JuMP.Model; result::Int64)
+    @ JuMP ~/.julia/packages/JuMP/D44Aq/src/objective.jl:54
+  [9] objective_value
+    @ ~/.julia/packages/JuMP/D44Aq/src/objective.jl:50 [inlined]
+ [10] nl_mcf(graph::String, commodities::String, nodes::String, incr::Int64, cost::Symbol, solver::BARON.Optimizer, solver_params::Vector{Any}; restrict_to_commodities::Int64, solve::Bool, write_nl::Bool)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/nlsolver.jl:1241
+ [11] top-level scope
+    @ ~/git/ipwlb/code/sources/IterativePWLB/test/baron/mcf/script.jl:12
+in expression starting at /home/ccontard/git/ipwlb/code/sources/IterativePWLB/test/baron/mcf/script.jl:12

@@ -1,0 +1,99 @@
+solving instance uflp nlass gunluk ../../../../../instances/uflp/gunluk/gunluk-20-40-5.txt sincos
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Reformulating problem: 2.2 seconds
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1         OPT 413.89084     1366 62.076667
+NLP0014I             2         OPT 919.78042     2576 91.692172
+Couenne: new cutoff value 9.1978041916e+02 (184.461 seconds)
+Loaded instance "/tmp/jl_PPDBIy/model.nl"
+Constraints:         2440
+Variables:           2420 (820 integer)
+Auxiliaries:         5640 (0 integer)
+
+Coin0506I Presolve 8139 (-3902) rows, 4019 (-4041) columns and 22139 (-5921) elements
+Clp0006I 0  Obj -1877.4571 Primal inf 14184739 (2478)
+Clp0006I 237  Obj -1877.4571 Primal inf 12282498 (2448)
+Clp0006I 474  Obj -1877.4571 Primal inf 9377654 (2420)
+Clp0006I 711  Obj -1877.4571 Primal inf 7315831.9 (2371)
+Clp0006I 948  Obj -1877.4571 Primal inf 5966643.4 (2338)
+Clp0006I 1185  Obj -1877.4571 Primal inf 4903045.7 (2305)
+Clp0006I 1422  Obj -1877.4571 Primal inf 3242161.4 (2266)
+Clp0006I 1659  Obj -1877.4571 Primal inf 1897805.5 (2216)
+Clp0006I 1896  Obj -1877.4571 Primal inf 736108.04 (2162)
+Clp0006I 2133  Obj -1877.4571 Primal inf 20319.505 (2085)
+Clp0006I 2370  Obj -1877.4571 Primal inf 10339.982 (1994)
+Clp0006I 2607  Obj -1877.4571 Primal inf 5904.5827 (1901)
+Clp0006I 2844  Obj -1877.4571 Primal inf 5434.8601 (1889)
+Clp0006I 3081  Obj -1803.9079 Primal inf 4683.5032 (1845)
+Clp0006I 3318  Obj -1796.6736 Primal inf 4157.8879 (1829)
+Clp0006I 3555  Obj -1776.6928 Primal inf 3631.7635 (1832)
+Clp0006I 3792  Obj -1631.2493 Primal inf 4295.463 (1840)
+Clp0006I 4029  Obj -1370.7927 Primal inf 4696.9681 (1780)
+Clp0006I 4266  Obj -1073.8937 Primal inf 4308.3484 (1577)
+Clp0006I 4503  Obj -818.61011 Primal inf 2271.5131 (1163)
+Clp0006I 4740  Obj -743.95531 Primal inf 433.34216 (855)
+Clp0006I 4977  Obj -730.72343 Primal inf 337.50248 (861)
+Clp0006I 5214  Obj -721.84753 Primal inf 44.148247 (807)
+Clp0006I 5451  Obj -697.53483 Primal inf 119.66257 (495)
+Clp0006I 5645  Obj -676.30469
+Clp0000I Optimal - objective value -676.30469
+Clp0032I Optimal objective -676.3046915 - 5645 iterations time 0.502, Presolve 0.05
+Clp0000I Optimal - objective value -676.30469
+NLP Heuristic: time limit reached.
+Clp0000I Optimal - objective value -676.30469
+Optimality Based BT: 1314 improved bounds
+Probing: 771 improved bounds
+NLP Heuristic: time limit reached.
+Cbc0013I At root node, 0 cuts changed objective from -676.30469 to -224.03805 in 2 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 0 row cuts average 0.0 elements, 3 column cuts (3 active)
+Cbc0010I After 0 nodes, 1 on tree, 1e+50 best solution, best possible -1.7976931e+308 (760.33 seconds)
+Optimality Based BT: 81 improved bounds
+Optimality Based BT: 51 improved bounds
+Optimality Based BT: 74 improved bounds
+Cbc0020I Exiting on maximum time
+Cbc0005I Partial search - best objective 1e+50 (best possible -1.7976931e+308), took 4258 iterations and 3 nodes (3414.27 seconds)
+Cbc0035I Maximum depth 2, 0 variables fixed on reduced cost
+
+ 	"Not finished"
+
+Linearization cuts added at root node:      12041
+Linearization cuts added in total:          12041  (separation time: 0.173405s)
+Total solve time:                         3414.79s (3414.79s in branch-and-bound)
+Lower bound:                                 -inf
+Upper bound:                               919.78  (gap: --)
+Branch-and-bound nodes:                         3
+Stats: /tmp/jl_PPDBIy/model.nl 2420 [var]  820 [int] 2440 [con] 5640 [aux]  12041 [root]    12041 [tot] 0.173405 [sep]  3414.79 [time]   3414.8 [bb]       -1.797693e+308 [lower]         9.197804e+02 [upper]       3 [nodes]
+Performance of                           FBBT:	   0.525769s,       10 runs. fix:          0 shrnk:    3563.22 ubd:          0 2ubd:          0 infeas:          0
+Performance of                           OBBT:	    234.241s,        4 runs. fix:       1.75 shrnk:     5.2645 ubd:          0 2ubd:          0 infeas:          0
+ERROR: LoadError: MathOptInterface.GetAttributeNotAllowed{MathOptInterface.ObjectiveBound}: Getting attribute MathOptInterface.ObjectiveBound() cannot be performed: AmplNLWriter.Optimizer does not support getting the attribute MathOptInterface.ObjectiveBound(). You may want to use a `CachingOptimizer` in `AUTOMATIC` mode or you may need to call `reset_optimizer` before doing this operation if the `CachingOptimizer` is in `MANUAL` mode.
+Stacktrace:
+  [1] get_fallback(model::AmplNLWriter.Optimizer, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface ~/.julia/packages/MathOptInterface/gLl4d/src/attributes.jl:409
+  [2] get(::AmplNLWriter.Optimizer, ::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface ~/.julia/packages/MathOptInterface/gLl4d/src/attributes.jl:390
+  [3] _get_model_attribute(model::MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:865
+  [4] get(model::MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:900
+  [5] get(b::MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Bridges ~/.julia/packages/MathOptInterface/gLl4d/src/Bridges/bridge_optimizer.jl:889
+  [6] _get_model_attribute(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:865
+  [7] get(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:900
+  [8] _moi_get_result(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, args::MathOptInterface.ObjectiveBound)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/optimizer_interface.jl:1053
+  [9] get(model::JuMP.Model, attr::MathOptInterface.ObjectiveBound)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/optimizer_interface.jl:1073
+ [10] objective_bound(model::JuMP.Model)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/objective.jl:78
+ [11] nl_uflp_nlass(filename::String, cost::Symbol, solver::AmplNLWriter.Optimizer, solver_params::Vector{Any}; solve::Bool, write_nl::Bool, with_cap_constraint::Bool)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/nlsolver.jl:885
+ [12] top-level scope
+    @ ~/git/ipwlb/code/sources/IterativePWLB/test/couenne/uflp_nlass/script.jl:14
+in expression starting at /home/ccontard/git/ipwlb/code/sources/IterativePWLB/test/couenne/uflp_nlass/script.jl:14
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-20-40-5.txt

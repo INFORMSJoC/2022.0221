@@ -1,0 +1,57 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 100 8 log
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Couenne: new cutoff value -6.6748637370e-01 (0.025918 seconds)
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1         OPT -3045.3456       23 0.072977
+Couenne: new cutoff value -2.7160452460e+03 (0.252797 seconds)
+NLP0014I             2         OPT -2794.6666       27 0.065975
+Couenne: new cutoff value -2.7946665680e+03 (0.319665 seconds)
+Loaded instance "/tmp/jl_2UorFA/model.nl"
+Constraints:          301
+Variables:            300 (100 integer)
+Auxiliaries:          202 (0 integer)
+
+Coin0506I Presolve 701 (-201) rows, 300 (-202) columns and 1599 (-402) elements
+Clp0006I 0  Obj -3261.0064 Primal inf 276.11791 (100)
+Clp0006I 89  Obj -3261.0064 Primal inf 386.51141 (196)
+Clp0006I 178  Obj -3261.0064 Primal inf 636.1788 (353)
+Clp0006I 267  Obj -3261.0064 Primal inf 305.08211 (296)
+Clp0006I 356  Obj -3261.0063 Primal inf 413.16665 (261)
+Clp0006I 443  Obj -3192.0555 Primal inf 88.232994 (182)
+Clp0006I 532  Obj -3074.2291 Primal inf 10.270212 (54)
+Clp0006I 583  Obj -3061.7026
+Clp0000I Optimal - objective value -3061.7028
+Clp0032I Optimal objective -3061.7028 - 583 iterations time 0.022, Presolve 0.00
+Clp0000I Optimal - objective value -3061.7028
+NLP Heuristic: time limit reached.
+Clp0000I Optimal - objective value -3061.7028
+Optimality Based BT: 0 improved bounds
+Probing: 0 improved bounds
+Couenne: new cutoff value -3.0453455858e+03 (1.12166 seconds)
+NLP Heuristic: no solution.
+Cbc0031I 103 added rows had average density of 2
+Cbc0013I At root node, 103 cuts changed objective from -3061.7028 to -3045.3456 in 19 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 577 row cuts average 2.0 elements, 9 column cuts (9 active)
+Cbc0004I Integer solution of -3045.3456 found after 576 iterations and 0 nodes (0.82 seconds)
+Cbc0001I Search completed - best objective -3045.345585784509, took 576 iterations and 0 nodes (0.82 seconds)
+Cbc0035I Maximum depth 0, 0 variables fixed on reduced cost
+
+ 	"Finished"
+
+Linearization cuts added at root node:        902
+Linearization cuts added in total:            902  (separation time: 0.002149s)
+Total solve time:                        0.847743s (0.847742s in branch-and-bound)
+Lower bound:                             -3045.35
+Upper bound:                             -3045.35  (gap: 0.00%)
+Branch-and-bound nodes:                         0
+Stats: /tmp/jl_2UorFA/model.nl  300 [var]  100 [int]  301 [con]  202 [aux]    902 [root]      902 [tot] 0.002149 [sep] 0.847745 [time] 0.848398 [bb]        -3.045346e+03 [lower]        -3.045346e+03 [upper]       0 [nodes]
+Performance of                           FBBT:	   0.005702s,       22 runs. fix:          0 shrnk:    111.982 ubd:          0 2ubd:          1 infeas:          0
+Performance of                           OBBT:	   0.437393s,        1 runs. fix:          0 shrnk:          0 ubd:          0 2ubd:          1 infeas:          0
+primal_bound = -3045.345585784508, dual_bound = 0.0, gap = 100.0, time = 4.48

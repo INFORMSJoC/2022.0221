@@ -1,0 +1,92 @@
+solving instance transportation 15 5 square
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 480 rows, 900 columns and 1350 nonzeros
+Model fingerprint: 0x46936297
+Model has 225 function constraints treated as nonlinear
+  225 POW
+Variable types: 675 continuous, 225 integer (225 binary)
+Coefficient statistics:
+  Matrix range     [5e-04, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+00, 4e+02]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 450 rows and 675 columns
+Presolve time: 0.00s
+Presolved: 30 rows, 225 columns, 450 nonzeros
+Presolved model has 225 quadratic objective terms
+Variable types: 225 continuous, 0 integer (0 binary)
+Root relaxation presolve time: 0.00s
+Root relaxation presolved: 30 rows, 225 columns, 450 nonzeros
+Root relaxation presolved model has 225 quadratic objective terms
+Root barrier log...
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 2.250e+02
+ Factor NZ  : 4.650e+02
+ Factor Ops : 9.455e+03 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   6.12597491e+07 -6.28865487e+07  1.24e+04 8.01e+02  7.06e+05     0s
+   1   1.80255432e+06 -3.73726947e+06  1.84e+03 1.17e+02  1.11e+05     0s
+   2   2.21101505e+04 -1.83395143e+06  1.57e+02 9.96e+00  1.24e+04     0s
+   3   2.44444871e+03 -1.09565496e+06  2.74e+01 1.74e+00  3.75e+03     0s
+   4   1.08146546e+03 -4.64915325e+05  7.44e+00 4.80e-01  1.30e+03     0s
+   5   6.54199942e+02 -2.33968123e+05  2.92e+00 1.93e-01  6.08e+02     0s
+   6   3.45665526e+02 -1.11279682e+05  8.71e-01 6.03e-02  2.71e+02     0s
+   7   2.57326042e+02 -4.16233209e+04  2.77e-01 2.04e-02  9.82e+01     0s
+   8   2.21807260e+02 -1.37175895e+04  4.90e-02 4.64e-03  3.09e+01     0s
+   9   2.12153841e+02 -3.41672928e+03  3.71e-03 3.10e-04  7.70e+00     0s
+  10   2.02396648e+02 -3.37922574e+02  5.32e-04 4.51e-05  1.15e+00     0s
+  11   1.86030369e+02  6.95968340e+01  5.66e-05 4.32e-06  2.46e-01     0s
+  12   1.80788295e+02  1.33032582e+02  1.52e-05 1.49e-06  1.01e-01     0s
+  13   1.78776838e+02  1.76836847e+02  1.33e-07 8.88e-09  4.05e-03     0s
+  14   1.78699959e+02  1.78651332e+02  8.91e-10 8.14e-11  1.01e-04     0s
+  15   1.78694562e+02  1.78692436e+02  1.73e-11 2.29e-12  4.43e-06     0s
+  16   1.78693952e+02  1.78693833e+02  3.15e-12 1.66e-12  2.48e-07     0s
+  17   1.78693903e+02  1.78693903e+02  2.84e-14 3.92e-12  7.02e-10     0s
+
+Barrier solved model in 17 iterations and 0.00 seconds (0.00 work units)
+Optimal objective 1.78693903e+02
+
+
+Root relaxation: objective 1.786939e+02, 0 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     178.6939032  178.69390  0.00%     -    0s
+
+Explored 1 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 1: 178.694 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 1.786939032037e+02, best bound 1.786939032037e+02, gap 0.0000%
+
+User-callback calls 345, time in user-callback 0.00 sec
+primal_bound = 178.69390320373984, dual_bound = 178.6939032037437, gap = 2.16311380144164e-12, time = 0.02

@@ -1,0 +1,89 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 1000 3 square
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 3001 rows, 4000 columns and 6000 nonzeros
+Model fingerprint: 0x170033db
+Model has 1000 function constraints treated as nonlinear
+  1000 POW
+Variable types: 3000 continuous, 1000 integer (1000 binary)
+Coefficient statistics:
+  Matrix range     [4e-07, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+02, 1e+10]
+  RHS range        [1e+02, 2e+06]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Found heuristic solution: objective 0.0000000
+Presolve removed 3000 rows and 3000 columns
+Presolve time: 0.01s
+Presolved: 1002 rows, 2002 columns, 4001 nonzeros
+Presolved model has 1000 bilinear constraint(s)
+
+Solving non-convex MIQCP
+
+Variable types: 2002 continuous, 0 integer (0 binary)
+Found heuristic solution: objective -31707.69802
+
+Root relaxation: objective -3.197286e+04, 1010 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -31972.856    0    1 -31707.698 -31972.856  0.84%     -    0s
+H    0     0                    -31966.25453 -31972.856  0.02%     -    0s
+     0     0 -31972.804    0    1 -31966.255 -31972.804  0.02%     -    0s
+     0     0 -31972.790    0    1 -31966.255 -31972.790  0.02%     -    0s
+     0     0 -31972.756    0    4 -31966.255 -31972.756  0.02%     -    0s
+     0     0 -31972.756    0    4 -31966.255 -31972.756  0.02%     -    0s
+H    0     0                    -31968.07789 -31972.756  0.01%     -    0s
+     0     2 -31972.753    0    4 -31968.078 -31972.753  0.01%     -    0s
+H   13    13                    -31970.14987 -31972.577  0.01%  26.5    0s
+*   74    54              37    -31970.79909 -31972.535  0.01%  61.3    0s
+*  124    36               3    -31971.59337 -31972.431  0.00%  37.0    0s
+H  376    58                    -31971.89096 -31972.330  0.00%  12.8    1s
+H  376    58                    -31971.90411 -31972.330  0.00%  12.8    1s
+  1814   959 -31971.962  518    1 -31971.904 -31972.330  0.00%   4.2    5s
+* 2862   175            1042    -31971.96378 -31972.330  0.00%   3.0    6s
+* 2935    76              67    -31971.97950 -31972.330  0.00%   3.0    6s
+* 2938    73              69    -31971.97953 -31972.330  0.00%   3.0    6s
+H 2991    68                    -31971.98018 -31972.330  0.00%   3.0    6s
+* 3095    68              67    -31971.98021 -31972.330  0.00%   2.9    7s
+* 3099    68              69    -31971.98034 -31972.330  0.00%   2.9    7s
+* 3216   101              73    -31971.98037 -31972.324  0.00%   2.8    7s
+* 3251   112              68    -31971.98038 -31972.317  0.00%   2.8    7s
+* 3253   111              69    -31971.98039 -31972.317  0.00%   2.8    7s
+* 3423   147              69    -31971.98039 -31972.287  0.00%   2.8    8s
+
+Cutting planes:
+  RLT: 3
+
+Explored 3850 nodes (11147 simplex iterations) in 9.33 seconds (4.42 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 10: -31972 -31972 -31972 ... -31972
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective -3.197198039105e+04, best bound -3.197198716889e+04, gap 0.0000%
+
+User-callback calls 13139, time in user-callback 0.01 sec
+primal_bound = -31971.98039104729, dual_bound = 0.0, gap = 100.0, time = 9.69

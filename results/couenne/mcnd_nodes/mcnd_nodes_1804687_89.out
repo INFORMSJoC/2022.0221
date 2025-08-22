@@ -1,0 +1,92 @@
+solving instance mcnd nodes c25_100_30_F_L_5 3 6 square
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Reformulating problem: 1.9 seconds
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1         OPT 24636.69       81 80.009021
+NLP0014I             2      INFEAS 6.9999999       69 18.805546
+Loaded instance "/tmp/jl_roESRn/model.nl"
+Constraints:         4125
+Variables:           3275 (125 integer)
+Auxiliaries:         3156 (1 integer)
+
+Coin0506I Presolve 4078 (-177) rows, 3262 (-3169) columns and 21338 (-3668) elements
+Clp0006I 0  Obj 4015.371 Primal inf 274.37745 (78)
+Clp0006I 156  Obj 6882.9134 Primal inf 1016.2238 (160)
+Clp0006I 312  Obj 11071.279 Primal inf 974.29173 (310)
+Clp0006I 468  Obj 15280.571 Primal inf 1501.6277 (389)
+Clp0006I 624  Obj 17772.796 Primal inf 3613.2307 (598)
+Clp0006I 780  Obj 19179.377 Primal inf 2558.4252 (672)
+Clp0006I 936  Obj 20152.76 Primal inf 18759.294 (867)
+Clp0006I 1077  Obj 20794.878 Primal inf 4551.3695 (737)
+Clp0006I 1220  Obj 21561.743 Primal inf 22751.785 (1492)
+Clp0006I 1355  Obj 22128.902 Primal inf 10829.678 (1404)
+Clp0006I 1486  Obj 22590.325 Primal inf 24382.255 (1502)
+Clp0006I 1618  Obj 23268.318 Primal inf 3508.8337 (1153)
+Clp0006I 1739  Obj 23693.592 Primal inf 12365.798 (1283)
+Clp0006I 1861  Obj 24132.583 Primal inf 973.17921 (610)
+Clp0006I 1979  Obj 24338.822 Primal inf 2928.6644 (1033)
+Clp0006I 2104  Obj 24452.486 Primal inf 829.19069 (717)
+Clp0006I 2219  Obj 24517.631 Primal inf 825.93822 (458)
+Clp0006I 2343  Obj 24575.023 Primal inf 8.6207295 (57)
+Clp0006I 2365  Obj 24575.678
+Clp0000I Optimal - objective value 24575.678
+Clp0032I Optimal objective 24575.67787 - 2365 iterations time 0.892, Presolve 0.03
+Clp0000I Optimal - objective value 24575.678
+NLP Heuristic: time limit reached.
+Clp0000I Optimal - objective value 24575.678
+Optimality Based BT: 0 improved bounds
+Probing: 1 improved bounds
+NLP Heuristic: time limit reached.
+Cbc0031I 26 added rows had average density of 2
+Cbc0013I At root node, 26 cuts changed objective from 24575.678 to 24636.691 in 16 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 355 row cuts average 2.0 elements, 1 column cuts (1 active)
+Cbc0010I After 0 nodes, 1 on tree, 1e+50 best solution, best possible -1.7976931e+308 (1078.03 seconds)
+Optimality Based BT: 0 improved bounds
+Optimality Based BT: 0 improved bounds
+Optimality Based BT: 0 improved bounds
+Cbc0020I Exiting on maximum time
+Cbc0005I Partial search - best objective 1e+50 (best possible -1.7976931e+308), took 2737 iterations and 3 nodes (3475.99 seconds)
+Cbc0035I Maximum depth 1, 0 variables fixed on reduced cost
+
+ 	"Not finished"
+
+Linearization cuts added at root node:       4255
+Linearization cuts added in total:           4255  (separation time: 0.145253s)
+Total solve time:                         3476.88s (3476.88s in branch-and-bound)
+Lower bound:                                 -inf
+Upper bound:                                  inf  (gap: --)
+Branch-and-bound nodes:                         3
+Stats: /tmp/jl_roESRn/model.nl 3275 [var]  125 [int] 4125 [con] 3156 [aux]   4255 [root]     4255 [tot] 0.145253 [sep]  3476.88 [time]  3476.89 [bb]       -1.797693e+308 [lower]         1.000000e+50 [upper]       3 [nodes]
+Performance of                           FBBT:	    1.99179s,       31 runs. fix:   0.451613 shrnk:   0.512014 ubd:          0 2ubd:          0 infeas:          0
+Performance of                           OBBT:	    806.668s,        4 runs. fix:          0 shrnk:          0 ubd:          0 2ubd:          0 infeas:          0
+ERROR: LoadError: MathOptInterface.GetAttributeNotAllowed{MathOptInterface.ObjectiveBound}: Getting attribute MathOptInterface.ObjectiveBound() cannot be performed: AmplNLWriter.Optimizer does not support getting the attribute MathOptInterface.ObjectiveBound(). You may want to use a `CachingOptimizer` in `AUTOMATIC` mode or you may need to call `reset_optimizer` before doing this operation if the `CachingOptimizer` is in `MANUAL` mode.
+Stacktrace:
+  [1] get_fallback(model::AmplNLWriter.Optimizer, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface ~/.julia/packages/MathOptInterface/gLl4d/src/attributes.jl:409
+  [2] get(::AmplNLWriter.Optimizer, ::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface ~/.julia/packages/MathOptInterface/gLl4d/src/attributes.jl:390
+  [3] _get_model_attribute(model::MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:865
+  [4] get(model::MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:900
+  [5] get(b::MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Bridges ~/.julia/packages/MathOptInterface/gLl4d/src/Bridges/bridge_optimizer.jl:889
+  [6] _get_model_attribute(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:865
+  [7] get(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:900
+  [8] _moi_get_result(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, args::MathOptInterface.ObjectiveBound)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/optimizer_interface.jl:1053
+  [9] get(model::JuMP.Model, attr::MathOptInterface.ObjectiveBound)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/optimizer_interface.jl:1073
+ [10] objective_bound(model::JuMP.Model)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/objective.jl:78
+ [11] nl_mcnd(ptype::String, graph::String, commodities::String, nodes::String, incr::Int64, cost::Symbol, solver::AmplNLWriter.Optimizer, solver_params::Vector{Any}; solve::Bool, write_nl::Bool)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/nlsolver.jl:1192
+ [12] top-level scope
+    @ ~/git/ipwlb/code/sources/IterativePWLB/test/couenne/mcnd_nodes/script.jl:18
+in expression starting at /home/ccontard/git/ipwlb/code/sources/IterativePWLB/test/couenne/mcnd_nodes/script.jl:18

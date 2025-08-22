@@ -1,0 +1,92 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 20 10 sinabc1
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 101 rows, 140 columns and 220 nonzeros
+Model fingerprint: 0xdfb5022a
+Model has 40 function constraints treated as nonlinear
+  20 POW, 20 SIN
+Variable types: 120 continuous, 20 integer (20 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+02, 6e+04]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 80 rows and 80 columns
+Presolve time: 0.00s
+Presolved: 142 rows, 82 columns, 341 nonzeros
+Presolved model has 20 bilinear constraint(s)
+Presolved model has 20 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 82 continuous, 0 integer (0 binary)
+Found heuristic solution: objective -790.4186642
+
+Root relaxation: objective -8.648647e+02, 88 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -864.86474    0   31 -790.41866 -864.86474  9.42%     -    0s
+     0     0 -834.28838    0   30 -790.41866 -834.28838  5.55%     -    0s
+     0     0 -812.95601    0   26 -790.41866 -812.95601  2.85%     -    0s
+     0     0 -811.66126    0   26 -790.41866 -811.66126  2.69%     -    0s
+     0     0 -809.10319    0   26 -790.41866 -809.10319  2.36%     -    0s
+     0     0 -809.05240    0   26 -790.41866 -809.05240  2.36%     -    0s
+     0     0 -808.68391    0   26 -790.41866 -808.68391  2.31%     -    0s
+     0     0 -808.65270    0   26 -790.41866 -808.65270  2.31%     -    0s
+     0     0 -808.63808    0   26 -790.41866 -808.63808  2.31%     -    0s
+     0     0 -808.63743    0   26 -790.41866 -808.63743  2.30%     -    0s
+     0     0 -805.48024    0   26 -790.41866 -805.48024  1.91%     -    0s
+     0     2 -805.48024    0   26 -790.41866 -805.48024  1.91%     -    0s
+H    3     3                    -790.6219682 -803.64713  1.65%   8.0    0s
+H   30    20                    -790.6415764 -803.55622  1.63%   8.0    0s
+H  150    98                    -790.6987643 -803.55622  1.63%   5.7    0s
+H  470   204                    -790.7078423 -795.22360  0.57%   5.7    0s
+H  561   277                    -790.7085160 -795.22360  0.57%   5.7    0s
+* 1623   393             113    -790.7112335 -792.09472  0.17%   6.3    0s
+* 3328   527             116    -790.7128164 -791.10852  0.05%   5.9    1s
+* 6319   816             113    -790.7128216 -790.81375  0.01%   5.7    1s
+* 6326   817             116    -790.7128651 -790.81375  0.01%   5.7    1s
+* 6327   806             116    -790.7128982 -790.81375  0.01%   5.7    1s
+H14703  1534                    -790.7129666 -790.72473  0.00%   5.9    4s
+ 17110  1907 -790.71305   80   13 -790.71297 -790.72270  0.00%   5.8    5s
+ 34119  2924 -790.71338   88   18 -790.71297 -790.71766  0.00%   5.7   10s
+H47862  2057                    -790.7130388 -790.71540  0.00%   5.7   14s
+ 51021  1790 -790.71367   83   13 -790.71304 -790.71485  0.00%   5.7   15s
+
+Cutting planes:
+  RLT: 8
+
+Explored 59278 nodes (351398 simplex iterations) in 17.52 seconds (7.05 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 10: -790.713 -790.713 -790.713 ... -790.642
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective -7.907130386816e+02, best bound -7.907138290730e+02, gap 0.0001%
+
+User-callback calls 119278, time in user-callback 0.02 sec
+primal_bound = -790.7130386815682, dual_bound = 0.0, gap = 100.0, time = 17.74

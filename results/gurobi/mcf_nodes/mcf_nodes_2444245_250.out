@@ -1,0 +1,83 @@
+solving instance mcf nodes c46 3 6 log
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 4664 rows, 59084 columns and 234616 nonzeros
+Model fingerprint: 0xbdc3762c
+Model has 20 function constraints treated as nonlinear
+  20 LOG
+Variable types: 58772 continuous, 312 integer (312 binary)
+Coefficient statistics:
+  Matrix range     [7e-03, 3e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [2e+01, 1e+10]
+  RHS range        [1e+00, 7e+01]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Warning: x < 1e-10 in domain of log(x).
+         Setting lower bound to 1e-10.
+Presolve removed 352 rows and 644 columns
+Presolve time: 0.54s
+Presolved: 4412 rows, 58441 columns, 233820 nonzeros
+Presolved model has 20 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 58441 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 5.352011e+03, 6179 iterations, 0.56 seconds (0.31 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 5352.01133    0   20          - 5352.01133      -     -    1s
+     0     0 5529.35604    0   20          - 5529.35604      -     -    1s
+     0     2 5529.35604    0   20          - 5529.35604      -     -    1s
+   102    68 11417.6400   51    3          - 6029.75392      -  31.5    5s
+*  121    47              61    11417.558464 6029.75392  47.2%  27.5    5s
+   205    59 11404.0857   11    5 11417.5585 6637.71656  41.9%  27.4   10s
+   292    78 11397.9829    9    5 11417.5585 7194.13312  37.0%  30.7   15s
+*  360    84              39    11416.201158 7194.13312  37.0%  25.8   18s
+   383    87 11348.1488    9    4 11416.2012 7416.67997  35.0%  28.5   20s
+   469   117 11398.4266   25    4 11416.2012 7685.77824  32.7%  29.5   25s
+*  516    98              42    11404.865019 7685.77824  32.6%  27.4   28s
+   552    94     cutoff   13      11404.8650 8273.50924  27.5%  29.0   30s
+   636   154 11393.6922   34    5 11404.8650 8428.97281  26.1%  29.1   35s
+*  666   108              45    11393.906432 8428.97281  26.0%  28.0   36s
+*  667   101              45    11393.865533 8428.97281  26.0%  27.9   36s
+   726    90 11363.9493   16    2 11393.8655 9430.56077  17.2%  31.7   40s
+   821    67     cutoff   15      11393.8655 11362.4704  0.28%  32.4   45s
+   907    67 11378.4742    7    7 11393.8655 11367.0751  0.24%  31.1   50s
+   998    42 11387.4530   23    4 11393.8655 11386.3273  0.07%  30.2   55s
+  1088    20 11393.7979   31    3 11393.8655 11392.4586  0.01%  28.4   60s
+* 1142    14              48    11393.828492 11393.6938  0.00%  27.3   62s
+* 1147    13              48    11393.807278 11393.6938  0.00%  27.2   63s
+* 1162     8              48    11393.798932 11393.7750  0.00%  26.9   63s
+* 1168     5              48    11393.783658 11393.7750  0.00%  26.7   63s
+
+Explored 1169 nodes (37418 simplex iterations) in 63.97 seconds (18.14 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 9: 11393.8 11393.8 11393.8 ... 11417.6
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 1.139378365831e+04, best bound 1.139377496162e+04, gap 0.0001%
+
+User-callback calls 4487, time in user-callback 0.02 sec
+primal_bound = 11393.783658308199, dual_bound = 11393.7749616175, gap = 7.632838185409929e-5, time = 63.99

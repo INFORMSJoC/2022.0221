@@ -1,0 +1,95 @@
+solving instance uflp nlass gunluk ../../../../../instances/uflp/gunluk/gunluk-30-60-8.txt sqrt
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Reformulating problem: 7.1 seconds
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1      FAILED 1399.9097      271 482.68664
+NLP0014I             1      FAILED 1399.9097      271 461.79598   resolve robustness
+NLP3006W Warning : continuing branching, while there are unrecovered failures at nodes
+Loaded instance "/tmp/jl_wWnsEA/model.nl"
+Constraints:         5460
+Variables:           5430 (1830 integer)
+Auxiliaries:         1861 (0 integer)
+
+Coin0506I Presolve 16201 (-60) rows, 7171 (-120) columns and 35911 (-180) elements
+Clp0006I 0  Obj 0.00047149005 Primal inf 4242.6406 (60) Dual inf 1.3329206e+13 (1800)
+Clp0006I 360  Obj 1465.5457 Dual inf 410.91555 (1322)
+Clp0006I 666  Obj 1273.5088 Dual inf 211263.25 (1124)
+Clp0006I 972  Obj 1137.7514 Dual inf 151123.07 (983)
+Clp0006I 1278  Obj 1137.7514 Dual inf 382808.42 (1043)
+Clp0006I 1584  Obj 1137.7495 Dual inf 984083.5 (1107)
+Clp0006I 1890  Obj 1137.7492 Dual inf 514609.76 (1026)
+Clp0006I 2196  Obj 1137.7487 Dual inf 521856.82 (983)
+Clp0006I 2502  Obj 1024.4953 Dual inf 319344.85 (948)
+Clp0006I 2808  Obj 1024.4928 Dual inf 594086.24 (1060)
+Clp0006I 3114  Obj 869.13329 Dual inf 336379.76 (807)
+Clp0006I 3420  Obj 869.13204 Dual inf 380982.49 (753)
+Clp0006I 3726  Obj 804.52003 Dual inf 280233.92 (725)
+Clp0006I 4032  Obj 751.13692 Dual inf 233816.49 (790)
+Clp0006I 4338  Obj 751.13627 Dual inf 176055.7 (481)
+Clp0006I 4644  Obj 681.23113 Dual inf 92538.459 (472)
+Clp0006I 4950  Obj 654.24256 Dual inf 41550.083 (343)
+Clp0006I 5256  Obj 654.24243 Dual inf 45439.635 (382)
+Clp0006I 5562  Obj 636.551 Dual inf 19809.036 (216)
+Clp0006I 5868  Obj 633.24682 Dual inf 6198.146 (153)
+Clp0006I 6031  Obj 630.71766
+Clp0000I Optimal - objective value 630.71766
+Clp0000I Optimal - objective value 630.72229
+Clp0032I Optimal objective 630.7222889 - 6031 iterations time 1.122, Presolve 0.03
+Clp0000I Optimal - objective value 630.72229
+Couenne: new cutoff value 6.3072228887e+02 (953.247 seconds)
+NLP Heuristic: NLP0014I             3      FAILED 3971.5734      476 722.88181
+no solution.
+Clp0000I Optimal - objective value 630.72229
+Optimality Based BT: 0 improved bounds
+Probing: 13 improved bounds
+NLP Heuristic: no solution.
+Cbc0031I 6 added rows had average density of 2
+Cbc0013I At root node, 6 cuts changed objective from 630.72229 to 630.72229 in 2 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 6 row cuts average 2.0 elements, 1 column cuts (1 active)
+Cbc0004I Integer solution of 630.72229 found after 6 iterations and 0 nodes (1045.85 seconds)
+Cbc0001I Search completed - best objective 630.7222930145089, took 6 iterations and 0 nodes (1045.89 seconds)
+Cbc0035I Maximum depth 0, 0 variables fixed on reduced cost
+
+ 	"Finished"
+
+Linearization cuts added at root node:      16261
+Linearization cuts added in total:          16261  (separation time: 0.033235s)
+Total solve time:                         1047.04s (1047.04s in branch-and-bound)
+Lower bound:                              630.722
+Upper bound:                              630.722  (gap: 0.00%)
+Branch-and-bound nodes:                         0
+Stats: /tmp/jl_wWnsEA/model.nl 5430 [var] 1830 [int] 5460 [con] 1861 [aux]  16261 [root]    16261 [tot] 0.033235 [sep]  1047.04 [time]  1047.05 [bb]         6.307223e+02 [lower]         6.307223e+02 [upper]       0 [nodes]
+Performance of                           FBBT:	   0.028834s,        5 runs. fix:          0 shrnk: 1.17377e-10 ubd:          0 2ubd:          0 infeas:          0
+Performance of                           OBBT:	    3.99667s,        1 runs. fix:          0 shrnk:          0 ubd:          0 2ubd:          0 infeas:          0
+ERROR: LoadError: MathOptInterface.GetAttributeNotAllowed{MathOptInterface.ObjectiveBound}: Getting attribute MathOptInterface.ObjectiveBound() cannot be performed: AmplNLWriter.Optimizer does not support getting the attribute MathOptInterface.ObjectiveBound(). You may want to use a `CachingOptimizer` in `AUTOMATIC` mode or you may need to call `reset_optimizer` before doing this operation if the `CachingOptimizer` is in `MANUAL` mode.
+Stacktrace:
+  [1] get_fallback(model::AmplNLWriter.Optimizer, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface ~/.julia/packages/MathOptInterface/gLl4d/src/attributes.jl:409
+  [2] get(::AmplNLWriter.Optimizer, ::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface ~/.julia/packages/MathOptInterface/gLl4d/src/attributes.jl:390
+  [3] _get_model_attribute(model::MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:865
+  [4] get(model::MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:900
+  [5] get(b::MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Bridges ~/.julia/packages/MathOptInterface/gLl4d/src/Bridges/bridge_optimizer.jl:889
+  [6] _get_model_attribute(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:865
+  [7] get(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, attr::MathOptInterface.ObjectiveBound)
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/gLl4d/src/Utilities/cachingoptimizer.jl:900
+  [8] _moi_get_result(model::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{MathOptInterface.Utilities.CachingOptimizer{AmplNLWriter.Optimizer, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}}, args::MathOptInterface.ObjectiveBound)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/optimizer_interface.jl:1053
+  [9] get(model::JuMP.Model, attr::MathOptInterface.ObjectiveBound)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/optimizer_interface.jl:1073
+ [10] objective_bound(model::JuMP.Model)
+    @ JuMP ~/.julia/packages/JuMP/i68GU/src/objective.jl:78
+ [11] nl_uflp_nlass(filename::String, cost::Symbol, solver::AmplNLWriter.Optimizer, solver_params::Vector{Any}; solve::Bool, write_nl::Bool, with_cap_constraint::Bool)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/nlsolver.jl:885
+ [12] top-level scope
+    @ ~/git/ipwlb/code/sources/IterativePWLB/test/couenne/uflp_nlass/script.jl:14
+in expression starting at /home/ccontard/git/ipwlb/code/sources/IterativePWLB/test/couenne/uflp_nlass/script.jl:14
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-30-60-8.txt

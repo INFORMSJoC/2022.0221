@@ -1,0 +1,93 @@
+solving instance mcf nodes c25_100_10_F_L_5 3 6 square
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 525 rows, 1300 columns and 4425 nonzeros
+Model fingerprint: 0xf06e25eb
+Model has 25 function constraints treated as nonlinear
+  25 POW
+Variable types: 1175 continuous, 125 integer (125 binary)
+Coefficient statistics:
+  Matrix range     [7e-02, 7e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [6e+00, 9e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 180 rows and 285 columns
+Presolve time: 0.00s
+Presolved: 345 rows, 1015 columns, 3695 nonzeros
+Presolved model has 25 quadratic objective terms
+Variable types: 1015 continuous, 0 integer (0 binary)
+Root relaxation presolve removed 10 rows and 0 columns
+Root relaxation presolve time: 0.01s
+Root relaxation presolved: 335 rows, 1015 columns, 3595 nonzeros
+Root relaxation presolved model has 25 quadratic objective terms
+Root barrier log...
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 3.426e+03
+ Factor NZ  : 1.941e+04 (roughly 1 MB of memory)
+ Factor Ops : 1.791e+06 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   6.06139045e+06 -9.28432304e+06  5.95e+04 7.07e+02  8.62e+05     0s
+   1   1.74273447e+05 -3.49823551e+06  6.57e+03 1.18e+02  1.20e+05     0s
+   2   2.52061356e+03 -3.09002942e+06  5.75e+01 9.55e-01  2.63e+03     0s
+   3   2.41487992e+03 -1.60549635e+06  2.00e+01 2.89e-01  1.01e+03     0s
+   4   2.91233338e+03 -1.11210475e+06  1.30e+01 1.66e-01  6.58e+02     0s
+   5   3.76163386e+03 -1.19333167e+05  4.92e-03 6.33e-04  5.81e+01     0s
+   6   3.16300778e+03 -8.68203587e+03  3.37e-04 4.33e-05  5.58e+00     0s
+   7   1.77792222e+03 -4.17448132e+03  2.21e-05 2.84e-06  2.80e+00     0s
+   8   1.08810917e+03 -1.42532445e+03  7.04e-06 9.05e-07  1.18e+00     0s
+   9   7.55690758e+02 -6.08879499e+02  7.04e-12 9.04e-13  6.42e-01     0s
+  10   4.95625505e+02  1.47743518e+02  1.50e-12 1.93e-13  1.64e-01     0s
+  11   4.21958648e+02  2.78478658e+02  4.47e-13 5.77e-14  6.75e-02     0s
+  12   3.79097235e+02  3.46607078e+02  8.83e-14 1.07e-14  1.53e-02     0s
+  13   3.67421437e+02  3.61373918e+02  2.42e-14 8.42e-15  2.85e-03     0s
+  14   3.64540867e+02  3.64316079e+02  9.86e-14 8.26e-15  1.06e-04     0s
+  15   3.64431731e+02  3.64426402e+02  2.96e-13 7.91e-15  2.51e-06     0s
+  16   3.64428963e+02  3.64428860e+02  1.55e-12 7.11e-15  4.85e-08     0s
+  17   3.64428884e+02  3.64428882e+02  8.43e-10 1.07e-14  8.59e-10     0s
+
+Barrier solved model in 17 iterations and 0.05 seconds (0.02 work units)
+Optimal objective 3.64428884e+02
+
+
+Root relaxation: objective 3.644289e+02, 0 iterations, 0.05 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     364.4288838  364.42888  0.00%     -    0s
+
+Explored 1 nodes (0 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 1: 364.429 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 3.644288838035e+02, best bound 3.644288838035e+02, gap 0.0000%
+
+User-callback calls 400, time in user-callback 0.00 sec
+primal_bound = 364.42888380348984, dual_bound = 364.42888380348984, gap = 0.0, time = 0.07

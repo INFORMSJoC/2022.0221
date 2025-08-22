@@ -1,0 +1,118 @@
+solving instance uflp nldep gunluk ../../../../../instances/uflp/gunluk/gunluk-10-20-7.txt exp
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 260 rows, 270 columns and 880 nonzeros
+Model fingerprint: 0xa42c4684
+Model has 20 function constraints treated as nonlinear
+  10 EXP, 10 POW
+Variable types: 260 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 5e+02]
+  Objective range  [1e+00, 6e+01]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [5e-03, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Warning: 0 <= x < 1e-10 in domain of pow(x,a) with a=-1.000.
+         Setting lower bound to 1e-10.
+Presolve removed 20 rows and 20 columns
+Presolve time: 0.00s
+Presolved: 330 rows, 251 columns, 1010 nonzeros
+Presolved model has 10 bilinear constraint(s)
+Presolved model has 10 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 241 continuous, 10 integer (10 binary)
+Found heuristic solution: objective 780.3862588
+
+Root relaxation: objective 2.358113e+02, 72 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  235.81132    0    8  780.38626  235.81132  69.8%     -    0s
+H    0     0                     577.9478190  235.81132  59.2%     -    0s
+H    0     0                     571.0093345  235.81132  58.7%     -    0s
+H    0     0                     570.9073602  235.81132  58.7%     -    0s
+     0     0  235.81132    0    8  570.90736  235.81132  58.7%     -    0s
+H    0     0                     236.7746734  235.81132  0.41%     -    0s
+     0     0  236.27756    0    8  236.77467  236.27756  0.21%     -    0s
+     0     0  236.71206    0    8  236.77467  236.71206  0.03%     -    0s
+     0     0  236.77224    0    8  236.77467  236.77224  0.00%     -    0s
+     0     0  236.77466    0    7  236.77467  236.77466  0.00%     -    0s
+
+Explored 1 nodes (97 simplex iterations) in 0.03 seconds (0.01 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 5: 236.775 570.907 571.009 ... 780.386
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 2.367746733970e+02, best bound 2.367746596607e+02, gap 0.0000%
+
+User-callback calls 387, time in user-callback 0.00 sec
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-10-20-7.txt
+primal_bound = 236.77467339700218, dual_bound = 236.77465966073362, gap = 5.8014095677175925e-6, time = 0.04
+OPTIMAL LOCATIONS:
+y[4] = 1.0
+y[7] = 1.0
+y[8] = 1.0
+y[9] = 1.0
+OPTIMAL WAREHOUSING:
+f[4] = 339.0
+f[7] = 208.0
+f[8] = 110.0
+f[9] = 361.0
+OPTIMAL WAREHOUSING COSTS:
+nlobj[1] = 0.0
+nlobj[2] = 0.0
+nlobj[3] = 0.0
+nlobj[4] = 11.653198680020914
+nlobj[5] = 0.0
+nlobj[6] = 0.0
+nlobj[7] = 8.133089557421025
+nlobj[8] = 13.586058918659948
+nlobj[9] = 2.6833914839241677
+nlobj[10] = 0.0
+OPTIMAL ASSIGNMENTS:
+x[4, 2] = 1.0
+x[4, 3] = 1.0
+x[4, 4] = 1.0
+x[4, 7] = 1.0
+x[4, 8] = 1.0
+x[4, 13] = 1.0
+x[4, 20] = 1.0
+x[7, 5] = 1.0
+x[7, 9] = 1.0
+x[7, 18] = 1.0
+x[8, 10] = 1.0
+x[8, 15] = 1.0
+x[9, 1] = 1.0
+x[9, 6] = 1.0
+x[9, 11] = 1.0
+x[9, 12] = 1.0
+x[9, 14] = 1.0
+x[9, 16] = 1.0
+x[9, 17] = 1.0
+x[9, 19] = 1.0
+fixed costs = 70.0
+assignment costs = 200.71893475697613
+warehousing costs = 36.05573864002605
+total cost = 236.77467339700218

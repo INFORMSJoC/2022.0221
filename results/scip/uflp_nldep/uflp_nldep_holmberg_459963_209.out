@@ -1,0 +1,35 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nldep holmberg 21 square
+presolving:
+(round 1, fast)       40 del vars, 1020 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (0.6s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (0.6s) no symmetry present
+presolving (2 rounds: 2 fast, 1 medium, 1 exhaustive):
+ 40 deleted vars, 1020 deleted constraints, 0 added constraints, 20 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 1020 variables (0 bin, 0 int, 0 impl, 1020 cont) and 70 constraints
+     50 constraints of type <linear>
+     20 constraints of type <nonlinear>
+Presolving Time: 0.64
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  0.8s|     1 |     0 |    57 |     - |    86M |   0 |1040 |  70 | 150 |   0 |  0 |   0 |   0 | 3.204458e+03 |      --      |    Inf | unknown
+L 1.7s|     1 |     0 |    57 |     - |undercov|   0 |1040 |  70 | 150 |   0 |  0 |   0 |   0 | 3.204458e+03 | 3.210982e+03 |   0.20%| unknown
+L 3.0s|     1 |     0 |    57 |     - |undercov|   0 |1040 |  70 | 150 |   0 |  0 |   0 |   0 | 3.204458e+03 | 3.210979e+03 |   0.20%| unknown
+L 4.5s|     1 |     0 |    57 |     - |  subnlp|   0 |1040 |  70 | 150 |   0 |  0 |   0 |   0 | 3.204458e+03 | 3.210979e+03 |   0.20%| unknown
+  4.6s|     1 |     0 |    77 |     - |    91M |   0 |1040 |  70 | 170 |  20 |  1 |   0 |   0 | 3.210979e+03 | 3.210979e+03 |   0.00%| unknown
+  4.6s|     1 |     0 |    77 |     - |    91M |   0 |1040 |  70 | 170 |  20 |  1 |   0 |   0 | 3.210979e+03 | 3.210979e+03 |   0.00%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 4.56
+Solving Nodes      : 1
+Primal Bound       : +3.21097909737107e+03 (3 solutions)
+Dual Bound         : +3.21097909737107e+03
+Gap                : 0.00 %
+reading holmberg data file ../../../../../instances/uflp/holmberg/p21
+primal_bound = 3210.9790973710665, dual_bound = 3210.9790973710665, gap = 0.0, time = 7.23

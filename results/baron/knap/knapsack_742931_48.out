@@ -1,0 +1,145 @@
+2023/05/23
+Julia is now 1.9.4
+previous version was 1.9.0
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+2022/09/22 - cplex version is now 22.1.1
+previous version was 22.1
+solving instance knapsack 10 8 log
+===========================================================================
+ BARON version 23.11.13. Built: LNX-64 Mon Nov 13 23:14:09 EST 2023
+
+ BARON is a product of The Optimization Firm.
+ For information on BARON, see https://minlp.com/about-baron
+ Licensee: Claudio Contardo at Concordia University, claudio.contardo@concordia.ca.
+
+ If you use this software, please cite publications from
+ https://minlp.com/baron-publications, such as: 
+
+ Khajavirad, A. and N. V. Sahinidis,
+ A hybrid LP/NLP paradigm for global optimization relaxations,
+ Mathematical Programming Computation, 10, 383-421, 2018.
+===========================================================================
+ This BARON run may utilize the following subsolver(s)
+ For LP/MIP/QP: CLP/CBC, ILOG CPLEX                             
+ For NLP: IPOPT, FILTERSQP
+===========================================================================
+ Preprocessing found feasible solution with value 0.00000
+ Doing local search
+ Solving bounding LP
+ Starting multi-start local search
+ Done with local search
+===========================================================================
+  Iteration    Open nodes         Time (s)    Lower bound      Upper bound
+          1             1             0.05     -282.751          0.00000       
+*         5             2             0.10     -282.645         -282.567       
+          7             0             0.11     -282.568         -282.567       
+
+                         *** Normal completion ***            
+
+ Wall clock time:                     0.11
+ Total CPU time used:                 0.11
+
+ Total no. of BaR iterations:       7
+ Best solution found at node:       5
+ Max. no. of nodes in memory:       3
+ 
+ All done
+===========================================================================
+Min nlobj[1,1] + nlobj[1,2] + nlobj[1,3] + nlobj[1,4] + nlobj[1,5] + nlobj[1,6] + nlobj[1,7] + nlobj[1,8] + nlobj[1,9] + nlobj[1,10]
+Subject to
+ x[1,1] - 100 onoff[1,1] ≤ 0
+ x[1,2] - 100 onoff[1,2] ≤ 0
+ x[1,3] - 100 onoff[1,3] ≤ 0
+ x[1,4] - 100 onoff[1,4] ≤ 0
+ x[1,5] - 100 onoff[1,5] ≤ 0
+ x[1,6] - 100 onoff[1,6] ≤ 0
+ x[1,7] - 100 onoff[1,7] ≤ 0
+ x[1,8] - 100 onoff[1,8] ≤ 0
+ x[1,9] - 100 onoff[1,9] ≤ 0
+ x[1,10] - 100 onoff[1,10] ≤ 0
+ 69 x[1,1] + 90 x[1,2] + 6 x[1,3] + 86 x[1,4] + 33 x[1,5] + 46 x[1,6] + 50 x[1,7] + 66 x[1,8] + 51 x[1,9] + 99 x[1,10] ≤ 29800
+ x[1,1] ≤ 100
+ x[1,2] ≤ 100
+ x[1,3] ≤ 100
+ x[1,4] ≤ 100
+ x[1,5] ≤ 100
+ x[1,6] ≤ 100
+ x[1,7] ≤ 100
+ x[1,8] ≤ 100
+ x[1,9] ≤ 100
+ x[1,10] ≤ 100
+ x[1,1] ≥ 0
+ x[1,2] ≥ 0
+ x[1,3] ≥ 0
+ x[1,4] ≥ 0
+ x[1,5] ≥ 0
+ x[1,6] ≥ 0
+ x[1,7] ≥ 0
+ x[1,8] ≥ 0
+ x[1,9] ≥ 0
+ x[1,10] ≥ 0
+ nlobj[1,1] ≥ -10000000000
+ nlobj[1,2] ≥ -10000000000
+ nlobj[1,3] ≥ -10000000000
+ nlobj[1,4] ≥ -10000000000
+ nlobj[1,5] ≥ -10000000000
+ nlobj[1,6] ≥ -10000000000
+ nlobj[1,7] ≥ -10000000000
+ nlobj[1,8] ≥ -10000000000
+ nlobj[1,9] ≥ -10000000000
+ nlobj[1,10] ≥ -10000000000
+ x[1,1] ≤ 100
+ x[1,2] ≤ 100
+ x[1,3] ≤ 100
+ x[1,4] ≤ 100
+ x[1,5] ≤ 100
+ x[1,6] ≤ 100
+ x[1,7] ≤ 100
+ x[1,8] ≤ 100
+ x[1,9] ≤ 100
+ x[1,10] ≤ 100
+ nlobj[1,1] ≤ 10000000000
+ nlobj[1,2] ≤ 10000000000
+ nlobj[1,3] ≤ 10000000000
+ nlobj[1,4] ≤ 10000000000
+ nlobj[1,5] ≤ 10000000000
+ nlobj[1,6] ≤ 10000000000
+ nlobj[1,7] ≤ 10000000000
+ nlobj[1,8] ≤ 10000000000
+ nlobj[1,9] ≤ 10000000000
+ nlobj[1,10] ≤ 10000000000
+ onoff[1,1] binary
+ onoff[1,2] binary
+ onoff[1,3] binary
+ onoff[1,4] binary
+ onoff[1,5] binary
+ onoff[1,6] binary
+ onoff[1,7] binary
+ onoff[1,8] binary
+ onoff[1,9] binary
+ onoff[1,10] binary
+ (subexpression[1] - nlobj[1,1]) - 0.0 ≤ 0
+ (subexpression[2] - nlobj[1,2]) - 0.0 ≤ 0
+ (subexpression[3] - nlobj[1,3]) - 0.0 ≤ 0
+ (subexpression[4] - nlobj[1,4]) - 0.0 ≤ 0
+ (subexpression[5] - nlobj[1,5]) - 0.0 ≤ 0
+ (subexpression[6] - nlobj[1,6]) - 0.0 ≤ 0
+ (subexpression[7] - nlobj[1,7]) - 0.0 ≤ 0
+ (subexpression[8] - nlobj[1,8]) - 0.0 ≤ 0
+ (subexpression[9] - nlobj[1,9]) - 0.0 ≤ 0
+ (subexpression[10] - nlobj[1,10]) - 0.0 ≤ 0
+With NL expressions
+ subexpression[1]: -1.0 * 18.06821688980794 * log(1.0 + 0.19085536923187668 * x[1,1])
+ subexpression[2]: -1.0 * 18.322614657858118 * log(1.0 + 0.19085536923187668 * x[1,2])
+ subexpression[3]: -1.0 * 3.1910336007087907 * log(1.0 + 0.19085536923187668 * x[1,3])
+ subexpression[4]: -1.0 * 14.262964955931466 * log(1.0 + 0.19085536923187668 * x[1,4])
+ subexpression[5]: -1.0 * 6.30756613742961 * log(1.0 + 0.19085536923187668 * x[1,5])
+ subexpression[6]: -1.0 * 2.793215092023994 * log(1.0 + 0.19085536923187668 * x[1,6])
+ subexpression[7]: -1.0 * 19.147961405977945 * log(1.0 + 0.19085536923187668 * x[1,7])
+ subexpression[8]: -1.0 * 10.61864829431818 * log(1.0 + 0.19085536923187668 * x[1,8])
+ subexpression[9]: -1.0 * 8.451982291504107 * log(1.0 + 0.19085536923187668 * x[1,9])
+ subexpression[10]: -1.0 * 14.883491674450646 * log(1.0 + 0.19085536923187668 * x[1,10])
+
+primal_bound = -282.567299493, dual_bound = -282.567582061, gap = 0.00010000014790363113, time = 2.87

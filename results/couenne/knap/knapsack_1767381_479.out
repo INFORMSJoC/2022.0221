@@ -1,0 +1,70 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 200 8 square
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Couenne: new cutoff value -1.5767719501e+01 (0.061813 seconds)
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1      FAILED -2802.316     3000 33.718174
+NLP0014I             1      FAILED -2802.316     3000 33.756786   resolve robustness
+NLP3006W Warning : continuing branching, while there are unrecovered failures at nodes
+Loaded instance "/tmp/jl_mpgZ4I/model.nl"
+Constraints:          601
+Variables:            600 (200 integer)
+Auxiliaries:          202 (0 integer)
+
+Coin0506I Presolve 1202 (-200) rows, 601 (-201) columns and 2801 (-400) elements
+Clp0006I 0  Obj -7478.7054 Primal inf 66239.797 (200)
+Clp0006I 99  Obj -7478.7054 Primal inf 52271.038 (169)
+Clp0006I 198  Obj -7478.7054 Primal inf 36803.999 (136)
+Clp0006I 297  Obj -7478.7054 Primal inf 24884.896 (105)
+Clp0006I 396  Obj -6789.1143 Primal inf 14419.997 (64)
+Clp0006I 495  Obj -6462.0443 Primal inf 2218.1643 (15)
+Clp0006I 520  Obj -6448.366
+Clp0000I Optimal - objective value -6448.366
+Clp0032I Optimal objective -6448.366009 - 520 iterations time 0.022, Presolve 0.00
+Clp0000I Optimal - objective value -6448.366
+NLP Heuristic: NLP0014I             3         OPT -6447.34       26 0.23158
+no solution.
+Clp0000I Optimal - objective value -6448.366
+Optimality Based BT: Couenne: new cutoff value -6.4227782526e+03 (67.9112 seconds)
+0 improved bounds
+Probing: Couenne: new cutoff value -6.4473399332e+03 (68.8871 seconds)
+0 improved bounds
+NLP Heuristic: no solution.
+Cbc0013I At root node, 0 cuts changed objective from -6448.366 to -6448.366 in 1 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 0 row cuts average 0.0 elements, 84 column cuts (84 active)
+Cbc0010I After 0 nodes, 1 on tree, 1e+50 best solution, best possible -1.7976931e+308 (2.22 seconds)
+Optimality Based BT: 49 improved bounds
+Optimality Based BT: 22 improved bounds
+Optimality Based BT: 106 improved bounds
+Optimality Based BT: 102 improved bounds
+Couenne: new cutoff value -6.4473439417e+03 (78.0334 seconds)
+Optimality Based BT: 102 improved bounds
+Optimality Based BT: 103 improved bounds
+Optimality Based BT: 101 improved bounds
+Optimality Based BT: 103 improved bounds
+Optimality Based BT: 103 improved bounds
+Couenne: new cutoff value -6.4473511105e+03 (95.9062 seconds)
+Cbc0010I After 100 nodes, 4 on tree, 1e+50 best solution, best possible -6447.3513 (29.75 seconds)
+Cbc0010I After 200 nodes, 4 on tree, 1e+50 best solution, best possible -6447.3513 (30.55 seconds)
+Cbc0004I Integer solution of -6447.3511 found after 5642 iterations and 201 nodes (30.56 seconds)
+Cbc0001I Search completed - best objective -6447.351110463977, took 5656 iterations and 203 nodes (30.57 seconds)
+Cbc0035I Maximum depth 94, 0 variables fixed on reduced cost
+
+ 	"Finished"
+
+Linearization cuts added at root node:       1402
+Linearization cuts added in total:           1402  (separation time: 0.002178s)
+Total solve time:                         30.5957s (30.5957s in branch-and-bound)
+Lower bound:                             -6447.35
+Upper bound:                             -6447.35  (gap: 0.00%)
+Branch-and-bound nodes:                       203
+Stats: /tmp/jl_mpgZ4I/model.nl  600 [var]  200 [int]  601 [con]  202 [aux]   1402 [root]     1402 [tot] 0.002178 [sep]  30.5957 [time]  30.5965 [bb]        -6.447351e+03 [lower]        -6.447351e+03 [upper]     203 [nodes]
+Performance of                           FBBT:	   0.053866s,      159 runs. fix:          0 shrnk:    103.798 ubd:          0 2ubd:          1 infeas:          0
+Performance of                           OBBT:	    11.3472s,       10 runs. fix:    3.33333 shrnk:    200.509 ubd:          0 2ubd:          1 infeas:          0
+primal_bound = -6447.351110463981, dual_bound = 0.0, gap = 100.0, time = 102.49

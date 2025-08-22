@@ -1,0 +1,124 @@
+solving instance uflp nldep gunluk ../../../../../instances/uflp/gunluk/gunluk-10-20-6.txt pardivexp
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 260 rows, 270 columns and 880 nonzeros
+Model fingerprint: 0xd82a739c
+Model has 20 function constraints treated as nonlinear
+  10 EXP, 10 POW
+Variable types: 260 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [9e-04, 1e+02]
+  Objective range  [1e+00, 6e+01]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [9e-04, 3e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 20 rows and 20 columns
+Presolve time: 0.00s
+Presolved: 330 rows, 251 columns, 1010 nonzeros
+Presolved model has 10 bilinear constraint(s)
+Presolved model has 10 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 241 continuous, 10 integer (10 binary)
+Found heuristic solution: objective 777.1269426
+
+Root relaxation: objective 1.297316e+02, 59 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  129.73164    0   18  777.12694  129.73164  83.3%     -    0s
+H    0     0                     643.6280861  129.73164  79.8%     -    0s
+H    0     0                     643.4128766  129.73164  79.8%     -    0s
+H    0     0                     643.3360573  129.73164  79.8%     -    0s
+     0     0  129.73164    0   18  643.33606  129.73164  79.8%     -    0s
+H    0     0                     135.0508752  129.73164  3.94%     -    0s
+     0     2  129.84811    0   18  135.05088  129.84811  3.85%     -    0s
+*   53    15              19     135.0508738  133.28552  1.31%   2.5    0s
+
+Explored 194 nodes (509 simplex iterations) in 0.14 seconds (0.05 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 6: 135.051 135.051 643.336 ... 777.127
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 1.350508737678e+02, best bound 1.350508737678e+02, gap 0.0000%
+
+User-callback calls 810, time in user-callback 0.00 sec
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-10-20-6.txt
+primal_bound = 135.05087376779437, dual_bound = 135.05087376779437, gap = 0.0, time = 0.15
+OPTIMAL LOCATIONS:
+y[1] = 1.0
+y[2] = 1.0
+y[3] = 1.0
+y[4] = 1.0
+y[5] = 1.0
+y[7] = 1.0
+y[8] = 1.0
+y[9] = 1.0
+y[10] = 1.0
+OPTIMAL WAREHOUSING:
+f[1] = 27.0
+f[2] = 84.0
+f[3] = 15.0
+f[4] = 240.0
+f[5] = 144.0
+f[7] = 59.0
+f[8] = 115.0
+f[9] = 160.0
+f[10] = 84.0
+OPTIMAL WAREHOUSING COSTS:
+nlobj[1] = 0.10161114181872184
+nlobj[2] = 0.29316350348001907
+nlobj[3] = 0.001128063536570787
+nlobj[4] = 3.3334860182021373
+nlobj[5] = 0.6684130859770989
+nlobj[6] = 0.0
+nlobj[7] = 0.15071798996585398
+nlobj[8] = 0.3994910312983041
+nlobj[9] = 0.7101223621578441
+nlobj[10] = 0.21987278613080158
+OPTIMAL ASSIGNMENTS:
+x[1, 6] = 1.0
+x[2, 7] = 1.0
+x[2, 15] = 1.0
+x[3, 13] = 1.0
+x[4, 4] = 1.0
+x[4, 8] = 1.0
+x[4, 10] = 1.0
+x[4, 17] = 1.0
+x[4, 19] = 1.0
+x[5, 2] = 1.0
+x[5, 11] = 1.0
+x[5, 14] = 1.0
+x[7, 18] = 1.0
+x[8, 1] = 1.0
+x[8, 3] = 1.0
+x[8, 20] = 1.0
+x[9, 5] = 1.0
+x[9, 12] = 1.0
+x[9, 16] = 1.0
+x[10, 9] = 1.0
+fixed costs = 564.0
+assignment costs = 129.17286778522703
+warehousing costs = 5.878005982567352
+total cost = 135.05087376779437

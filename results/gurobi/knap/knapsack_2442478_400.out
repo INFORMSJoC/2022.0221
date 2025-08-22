@@ -1,0 +1,86 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 100 10 log
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 401 rows, 500 columns and 800 nonzeros
+Model fingerprint: 0xfbf2b099
+Model has 100 function constraints treated as nonlinear
+  100 LOG
+Variable types: 400 continuous, 100 integer (100 binary)
+Coefficient statistics:
+  Matrix range     [1e-01, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+02, 1e+10]
+  RHS range        [1e+00, 2e+05]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Warning: x < 1e-10 in domain of log(x).
+         Setting lower bound to 1e-10.
+Presolve removed 400 rows and 300 columns
+Presolve time: 0.00s
+Presolved: 501 rows, 201 columns, 1100 nonzeros
+Presolved model has 100 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 201 continuous, 0 integer (0 binary)
+Found heuristic solution: objective -3430.411412
+
+Root relaxation: objective -3.475099e+03, 483 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -3475.0986    0   41 -3430.4114 -3475.0986  1.30%     -    0s
+     0     0 -3452.0821    0   44 -3430.4114 -3452.0821  0.63%     -    0s
+     0     0 -3438.6916    0   43 -3430.4114 -3438.6916  0.24%     -    0s
+     0     0 -3433.1206    0   43 -3430.4114 -3433.1206  0.08%     -    0s
+     0     0 -3431.2663    0   43 -3430.4114 -3431.2663  0.02%     -    0s
+     0     0 -3431.2660    0   43 -3430.4114 -3431.2660  0.02%     -    0s
+     0     0 -3430.7411    0   43 -3430.4114 -3430.7411  0.01%     -    0s
+     0     0 -3430.7097    0   43 -3430.4114 -3430.7097  0.01%     -    0s
+     0     0 -3430.5399    0   43 -3430.4114 -3430.5399  0.00%     -    0s
+     0     0 -3430.5337    0   43 -3430.4114 -3430.5337  0.00%     -    0s
+     0     0 -3430.4896    0   43 -3430.4114 -3430.4896  0.00%     -    0s
+     0     0 -3430.4795    0   43 -3430.4114 -3430.4795  0.00%     -    0s
+     0     0 -3430.4622    0   44 -3430.4114 -3430.4622  0.00%     -    0s
+     0     0 -3430.4605    0   44 -3430.4114 -3430.4605  0.00%     -    0s
+     0     2 -3430.4605    0   44 -3430.4114 -3430.4605  0.00%     -    0s
+*  452   376             232    -3430.411526 -3430.4539  0.00%  15.1    0s
+*  453   373             232    -3430.411528 -3430.4539  0.00%  15.1    0s
+* 4860  2962             180    -3430.411638 -3430.4183  0.00%  10.3    3s
+  7955  5013 -3430.4118  105   30 -3430.4116 -3430.4169  0.00%  10.1    5s
+ 16949 11171 -3430.4152   70   37 -3430.4116 -3430.4159  0.00%   9.3   10s
+ 25121 16629 -3430.4130   70   33 -3430.4116 -3430.4154  0.00%   8.9   15s
+ 33430 22304 -3430.4127   85   30 -3430.4116 -3430.4153  0.00%   8.7   20s
+ 41861 28103 -3430.4135   64   34 -3430.4116 -3430.4152  0.00%   8.6   25s
+
+Explored 46344 nodes (394962 simplex iterations) in 27.67 seconds (14.09 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 4: -3430.41 -3430.41 -3430.41 -3430.41 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective -3.430411638153e+03, best bound -3.430415068247e+03, gap 0.0001%
+
+User-callback calls 95321, time in user-callback 0.03 sec
+primal_bound = -3430.4116381533113, dual_bound = 0.0, gap = 100.0, time = 27.86

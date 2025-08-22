@@ -1,0 +1,66 @@
+solving instance mcf nodes c41 3 6 sqrt
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 1456 rows, 12196 columns and 47084 nonzeros
+Model fingerprint: 0x0751f83e
+Model has 20 function constraints treated as nonlinear
+  20 POW
+Variable types: 11888 continuous, 308 integer (308 binary)
+Coefficient statistics:
+  Matrix range     [1e-04, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [8e-14, 1e+10]
+  RHS range        [2e+02, 7e+02]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Warning: Completing partial solution with 308 unfixed non-continuous variables out of 308
+User MIP start did not produce a new incumbent solution
+
+Presolve removed 468 rows and 636 columns
+Presolve time: 0.04s
+Presolved: 1088 rows, 11561 columns, 41500 nonzeros
+Presolved model has 20 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 11561 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 3.359031e+04, 2044 iterations, 0.06 seconds (0.04 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 33590.3140    0   15          - 33590.3140      -     -    0s
+     0     0 35175.0272    0   14          - 35175.0272      -     -    0s
+     0     2 35175.0272    0   14          - 35175.0272      -     -    0s
+*   68    34              34    40703.077951 36884.9373  9.38%   9.5    0s
+
+Explored 129 nodes (3816 simplex iterations) in 1.09 seconds (0.39 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 1: 40703.1 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 4.070307795144e+04, best bound 4.070307795144e+04, gap 0.0000%
+
+User-callback calls 695, time in user-callback 0.00 sec
+primal_bound = 40703.07795144448, dual_bound = 40703.07795144448, gap = 0.0, time = 1.09

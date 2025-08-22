@@ -1,0 +1,43 @@
+
+Note: the module "julia" cannot be unloaded because it was not loaded.
+
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nlass gunluk ../../../../../instances/uflp/gunluk/gunluk-50-100-7.txt sqrt
+The latest version of Julia in the `1.10` channel is 1.10.6+0.x64.linux.gnu. You currently have `1.10.5+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.10.6+0.x64.linux.gnu and update the `1.10` channel to that version.
+presolving:
+(round 1, fast)       5000 del vars, 5000 del conss, 0 add conss, 5000 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 5000 del vars, 5000 del conss, 0 add conss, 5000 chg bounds, 0 chg sides, 0 chg coeffs, 5000 upgd conss, 0 impls, 0 clqs
+   (1.4s) probing cycle finished: starting next cycle
+   (1.4s) probing: 1/50 (2.0%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (1.4s) probing aborted: 50/50 successive totally useless probings
+   (1.4s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (1.4s) no symmetry present (symcode time: 0.03)
+presolving (3 rounds: 3 fast, 2 medium, 2 exhaustive):
+ 5000 deleted vars, 5000 deleted constraints, 0 added constraints, 5000 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 5000 implications, 0 cliques
+presolved problem has 10050 variables (50 bin, 0 int, 0 impl, 10000 cont) and 10100 constraints
+   5000 constraints of type <varbound>
+    100 constraints of type <linear>
+   5000 constraints of type <nonlinear>
+Presolving Time: 1.35
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  9.0s|     1 |     0 | 39882 |     - |   194M |   0 |  20k|  10k|  15k|   0 |  0 |   0 |   0 | 8.575971e+02 |      --      |    Inf | unknown
+  481s|     1 |     2 | 63980 |     - |   217M |   0 |  20k|  10k|  15k|   0 |  1 |   0 |   5 | 8.575973e+02 |      --      |    Inf | unknown
+L 490s|    21 |     6 | 64532 |2210.8 |    alns|  20 |  20k|  10k|  15k|   3 |  1 |   0 |  31 | 8.575987e+02 | 8.686434e+02 |   1.29%|   9.17%
+L 490s|    21 |     4 | 64532 |2210.8 |    alns|  20 |  20k|  10k|  15k|   3 |  1 |   0 |  31 | 8.575987e+02 | 8.576014e+02 |   0.00%|  36.67%
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 490.80
+Solving Nodes      : 25
+Primal Bound       : +8.57601364564606e+02 (2 solutions)
+Dual Bound         : +8.57601364564606e+02
+Gap                : 0.00 %
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-50-100-7.txt
+primal_bound = 857.6013645646063, dual_bound = 857.6013645646063, gap = 0.0, time = 495.68

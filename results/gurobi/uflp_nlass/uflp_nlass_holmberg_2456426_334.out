@@ -1,0 +1,108 @@
+solving instance uflp nlass holmberg 34 sinabc2
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 22650 rows, 31530 columns and 54000 nonzeros
+Model fingerprint: 0xdd10d5dc
+Model has 9000 function constraints treated as nonlinear
+  4500 POW, 4500 SIN
+Variable types: 27000 continuous, 4530 integer (4530 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 3e+02]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+00, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 13500 rows and 18000 columns
+Presolve time: 0.13s
+Presolved: 45150 rows, 13531 columns, 99000 nonzeros
+Presolved model has 4500 quadratic objective terms
+Presolved model has 4500 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 13501 continuous, 30 integer (30 binary)
+Found heuristic solution: objective 68574.999239
+
+Root relaxation: objective 2.066748e+03, 19833 iterations, 2.29 seconds (1.14 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2066.74802    0 4530 68574.9992 2066.74802  97.0%     -    2s
+H    0     0                    16309.474012 2066.74802  87.3%     -    2s
+H    0     0                    16306.491811 2066.74802  87.3%     -    3s
+     0     0 2080.96435    0 4530 16306.4918 2080.96435  87.2%     -    6s
+     0     0 2083.46541    0 4530 16306.4918 2083.46541  87.2%     -    7s
+     0     2 2084.29125    0 4530 16306.4918 2084.29125  87.2%     -    7s
+     1     3 2245.02262    1 4379 16306.4918 2085.75512  87.2% 10723   16s
+     3     5 2455.18063    2 4228 16306.4918 2249.19886  86.2% 10121   33s
+     5     7 2569.10173    3 4077 16306.4918 2307.28057  85.9%  7769   40s
+     7     9 2777.05484    4 3926 16306.4918 2307.28057  85.9%  7980   50s
+    10    12 2982.74241    5 3775 16306.4918 2307.28057  85.9%  6717   57s
+    11    13 3217.86499    6 3624 16306.4918 2307.28057  85.9%  6583   61s
+    14    16 3430.72526    7 3773 16306.4918 2307.28057  85.9%  5475   65s
+    15    17 3597.12275    8 3472 16306.4918 2307.28057  85.9%  5813   70s
+    19    21 4000.42479   10 3320 16306.4918 2307.28057  85.9%  5191   77s
+    23    25 4340.29266   12 3168 16306.4918 2307.28057  85.9%  4765   83s
+    25    27 4466.41610   13 3167 16306.4918 2307.28057  85.9%  4498   85s
+    29    31 4831.77302   15 2865 16306.4918 2307.28057  85.9%  4230   90s
+    35    37 5352.32293   18 2412 16306.4918 2307.28057  85.9%  3782   97s
+    39    41 5766.16781   20 2260 16306.4918 2307.28057  85.9%  3544  100s
+    58    60 7950.31601   29 1201 16306.4918 2307.28057  85.9%  2571  105s
+    59    61 8134.00724   30  900 16306.4918 2307.28057  85.9%  2536  159s
+    60    62 8188.43535   30 1050 16306.4918 2307.28057  85.9%  2494  168s
+    62    64 8160.62354   31  900 16306.4918 2307.28057  85.9%  2414  172s
+    80    82 8704.14832   40  900 16306.4918 2307.28057  85.9%  1872  175s
+   233   235 11551.2160  117  897 16306.4918 2307.28057  85.9%   644  180s
+   379   381 13155.1624  190  895 16306.4918 2307.28057  85.9%   397  185s
+   539   541 14993.4610  270  895 16306.4918 2307.28057  85.9%   280  190s
+H  687   285                    12404.756524 2307.28057  81.4%   220  210s
+H  687   217                    11437.083417 2307.28057  79.8%   220  211s
+   689   220 3431.49935    8   30 11437.0834 2312.65756  79.8%   234  227s
+H  690   209                    11418.604042 2312.65756  79.7%   234  232s
+H  691   199                    11007.488222 2312.65756  79.0%   233  237s
+   694   201 11007.4882  106   30 11007.4882 2312.65756  79.0%   232  243s
+   695   202 10431.2834   79   30 11007.4882 2312.65756  79.0%   232  250s
+   696   205 2312.65756   12 4379 11007.4882 2312.65756  79.0%   286 1820s
+   697   205 2312.65756   12 4529 11007.4882 2312.65756  79.0%   286 2253s
+   698   206 2455.14772   13 4228 11007.4882 2312.65756  79.0%   310 2558s
+   699   207 2461.40512   13 4378 11007.4882 2312.65756  79.0%   310 2791s
+   700   207 2571.11380   14 4227 11007.4882 2312.65756  79.0%   321 3003s
+   701   208 2705.53982   14 4377 11007.4882 2312.65756  79.0%   321 3194s
+   702   209 2674.72854   15 4076 11007.4882 2312.65756  79.0%   336 3368s
+   703   209 2827.83311   15 4226 11007.4882 2312.65756  79.0%   336 3526s
+   704   210 2842.36477   16 3925 11007.4882 2312.65756  79.0%   351 3600s
+
+Cutting planes:
+  Implied bound: 977
+  Flow cover: 238
+
+Explored 705 nodes (269905 simplex iterations) in 3600.02 seconds (1209.43 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 7: 11007.5 11418.6 11437.1 ... 68575
+
+Time limit reached
+Best objective 1.100748822173e+04, best bound 2.312657559595e+03, gap 78.9901%
+
+User-callback calls 20152, time in user-callback 0.14 sec
+reading holmberg data file ../../../../../instances/uflp/holmberg/p34
+primal_bound = 11007.488221734111, dual_bound = 2312.65755959487, gap = 78.99014277363872, time = 3600.04

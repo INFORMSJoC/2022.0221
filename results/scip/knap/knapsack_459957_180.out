@@ -1,0 +1,228 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance knapsack 20 8 log
+feasible solution found by trivial heuristic after 0.0 seconds, objective value 0.000000e+00
+presolving:
+(round 1, fast)       20 del vars, 40 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       20 del vars, 40 del conss, 0 add conss, 40 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (0.0s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (0.0s) no symmetry present
+presolving (3 rounds: 3 fast, 1 medium, 1 exhaustive):
+ 20 deleted vars, 40 deleted constraints, 0 added constraints, 40 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 40 variables (0 bin, 0 int, 0 impl, 40 cont) and 21 constraints
+      1 constraints of type <linear>
+     20 constraints of type <nonlinear>
+Presolving Time: 0.00
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t 0.0s|     1 |     0 |     0 |     - | trivial|   0 |  40 |  21 |   0 |   0 |  0 |   0 |   0 |-6.851149e+02 | 0.000000e+00 |    Inf | unknown
+  0.0s|     1 |     0 |    84 |     - |  1858k |   0 |  80 |  21 | 121 |   0 |  0 |   0 |   0 |-6.422990e+02 | 0.000000e+00 |    Inf | unknown
+L 0.0s|     1 |     0 |    84 |     - |undercov|   0 |  80 |  21 | 121 |   0 |  0 |   0 |   0 |-6.422990e+02 |-6.126712e+02 |   4.84%| unknown
+L 0.0s|     1 |     0 |    84 |     - |undercov|   0 |  80 |  21 | 121 |   0 |  0 |   0 |   0 |-6.422990e+02 |-6.266575e+02 |   2.50%| unknown
+t 0.1s|     1 |     0 |    84 |     - | trivial|   0 |  80 |  21 | 121 |   0 |  0 |   0 |   0 |-6.422990e+02 |-6.266575e+02 |   2.50%| unknown
+  0.1s|     1 |     0 |   103 |     - |  1929k |   0 |  80 |  21 | 141 |  20 |  1 |   0 |   0 |-6.289230e+02 |-6.266575e+02 |   0.36%| unknown
+  0.1s|     1 |     0 |   103 |     - |  1929k |   0 |  80 |  21 | 141 |  20 |  1 |   0 |   0 |-6.289230e+02 |-6.266575e+02 |   0.36%| unknown
+  0.1s|     1 |     0 |   123 |     - |  1946k |   0 |  80 |  21 | 159 |  38 |  2 |   0 |   0 |-6.270489e+02 |-6.266575e+02 |   0.06%| unknown
+  0.1s|     1 |     0 |   148 |     - |  1970k |   0 |  80 |  21 | 177 |  56 |  3 |   0 |   0 |-6.267411e+02 |-6.266575e+02 |   0.01%| unknown
+  0.1s|     1 |     0 |   160 |     - |  1970k |   0 |  80 |  21 | 188 |  67 |  4 |   0 |   0 |-6.266714e+02 |-6.266575e+02 |   0.00%| unknown
+  0.1s|     1 |     0 |   170 |     - |  2030k |   0 |  80 |  21 | 199 |  78 |  5 |   0 |   0 |-6.266615e+02 |-6.266575e+02 |   0.00%| unknown
+  0.1s|     1 |     0 |   180 |     - |  2030k |   0 |  80 |  21 | 210 |  89 |  6 |   0 |   0 |-6.266587e+02 |-6.266575e+02 |   0.00%| unknown
+  0.1s|     1 |     0 |   191 |     - |  2030k |   0 |  80 |  21 | 221 | 100 |  7 |   0 |   0 |-6.266578e+02 |-6.266575e+02 |   0.00%| unknown
+
+SCIP Status        : solving was interrupted [gap limit reached]
+Solving Time (sec) : 0.06
+Solving Nodes      : 1
+Primal Bound       : -6.26657513435251e+02 (8 solutions)
+Dual Bound         : -6.26657759061888e+02
+Gap                : 0.00 %
+Min nlobj[1,1] + nlobj[1,2] + nlobj[1,3] + nlobj[1,4] + nlobj[1,5] + nlobj[1,6] + nlobj[1,7] + nlobj[1,8] + nlobj[1,9] + nlobj[1,10] + nlobj[1,11] + nlobj[1,12] + nlobj[1,13] + nlobj[1,14] + nlobj[1,15] + nlobj[1,16] + nlobj[1,17] + nlobj[1,18] + nlobj[1,19] + nlobj[1,20]
+Subject to
+ x[1,1] - 100 onoff[1,1] ≤ 0
+ x[1,2] - 100 onoff[1,2] ≤ 0
+ x[1,3] - 100 onoff[1,3] ≤ 0
+ x[1,4] - 100 onoff[1,4] ≤ 0
+ x[1,5] - 100 onoff[1,5] ≤ 0
+ x[1,6] - 100 onoff[1,6] ≤ 0
+ x[1,7] - 100 onoff[1,7] ≤ 0
+ x[1,8] - 100 onoff[1,8] ≤ 0
+ x[1,9] - 100 onoff[1,9] ≤ 0
+ x[1,10] - 100 onoff[1,10] ≤ 0
+ x[1,11] - 100 onoff[1,11] ≤ 0
+ x[1,12] - 100 onoff[1,12] ≤ 0
+ x[1,13] - 100 onoff[1,13] ≤ 0
+ x[1,14] - 100 onoff[1,14] ≤ 0
+ x[1,15] - 100 onoff[1,15] ≤ 0
+ x[1,16] - 100 onoff[1,16] ≤ 0
+ x[1,17] - 100 onoff[1,17] ≤ 0
+ x[1,18] - 100 onoff[1,18] ≤ 0
+ x[1,19] - 100 onoff[1,19] ≤ 0
+ x[1,20] - 100 onoff[1,20] ≤ 0
+ 69 x[1,1] + 90 x[1,2] + 6 x[1,3] + 86 x[1,4] + 33 x[1,5] + 46 x[1,6] + 50 x[1,7] + 66 x[1,8] + 51 x[1,9] + 99 x[1,10] + 70 x[1,11] + 100 x[1,12] + 76 x[1,13] + 10 x[1,14] + 44 x[1,15] + 17 x[1,16] + 21 x[1,17] + 21 x[1,18] + 90 x[1,19] + 38 x[1,20] ≤ 54150
+ x[1,1] ≤ 100
+ x[1,2] ≤ 100
+ x[1,3] ≤ 100
+ x[1,4] ≤ 100
+ x[1,5] ≤ 100
+ x[1,6] ≤ 100
+ x[1,7] ≤ 100
+ x[1,8] ≤ 100
+ x[1,9] ≤ 100
+ x[1,10] ≤ 100
+ x[1,11] ≤ 100
+ x[1,12] ≤ 100
+ x[1,13] ≤ 100
+ x[1,14] ≤ 100
+ x[1,15] ≤ 100
+ x[1,16] ≤ 100
+ x[1,17] ≤ 100
+ x[1,18] ≤ 100
+ x[1,19] ≤ 100
+ x[1,20] ≤ 100
+ x[1,1] ≥ 0
+ x[1,2] ≥ 0
+ x[1,3] ≥ 0
+ x[1,4] ≥ 0
+ x[1,5] ≥ 0
+ x[1,6] ≥ 0
+ x[1,7] ≥ 0
+ x[1,8] ≥ 0
+ x[1,9] ≥ 0
+ x[1,10] ≥ 0
+ x[1,11] ≥ 0
+ x[1,12] ≥ 0
+ x[1,13] ≥ 0
+ x[1,14] ≥ 0
+ x[1,15] ≥ 0
+ x[1,16] ≥ 0
+ x[1,17] ≥ 0
+ x[1,18] ≥ 0
+ x[1,19] ≥ 0
+ x[1,20] ≥ 0
+ nlobj[1,1] ≥ -10000000000
+ nlobj[1,2] ≥ -10000000000
+ nlobj[1,3] ≥ -10000000000
+ nlobj[1,4] ≥ -10000000000
+ nlobj[1,5] ≥ -10000000000
+ nlobj[1,6] ≥ -10000000000
+ nlobj[1,7] ≥ -10000000000
+ nlobj[1,8] ≥ -10000000000
+ nlobj[1,9] ≥ -10000000000
+ nlobj[1,10] ≥ -10000000000
+ nlobj[1,11] ≥ -10000000000
+ nlobj[1,12] ≥ -10000000000
+ nlobj[1,13] ≥ -10000000000
+ nlobj[1,14] ≥ -10000000000
+ nlobj[1,15] ≥ -10000000000
+ nlobj[1,16] ≥ -10000000000
+ nlobj[1,17] ≥ -10000000000
+ nlobj[1,18] ≥ -10000000000
+ nlobj[1,19] ≥ -10000000000
+ nlobj[1,20] ≥ -10000000000
+ x[1,1] ≤ 100
+ x[1,2] ≤ 100
+ x[1,3] ≤ 100
+ x[1,4] ≤ 100
+ x[1,5] ≤ 100
+ x[1,6] ≤ 100
+ x[1,7] ≤ 100
+ x[1,8] ≤ 100
+ x[1,9] ≤ 100
+ x[1,10] ≤ 100
+ x[1,11] ≤ 100
+ x[1,12] ≤ 100
+ x[1,13] ≤ 100
+ x[1,14] ≤ 100
+ x[1,15] ≤ 100
+ x[1,16] ≤ 100
+ x[1,17] ≤ 100
+ x[1,18] ≤ 100
+ x[1,19] ≤ 100
+ x[1,20] ≤ 100
+ nlobj[1,1] ≤ 10000000000
+ nlobj[1,2] ≤ 10000000000
+ nlobj[1,3] ≤ 10000000000
+ nlobj[1,4] ≤ 10000000000
+ nlobj[1,5] ≤ 10000000000
+ nlobj[1,6] ≤ 10000000000
+ nlobj[1,7] ≤ 10000000000
+ nlobj[1,8] ≤ 10000000000
+ nlobj[1,9] ≤ 10000000000
+ nlobj[1,10] ≤ 10000000000
+ nlobj[1,11] ≤ 10000000000
+ nlobj[1,12] ≤ 10000000000
+ nlobj[1,13] ≤ 10000000000
+ nlobj[1,14] ≤ 10000000000
+ nlobj[1,15] ≤ 10000000000
+ nlobj[1,16] ≤ 10000000000
+ nlobj[1,17] ≤ 10000000000
+ nlobj[1,18] ≤ 10000000000
+ nlobj[1,19] ≤ 10000000000
+ nlobj[1,20] ≤ 10000000000
+ onoff[1,1] binary
+ onoff[1,2] binary
+ onoff[1,3] binary
+ onoff[1,4] binary
+ onoff[1,5] binary
+ onoff[1,6] binary
+ onoff[1,7] binary
+ onoff[1,8] binary
+ onoff[1,9] binary
+ onoff[1,10] binary
+ onoff[1,11] binary
+ onoff[1,12] binary
+ onoff[1,13] binary
+ onoff[1,14] binary
+ onoff[1,15] binary
+ onoff[1,16] binary
+ onoff[1,17] binary
+ onoff[1,18] binary
+ onoff[1,19] binary
+ onoff[1,20] binary
+ (subexpression[1] - nlobj[1,1]) - 0.0 ≤ 0
+ (subexpression[2] - nlobj[1,2]) - 0.0 ≤ 0
+ (subexpression[3] - nlobj[1,3]) - 0.0 ≤ 0
+ (subexpression[4] - nlobj[1,4]) - 0.0 ≤ 0
+ (subexpression[5] - nlobj[1,5]) - 0.0 ≤ 0
+ (subexpression[6] - nlobj[1,6]) - 0.0 ≤ 0
+ (subexpression[7] - nlobj[1,7]) - 0.0 ≤ 0
+ (subexpression[8] - nlobj[1,8]) - 0.0 ≤ 0
+ (subexpression[9] - nlobj[1,9]) - 0.0 ≤ 0
+ (subexpression[10] - nlobj[1,10]) - 0.0 ≤ 0
+ (subexpression[11] - nlobj[1,11]) - 0.0 ≤ 0
+ (subexpression[12] - nlobj[1,12]) - 0.0 ≤ 0
+ (subexpression[13] - nlobj[1,13]) - 0.0 ≤ 0
+ (subexpression[14] - nlobj[1,14]) - 0.0 ≤ 0
+ (subexpression[15] - nlobj[1,15]) - 0.0 ≤ 0
+ (subexpression[16] - nlobj[1,16]) - 0.0 ≤ 0
+ (subexpression[17] - nlobj[1,17]) - 0.0 ≤ 0
+ (subexpression[18] - nlobj[1,18]) - 0.0 ≤ 0
+ (subexpression[19] - nlobj[1,19]) - 0.0 ≤ 0
+ (subexpression[20] - nlobj[1,20]) - 0.0 ≤ 0
+With NL expressions
+ subexpression[1]: -1.0 * 0.07568549319492644 * log(1.0 + 0.19085536923187668 * x[1,1])
+ subexpression[2]: -1.0 * 12.208647834684323 * log(1.0 + 0.19085536923187668 * x[1,2])
+ subexpression[3]: -1.0 * 10.180096804557751 * log(1.0 + 0.19085536923187668 * x[1,3])
+ subexpression[4]: -1.0 * 2.2089716689838217 * log(1.0 + 0.19085536923187668 * x[1,4])
+ subexpression[5]: -1.0 * 0.31826496108897373 * log(1.0 + 0.19085536923187668 * x[1,5])
+ subexpression[6]: -1.0 * 16.55436426081587 * log(1.0 + 0.19085536923187668 * x[1,6])
+ subexpression[7]: -1.0 * 8.258273725462006 * log(1.0 + 0.19085536923187668 * x[1,7])
+ subexpression[8]: -1.0 * 13.711052682796591 * log(1.0 + 0.19085536923187668 * x[1,8])
+ subexpression[9]: -1.0 * 7.720270908490375 * log(1.0 + 0.19085536923187668 * x[1,9])
+ subexpression[10]: -1.0 * 14.299357590954115 * log(1.0 + 0.19085536923187668 * x[1,10])
+ subexpression[11]: -1.0 * 13.556538271938761 * log(1.0 + 0.19085536923187668 * x[1,11])
+ subexpression[12]: -1.0 * 28.036761090690163 * log(1.0 + 0.19085536923187668 * x[1,12])
+ subexpression[13]: -1.0 * 7.947723262812083 * log(1.0 + 0.19085536923187668 * x[1,13])
+ subexpression[14]: -1.0 * 2.3665036549556677 * log(1.0 + 0.19085536923187668 * x[1,14])
+ subexpression[15]: -1.0 * 2.3427841314094784 * log(1.0 + 0.19085536923187668 * x[1,15])
+ subexpression[16]: -1.0 * 6.7475960517949645 * log(1.0 + 0.19085536923187668 * x[1,16])
+ subexpression[17]: -1.0 * 26.756849416223602 * log(1.0 + 0.19085536923187668 * x[1,17])
+ subexpression[18]: -1.0 * 23.319743369715017 * log(1.0 + 0.19085536923187668 * x[1,18])
+ subexpression[19]: -1.0 * 1.8829053758085736 * log(1.0 + 0.19085536923187668 * x[1,19])
+ subexpression[20]: -1.0 * 29.879213832858653 * log(1.0 + 0.19085536923187668 * x[1,20])
+
+primal_bound = -626.6575134352505, dual_bound = -626.6577590618876, gap = 3.9196297115340146e-5, time = 3.33

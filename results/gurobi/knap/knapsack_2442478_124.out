@@ -1,0 +1,89 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 20 3 sinabc2
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 101 rows, 140 columns and 220 nonzeros
+Model fingerprint: 0x2883d992
+Model has 40 function constraints treated as nonlinear
+  20 POW, 20 SIN
+Variable types: 120 continuous, 20 integer (20 binary)
+Coefficient statistics:
+  Matrix range     [5e-02, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+02, 5e+04]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 80 rows and 80 columns
+Presolve time: 0.00s
+Presolved: 202 rows, 82 columns, 461 nonzeros
+Presolved model has 20 bilinear constraint(s)
+Presolved model has 20 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 82 continuous, 0 integer (0 binary)
+Found heuristic solution: objective -566.2971127
+
+Root relaxation: objective -1.402791e+03, 83 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -1402.7909    0   28 -566.29711 -1402.7909   148%     -    0s
+     0     0 -1069.3551    0   26 -566.29711 -1069.3551  88.8%     -    0s
+     0     0 -869.86934    0   23 -566.29711 -869.86934  53.6%     -    0s
+     0     0 -869.83126    0   23 -566.29711 -869.83126  53.6%     -    0s
+     0     0 -859.69936    0   15 -566.29711 -859.69936  51.8%     -    0s
+     0     0 -857.89111    0   15 -566.29711 -857.89111  51.5%     -    0s
+     0     0 -857.15686    0   15 -566.29711 -857.15686  51.4%     -    0s
+     0     0 -857.12097    0   15 -566.29711 -857.12097  51.4%     -    0s
+     0     0 -856.89783    0   16 -566.29711 -856.89783  51.3%     -    0s
+     0     0 -856.88880    0   16 -566.29711 -856.88880  51.3%     -    0s
+     0     0 -856.24966    0   14 -566.29711 -856.24966  51.2%     -    0s
+     0     0 -848.71960    0   12 -566.29711 -848.71960  49.9%     -    0s
+H    0     0                    -814.6260306 -848.71960  4.19%     -    0s
+     0     2 -848.71960    0   12 -814.62603 -848.71960  4.19%     -    0s
+H    6     6                    -822.7365696 -848.08307  3.08%  11.7    0s
+H   14    10                    -822.7424941 -844.03482  2.59%  13.1    0s
+*   59    43              30    -822.7434746 -835.02278  1.49%   8.6    0s
+*   61    41              31    -822.7438216 -835.02278  1.49%   8.4    0s
+*  172    46              36    -822.7508970 -826.74322  0.49%   7.8    0s
+*  173    43              36    -822.7509026 -826.74322  0.49%   7.8    0s
+*  223    37              24    -822.7608768 -824.35281  0.19%   7.5    0s
+*  224    36              24    -822.7608811 -824.35281  0.19%   7.4    0s
+*  230    36              25    -822.7609816 -824.35281  0.19%   7.5    0s
+*  233    35              24    -822.7609851 -824.35281  0.19%   7.5    0s
+
+Cutting planes:
+  RLT: 21
+
+Explored 331 nodes (2366 simplex iterations) in 0.17 seconds (0.06 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 10: -822.761 -822.761 -822.761 ... -814.626
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective -8.227609850679e+02, best bound -8.227609959311e+02, gap 0.0000%
+
+User-callback calls 1087, time in user-callback 0.01 sec
+primal_bound = -822.7609850678884, dual_bound = 0.0, gap = 100.0, time = 0.45

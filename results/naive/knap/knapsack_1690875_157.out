@@ -1,0 +1,108 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance knapsack 20 6 divexp
+The latest version of Julia in the `1.10` channel is 1.10.6+0.x64.linux.gnu. You currently have `1.10.5+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.10.6+0.x64.linux.gnu and update the `1.10` channel to that version.
+ERROR: LoadError: MethodError: no method matching zero(::Type{Vector{Float64}})
+
+Closest candidates are:
+  zero(!Matched::Type{Union{}}, Any...)
+   @ Base number.jl:310
+  zero(!Matched::Type{LibGit2.GitHash})
+   @ LibGit2 ~/.julia/juliaup/julia-1.10.5+0.x64.linux.gnu/share/julia/stdlib/v1.10/LibGit2/src/oid.jl:221
+  zero(!Matched::Type{Dates.Date})
+   @ Dates ~/.julia/juliaup/julia-1.10.5+0.x64.linux.gnu/share/julia/stdlib/v1.10/Dates/src/types.jl:439
+  ...
+
+Stacktrace:
+  [1] reduce_empty(::typeof(+), ::Type{Vector{Float64}})
+    @ Base ./reduce.jl:343
+  [2] reduce_empty(::typeof(Base.add_sum), ::Type{Vector{Float64}})
+    @ Base ./reduce.jl:352
+  [3] mapreduce_empty
+    @ ./reduce.jl:372
+  [4] reduce_empty(op::Base.MappingRF{typeof(identity), typeof(Base.add_sum)}, ::Type{Vector{Float64}})
+    @ Base ./reduce.jl:361
+  [5] reduce_empty_iter
+    @ ./reduce.jl:384 [inlined]
+  [6] mapreduce_empty_iter(f::Function, op::Function, itr::Vector{Vector{Float64}}, ItrEltype::Base.HasEltype)
+    @ Base ./reduce.jl:380
+  [7] _mapreduce(f::typeof(identity), op::typeof(Base.add_sum), ::IndexLinear, A::Vector{Vector{Float64}})
+    @ Base ./reduce.jl:432
+  [8] _mapreduce_dim
+    @ ./reducedim.jl:365 [inlined]
+  [9] mapreduce
+    @ ./reducedim.jl:357 [inlined]
+ [10] _sum
+    @ ./reducedim.jl:1015 [inlined]
+ [11] _sum
+    @ ./reducedim.jl:1014 [inlined]
+ [12] sum(a::Vector{Vector{Float64}})
+    @ Base ./reducedim.jl:1010
+ [13] ORourke(pts::Vector{LinA.dataError})
+    @ LinA ~/git/LinA.jl/src/oRourke.jl:36
+ [14] ExactPiece(start::Float64, maximum::Float64, lower::LinA.var"#f#34"{LinA.var"#18#19"{LinA.var"#20#21"{IterativePWLB.var"#165#168"{IterativePWLB.var"#164#167"{Vector{Float64}, Vector{Float64}, Vector{Float64}, Vector{Float64}, Int64}}}, Float64, Float64, Float64}}, upper::LinA.Shift{LinA.Scale{LinA.var"#f#34"{LinA.var"#18#19"{LinA.var"#20#21"{IterativePWLB.var"#165#168"{IterativePWLB.var"#164#167"{Vector{Float64}, Vector{Float64}, Vector{Float64}, Vector{Float64}, Int64}}}, Float64, Float64, Float64}}, Float64}, Float64})
+    @ LinA ~/git/LinA.jl/src/exactPiece.jl:37
+ [15] ExactLin(expr_fct::LinA.var"#18#19"{LinA.var"#20#21"{IterativePWLB.var"#165#168"{IterativePWLB.var"#164#167"{Vector{Float64}, Vector{Float64}, Vector{Float64}, Vector{Float64}, Int64}}}, Float64, Float64, Float64}, x1::Float64, x2::Float64, e::Relative; bounding::Over, ConcavityChanges::Vector{Float64})
+    @ LinA ~/git/LinA.jl/src/exactMethod.jl:31
+ [16] ScaledLinearize(f::IterativePWLB.var"#165#168"{IterativePWLB.var"#164#167"{Vector{Float64}, Vector{Float64}, Vector{Float64}, Vector{Float64}, Int64}}, x1::Float64, x2::Float64, e::Relative, LinAlg::Type{ExactLin}, bounding::Under, concavity_changes::Vector{Float64})
+    @ LinA ~/git/LinA.jl/src/linearizeDispatch.jl:127
+ [17] #Linearize#63
+    @ ~/git/LinA.jl/src/linearizeDispatch.jl:85 [inlined]
+ [18] construct_linear_expressions(exprs1::Matrix{Any}, exprs2::Vector{Any}, ptype::Symbol, pdata::IterativePWLB.KnapData, eps0::Float64, cost_type::Symbol, linasolver::Type{ExactLin}, fixed_charge::Bool)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/util.jl:129
+ [19] ipwlb(exprs::Matrix{Expr}, expr1::Vector{Any}, expr2::Vector{Any}, functions::Matrix{Any}, func1::Vector{Any}, func2::Vector{Any}, eps::Float64, ptype::Symbol, pdata::IterativePWLB.KnapData, with_solver::Type, with_solver_parameters::typeof(IterativePWLB.gurobi_parameters), with_lina_solver::Type, eps0::Float64, tilim::Int64, printon::Bool, stepdiv::Float64, dynstep::Bool, activeUpdateLargePwlf::Bool, warmstartMILP::Bool, miptype::Symbol, with_fixed_charge::Bool)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/ipwlb.jl:31
+ [20] solve_knap(filename::String, are_vars_integer::Bool, eps::Float64, init::Float64; Flim::Float64, with_solver::Type, with_solver_parameters::Function, with_cost_type::Symbol, with_lina_solver::Type, tilim::Int64, printon::Bool, stepdiv::Float64, dynstep::Bool, activeUpdateLargePwlf::Bool, warmstartMILP::Bool, miptype::Symbol, with_fixed_charge::Bool)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/solve.jl:79
+ [21] top-level scope
+    @ ~/git/ipwlb/code/sources/IterativePWLB/test/naive/knap/script.jl:8
+in expression starting at /home/ccontard/git/ipwlb/code/sources/IterativePWLB/test/naive/knap/script.jl:8
+expr 1, 1 = 12.72869 / (1 + 25.636922 * exp(-0.111218 * (x + -53.499644)))
+expr 1, 2 = 32.057947 / (1 + 80.670039 * exp(-0.181232 * (x + -5.913982)))
+expr 1, 3 = 8.066014 / (1 + 13.149285 * exp(-0.181085 * (x + -24.693056)))
+expr 1, 4 = 27.294961 / (1 + 47.268944 * exp(-0.154606 * (x + -41.690409)))
+expr 1, 5 = 92.068546 / (1 + 66.116878 * exp(-0.178151 * (x + -38.334945)))
+expr 1, 6 = 48.430365 / (1 + 5.063557 * exp(-0.182056 * (x + -22.73804)))
+expr 1, 7 = 99.152498 / (1 + 75.35214 * exp(-0.18562 * (x + -62.41561)))
+expr 1, 8 = 13.578683 / (1 + 71.269952 * exp(-0.10908 * (x + -34.652805)))
+expr 1, 9 = 85.879134 / (1 + 15.608554 * exp(-0.169837 * (x + -50.281519)))
+expr 1, 10 = 25.800867 / (1 + 34.139409 * exp(-0.115511 * (x + -64.253306)))
+expr 1, 11 = 40.967848 / (1 + 70.584356 * exp(-0.17559 * (x + -74.442687)))
+expr 1, 12 = 93.041679 / (1 + 73.086994 * exp(-0.187784 * (x + -62.53918)))
+expr 1, 13 = 59.588118 / (1 + 74.780438 * exp(-0.163392 * (x + -33.93502)))
+expr 1, 14 = 45.571786 / (1 + 69.658539 * exp(-0.12368 * (x + -81.362067)))
+expr 1, 15 = 93.677152 / (1 + 99.592187 * exp(-0.14367 * (x + -73.427568)))
+expr 1, 16 = 89.009138 / (1 + 67.769292 * exp(-0.14975 * (x + -92.710885)))
+expr 1, 17 = 2.892827 / (1 + 70.385198 * exp(-0.147252 * (x + -62.021247)))
+expr 1, 18 = 35.479104 / (1 + 97.920257 * exp(-0.105209 * (x + -51.978202)))
+expr 1, 19 = 28.518172 / (1 + 62.967239 * exp(-0.185358 * (x + -80.685921)))
+expr 1, 20 = 15.526285 / (1 + 4.528858 * exp(-0.192642 * (x + -57.94254)))
+(-1.0 * 12.72869) / (1 + 25.636922 * exp(-0.111218 * (x + -53.499644)))
+(-1.0 * 32.057947) / (1 + 80.670039 * exp(-0.181232 * (x + -5.913982)))
+(-1.0 * 8.066014) / (1 + 13.149285 * exp(-0.181085 * (x + -24.693056)))
+(-1.0 * 27.294961) / (1 + 47.268944 * exp(-0.154606 * (x + -41.690409)))
+(-1.0 * 92.068546) / (1 + 66.116878 * exp(-0.178151 * (x + -38.334945)))
+(-1.0 * 48.430365) / (1 + 5.063557 * exp(-0.182056 * (x + -22.73804)))
+(-1.0 * 99.152498) / (1 + 75.35214 * exp(-0.18562 * (x + -62.41561)))
+(-1.0 * 13.578683) / (1 + 71.269952 * exp(-0.10908 * (x + -34.652805)))
+(-1.0 * 85.879134) / (1 + 15.608554 * exp(-0.169837 * (x + -50.281519)))
+(-1.0 * 25.800867) / (1 + 34.139409 * exp(-0.115511 * (x + -64.253306)))
+(-1.0 * 40.967848) / (1 + 70.584356 * exp(-0.17559 * (x + -74.442687)))
+(-1.0 * 93.041679) / (1 + 73.086994 * exp(-0.187784 * (x + -62.53918)))
+(-1.0 * 59.588118) / (1 + 74.780438 * exp(-0.163392 * (x + -33.93502)))
+(-1.0 * 45.571786) / (1 + 69.658539 * exp(-0.12368 * (x + -81.362067)))
+(-1.0 * 93.677152) / (1 + 99.592187 * exp(-0.14367 * (x + -73.427568)))
+(-1.0 * 89.009138) / (1 + 67.769292 * exp(-0.14975 * (x + -92.710885)))
+(-1.0 * 2.892827) / (1 + 70.385198 * exp(-0.147252 * (x + -62.021247)))
+(-1.0 * 35.479104) / (1 + 97.920257 * exp(-0.105209 * (x + -51.978202)))
+(-1.0 * 28.518172) / (1 + 62.967239 * exp(-0.185358 * (x + -80.685921)))
+(-1.0 * 15.526285) / (1 + 4.528858 * exp(-0.192642 * (x + -57.94254)))
+translating piece by 7.044029187053269e-6
+translating piece by 5.014696523808482e-6
+translating piece by 1.265318256837844e-7
+translating piece by 2.1427390994865902e-6

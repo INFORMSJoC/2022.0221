@@ -1,0 +1,82 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 200 10 square
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Couenne: new cutoff value -1.2421064023e+01 (0.059092 seconds)
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1      FAILED -2539.171     3000 33.566786
+NLP0014I             1      FAILED -2539.171     3000 33.452344   resolve robustness
+NLP3006W Warning : continuing branching, while there are unrecovered failures at nodes
+Loaded instance "/tmp/jl_HFAj16/model.nl"
+Constraints:          601
+Variables:            600 (200 integer)
+Auxiliaries:          202 (0 integer)
+
+Coin0506I Presolve 1201 (-201) rows, 600 (-202) columns and 2799 (-402) elements
+Clp0006I 0  Obj -7460.9757 Primal inf 129687.46 (200)
+Clp0006I 99  Obj -7460.9757 Primal inf 118070.25 (198)
+Clp0006I 198  Obj -7460.9757 Primal inf 77423.026 (152)
+Clp0006I 297  Obj -7140.665 Primal inf 45385.086 (101)
+Clp0006I 396  Obj -6591.2952 Primal inf 16770.035 (50)
+Clp0006I 484  Obj -6432.3456
+Clp0000I Optimal - objective value -6432.3456
+Clp0032I Optimal objective -6432.345574 - 484 iterations time 0.012, Presolve 0.00
+Clp0000I Optimal - objective value -6432.3456
+NLP Heuristic: NLP0014I             3         OPT -6421.3233       31 0.267634
+no solution.
+Clp0000I Optimal - objective value -6432.3456
+Optimality Based BT: 0 improved bounds
+Probing: Couenne: new cutoff value -6.4196228349e+03 (68.3787 seconds)
+0 improved bounds
+NLP Heuristic: no solution.
+Cbc0013I At root node, 0 cuts changed objective from -6432.3456 to -6432.3456 in 1 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 0 row cuts average 0.0 elements, 85 column cuts (85 active)
+Cbc0010I After 0 nodes, 1 on tree, 1e+50 best solution, best possible -1.7976931e+308 (3.04 seconds)
+Optimality Based BT: 40 improved bounds
+Optimality Based BT: 71 improved bounds
+Optimality Based BT: 74 improved bounds
+Couenne: new cutoff value -6.4196253514e+03 (77.8536 seconds)
+Optimality Based BT: 74 improved bounds
+Couenne: new cutoff value -6.4213232260e+03 (81.8299 seconds)
+Optimality Based BT: 86 improved bounds
+Cbc0010I After 100 nodes, 45 on tree, 1e+50 best solution, best possible -6430.9918 (23.59 seconds)
+Cbc0010I After 200 nodes, 95 on tree, 1e+50 best solution, best possible -6430.9918 (25.35 seconds)
+Cbc0010I After 300 nodes, 145 on tree, 1e+50 best solution, best possible -6430.9918 (27.33 seconds)
+Cbc0010I After 400 nodes, 195 on tree, 1e+50 best solution, best possible -6430.9918 (29.32 seconds)
+Cbc0010I After 500 nodes, 245 on tree, 1e+50 best solution, best possible -6430.9918 (31.45 seconds)
+Cbc0010I After 600 nodes, 295 on tree, 1e+50 best solution, best possible -6430.9918 (33.60 seconds)
+Cbc0010I After 700 nodes, 345 on tree, 1e+50 best solution, best possible -6430.9918 (35.82 seconds)
+Cbc0010I After 800 nodes, 395 on tree, 1e+50 best solution, best possible -6430.9918 (38.06 seconds)
+Cbc0010I After 900 nodes, 445 on tree, 1e+50 best solution, best possible -6430.9918 (40.36 seconds)
+Cbc0010I After 1000 nodes, 495 on tree, 1e+50 best solution, best possible -6430.9918 (42.58 seconds)
+Couenne: new cutoff value -6.4269904705e+03 (111.165 seconds)
+Cbc0010I After 1100 nodes, 531 on tree, 1e+50 best solution, best possible -6430.9918 (44.82 seconds)
+Couenne: new cutoff value -6.4269904708e+03 (113.499 seconds)
+Optimality Based BT: 50 improved bounds
+Optimality Based BT: Couenne: new cutoff value -6.4271940636e+03 (116.32 seconds)
+53 improved bounds
+Optimality Based BT: 102 improved bounds
+Cbc0010I After 1200 nodes, 539 on tree, 1e+50 best solution, best possible -6430.6792 (56.51 seconds)
+Optimality Based BT: 62 improved bounds
+Couenne: new cutoff value -6.4304404053e+03 (126.173 seconds)
+Cbc0004I Integer solution of -6430.4404 found after 52431 iterations and 1205 nodes (59.06 seconds)
+Cbc0001I Search completed - best objective -6430.440405253418, took 52442 iterations and 1208 nodes (61.41 seconds)
+Cbc0035I Maximum depth 594, 0 variables fixed on reduced cost
+
+ 	"Finished"
+
+Linearization cuts added at root node:       1402
+Linearization cuts added in total:           1402  (separation time: 0.002266s)
+Total solve time:                         61.4276s (61.4276s in branch-and-bound)
+Lower bound:                             -6430.44
+Upper bound:                             -6430.44  (gap: 0.00%)
+Branch-and-bound nodes:                      1208
+Stats: /tmp/jl_HFAj16/model.nl  600 [var]  200 [int]  601 [con]  202 [aux]   1402 [root]     1402 [tot] 0.002266 [sep]  61.4276 [time]  61.4276 [bb]        -6.430440e+03 [lower]        -6.430440e+03 [upper]    1208 [nodes]
+Performance of                           FBBT:	   0.762764s,     2217 runs. fix:          0 shrnk:    79.8563 ubd:          0 2ubd:          1 infeas:          0
+Performance of                           OBBT:	    10.8672s,       10 runs. fix:    6.08421 shrnk:    66.1896 ubd:          0 2ubd:          1 infeas:          0
+primal_bound = -6430.440405253662, dual_bound = 0.0, gap = 100.0, time = 133.67

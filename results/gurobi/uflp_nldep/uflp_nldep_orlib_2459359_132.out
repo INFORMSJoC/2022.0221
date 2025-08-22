@@ -1,0 +1,75 @@
+solving instance uflp nldep orlib 81 cubic
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Warning: zero or small (< 1e-13) coefficient for the highest term of polynomial function.
+Warning: no quadratic or higher terms for polynomial function.
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 1350 rows, 1350 columns and 5099 nonzeros
+Model fingerprint: 0x9e380b6f
+Model has 25 function constraints treated as nonlinear
+  25 POLY
+Variable types: 1325 continuous, 25 integer (25 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+04]
+  Objective range  [1e+00, 1e+06]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+00, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 76 rows and 29 columns
+Presolve time: 0.01s
+Presolved: 1394 rows, 1322 columns, 5137 nonzeros
+Presolved model has 24 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 1298 continuous, 24 integer (24 binary)
+
+Root relaxation: infeasible, 78 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 infeasible    0               - infeasible      -     -    0s
+
+Explored 1 nodes (78 simplex iterations) in 0.01 seconds (0.01 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+User-callback calls 267, time in user-callback 0.00 sec
+ERROR: LoadError: MathOptInterface.GetAttributeNotAllowed{MathOptInterface.ObjectiveBound}: Getting attribute MathOptInterface.ObjectiveBound() cannot be performed. You may want to use a `CachingOptimizer` in `AUTOMATIC` mode or you may need to call `reset_optimizer` before doing this operation if the `CachingOptimizer` is in `MANUAL` mode.
+Stacktrace:
+ [1] get(model::Gurobi.Optimizer, attr::MathOptInterface.ObjectiveBound)
+   @ Gurobi ~/.julia/packages/Gurobi/qCzRR/src/MOI_wrapper/MOI_wrapper.jl:3344
+ [2] _moi_get_result(model::Gurobi.Optimizer, args::MathOptInterface.ObjectiveBound)
+   @ JuMP ~/.julia/packages/JuMP/i68GU/src/optimizer_interface.jl:1044
+ [3] get(model::JuMP.Model, attr::MathOptInterface.ObjectiveBound)
+   @ JuMP ~/.julia/packages/JuMP/i68GU/src/optimizer_interface.jl:1073
+ [4] objective_bound(model::JuMP.Model)
+   @ JuMP ~/.julia/packages/JuMP/i68GU/src/objective.jl:78
+ [5] nl_uflp_nldep(filename::String, cost::Symbol, solver::Gurobi.Optimizer, solver_params::Dict{String, Real}; solve::Bool, write_nl::Bool, write_lp::Bool, with_cap_constraint::Bool)
+   @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/nlsolver.jl:789
+ [6] top-level scope
+   @ ~/git/ipwlb/code/sources/IterativePWLB/test/gurobi/uflp_nldep/script.jl:11
+in expression starting at /home/ccontard/git/ipwlb/code/sources/IterativePWLB/test/gurobi/uflp_nldep/script.jl:11
+reading orlib data file ../../../../../instances/uflp/orlib/cap81.txt

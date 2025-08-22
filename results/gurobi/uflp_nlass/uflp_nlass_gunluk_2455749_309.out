@@ -1,0 +1,68 @@
+solving instance uflp nlass gunluk ../../../../../instances/uflp/gunluk/gunluk-40-80-10.txt square
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 9680 rows, 12840 columns and 22400 nonzeros
+Model fingerprint: 0x9a257f34
+Model has 3200 function constraints treated as nonlinear
+  3200 POW
+Variable types: 9600 continuous, 3240 integer (3240 binary)
+Coefficient statistics:
+  Matrix range     [6e-01, 6e+01]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+00, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 6400 rows and 9600 columns
+Presolve time: 0.04s
+Presolved: 3280 rows, 3240 columns, 9600 nonzeros
+Presolved model has 3200 quadratic objective terms
+Variable types: 3200 continuous, 40 integer (40 binary)
+Found heuristic solution: objective 2142.9407055
+
+Root relaxation: objective 9.362749e+01, 5590 iterations, 0.33 seconds (0.41 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   93.62749    0   40 2142.94071   93.62749  95.6%     -    0s
+     0     0   93.64046    0   40 2142.94071   93.64046  95.6%     -    0s
+     0     0  252.89626    0    3 2142.94071  252.89626  88.2%     -    0s
+H    0     0                     271.2470026  252.89626  6.77%     -    0s
+     0     0  252.89626    0    3  271.24700  252.89626  6.77%     -    1s
+H    0     0                     271.2456361  252.89626  6.76%     -    1s
+H    0     0                     256.9061156  252.89626  1.56%     -    1s
+     0     2  252.89626    0    3  256.90612  252.89626  1.56%     -    1s
+H    3     3                     254.9856139  252.90928  0.81%   0.0    2s
+H    3     3                     253.4478986  252.90928  0.21%   0.0    2s
+*    5     3               3     253.3420893  253.30504  0.01%   0.0    2s
+
+Explored 7 nodes (5590 simplex iterations) in 3.11 seconds (1.57 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 3: 253.342 271.246 2142.94 
+No other solutions better than 253.342
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 2.533420630731e+02, best bound 2.533420893043e+02, gap 0.0000%
+
+User-callback calls 642, time in user-callback 0.00 sec
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-40-80-10.txt
+primal_bound = 253.34206307310433, dual_bound = 253.34208930425865, gap = 1.035404515470318e-5, time = 3.12

@@ -1,0 +1,89 @@
+solving instance transportation 10 8 square
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 220 rows, 400 columns and 600 nonzeros
+Model fingerprint: 0x06489219
+Model has 100 function constraints treated as nonlinear
+  100 POW
+Variable types: 300 continuous, 100 integer (100 binary)
+Coefficient statistics:
+  Matrix range     [3e-04, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+00, 1e+10]
+  RHS range        [5e+00, 3e+02]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 200 rows and 300 columns
+Presolve time: 0.00s
+Presolved: 20 rows, 100 columns, 200 nonzeros
+Presolved model has 100 quadratic objective terms
+Variable types: 100 continuous, 0 integer (0 binary)
+Root relaxation presolve time: 0.00s
+Root relaxation presolved: 20 rows, 100 columns, 200 nonzeros
+Root relaxation presolved model has 100 quadratic objective terms
+Root barrier log...
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.000e+02
+ Factor NZ  : 2.100e+02
+ Factor Ops : 2.870e+03 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.79876353e+07 -2.85930199e+07  8.00e+03 7.49e+02  6.74e+05     0s
+   1   1.16645870e+06 -1.90228063e+06  1.28e+03 1.18e+02  1.12e+05     0s
+   2   3.52240398e+03 -7.28170039e+05  4.16e+01 3.80e+00  6.70e+03     0s
+   3   1.14522946e+03 -4.07771922e+05  1.37e+01 1.29e+00  2.85e+03     0s
+   4   3.93489541e+02 -1.59828793e+05  2.91e+00 3.16e-01  9.65e+02     0s
+   5   2.22086525e+02 -5.59472458e+04  7.30e-01 8.83e-02  3.04e+02     0s
+   6   1.39500372e+02 -1.58381880e+04  9.51e-02 1.46e-02  7.95e+01     0s
+   7   1.34444851e+02 -2.26551874e+03  1.13e-02 1.81e-03  1.17e+01     0s
+   8   1.18842179e+02 -3.71455275e+02  2.01e-03 3.23e-04  2.38e+00     0s
+   9   9.46170901e+01 -2.28570193e+01  1.52e-04 1.73e-05  5.45e-01     0s
+  10   8.92197512e+01  7.36299080e+01  7.61e-06 1.17e-06  7.19e-02     0s
+  11   8.85306692e+01  8.80886848e+01  9.69e-08 1.09e-08  2.02e-03     0s
+  12   8.85212062e+01  8.85173970e+01  1.54e-10 2.42e-11  1.73e-05     0s
+  13   8.85211943e+01  8.85211899e+01  1.57e-13 1.73e-12  2.00e-08     0s
+  14   8.85211943e+01  8.85211943e+01  1.77e-14 2.33e-12  2.00e-11     0s
+
+Barrier solved model in 14 iterations and 0.00 seconds (0.00 work units)
+Optimal objective 8.85211943e+01
+
+
+Root relaxation: objective 8.852119e+01, 0 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      88.5211943   88.52119  0.00%     -    0s
+
+Explored 1 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 1: 88.5212 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 8.852119430372e+01, best bound 8.852119430372e+01, gap 0.0000%
+
+User-callback calls 342, time in user-callback 0.00 sec
+primal_bound = 88.52119430372, dual_bound = 88.52119430372001, gap = 1.6053618375780102e-14, time = 0.01

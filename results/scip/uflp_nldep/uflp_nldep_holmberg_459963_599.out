@@ -1,0 +1,33 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nldep holmberg 60 square
+presolving:
+(round 1, fast)       60 del vars, 6030 del conss, 0 add conss, 30 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (21.3s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (23.2s) no symmetry present
+presolving (2 rounds: 2 fast, 1 medium, 1 exhaustive):
+ 60 deleted vars, 6030 deleted constraints, 0 added constraints, 30 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 6030 variables (0 bin, 0 int, 0 impl, 6030 cont) and 230 constraints
+    200 constraints of type <linear>
+     30 constraints of type <nonlinear>
+Presolving Time: 27.00
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+ 31.3s|     1 |     0 |   202 |     - |  1744M |   0 |6060 | 230 | 350 |   0 |  0 |   0 |   0 | 8.883307e+03 |      --      |    Inf | unknown
+L 109s|     1 |     0 |   202 |     - |  subnlp|   0 |6060 | 230 | 350 |   0 |  0 |   0 |   0 | 8.883307e+03 | 8.900485e+03 |   0.19%| unknown
+  157s|     1 |     0 |   232 |     - |  1745M |   0 |6060 | 230 | 380 |  30 |  1 |   0 |   0 | 8.900485e+03 | 8.900485e+03 |   0.00%| unknown
+  157s|     1 |     0 |   232 |     - |  1745M |   0 |6060 | 230 | 380 |  30 |  1 |   0 |   0 | 8.900485e+03 | 8.900485e+03 |   0.00%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 157.21
+Solving Nodes      : 1
+Primal Bound       : +8.90048479864591e+03 (2 solutions)
+Dual Bound         : +8.90048479864591e+03
+Gap                : 0.00 %
+reading holmberg data file ../../../../../instances/uflp/holmberg/p60
+primal_bound = 8900.48479864591, dual_bound = 8900.48479864591, gap = 0.0, time = 160.12

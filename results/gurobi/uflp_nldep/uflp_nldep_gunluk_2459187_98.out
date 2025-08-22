@@ -1,0 +1,126 @@
+solving instance uflp nldep gunluk ../../../../../instances/uflp/gunluk/gunluk-10-20-9.txt sqrt
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 250 rows, 250 columns and 850 nonzeros
+Model fingerprint: 0xc538774e
+Model has 10 function constraints treated as nonlinear
+  10 POW
+Variable types: 240 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [1e-03, 1e+02]
+  Objective range  [1e+00, 6e+01]
+  Bounds range     [9e-14, 1e+10]
+  RHS range        [1e+00, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+User MIP start did not produce a new incumbent solution
+
+Presolve removed 220 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 80 rows, 221 columns, 510 nonzeros
+Presolved model has 10 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 221 continuous, 0 integer (0 binary)
+Found heuristic solution: objective 289.7061035
+
+Root relaxation: objective 2.191256e+02, 24 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  219.12560    0    9  289.70610  219.12560  24.4%     -    0s
+Another try with MIP start
+     0     0  219.59287    0    9  289.70610  219.59287  24.2%     -    0s
+     0     2  219.59287    0    9  289.70610  219.59287  24.2%     -    0s
+H   43    31                     289.7035028  234.04531  19.2%   1.1    0s
+H   70    44                     289.6680965  242.16595  16.4%   1.3    0s
+H  106    56                     289.6105501  242.80973  16.2%   1.3    0s
+*  414   114              21     289.6104052  261.34128  9.76%   1.6    0s
+
+Explored 881 nodes (1716 simplex iterations) in 0.28 seconds (0.10 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 2: 289.61 289.668 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 2.896104052342e+02, best bound 2.896104052342e+02, gap 0.0000%
+
+User-callback calls 2056, time in user-callback 0.00 sec
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-10-20-9.txt
+primal_bound = 289.6104052342061, dual_bound = 289.6104052342061, gap = 0.0, time = 0.29
+OPTIMAL LOCATIONS:
+y[1] = 1.0
+y[2] = 1.0
+y[3] = 1.0
+y[4] = 1.0
+y[5] = 1.0
+y[6] = 1.0
+y[7] = 1.0
+y[8] = 1.0
+y[9] = 1.0
+y[10] = 1.0
+OPTIMAL WAREHOUSING:
+f[1] = 90.0
+f[2] = 318.0
+f[3] = 5.499745126629562e-5
+f[4] = 101.0
+f[5] = 109.0
+f[7] = 110.99994500254874
+f[10] = 125.0
+OPTIMAL WAREHOUSING COSTS:
+nlobj[1] = 27.26914967960924
+nlobj[2] = 4.881739610807289
+nlobj[3] = 0.0
+nlobj[4] = 9.28529073378173
+nlobj[5] = 22.150115599993747
+nlobj[6] = 0.0
+nlobj[7] = 2.1631353279267707
+nlobj[8] = 0.0
+nlobj[9] = 0.0
+nlobj[10] = 29.8415012156833
+OPTIMAL ASSIGNMENTS:
+x[1, 9] = 1.0
+x[1, 18] = 1.0
+x[1, 20] = 1.0
+x[2, 1] = 1.0
+x[2, 3] = 1.0
+x[2, 6] = 1.0
+x[2, 7] = 1.0
+x[2, 11] = 1.0
+x[2, 16] = 1.0
+x[2, 17] = 1.0
+x[3, 5] = 1.0376877597414268e-6
+x[4, 13] = 1.0
+x[4, 15] = 1.0
+x[5, 10] = 1.0
+x[5, 12] = 1.0
+x[5, 14] = 1.0
+x[7, 4] = 1.0
+x[7, 5] = 0.9999989623122403
+x[10, 2] = 1.0
+x[10, 8] = 1.0
+x[10, 19] = 1.0
+fixed costs = 622.0
+assignment costs = 194.01947306640398
+warehousing costs = 95.59093216780207
+total cost = 289.61040523420604

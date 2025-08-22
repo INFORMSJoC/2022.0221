@@ -1,0 +1,339 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance transportation 5 9 sqrt
+===========================================================================
+ BARON version 23.11.13. Built: LNX-64 Mon Nov 13 23:14:09 EST 2023
+
+ BARON is a product of The Optimization Firm.
+ For information on BARON, see https://minlp.com/about-baron
+ Licensee: Claudio Contardo at Concordia University, claudio.contardo@concordia.ca.
+
+ If you use this software, please cite publications from
+ https://minlp.com/baron-publications, such as: 
+
+ Khajavirad, A. and N. V. Sahinidis,
+ A hybrid LP/NLP paradigm for global optimization relaxations,
+ Mathematical Programming Computation, 10, 383-421, 2018.
+===========================================================================
+ This BARON run may utilize the following subsolver(s)
+ For LP/MIP/QP: CLP/CBC, ILOG CPLEX                             
+ For NLP: IPOPT, FILTERSQP
+===========================================================================
+ Doing local search
+ Solving bounding LP
+ Preprocessing found feasible solution with value 0.250000E+12
+ Starting multi-start local search
+ Done with local search
+===========================================================================
+  Iteration    Open nodes         Time (s)    Lower bound      Upper bound
+          1             1             0.56      210.963         0.250000E+12   
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+Failure to change feasibility, error 1014.
+*      5343           712            11.36      229.440          404.294       
+      35834          6615            41.28      235.508          404.294       
+      85211         15883            71.13      235.572          404.294       
+     135564         25250           100.98      235.581          404.294       
+     185141         34205           130.84      235.585          404.294       
+     235502         43490           160.69      235.594          404.294       
+     285848         52711           190.54      235.601          404.294       
+     338471         63015           220.39      235.604          404.294       
+     400475         79718           250.25      235.604          404.294       
+     462561         96171           280.11      235.604          404.294       
+     523585        113524           309.96      235.604          404.294       
+     585166        130605           339.82      235.604          404.294       
+     647056        147397           369.67      235.604          404.294       
+     708800        164891           399.53      235.604          404.294       
+     770085        182159           429.39      235.604          404.294       
+     830860        199532           459.24      235.604          404.294       
+     892619        217464           489.10      235.604          404.294       
+     954382        234654           518.95      235.604          404.294       
+    1000000        247853           541.49      235.604          404.294       
+    1058721        265129           571.34      235.604          404.294       
+    1117215        282414           601.19      235.604          404.294       
+    1175733        299898           631.04      235.604          404.294       
+    1233306        317946           660.90      235.604          404.294       
+    1292074        335993           690.75      235.604          404.294       
+    1349568        353848           720.60      235.604          404.294       
+    1408355        371399           750.44      235.604          404.294       
+    1466405        388901           780.30      235.604          404.294       
+    1525417        404983           810.15      235.604          404.294       
+    1584609        421836           840.00      235.604          404.294       
+    1642417        438867           869.85      235.604          404.294       
+    1700707        455792           899.70      235.604          404.294       
+    1759815        472409           929.55      235.604          404.294       
+    1817993        489660           959.40      235.604          404.294       
+    1873282        505960           989.24      235.604          404.294       
+    1928266        521100          1019.08      235.604          404.294       
+    1982453        536861          1048.92      235.604          404.294       
+    2000000        542049          1058.56      235.604          404.294       
+    2054269        557605          1088.40      235.604          404.294       
+    2109252        573425          1118.25      235.604          404.294       
+    2164008        588708          1148.09      235.604          404.294       
+    2218199        604784          1177.93      235.604          404.294       
+    2272536        620625          1207.77      235.604          404.294       
+    2325710        637283          1237.61      235.604          404.294       
+    2379594        653190          1267.46      235.604          404.294       
+    2434168        668773          1297.30      235.604          404.294       
+    2489321        685230          1327.15      235.604          404.294       
+    2544988        701997          1356.99      235.604          404.294       
+    2599478        718680          1386.83      235.604          404.294       
+    2654471        735222          1416.67      235.604          404.294       
+    2708935        751471          1446.51      235.604          404.294       
+    2761878        767988          1476.35      235.604          404.294       
+    2814793        784881          1506.18      235.604          404.294       
+*   2819282        769963          1508.79      235.604          300.706       
+    2871819        786786          1538.63      235.604          300.706       
+    2925058        803160          1568.47      235.604          300.706       
+    2977096        818426          1598.30      235.604          300.706       
+    3000000        825185          1611.24      235.604          300.706       
+    3052479        840799          1641.06      235.604          300.706       
+    3105211        855968          1670.89      235.604          300.706       
+    3156785        871132          1700.70      235.604          300.706       
+    3206726        886633          1730.47      235.604          300.706       
+ERROR: LoadError: failed to call BARON exec /home/ccontard/solvers/baron/23.11.13/baron
+Stacktrace:
+ [1] error(s::String)
+   @ Base ./error.jl:35
+ [2] optimize!(model::BARON.Optimizer)
+   @ BARON ~/.julia/packages/BARON/0gno4/src/MOI_wrapper.jl:53
+ [3] optimize!
+   @ ~/.julia/packages/MathOptInterface/wW7fs/src/Bridges/bridge_optimizer.jl:378 [inlined]
+ [4] optimize!
+   @ ~/.julia/packages/MathOptInterface/wW7fs/src/MathOptInterface.jl:85 [inlined]
+ [5] optimize!(m::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{BARON.Optimizer}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}})
+   @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/wW7fs/src/Utilities/cachingoptimizer.jl:316
+ [6] optimize!(model::JuMP.Model; ignore_optimize_hook::Bool, _differentiation_backend::MathOptInterface.Nonlinear.SparseReverseMode, kwargs::Base.Pairs{Symbol, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
+   @ JuMP ~/.julia/packages/JuMP/D44Aq/src/optimizer_interface.jl:448
+ [7] optimize!
+   @ ~/.julia/packages/JuMP/D44Aq/src/optimizer_interface.jl:409 [inlined]
+ [8] nl_transp(filename::String, cost::Symbol, solver::BARON.Optimizer, solver_params::Vector{Any}; solve::Bool, write_nl::Bool)
+   @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/nlsolver.jl:913
+ [9] top-level scope
+   @ ~/git/ipwlb/code/sources/IterativePWLB/test/baron/transp/script.jl:8
+in expression starting at /home/ccontard/git/ipwlb/code/sources/IterativePWLB/test/baron/transp/script.jl:8
+
+caused by: failed process: Process(`/home/ccontard/solvers/baron/23.11.13/baron /tmp/jl_jluQOz/baron_problem.bar`, ProcessSignaled(9)) [0]
+
+Stacktrace:
+  [1] pipeline_error
+    @ ./process.jl:565 [inlined]
+  [2] run(::Cmd; wait::Bool)
+    @ Base ./process.jl:480
+  [3] run
+    @ ./process.jl:477 [inlined]
+  [4] optimize!(model::BARON.Optimizer)
+    @ BARON ~/.julia/packages/BARON/0gno4/src/MOI_wrapper.jl:49
+  [5] optimize!
+    @ ~/.julia/packages/MathOptInterface/wW7fs/src/Bridges/bridge_optimizer.jl:378 [inlined]
+  [6] optimize!
+    @ ~/.julia/packages/MathOptInterface/wW7fs/src/MathOptInterface.jl:85 [inlined]
+  [7] optimize!(m::MathOptInterface.Utilities.CachingOptimizer{MathOptInterface.Bridges.LazyBridgeOptimizer{BARON.Optimizer}, MathOptInterface.Utilities.UniversalFallback{MathOptInterface.Utilities.Model{Float64}}})
+    @ MathOptInterface.Utilities ~/.julia/packages/MathOptInterface/wW7fs/src/Utilities/cachingoptimizer.jl:316
+  [8] optimize!(model::JuMP.Model; ignore_optimize_hook::Bool, _differentiation_backend::MathOptInterface.Nonlinear.SparseReverseMode, kwargs::Base.Pairs{Symbol, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
+    @ JuMP ~/.julia/packages/JuMP/D44Aq/src/optimizer_interface.jl:448
+  [9] optimize!
+    @ ~/.julia/packages/JuMP/D44Aq/src/optimizer_interface.jl:409 [inlined]
+ [10] nl_transp(filename::String, cost::Symbol, solver::BARON.Optimizer, solver_params::Vector{Any}; solve::Bool, write_nl::Bool)
+    @ IterativePWLB ~/git/ipwlb/code/sources/IterativePWLB/src/nlsolver.jl:913
+ [11] top-level scope
+    @ ~/git/ipwlb/code/sources/IterativePWLB/test/baron/transp/script.jl:8
+ProcessFailedException(Base.Process[Process(`/home/ccontard/solvers/baron/23.11.13/baron /tmp/jl_jluQOz/baron_problem.bar`, ProcessSignaled(9))])
+OPTIONS{
+EpsR: 1.0e-6;
+AbsConFeasTol: 1.0e-12;
+MaxTime: 3600.0;
+ResName: "/tmp/jl_jluQOz/res.lst";
+SumName: "/tmp/jl_jluQOz/sum.lst";
+CplexLibName: "/home/ibm/cplex-studio/22.1.1/cplex/bin/x86-64_linux/libcplex2211.so";
+LicName: "/home/ccontard/solvers/baron/23.11.13/baronlice.txt";
+TimName: "/tmp/jl_jluQOz/tim.lst";
+RelConFeasTol: 1.0e-12;
+EpsA: 1.0e-12;
+ProName: "/tmp/jl_jluQOz/baron_problem.bar";
+}
+
+BINARY_VARIABLES x26, x27, x28, x29, x30, x31, x32, x33, x34, x35, x36, x37, x38, x39, x40, x41, x42, x43, x44, x45, x46, x47, x48, x49, x50;
+POSITIVE_VARIABLES x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20, x21, x22, x23, x24, x25;
+VARIABLE x51, x52, x53, x54, x55, x56, x57, x58, x59, x60, x61, x62, x63, x64, x65, x66, x67, x68, x69, x70, x71, x72, x73, x74, x75;
+
+LOWER_BOUNDS{
+x1: 0.0;
+x2: 0.0;
+x3: 0.0;
+x4: 0.0;
+x5: 0.0;
+x6: 0.0;
+x7: 0.0;
+x8: 0.0;
+x9: 0.0;
+x10: 0.0;
+x11: 0.0;
+x12: 0.0;
+x13: 0.0;
+x14: 0.0;
+x15: 0.0;
+x16: 0.0;
+x17: 0.0;
+x18: 0.0;
+x19: 0.0;
+x20: 0.0;
+x21: 0.0;
+x22: 0.0;
+x23: 0.0;
+x24: 0.0;
+x25: 0.0;
+x51: -1.0e10;
+x52: -1.0e10;
+x53: -1.0e10;
+x54: -1.0e10;
+x55: -1.0e10;
+x56: -1.0e10;
+x57: -1.0e10;
+x58: -1.0e10;
+x59: -1.0e10;
+x60: -1.0e10;
+x61: -1.0e10;
+x62: -1.0e10;
+x63: -1.0e10;
+x64: -1.0e10;
+x65: -1.0e10;
+x66: -1.0e10;
+x67: -1.0e10;
+x68: -1.0e10;
+x69: -1.0e10;
+x70: -1.0e10;
+x71: -1.0e10;
+x72: -1.0e10;
+x73: -1.0e10;
+x74: -1.0e10;
+x75: -1.0e10;
+}
+
+UPPER_BOUNDS{
+x1: 195.0;
+x2: 141.0;
+x3: 195.0;
+x4: 98.0;
+x5: 104.0;
+x6: 78.0;
+x7: 78.0;
+x8: 78.0;
+x9: 78.0;
+x10: 78.0;
+x11: 45.0;
+x12: 45.0;
+x13: 45.0;
+x14: 45.0;
+x15: 45.0;
+x16: 225.0;
+x17: 141.0;
+x18: 362.0;
+x19: 98.0;
+x20: 104.0;
+x21: 225.0;
+x22: 141.0;
+x23: 320.0;
+x24: 98.0;
+x25: 104.0;
+x51: 1.0e10;
+x52: 1.0e10;
+x53: 1.0e10;
+x54: 1.0e10;
+x55: 1.0e10;
+x56: 1.0e10;
+x57: 1.0e10;
+x58: 1.0e10;
+x59: 1.0e10;
+x60: 1.0e10;
+x61: 1.0e10;
+x62: 1.0e10;
+x63: 1.0e10;
+x64: 1.0e10;
+x65: 1.0e10;
+x66: 1.0e10;
+x67: 1.0e10;
+x68: 1.0e10;
+x69: 1.0e10;
+x70: 1.0e10;
+x71: 1.0e10;
+x72: 1.0e10;
+x73: 1.0e10;
+x74: 1.0e10;
+x75: 1.0e10;
+}
+
+EQUATIONS e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15, e16, e17, e18, e19, e20, e21, e22, e23, e24, e25, e26, e27, e28, e29, e30, e31, e32, e33, e34, e35, e36, e37, e38, e39, e40, e41, e42, e43, e44, e45, e46, e47, e48, e49, e50, e51, e52, e53, e54, e55, e56, e57, e58, e59, e60;
+e1: (((1.0*39.0*((0.005128205128205128*x1)^0.5))-x51)-0.0) <= 0.0;
+e2: (((1.0*51.0*((0.01282051282051282*x6)^0.5))-x56)-0.0) <= 0.0;
+e3: (((1.0*31.0*((0.022222222222222223*x11)^0.5))-x61)-0.0) <= 0.0;
+e4: (((1.0*79.0*((0.0044444444444444444*x16)^0.5))-x66)-0.0) <= 0.0;
+e5: (((1.0*73.0*((0.0044444444444444444*x21)^0.5))-x71)-0.0) <= 0.0;
+e6: (((1.0*45.0*((0.0070921985815602835*x2)^0.5))-x52)-0.0) <= 0.0;
+e7: (((1.0*75.0*((0.01282051282051282*x7)^0.5))-x57)-0.0) <= 0.0;
+e8: (((1.0*52.0*((0.022222222222222223*x12)^0.5))-x62)-0.0) <= 0.0;
+e9: (((1.0*32.0*((0.0070921985815602835*x17)^0.5))-x67)-0.0) <= 0.0;
+e10: (((1.0*9.0*((0.0070921985815602835*x22)^0.5))-x72)-0.0) <= 0.0;
+e11: (((1.0*32.0*((0.005128205128205128*x3)^0.5))-x53)-0.0) <= 0.0;
+e12: (((1.0*39.0*((0.01282051282051282*x8)^0.5))-x58)-0.0) <= 0.0;
+e13: (((1.0*37.0*((0.022222222222222223*x13)^0.5))-x63)-0.0) <= 0.0;
+e14: (((1.0*61.0*((0.0027624309392265192*x18)^0.5))-x68)-0.0) <= 0.0;
+e15: (((1.0*43.0*((0.003125*x23)^0.5))-x73)-0.0) <= 0.0;
+e16: (((1.0*14.0*((0.01020408163265306*x4)^0.5))-x54)-0.0) <= 0.0;
+e17: (((1.0*80.0*((0.01282051282051282*x9)^0.5))-x59)-0.0) <= 0.0;
+e18: (((1.0*22.0*((0.022222222222222223*x14)^0.5))-x64)-0.0) <= 0.0;
+e19: (((1.0*33.0*((0.01020408163265306*x19)^0.5))-x69)-0.0) <= 0.0;
+e20: (((1.0*55.0*((0.01020408163265306*x24)^0.5))-x74)-0.0) <= 0.0;
+e21: (((1.0*43.0*((0.009615384615384616*x5)^0.5))-x55)-0.0) <= 0.0;
+e22: (((1.0*79.0*((0.01282051282051282*x10)^0.5))-x60)-0.0) <= 0.0;
+e23: (((1.0*55.0*((0.022222222222222223*x15)^0.5))-x65)-0.0) <= 0.0;
+e24: (((1.0*27.0*((0.009615384615384616*x20)^0.5))-x70)-0.0) <= 0.0;
+e25: (((1.0*21.0*((0.009615384615384616*x25)^0.5))-x75)-0.0) <= 0.0;
+e26: ((1.0*x1)+(1.0*x2)+(1.0*x3)+(1.0*x4)+(1.0*x5)) >= 195.0;
+e27: ((1.0*x6)+(1.0*x7)+(1.0*x8)+(1.0*x9)+(1.0*x10)) >= 78.0;
+e28: ((1.0*x11)+(1.0*x12)+(1.0*x13)+(1.0*x14)+(1.0*x15)) >= 45.0;
+e29: ((1.0*x16)+(1.0*x17)+(1.0*x18)+(1.0*x19)+(1.0*x20)) >= 362.0;
+e30: ((1.0*x21)+(1.0*x22)+(1.0*x23)+(1.0*x24)+(1.0*x25)) >= 320.0;
+e31: ((1.0*x1)+(1.0*x6)+(1.0*x11)+(1.0*x16)+(1.0*x21)) <= 225.0;
+e32: ((1.0*x2)+(1.0*x7)+(1.0*x12)+(1.0*x17)+(1.0*x22)) <= 141.0;
+e33: ((1.0*x3)+(1.0*x8)+(1.0*x13)+(1.0*x18)+(1.0*x23)) <= 432.0;
+e34: ((1.0*x4)+(1.0*x9)+(1.0*x14)+(1.0*x19)+(1.0*x24)) <= 98.0;
+e35: ((1.0*x5)+(1.0*x10)+(1.0*x15)+(1.0*x20)+(1.0*x25)) <= 104.0;
+e36: ((1.0*x1)+(-195.0*x26)) <= 0.0;
+e37: ((1.0*x2)+(-141.0*x27)) <= 0.0;
+e38: ((1.0*x3)+(-195.0*x28)) <= 0.0;
+e39: ((1.0*x4)+(-98.0*x29)) <= 0.0;
+e40: ((1.0*x5)+(-104.0*x30)) <= 0.0;
+e41: ((1.0*x6)+(-78.0*x31)) <= 0.0;
+e42: ((1.0*x7)+(-78.0*x32)) <= 0.0;
+e43: ((1.0*x8)+(-78.0*x33)) <= 0.0;
+e44: ((1.0*x9)+(-78.0*x34)) <= 0.0;
+e45: ((1.0*x10)+(-78.0*x35)) <= 0.0;
+e46: ((1.0*x11)+(-45.0*x36)) <= 0.0;
+e47: ((1.0*x12)+(-45.0*x37)) <= 0.0;
+e48: ((1.0*x13)+(-45.0*x38)) <= 0.0;
+e49: ((1.0*x14)+(-45.0*x39)) <= 0.0;
+e50: ((1.0*x15)+(-45.0*x40)) <= 0.0;
+e51: ((1.0*x16)+(-225.0*x41)) <= 0.0;
+e52: ((1.0*x17)+(-141.0*x42)) <= 0.0;
+e53: ((1.0*x18)+(-362.0*x43)) <= 0.0;
+e54: ((1.0*x19)+(-98.0*x44)) <= 0.0;
+e55: ((1.0*x20)+(-104.0*x45)) <= 0.0;
+e56: ((1.0*x21)+(-225.0*x46)) <= 0.0;
+e57: ((1.0*x22)+(-141.0*x47)) <= 0.0;
+e58: ((1.0*x23)+(-320.0*x48)) <= 0.0;
+e59: ((1.0*x24)+(-98.0*x49)) <= 0.0;
+e60: ((1.0*x25)+(-104.0*x50)) <= 0.0;
+
+OBJ: minimize ((1.0*x51)+(1.0*x52)+(1.0*x53)+(1.0*x54)+(1.0*x55)+(1.0*x56)+(1.0*x57)+(1.0*x58)+(1.0*x59)+(1.0*x60)+(1.0*x61)+(1.0*x62)+(1.0*x63)+(1.0*x64)+(1.0*x65)+(1.0*x66)+(1.0*x67)+(1.0*x68)+(1.0*x69)+(1.0*x70)+(1.0*x71)+(1.0*x72)+(1.0*x73)+(1.0*x74)+(1.0*x75));
+
+

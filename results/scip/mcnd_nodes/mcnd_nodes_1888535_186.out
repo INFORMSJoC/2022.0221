@@ -1,0 +1,33 @@
+solving instance mcnd nodes c40 3 6 sincos
+presolving:
+(round 1, fast)       228 del vars, 228 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 228 del vars, 456 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, exhaustive) 228 del vars, 456 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 45620 upgd conss, 0 impls, 0 clqs
+   (1.3s) probing: 71/248 (28.6%) - 20 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (1.3s) probing aborted: 50/50 successive totally useless probings
+   (1.3s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (1.6s) no symmetry present (symcode time: 0.08)
+presolving (4 rounds: 4 fast, 3 medium, 3 exhaustive):
+ 248 deleted vars, 456 deleted constraints, 0 added constraints, 20 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 45620 implications, 0 cliques
+presolved problem has 45868 variables (228 bin, 0 int, 0 impl, 45640 cont) and 49888 constraints
+  45620 constraints of type <varbound>
+   4248 constraints of type <linear>
+     20 constraints of type <nonlinear>
+Presolving Time: 1.38
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t23.3s|     1 |     0 | 30102 |     - |  trysol|   0 |  45k|  49k|  49k|   0 |  0 |   0 |   0 |-1.792318e+03 | 4.364020e+05 |    Inf | unknown
+  384s|     1 |     0 | 93033 |     - |   379M |   0 |  45k|  49k|  49k|   0 |  0 |   0 |   0 | 6.112324e+04 | 4.364020e+05 | 613.97%| unknown
+t 577s|     1 |     0 |127035 |     - |  trysol|   0 |  45k|  49k|  49k|   0 |  0 |   0 |   0 | 6.112324e+04 | 1.362003e+05 | 122.83%| unknown
+  670s|     1 |     0 |139788 |     - |   395M |   0 |  45k|  49k|  49k|   9 |  1 |   0 |   0 | 6.128336e+04 | 1.362003e+05 | 122.25%| unknown
+  686s|     1 |     0 |139788 |     - |   395M |   0 |  45k|  49k|  49k|   9 |  1 |   0 |   0 | 6.128336e+04 | 1.362003e+05 | 122.25%| unknown
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 3711.53
+Solving Nodes      : 1
+Primal Bound       : +1.36200301974696e+05 (3 solutions)
+Dual Bound         : +6.12833618665521e+04
+Gap                : 122.25 %
+primal_bound = 136200.30197469628, dual_bound = 61283.36186655207, gap = 55.00497357345252, time = 3714.65
+slurmstepd: error: *** JOB 1888655 ON optimum02 CANCELLED AT 2025-01-13T11:00:19 DUE TO TIME LIMIT ***

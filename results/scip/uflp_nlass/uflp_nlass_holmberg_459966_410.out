@@ -1,0 +1,35 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nlass holmberg 41 log
+presolving:
+(round 1, fast)       900 del vars, 900 del conss, 0 add conss, 900 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 900 del vars, 900 del conss, 0 add conss, 900 chg bounds, 0 chg sides, 0 chg coeffs, 900 upgd conss, 0 impls, 0 clqs
+   (0.2s) probing cycle finished: starting next cycle
+   (0.2s) symmetry computation started: requiring (bin +, int -, cont -), (fixed: bin -, int +, cont +)
+   (0.2s) no symmetry present
+presolving (3 rounds: 3 fast, 2 medium, 2 exhaustive):
+ 900 deleted vars, 900 deleted constraints, 0 added constraints, 900 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 900 implications, 0 cliques
+presolved problem has 1810 variables (10 bin, 0 int, 0 impl, 1800 cont) and 1890 constraints
+    900 constraints of type <varbound>
+     90 constraints of type <linear>
+    900 constraints of type <nonlinear>
+Presolving Time: 0.18
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t 0.3s|     1 |     0 |  3782 |     - |  trysol|   0 |3610 |1890 |2790 |   0 |  0 |   0 |   0 |-1.716614e-03 | 6.948999e+03 |    Inf | unknown
+* 0.5s|     1 |     0 | 11676 |     - |    LP  |   0 |3610 |1890 |2790 |   0 |  0 |   0 |   0 | 6.151000e+03 | 6.151000e+03 |   0.00%| unknown
+  0.5s|     1 |     0 | 11676 |     - |    43M |   0 |3610 |1890 |2790 |   0 |  0 |   0 |   0 | 6.151000e+03 | 6.151000e+03 |   0.00%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 0.51
+Solving Nodes      : 1
+Primal Bound       : +6.15100000000000e+03 (2 solutions)
+Dual Bound         : +6.15100000000000e+03
+Gap                : 0.00 %
+reading holmberg data file ../../../../../instances/uflp/holmberg/p41
+primal_bound = 6151.0, dual_bound = 6151.0, gap = 0.0, time = 3.42

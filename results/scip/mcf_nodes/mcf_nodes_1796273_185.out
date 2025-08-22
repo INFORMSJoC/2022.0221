@@ -1,0 +1,19 @@
+solving instance mcf nodes c40 3 6 sinabc3
+presolving:
+(round 1, fast)       248 del vars, 248 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       476 del vars, 248 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, fast)       476 del vars, 248 del conss, 0 add conss, 20 chg bounds, 228 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (0.6s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (0.7s) no symmetry present (symcode time: 0.03)
+presolving (4 rounds: 4 fast, 1 medium, 1 exhaustive):
+ 476 deleted vars, 248 deleted constraints, 0 added constraints, 20 tightened bounds, 0 added holes, 228 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 45640 variables (0 bin, 0 int, 0 impl, 45640 cont) and 4268 constraints
+   4248 constraints of type <linear>
+     20 constraints of type <nonlinear>
+Presolving Time: 0.58
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+ 12.1s|     1 |     0 | 18923 |     - |   252M |   0 |  45k|4268 |4428 |   0 |  0 |   0 |   0 | 7.068802e+02 |      --      |    Inf | unknown
+script.sh : ligne 3 : 580920 Processus arrêté      julia +1.10 --project=/scratch/ccontard/julia-ipwlb script.jl ${BASE}/$1.csv ${BASE}/$1Commod.csv ${BASE}/infoNodes/nodes_$1_0$2.csv $3 $4
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=1796458.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.

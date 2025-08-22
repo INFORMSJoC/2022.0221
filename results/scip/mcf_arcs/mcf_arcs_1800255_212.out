@@ -1,0 +1,35 @@
+solving instance mcf arcs c43 3 6 cubic
+presolving:
+(round 1, fast)       20 del vars, 20 del conss, 0 add conss, 774 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       40 del vars, 20 del conss, 0 add conss, 774 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, exhaustive) 40 del vars, 20 del conss, 0 add conss, 774 chg bounds, 0 chg sides, 0 chg coeffs, 294 upgd conss, 0 impls, 0 clqs
+   (0.4s) probing cycle finished: starting next cycle
+(round 4, exhaustive) 40 del vars, 20 del conss, 0 add conss, 1068 chg bounds, 0 chg sides, 0 chg coeffs, 294 upgd conss, 12348 impls, 0 clqs
+   (0.5s) probing: 51/294 (17.3%) - 0 fixings, 0 aggregations, 12054 implications, 294 bound changes
+   (0.5s) probing aborted: 50/50 successive totally useless probings
+   (0.5s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (0.5s) no symmetry present (symcode time: 0.01)
+presolving (5 rounds: 5 fast, 3 medium, 3 exhaustive):
+ 40 deleted vars, 20 deleted constraints, 0 added constraints, 1068 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 12348 implications, 0 cliques
+presolved problem has 12642 variables (294 bin, 0 int, 0 impl, 12348 cont) and 1702 constraints
+    294 constraints of type <varbound>
+   1114 constraints of type <linear>
+    294 constraints of type <nonlinear>
+Presolving Time: 0.45
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t 6.8s|     1 |     0 | 18990 |     - |  trysol|   0 |  13k|1702 |2878 |   0 |  0 |   0 |   0 |-1.451819e+07 | 3.813034e+06 |    Inf | unknown
+ 13.3s|     1 |     0 | 38229 |     - |    94M |   0 |  13k|1702 |2878 |   0 |  0 |   0 |   0 |-3.499355e+06 | 3.813034e+06 |    Inf | unknown
+L14.4s|     1 |     0 | 38229 |     - |undercov|   0 |  13k|1702 |2878 |   0 |  0 |   0 |   0 |-3.499355e+06 | 2.308331e+06 |    Inf | unknown
+L16.3s|     1 |     0 | 38229 |     - |undercov|   0 |  13k|1702 |2878 |   0 |  0 |   0 |   0 |-3.499355e+06 | 1.361960e+06 |    Inf | unknown
+ 3600s|     1 |     0 |  3163k|     - |   100M |   0 |  13k|1702 |2987 | 109 |  1 |   0 |   0 |-3.499355e+06 | 1.361960e+06 |    Inf | unknown
+(node 1) LP solver hit time limit in LP 3 -- using pseudo solution instead
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 3600.00
+Solving Nodes      : 1
+Primal Bound       : +1.36195975549951e+06 (3 solutions)
+Dual Bound         : -3.49935506033673e+06
+Gap                : infinite
+primal_bound = 1.361959755499507e6, dual_bound = -3.4993550603367267e6, gap = 138.9203076571616, time = 3602.1

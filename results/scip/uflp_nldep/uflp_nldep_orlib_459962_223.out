@@ -1,0 +1,42 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nldep orlib 102 sinabc1
+presolving:
+(round 1, fast)       25 del vars, 1251 del conss, 0 add conss, 25 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       27 del vars, 1252 del conss, 0 add conss, 25 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, fast)       77 del vars, 1252 del conss, 0 add conss, 25 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 4, fast)       77 del vars, 1252 del conss, 0 add conss, 25 chg bounds, 50 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (5.2s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (5.2s) no symmetry present
+presolving (5 rounds: 5 fast, 1 medium, 1 exhaustive):
+ 77 deleted vars, 1252 deleted constraints, 0 added constraints, 25 tightened bounds, 0 added holes, 50 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 1248 variables (0 bin, 0 int, 0 impl, 1248 cont) and 98 constraints
+     74 constraints of type <linear>
+     24 constraints of type <nonlinear>
+Presolving Time: 5.25
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t 5.3s|     1 |     0 |     0 |     - | trivial|   0 |1248 |  98 |   0 |   0 |  0 |   0 |   0 |-5.393951e+05 | 1.248143e+06 |    Inf | unknown
+  5.3s|     1 |     0 |   125 |     - |    12M |   0 |1296 |  98 | 218 |   0 |  0 |   0 |   0 | 6.532698e+05 | 1.248143e+06 |  91.06%| unknown
+L31.6s|     1 |     0 |   125 |     - |undercov|   0 |1296 |  98 | 218 |   0 |  0 |   0 |   0 | 6.532698e+05 | 6.548534e+05 |   0.24%| unknown
+L31.9s|     1 |     0 |   125 |     - |undercov|   0 |1296 |  98 | 218 |   0 |  0 |   0 |   0 | 6.532698e+05 | 6.548530e+05 |   0.24%| unknown
+L32.2s|     1 |     0 |   125 |     - |  subnlp|   0 |1296 |  98 | 218 |   0 |  0 |   0 |   0 | 6.532698e+05 | 6.548530e+05 |   0.24%| unknown
+ 32.2s|     1 |     0 |   145 |     - |    13M |   0 |1296 |  98 | 238 |  20 |  1 |   0 |   0 | 6.533553e+05 | 6.548530e+05 |   0.23%| unknown
+ 32.2s|     1 |     0 |   145 |     - |    13M |   0 |1296 |  98 | 238 |  20 |  1 |   0 |   0 | 6.533553e+05 | 6.548530e+05 |   0.23%| unknown
+ 32.2s|     1 |     0 |   638 |     - |    15M |   0 |1296 |  98 | 238 |  20 |  3 |   0 |   0 | 6.543553e+05 | 6.548530e+05 |   0.08%| unknown
+ 32.2s|     1 |     0 |   669 |     - |    15M |   0 |1296 |  98 | 262 |  44 |  4 |   0 |   0 | 6.547479e+05 | 6.548530e+05 |   0.02%| unknown
+ 32.2s|     1 |     0 |   693 |     - |    15M |   0 |1296 |  98 | 286 |  68 |  5 |   0 |   0 | 6.548525e+05 | 6.548530e+05 |   0.00%| unknown
+
+SCIP Status        : solving was interrupted [gap limit reached]
+Solving Time (sec) : 32.18
+Solving Nodes      : 1
+Primal Bound       : +6.54853032012904e+05 (6 solutions)
+Dual Bound         : +6.54852460532088e+05
+Gap                : 0.00 %
+reading orlib data file ../../../../../instances/uflp/orlib/cap102.txt
+primal_bound = 654853.0320129036, dual_bound = 654852.4605320878, gap = 8.726856070405364e-5, time = 52.46

@@ -1,0 +1,680 @@
+solving instance mcf nodes c62 3 6 exp
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 13508 rows, 273168 columns and 1088737 nonzeros
+Model fingerprint: 0x6f60e5bb
+Model has 60 function constraints treated as nonlinear
+  30 EXP, 30 POW
+Variable types: 272459 continuous, 709 integer (709 binary)
+Coefficient statistics:
+  Matrix range     [2e-03, 4e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [2e+01, 1e+10]
+  RHS range        [2e-01, 7e+01]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Warning: 0 <= x < 1e-10 in domain of pow(x,a) with a=-1.000.
+         Setting lower bound to 1e-10.
+Presolve removed 769 rows and 1448 columns (presolve time = 5s)...
+Presolve removed 769 rows and 1448 columns
+Presolve time: 6.05s
+Presolved: 13009 rows, 271721 columns, 1087030 nonzeros
+Presolved model has 30 bilinear constraint(s)
+Presolved model has 30 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 271721 continuous, 0 integer (0 binary)
+  NLP heuristic elapsed time = 5.12s
+  NLP heuristic elapsed time = 10.74s
+  NLP heuristic elapsed time = 15.60s
+  NLP heuristic elapsed time = 20.16s
+  NLP heuristic elapsed time = 25.38s
+  NLP heuristic elapsed time = 30.74s
+  NLP heuristic elapsed time = 35.43s
+  NLP heuristic elapsed time = 40.04s
+  NLP heuristic elapsed time = 45.53s
+  NLP heuristic elapsed time = 50.20s
+  NLP heuristic elapsed time = 56.49s
+  NLP heuristic elapsed time = 60.53s
+  NLP heuristic elapsed time = 65.92s
+  NLP heuristic elapsed time = 70.54s
+  NLP heuristic elapsed time = 75.18s
+  NLP heuristic elapsed time = 81.05s
+  NLP heuristic elapsed time = 86.46s
+  NLP heuristic elapsed time = 91.07s
+  NLP heuristic elapsed time = 95.20s
+  NLP heuristic elapsed time = 101.09s
+  NLP heuristic elapsed time = 105.72s
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0217599e+04   4.973344e+03   0.000000e+00    121s
+   19878    1.0219011e+04   1.703422e+04   0.000000e+00    125s
+   23517    1.0220584e+04   0.000000e+00   0.000000e+00    126s
+   23517    1.0220584e+04   0.000000e+00   0.000000e+00    126s
+
+Root relaxation: objective 1.022058e+04, 23517 iterations, 6.41 seconds (1.97 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 10220.5844    0   60          - 10220.5844      -     -  125s
+H    0     0                    10486.792961 10220.5844  2.54%     -  126s
+     0     0 10222.0406    0   60 10486.7930 10222.0406  2.52%     -  130s
+H    0     0                    10442.280154 10222.0406  2.11%     -  143s
+  NLP heuristic elapsed time = 5.14s
+  NLP heuristic elapsed time = 11.14s
+  NLP heuristic elapsed time = 15.91s
+  NLP heuristic elapsed time = 20.12s
+  NLP heuristic elapsed time = 25.05s
+  NLP heuristic elapsed time = 30.99s
+  NLP heuristic elapsed time = 35.28s
+  NLP heuristic elapsed time = 40.46s
+  NLP heuristic elapsed time = 45.16s
+  NLP heuristic elapsed time = 50.35s
+  NLP heuristic elapsed time = 55.79s
+  NLP heuristic elapsed time = 60.47s
+  NLP heuristic elapsed time = 65.44s
+  NLP heuristic elapsed time = 70.09s
+  NLP heuristic elapsed time = 76.01s
+  NLP heuristic elapsed time = 80.19s
+  NLP heuristic elapsed time = 86.55s
+  NLP heuristic elapsed time = 90.71s
+  NLP heuristic elapsed time = 95.34s
+  NLP heuristic elapsed time = 101.18s
+  NLP heuristic elapsed time = 105.26s
+  NLP heuristic elapsed time = 111.06s
+  NLP heuristic elapsed time = 115.63s
+  NLP heuristic elapsed time = 120.14s
+  NLP heuristic elapsed time = 125.88s
+  NLP heuristic elapsed time = 131.62s
+  NLP heuristic elapsed time = 135.75s
+  NLP heuristic elapsed time = 140.33s
+  NLP heuristic elapsed time = 146.11s
+     0     2 10222.5296    0   60 10442.2802 10222.5296  2.10%     -  347s
+     8     8 10244.0120    4   60 10442.2802 10240.8062  1.93%  64.0  350s
+    31    23 10266.1894   16   54 10442.2802 10240.8062  1.93%  21.0  355s
+    56    32 10310.1130   28   48 10442.2802 10240.8062  1.93%  13.4  360s
+    81    43 10336.8627   41   42 10442.2802 10240.8062  1.93%  10.9  365s
+   104    54 infeasible   52      10442.2802 10240.8062  1.93%   9.1  370s
+   127    67 10372.8965   64   30 10442.2802 10240.8062  1.93%   8.6  375s
+   143    75 10379.8766   72   26 10442.2802 10240.8062  1.93%  14.5  380s
+   155    81 10382.0978   78   24 10442.2802 10240.8062  1.93%  37.6  385s
+   169    87 10392.5173   85   26 10442.2802 10240.8062  1.93%  43.9  390s
+   179    97 10393.2804   90   26 10442.2802 10240.8062  1.93%  58.3  397s
+   180    98 10395.7209   90   24 10442.2802 10240.8062  1.93%  68.7  401s
+   185   103 10395.1156   93   20 10442.2802 10240.8062  1.93%  70.2  405s
+   193   111 10399.9145   97   18 10442.2802 10240.8062  1.93%  72.5  410s
+   203   119 10401.5689  102   11 10442.2802 10240.8062  1.93%  72.6  415s
+   222   138 10401.9236  111   10 10442.2802 10240.8062  1.93%  67.4  420s
+   229   145 10420.1521  115   11 10442.2802 10240.8062  1.93%  71.4  427s
+   231   145 10426.3242  116   17 10442.2802 10240.8062  1.93%  78.5  436s
+   236   144 10383.5232    3   23 10442.2802 10240.8062  1.93%  79.1  440s
+   248   150 10385.4086    9   25 10442.2802 10240.8062  1.93%  84.8  445s
+   266   166 10391.6753   18   23 10442.2802 10240.8062  1.93%  82.9  450s
+   277   173 10404.0965   23   23 10442.2802 10240.8062  1.93%  87.1  455s
+   292   188 10398.8299   31   29 10442.2802 10240.8062  1.93%  88.7  460s
+   303   195 10418.8077   36   25 10442.2802 10240.8062  1.93%  90.1  465s
+   308   198 10409.8598   39   25 10442.2802 10240.8062  1.93%  93.9  470s
+   312   202 10417.4950   41   25 10442.2802 10240.8062  1.93%   101  478s
+   314   204 10415.6070   42   23 10442.2802 10240.8062  1.93%   104  480s
+   319   209 10407.1788   44   27 10442.2802 10240.8062  1.93%   114  486s
+   322   212 10418.6599   46   25 10442.2802 10240.8062  1.93%   125  498s
+   323   213 10407.2527   46   27 10442.2802 10240.8062  1.93%   128  502s
+   327   217 10407.3704   48   25 10442.2802 10240.8062  1.93%   130  505s
+   329   219 10407.3860   49   25 10442.2802 10240.8062  1.93%   143  510s
+   331   221 10407.3981   50   25 10442.2802 10240.8062  1.93%   153  516s
+   335   223 10415.7705   52   25 10442.2802 10240.8062  1.93%   162  522s
+   338   226 10415.5716   54   25 10442.2802 10240.8062  1.93%   162  525s
+   341   229 10411.4052   55   29 10442.2802 10240.8062  1.93%   166  531s
+   345   233 10412.4487   57   31 10442.2802 10240.8062  1.93%   167  535s
+   354   242 10415.3125   62   31 10442.2802 10240.8062  1.93%   164  540s
+   357   245 10415.5672   63   29 10442.2802 10240.8062  1.93%   168  545s
+   362   250 10415.6105   66   31 10442.2802 10240.8062  1.93%   167  557s
+   365   251 10430.9715   67   29 10442.2802 10240.8062  1.93%   169  562s
+   367   251 10432.2739   68   31 10442.2802 10240.8062  1.93%   179  571s
+   371   251 10390.2280    3   21 10442.2802 10247.3481  1.87%   180  661s
+   380   256 10391.1768    7   21 10442.2802 10247.3481  1.87%   181  665s
+   398   274 10394.9851   16   23 10442.2802 10247.3481  1.87%   176  670s
+   412   282 10409.8150   23   24 10442.2802 10247.3481  1.87%   173  675s
+   423   291 10412.7035   29   22 10442.2802 10247.3481  1.87%   181  680s
+   433   299 10404.9527   34   28 10442.2802 10247.3481  1.87%   181  685s
+   441   305 10413.2264   38   27 10442.2802 10247.3481  1.87%   182  690s
+   444   308 10410.3175   39   27 10442.2802 10247.3481  1.87%   187  695s
+   446   310 10410.3598   40   27 10442.2802 10247.3481  1.87%   192  700s
+   449   313 10425.1650   42   31 10442.2802 10247.3481  1.87%   210  716s
+   455   317 10419.1231   45   27 10442.2802 10247.3481  1.87%   211  721s
+   459   317 10419.2945   47   27 10442.2802 10247.3481  1.87%   211  725s
+   462   316     cutoff   48      10442.2802 10247.3481  1.87%   220  732s
+   463   317 10419.6685   49   27 10442.2802 10247.3481  1.87%   222  737s
+   465   317 10419.7436   50   29 10442.2802 10247.3481  1.87%   222  740s
+   466   316     cutoff   50      10442.2802 10247.3481  1.87%   228  745s
+   467   317 10438.6510   51   29 10442.2802 10247.3481  1.87%   230  751s
+   468   318 10425.5602   51   31 10442.2802 10247.3481  1.87%   231  755s
+   469   319 10432.2606   52   29 10442.2802 10247.3481  1.87%   234  765s
+   474   324 10434.2033   54   29 10442.2802 10247.3481  1.87%   234  770s
+   478   328 10434.6266   56   29 10442.2802 10247.3481  1.87%   233  775s
+   480   328 10434.7439   57   29 10442.2802 10247.3481  1.87%   239  782s
+   481   329 10441.9751   58   26 10442.2802 10247.3481  1.87%   247  789s
+   482   330 10434.8044   58   29 10442.2802 10247.3481  1.87%   247  790s
+   483   331 10442.2433   59   26 10442.2802 10247.3481  1.87%   256  798s
+   485   331     cutoff   60      10442.2802 10247.3481  1.87%   263  805s
+   487   333 10438.8384   61   28 10442.2802 10247.3481  1.87%   268  810s
+   489   335 10438.6622   62   29 10442.2802 10247.3481  1.87%   269  815s
+   494   338 10437.5240   64   31 10442.2802 10247.3481  1.87%   269  820s
+   499   343 10439.5065   67   30 10442.2802 10247.3481  1.87%   267  825s
+   504   346 10442.1998   69   32 10442.2802 10247.3481  1.87%   265  830s
+   512   346 10389.9220    5   18 10442.2802 10247.3481  1.87%   265  835s
+   526   358 10400.3857   12   20 10442.2802 10247.3481  1.87%   263  840s
+   543   371 10397.5110   20   23 10442.2802 10247.3481  1.87%   257  845s
+   558   382 10411.5669   28   21 10442.2802 10247.3481  1.87%   265  857s
+   559   383 10402.3294   28   25 10442.2802 10247.3481  1.87%   278  875s
+   563   387 10415.4698   30   25 10442.2802 10247.3481  1.87%   286  882s
+   568   392 10404.1521   33   25 10442.2802 10247.3481  1.87%   286  885s
+   578   398 10409.5719   38   28 10442.2802 10247.3481  1.87%   282  890s
+   582   402 10409.8783   40   26 10442.2802 10247.3481  1.87%   288  895s
+   583   403 10423.6999   40   26 10442.2802 10247.3481  1.87%   293  900s
+   591   407 10415.9382   44   24 10442.2802 10247.3481  1.87%   291  906s
+   593   409 10416.0041   45   24 10442.2802 10247.3481  1.87%   295  910s
+   595   411 10433.8113   46   22 10442.2802 10247.3481  1.87%   297  916s
+   598   412 10420.9293   48   24 10442.2802 10247.3481  1.87%   297  922s
+   600   412 10420.9533   49   24 10442.2802 10247.3481  1.87%   300  926s
+   602   412 10421.1030   50   24 10442.2802 10247.3481  1.87%   306  936s
+   603   411     cutoff   50      10442.2802 10247.3481  1.87%   312  949s
+   604   412 10427.3082   51   24 10442.2802 10247.3481  1.87%   312  950s
+   611   417 10430.0113   54   26 10442.2802 10247.3481  1.87%   309  955s
+   616   422 10437.1616   57   26 10442.2802 10247.3481  1.87%   310  962s
+   618   424 10439.1284   58   26 10442.2802 10247.3481  1.87%   312  966s
+   620   426 10438.7274   59   26 10442.2802 10247.3481  1.87%   319  975s
+   622   428 10438.9002   60   26 10442.2802 10247.3481  1.87%   320  981s
+   626   430     cutoff   62      10442.2802 10247.3481  1.87%   324  988s
+   627   431 10434.6052   62   30 10442.2802 10247.3481  1.87%   325  990s
+   631   435 10438.7853   64   26 10442.2802 10247.3481  1.87%   323  995s
+   636   439 10418.7689   34    0 10442.2802 10247.3481  1.87%   321 1018s
+  NLP heuristic elapsed time = 5.47s
+  NLP heuristic elapsed time = 10.48s
+  NLP heuristic elapsed time = 15.51s
+  NLP heuristic elapsed time = 20.52s
+  NLP heuristic elapsed time = 25.49s
+  NLP heuristic elapsed time = 30.76s
+  NLP heuristic elapsed time = 35.14s
+  NLP heuristic elapsed time = 41.78s
+  NLP heuristic elapsed time = 45.41s
+  NLP heuristic elapsed time = 50.82s
+  NLP heuristic elapsed time = 55.14s
+  NLP heuristic elapsed time = 60.62s
+  NLP heuristic elapsed time = 66.03s
+  NLP heuristic elapsed time = 70.39s
+  NLP heuristic elapsed time = 75.38s
+  NLP heuristic elapsed time = 81.34s
+  NLP heuristic elapsed time = 85.20s
+  NLP heuristic elapsed time = 90.68s
+  NLP heuristic elapsed time = 95.00s
+  NLP heuristic elapsed time = 100.39s
+  NLP heuristic elapsed time = 105.79s
+  NLP heuristic elapsed time = 111.19s
+  NLP heuristic elapsed time = 116.19s
+  NLP heuristic elapsed time = 120.07s
+  NLP heuristic elapsed time = 125.56s
+  NLP heuristic elapsed time = 130.36s
+  NLP heuristic elapsed time = 135.43s
+  NLP heuristic elapsed time = 140.96s
+  NLP heuristic elapsed time = 145.31s
+  NLP heuristic elapsed time = 150.82s
+  NLP heuristic elapsed time = 155.23s
+  NLP heuristic elapsed time = 160.33s
+  NLP heuristic elapsed time = 165.91s
+  NLP heuristic elapsed time = 170.33s
+  NLP heuristic elapsed time = 175.93s
+  NLP heuristic elapsed time = 181.03s
+  NLP heuristic elapsed time = 186.13s
+  NLP heuristic elapsed time = 190.95s
+  NLP heuristic elapsed time = 195.38s
+  NLP heuristic elapsed time = 200.95s
+  NLP heuristic elapsed time = 205.33s
+  NLP heuristic elapsed time = 210.45s
+  NLP heuristic elapsed time = 215.92s
+  NLP heuristic elapsed time = 221.40s
+  NLP heuristic elapsed time = 225.78s
+  NLP heuristic elapsed time = 230.86s
+  NLP heuristic elapsed time = 235.25s
+  NLP heuristic elapsed time = 240.81s
+  NLP heuristic elapsed time = 245.17s
+  NLP heuristic elapsed time = 250.27s
+  NLP heuristic elapsed time = 255.87s
+  NLP heuristic elapsed time = 260.29s
+  NLP heuristic elapsed time = 266.34s
+  NLP heuristic elapsed time = 270.32s
+  NLP heuristic elapsed time = 275.46s
+  NLP heuristic elapsed time = 281.52s
+  NLP heuristic elapsed time = 285.45s
+  NLP heuristic elapsed time = 291.09s
+  NLP heuristic elapsed time = 295.10s
+  NLP heuristic elapsed time = 301.19s
+  NLP heuristic elapsed time = 305.12s
+  NLP heuristic elapsed time = 310.18s
+  NLP heuristic elapsed time = 316.19s
+  NLP heuristic elapsed time = 320.15s
+  NLP heuristic elapsed time = 326.11s
+  NLP heuristic elapsed time = 330.02s
+  NLP heuristic elapsed time = 335.55s
+  NLP heuristic elapsed time = 341.06s
+  NLP heuristic elapsed time = 346.54s
+  NLP heuristic elapsed time = 350.41s
+  NLP heuristic elapsed time = 355.88s
+  NLP heuristic elapsed time = 361.35s
+  NLP heuristic elapsed time = 365.68s
+  NLP heuristic elapsed time = 370.70s
+  NLP heuristic elapsed time = 375.01s
+  NLP heuristic elapsed time = 380.97s
+  NLP heuristic elapsed time = 386.07s
+  NLP heuristic elapsed time = 390.02s
+  NLP heuristic elapsed time = 395.57s
+  NLP heuristic elapsed time = 401.12s
+  NLP heuristic elapsed time = 405.51s
+  NLP heuristic elapsed time = 411.02s
+  NLP heuristic elapsed time = 415.38s
+  NLP heuristic elapsed time = 420.93s
+  NLP heuristic elapsed time = 426.01s
+  NLP heuristic elapsed time = 430.86s
+  NLP heuristic elapsed time = 436.03s
+  NLP heuristic elapsed time = 440.02s
+  NLP heuristic elapsed time = 445.64s
+  NLP heuristic elapsed time = 450.06s
+  NLP heuristic elapsed time = 455.66s
+  NLP heuristic elapsed time = 461.21s
+  NLP heuristic elapsed time = 465.16s
+  NLP heuristic elapsed time = 471.16s
+  NLP heuristic elapsed time = 475.09s
+  NLP heuristic elapsed time = 480.66s
+  NLP heuristic elapsed time = 485.06s
+  NLP heuristic elapsed time = 490.19s
+  NLP heuristic elapsed time = 495.73s
+  NLP heuristic elapsed time = 501.29s
+  NLP heuristic elapsed time = 505.27s
+  NLP heuristic elapsed time = 511.30s
+  NLP heuristic elapsed time = 515.77s
+  NLP heuristic elapsed time = 520.30s
+  NLP heuristic elapsed time = 525.51s
+  NLP heuristic elapsed time = 531.07s
+  NLP heuristic elapsed time = 536.61s
+  NLP heuristic elapsed time = 540.58s
+  NLP heuristic elapsed time = 545.02s
+  NLP heuristic elapsed time = 550.60s
+  NLP heuristic elapsed time = 556.13s
+  NLP heuristic elapsed time = 560.05s
+  NLP heuristic elapsed time = 565.61s
+  NLP heuristic elapsed time = 570.08s
+  NLP heuristic elapsed time = 575.73s
+  NLP heuristic elapsed time = 580.10s
+  NLP heuristic elapsed time = 585.13s
+  NLP heuristic elapsed time = 590.65s
+  NLP heuristic elapsed time = 596.12s
+  NLP heuristic elapsed time = 600.48s
+  NLP heuristic elapsed time = 605.57s
+  NLP heuristic elapsed time = 610.01s
+  NLP heuristic elapsed time = 615.64s
+  NLP heuristic elapsed time = 620.10s
+  NLP heuristic elapsed time = 625.71s
+  NLP heuristic elapsed time = 630.89s
+  NLP heuristic elapsed time = 635.26s
+  NLP heuristic elapsed time = 640.83s
+  NLP heuristic elapsed time = 645.96s
+  NLP heuristic elapsed time = 650.86s
+  NLP heuristic elapsed time = 656.07s
+  NLP heuristic elapsed time = 660.57s
+  NLP heuristic elapsed time = 666.30s
+  NLP heuristic elapsed time = 670.70s
+  NLP heuristic elapsed time = 675.09s
+  NLP heuristic elapsed time = 680.18s
+   637   440 10247.3481    3    0 10442.2802 10247.3481  1.87%   321 1707s
+   638   440 10437.4396   45    0 10442.2802 10386.0487  0.54%   320 1719s
+   639   441 10394.9444   88    0 10442.2802 10386.0487  0.54%   320 1732s
+   641   444 10416.1433   66    0 10442.2802 10386.0487  0.54%   370 1740s
+  NLP heuristic elapsed time = 5.53s
+  NLP heuristic elapsed time = 10.56s
+  NLP heuristic elapsed time = 15.62s
+  NLP heuristic elapsed time = 20.70s
+  NLP heuristic elapsed time = 25.03s
+  NLP heuristic elapsed time = 30.65s
+  NLP heuristic elapsed time = 35.12s
+  NLP heuristic elapsed time = 40.06s
+  NLP heuristic elapsed time = 45.25s
+  NLP heuristic elapsed time = 51.77s
+  NLP heuristic elapsed time = 55.65s
+  NLP heuristic elapsed time = 61.09s
+  NLP heuristic elapsed time = 65.33s
+  NLP heuristic elapsed time = 70.78s
+  NLP heuristic elapsed time = 76.22s
+  NLP heuristic elapsed time = 80.06s
+  NLP heuristic elapsed time = 85.94s
+  NLP heuristic elapsed time = 90.91s
+  NLP heuristic elapsed time = 96.31s
+  NLP heuristic elapsed time = 100.12s
+  NLP heuristic elapsed time = 106.39s
+  NLP heuristic elapsed time = 110.27s
+  NLP heuristic elapsed time = 115.23s
+  NLP heuristic elapsed time = 121.06s
+  NLP heuristic elapsed time = 126.47s
+  NLP heuristic elapsed time = 130.32s
+  NLP heuristic elapsed time = 135.74s
+  NLP heuristic elapsed time = 141.15s
+  NLP heuristic elapsed time = 145.04s
+  NLP heuristic elapsed time = 151.04s
+  NLP heuristic elapsed time = 156.14s
+  NLP heuristic elapsed time = 160.49s
+  NLP heuristic elapsed time = 165.99s
+  NLP heuristic elapsed time = 171.47s
+  NLP heuristic elapsed time = 175.33s
+  NLP heuristic elapsed time = 182.42s
+  NLP heuristic elapsed time = 185.14s
+  NLP heuristic elapsed time = 190.55s
+  NLP heuristic elapsed time = 195.96s
+  NLP heuristic elapsed time = 200.93s
+  NLP heuristic elapsed time = 205.23s
+  NLP heuristic elapsed time = 211.41s
+  NLP heuristic elapsed time = 215.02s
+  NLP heuristic elapsed time = 220.45s
+  NLP heuristic elapsed time = 225.91s
+  NLP heuristic elapsed time = 230.96s
+  NLP heuristic elapsed time = 235.69s
+  NLP heuristic elapsed time = 240.65s
+  NLP heuristic elapsed time = 246.08s
+  NLP heuristic elapsed time = 250.37s
+  NLP heuristic elapsed time = 255.73s
+  NLP heuristic elapsed time = 261.10s
+  NLP heuristic elapsed time = 266.07s
+  NLP heuristic elapsed time = 271.90s
+  NLP heuristic elapsed time = 275.83s
+  NLP heuristic elapsed time = 280.12s
+  NLP heuristic elapsed time = 285.09s
+  NLP heuristic elapsed time = 290.40s
+  NLP heuristic elapsed time = 296.21s
+  NLP heuristic elapsed time = 300.01s
+  NLP heuristic elapsed time = 305.38s
+  NLP heuristic elapsed time = 310.75s
+  NLP heuristic elapsed time = 316.13s
+  NLP heuristic elapsed time = 320.36s
+  NLP heuristic elapsed time = 325.27s
+  NLP heuristic elapsed time = 330.63s
+  NLP heuristic elapsed time = 336.41s
+  NLP heuristic elapsed time = 340.19s
+  NLP heuristic elapsed time = 345.03s
+  NLP heuristic elapsed time = 350.82s
+  NLP heuristic elapsed time = 355.03s
+  NLP heuristic elapsed time = 361.03s
+  NLP heuristic elapsed time = 365.38s
+  NLP heuristic elapsed time = 371.30s
+  NLP heuristic elapsed time = 375.20s
+  NLP heuristic elapsed time = 380.31s
+  NLP heuristic elapsed time = 385.81s
+  NLP heuristic elapsed time = 390.13s
+  NLP heuristic elapsed time = 395.61s
+  NLP heuristic elapsed time = 400.62s
+  NLP heuristic elapsed time = 406.54s
+  NLP heuristic elapsed time = 410.87s
+  NLP heuristic elapsed time = 416.36s
+  NLP heuristic elapsed time = 420.25s
+  NLP heuristic elapsed time = 425.73s
+  NLP heuristic elapsed time = 430.03s
+  NLP heuristic elapsed time = 435.54s
+  NLP heuristic elapsed time = 440.52s
+  NLP heuristic elapsed time = 446.40s
+  NLP heuristic elapsed time = 450.21s
+  NLP heuristic elapsed time = 455.67s
+  NLP heuristic elapsed time = 460.63s
+  NLP heuristic elapsed time = 466.43s
+  NLP heuristic elapsed time = 470.69s
+  NLP heuristic elapsed time = 475.69s
+  NLP heuristic elapsed time = 480.01s
+  NLP heuristic elapsed time = 485.46s
+  NLP heuristic elapsed time = 490.91s
+  NLP heuristic elapsed time = 495.21s
+  NLP heuristic elapsed time = 500.62s
+  NLP heuristic elapsed time = 505.20s
+  NLP heuristic elapsed time = 510.63s
+  NLP heuristic elapsed time = 516.48s
+  NLP heuristic elapsed time = 520.76s
+  NLP heuristic elapsed time = 526.62s
+  NLP heuristic elapsed time = 530.06s
+  NLP heuristic elapsed time = 535.54s
+  NLP heuristic elapsed time = 541.42s
+  NLP heuristic elapsed time = 545.24s
+  NLP heuristic elapsed time = 550.68s
+  NLP heuristic elapsed time = 556.06s
+  NLP heuristic elapsed time = 560.31s
+  NLP heuristic elapsed time = 565.23s
+  NLP heuristic elapsed time = 571.05s
+  NLP heuristic elapsed time = 575.53s
+  NLP heuristic elapsed time = 580.20s
+  NLP heuristic elapsed time = 585.58s
+  NLP heuristic elapsed time = 590.97s
+  NLP heuristic elapsed time = 596.35s
+  NLP heuristic elapsed time = 600.14s
+  NLP heuristic elapsed time = 605.52s
+  NLP heuristic elapsed time = 610.91s
+  NLP heuristic elapsed time = 615.83s
+  NLP heuristic elapsed time = 620.12s
+  NLP heuristic elapsed time = 626.04s
+  NLP heuristic elapsed time = 631.59s
+  NLP heuristic elapsed time = 635.50s
+  NLP heuristic elapsed time = 641.43s
+  NLP heuristic elapsed time = 645.34s
+  NLP heuristic elapsed time = 650.40s
+  NLP heuristic elapsed time = 655.91s
+  NLP heuristic elapsed time = 661.86s
+   642   445 10435.7998   56    0 10442.2802 10386.0487  0.54%   369 2410s
+   643   445 10400.4622   43    0 10442.2802 10400.4622  0.40%   369 2437s
+   644   446 10412.0693   28    0 10442.2802 10400.4622  0.40%   368 2470s
+   646   449 10408.0775   27    0 10442.2802 10400.4622  0.40%   408 2476s
+  NLP heuristic elapsed time = 5.39s
+  NLP heuristic elapsed time = 10.33s
+  NLP heuristic elapsed time = 15.55s
+  NLP heuristic elapsed time = 20.39s
+  NLP heuristic elapsed time = 26.52s
+  NLP heuristic elapsed time = 32.16s
+  NLP heuristic elapsed time = 37.88s
+  NLP heuristic elapsed time = 40.67s
+  NLP heuristic elapsed time = 45.62s
+  NLP heuristic elapsed time = 50.47s
+  NLP heuristic elapsed time = 55.38s
+  NLP heuristic elapsed time = 60.22s
+  NLP heuristic elapsed time = 65.07s
+  NLP heuristic elapsed time = 70.60s
+  NLP heuristic elapsed time = 75.42s
+  NLP heuristic elapsed time = 80.29s
+  NLP heuristic elapsed time = 85.09s
+H  646   426                    10437.863407 10400.4622  0.36%   408 2574s
+   648   427 10402.9214  111    0 10437.8634 10402.9214  0.33%   407 2591s
+   649   428 10411.6957   31    0 10437.8634 10402.9214  0.33%   406 2633s
+   650   429 10402.9214   19    0 10437.8634 10402.9214  0.33%   406 2678s
+   651   431 10409.6031   37   10 10437.8634 10403.1648  0.33%   450 2686s
+   658   436 10404.2298   40   10 10437.8634 10404.2298  0.32%   447 2690s
+   665   441 10412.9144   44   10 10437.8634 10404.3795  0.32%   444 2695s
+   668   443 10406.2350   45   12 10437.8634 10404.3795  0.32%   444 2700s
+   674   447 10407.4684   48   16 10437.8634 10404.3795  0.32%   441 2707s
+   677   449 10407.5769   50   16 10437.8634 10404.3795  0.32%   440 2713s
+   681   451 10410.4108   52   12 10437.8634 10404.3795  0.32%   438 2715s
+   685   454 10407.6536   54   12 10437.8634 10404.3795  0.32%   437 2722s
+   691   458 10417.1551   57    8 10437.8634 10404.3795  0.32%   434 2728s
+   692   459 10408.9950   57   10 10437.8634 10404.3795  0.32%   435 2733s
+   693   459 10409.5788   58   14 10437.8634 10404.3795  0.32%   438 2747s
+   696   461 10409.6645   59   12 10437.8634 10404.3795  0.32%   438 2752s
+   698   463 10409.7740   60   12 10437.8634 10404.3795  0.32%   437 2758s
+   700   464 10409.9019   61   14 10437.8634 10404.3795  0.32%   437 2763s
+   702   465 10410.1694   62   14 10437.8634 10404.3795  0.32%   436 2766s
+   717   475 10413.2886   70   14 10437.8634 10404.3795  0.32%   429 2776s
+   718   476 10421.6564   70   12 10437.8634 10404.3795  0.32%   429 2780s
+   721   478 10416.8223   72   14 10437.8634 10404.3795  0.32%   428 2787s
+   722   479 10415.1166   72   16 10437.8634 10404.3795  0.32%   429 2791s
+   727   482 10416.0448   75   18 10437.8634 10404.3795  0.32%   427 2796s
+   729   483 10416.2996   76   18 10437.8634 10404.3795  0.32%   427 2802s
+   731   485 10416.3166   77   18 10437.8634 10404.3795  0.32%   426 2806s
+   735   487 10416.3717   79   20 10437.8634 10404.3795  0.32%   425 2811s
+   737   489 10416.3844   80   18 10437.8634 10404.3795  0.32%   425 2815s
+   740   491 10421.4053   81   16 10437.8634 10404.3795  0.32%   426 2826s
+   742   492 10418.0438   82   16 10437.8634 10404.3795  0.32%   425 2830s
+   746   495 10421.0267   84   16 10437.8634 10404.3795  0.32%   424 2835s
+   753   499 10417.6991   88   22 10437.8634 10404.3795  0.32%   421 2840s
+   763   506 10420.2786   93   22 10437.8634 10404.3795  0.32%   417 2845s
+   770   511 10418.8248   96   24 10437.8634 10404.3795  0.32%   413 2850s
+   784   520 10419.8787  103   24 10437.8634 10404.3795  0.32%   407 2855s
+   799   530 10432.2283  111   16 10437.8634 10404.3795  0.32%   400 2863s
+   800   531 10425.1715  111   18 10437.8634 10404.3795  0.32%   401 2869s
+   801   531 10427.3321  112   22 10437.8634 10404.3795  0.32%   401 2871s
+   804   533 10428.1256  113   24 10437.8634 10404.3795  0.32%   401 2877s
+   813   539 10428.2579  118   22 10437.8634 10404.3795  0.32%   396 2880s
+   816   541 10428.2581  119   20 10437.8634 10404.3795  0.32%   426 2950s
+   824   547 10428.6434  123   16 10437.8634 10404.3795  0.32%   422 2955s
+   832   552 10428.7451  127   20 10437.8634 10404.3795  0.32%   419 2960s
+   836   553 10435.5098  129   20 10437.8634 10404.3795  0.32%   418 2967s
+   842   551 10435.7807  130   20 10437.8634 10404.3795  0.32%   416 2974s
+   846   547 10436.1819  130   18 10437.8634 10404.3795  0.32%   415 2979s
+   849   545 10404.9450   43   12 10437.8634 10404.3795  0.32%   414 2981s
+   852   547 10414.5585   45   10 10437.8634 10404.3795  0.32%   415 2990s
+   853   548 10405.8628   45   12 10437.8634 10404.3795  0.32%   417 2999s
+   854   549 10406.4256   46   12 10437.8634 10404.3795  0.32%   418 3002s
+   856   550 10406.4683   47   12 10437.8634 10404.3795  0.32%   419 3009s
+   857   551 10414.3260   47   12 10437.8634 10404.3795  0.32%   424 3015s
+   859   552 10414.5545   48   10 10437.8634 10404.3795  0.32%   424 3020s
+   861   553 10411.5291   49   14 10437.8634 10404.3795  0.32%   424 3025s
+   864   555 10409.9533   51   18 10437.8634 10404.3795  0.32%   424 3032s
+   865   556 10410.1556   51   16 10437.8634 10404.3795  0.32%   424 3035s
+   868   558 10410.2632   53   18 10437.8634 10404.3795  0.32%   424 3042s
+   870   559 10419.8684   54   16 10437.8634 10404.3795  0.32%   425 3050s
+   872   561 10411.7556   55   18 10437.8634 10404.3795  0.32%   425 3058s
+   873   561 10413.7961   55   18 10437.8634 10404.3795  0.32%   425 3060s
+   876   563 10411.9806   57   16 10437.8634 10404.3795  0.32%   426 3067s
+   878   565 10412.3216   58   18 10437.8634 10404.3795  0.32%   426 3073s
+   879   565 10421.2368   58   16 10437.8634 10404.3795  0.32%   429 3088s
+   881   567 10412.3319   59   18 10437.8634 10404.3795  0.32%   429 3091s
+   883   568 10413.2319   60   16 10437.8634 10404.3795  0.32%   428 3095s
+   886   570 10412.9924   62   18 10437.8634 10404.3795  0.32%   428 3100s
+   888   571 10413.0252   63   16 10437.8634 10404.3795  0.32%   428 3105s
+   891   573 10416.9120   64   16 10437.8634 10404.3795  0.32%   427 3110s
+   896   577 10415.9335   67   16 10437.8634 10404.3795  0.32%   426 3117s
+   897   577 10413.9972   67   20 10437.8634 10404.3795  0.32%   427 3122s
+   899   579 10414.1840   68   20 10437.8634 10404.3795  0.32%   426 3127s
+   901   580 10414.1983   69   20 10437.8634 10404.3795  0.32%   426 3130s
+   905   583 10414.2745   71   22 10437.8634 10404.3795  0.32%   425 3135s
+   912   587 10414.3836   75   20 10437.8634 10404.3795  0.32%   423 3141s
+   915   589 10419.5197   76   16 10437.8634 10404.3795  0.32%   422 3145s
+   917   591 10417.1767   77   20 10437.8634 10404.3795  0.32%   423 3151s
+   924   595 10418.7845   81   20 10437.8634 10404.3795  0.32%   420 3155s
+   940   606 10419.4306   89   18 10437.8634 10404.3795  0.32%   413 3164s
+   942   607 10419.4014   90   18 10437.8634 10404.3795  0.32%   412 3165s
+   950   611 10424.9752   94   24 10437.8634 10404.3795  0.32%   410 3171s
+   955   614 10426.2538   96   22 10437.8634 10404.3795  0.32%   408 3175s
+   968   623 10426.2620  103   21 10437.8634 10404.3795  0.32%   404 3181s
+   972   623 10431.2157  105   26 10437.8634 10404.3795  0.32%   403 3187s
+   975   623 10435.4781  106   24 10437.8634 10404.3795  0.32%   402 3190s
+   979   626 10434.5364  108   26 10437.8634 10404.3795  0.32%   401 3195s
+   993   635 10434.9905  115   26 10437.8634 10404.3795  0.32%   395 3200s
+   997   638 10435.2360  117   24 10437.8634 10404.3795  0.32%   394 3207s
+  1000   640 10436.3058  119   24 10437.8634 10404.3795  0.32%   393 3210s
+  1009   646 10437.3813  123   24 10437.8634 10404.3795  0.32%   390 3216s
+  1017   649 10437.7516  127   20 10437.8634 10404.3795  0.32%   387 3220s
+  1034   639 10420.7705   43   10 10437.8634 10404.4053  0.32%   381 3225s
+  1038   641 10421.6233   45   10 10437.8634 10404.4053  0.32%   381 3234s
+  1039   642 10422.1861   46   10 10437.8634 10404.4053  0.32%   381 3236s
+  1041   643 10422.2235   47   10 10437.8634 10404.4053  0.32%   382 3242s
+  1044   645 10429.5110   48   10 10437.8634 10404.4053  0.32%   381 3245s
+  1048   648 10422.8211   50   10 10437.8634 10404.4053  0.32%   380 3250s
+  1050   649 10423.9756   51   12 10437.8634 10404.4053  0.32%   380 3255s
+  1053   651 10424.0823   53   14 10437.8634 10404.4053  0.32%   381 3262s
+  1055   653 10424.2163   54   14 10437.8634 10404.4053  0.32%   381 3265s
+  1059   655 10424.2747   56   14 10437.8634 10404.4053  0.32%   380 3272s
+  1061   657 10424.5105   57   16 10437.8634 10404.4053  0.32%   380 3275s
+  1064   659 10426.2546   58   18 10437.8634 10404.4053  0.32%   381 3284s
+  1065   659 10434.5202   59   18 10437.8634 10404.4053  0.32%   381 3285s
+  1066   660 10426.2994   59   18 10437.8634 10404.4053  0.32%   381 3290s
+  1069   662 10430.1258   61   18 10437.8634 10404.4053  0.32%   381 3295s
+  1074   665 10427.0442   63   14 10437.8634 10404.4053  0.32%   380 3300s
+  1077   667 10426.7231   65   16 10437.8634 10404.4053  0.32%   380 3306s
+  1079   669 10426.7575   66   16 10437.8634 10404.4053  0.32%   380 3311s
+  1082   671 10431.9343   67   16 10437.8634 10404.4053  0.32%   380 3315s
+  1087   674 10427.3011   70   18 10437.8634 10404.4053  0.32%   378 3320s
+  1096   680 10427.6771   74   16 10437.8634 10404.4053  0.32%   376 3325s
+  1098   681 10431.3449   75   18 10437.8634 10404.4053  0.32%   376 3332s
+  1100   683 10431.4405   76   22 10437.8634 10404.4053  0.32%   376 3336s
+  1105   686 10434.1030   79   20 10437.8634 10404.4053  0.32%   375 3340s
+  1111   690 10434.0728   82   22 10437.8634 10404.4053  0.32%   374 3345s
+  1116   693 10434.7861   84   24 10437.8634 10404.4053  0.32%   372 3350s
+  1124   699 10435.6220   88   26 10437.8634 10404.4053  0.32%   370 3355s
+  1135   706 10435.9732   94   24 10437.8634 10404.4053  0.32%   367 3360s
+  1144   712 10436.1151   98   25 10437.8634 10404.4053  0.32%   364 3365s
+  1149   715 10436.1297  101   24 10437.8634 10404.4053  0.32%   365 3375s
+  1160   723 10437.3859  106   19 10437.8634 10404.4053  0.32%   362 3380s
+  1182   717 10413.8869   40    8 10437.8634 10404.4053  0.32%   356 3387s
+  1183   718 10422.9146   40    6 10437.8634 10404.4053  0.32%   358 3391s
+  1185   719 10429.1921   41    6 10437.8634 10404.4053  0.32%   358 3398s
+  1186   720 10415.1782   42    8 10437.8634 10404.4053  0.32%   358 3401s
+  1190   723 10416.2713   44   10 10437.8634 10404.4053  0.32%   358 3406s
+  1194   725 10416.8454   46   10 10437.8634 10404.4053  0.32%   357 3410s
+  1197   727 10417.0367   47   10 10437.8634 10404.4053  0.32%   357 3417s
+  1198   728 10426.3869   48   10 10437.8634 10404.4053  0.32%   359 3424s
+  1199   729 10417.0854   48   10 10437.8634 10404.4053  0.32%   360 3428s
+  1200   729 10427.3113   49    8 10437.8634 10404.4053  0.32%   361 3432s
+  1201   730 10417.3813   49    8 10437.8634 10404.4053  0.32%   362 3435s
+  1202   731 10418.1911   50   10 10437.8634 10404.4053  0.32%   362 3440s
+  1204   732 10427.6836   51    8 10437.8634 10404.4053  0.32%   362 3445s
+  1207   734 10419.6526   52   12 10437.8634 10404.4053  0.32%   363 3453s
+  1208   735 10422.2366   53   10 10437.8634 10404.4053  0.32%   363 3455s
+  1213   738 10419.6966   55   12 10437.8634 10404.4053  0.32%   363 3460s
+  1215   739 10419.7597   56   12 10437.8634 10404.4053  0.32%   364 3466s
+  1216   740 10421.2277   57   14 10437.8634 10404.4053  0.32%   364 3470s
+  1218   741 10421.3533   58   14 10437.8634 10404.4053  0.32%   364 3475s
+  1222   744 10421.5545   60   18 10437.8634 10404.4053  0.32%   364 3481s
+  1226   747 10422.9559   62   20 10437.8634 10404.4053  0.32%   363 3485s
+  1230   749 10423.0130   64   20 10437.8634 10404.4053  0.32%   364 3492s
+  1234   752 10423.1213   66   22 10437.8634 10404.4053  0.32%   364 3495s
+  1237   754 10436.7661   67   20 10437.8634 10404.4053  0.32%   364 3500s
+  1239   755 10434.2477   68   22 10437.8634 10404.4053  0.32%   364 3505s
+  1242   757 10428.9288   70   30 10437.8634 10404.4053  0.32%   364 3511s
+  1245   759 10432.0128   71   32 10437.8634 10404.4053  0.32%   364 3515s
+  1247   761 10435.2355   72   32 10437.8634 10404.4053  0.32%   364 3520s
+  1254   765 10436.4369   76   32 10437.8634 10404.4053  0.32%   362 3525s
+  1261   766 10437.2039   79   34 10437.8634 10404.4053  0.32%   360 3530s
+  1268   765 10437.8478   81   34 10437.8634 10404.4053  0.32%   359 3535s
+  1276   762 10405.5925   40   10 10437.8634 10404.7133  0.32%   358 3540s
+  1281   765 10408.1055   43    8 10437.8634 10404.7133  0.32%   357 3545s
+  1286   769 10407.3173   45   12 10437.8634 10404.7133  0.32%   356 3551s
+  1288   770 10417.1047   46   10 10437.8634 10404.7133  0.32%   357 3557s
+  1290   771 10408.5910   47   12 10437.8634 10404.7133  0.32%   357 3564s
+  1291   772 10419.9321   48   12 10437.8634 10404.7133  0.32%   357 3565s
+  1292   773 10408.6463   48   12 10437.8634 10404.7133  0.32%   358 3571s
+  1294   774 10408.9857   49   10 10437.8634 10404.7133  0.32%   358 3576s
+  1296   775 10411.8004   50   10 10437.8634 10404.7133  0.32%   358 3581s
+  1299   777 10419.4110   52   12 10437.8634 10404.7133  0.32%   358 3586s
+  1301   779 10415.0372   53   12 10437.8634 10404.7133  0.32%   358 3590s
+  1304   781 10411.2985   54   14 10437.8634 10404.7133  0.32%   358 3596s
+
+Explored 1308 nodes (491134 simplex iterations) in 3600.05 seconds (1273.89 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 3: 10437.9 10442.3 10486.8 
+
+Time limit reached
+Best objective 1.043786340726e+04, best bound 1.040471330747e+04, gap 0.3176%
+
+User-callback calls 57003, time in user-callback 0.33 sec
+primal_bound = 10437.863407255165, dual_bound = 10404.71330746786, gap = 0.31759468862432594, time = 3600.08

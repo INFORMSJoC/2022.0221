@@ -1,0 +1,49 @@
+solving instance knapsack 10 10 sqrt
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1         OPT -249.03556       29 0.027927
+Couenne: new cutoff value -2.4903555396e+02 (0.038656 seconds)
+NLP0014I             2         OPT -249.03555       28 0.026444
+Couenne: new cutoff value -2.4903555442e+02 (0.065933 seconds)
+Loaded instance "/tmp/jl_cDvmPY/model.nl"
+Constraints:           31
+Variables:             30 (10 integer)
+Auxiliaries:           22 (0 integer)
+
+Coin0506I Presolve 72 (-20) rows, 31 (-21) columns and 161 (-40) elements
+Clp0006I 0  Obj -266.45292 Primal inf 31.240383 (10)
+Clp0006I 32  Obj -250.38001 Primal inf 1.8006593 (14)
+Clp0006I 40  Obj -249.98687
+Clp0000I Optimal - objective value -249.98687
+Clp0032I Optimal objective -249.9868672 - 40 iterations time 0.002, Presolve 0.00
+Clp0000I Optimal - objective value -249.98687
+NLP Heuristic: NLP0014I             3         OPT -249.03555       16 0.014356
+no solution.
+Clp0000I Optimal - objective value -249.98687
+Optimality Based BT: 5 improved bounds
+Probing: 0 improved bounds
+Couenne: new cutoff value -2.4903555576e+02 (0.127677 seconds)
+NLP Heuristic: time limit reached.
+Cbc0031I 9 added rows had average density of 2
+Cbc0013I At root node, 9 cuts changed objective from -249.98687 to -249.03556 in 13 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 55 row cuts average 2.0 elements, 14 column cuts (14 active)
+Cbc0004I Integer solution of -249.03556 found after 54 iterations and 0 nodes (0.06 seconds)
+Cbc0001I Search completed - best objective -249.0355557580465, took 54 iterations and 0 nodes (0.06 seconds)
+Cbc0035I Maximum depth 0, 0 variables fixed on reduced cost
+
+ 	"Finished"
+
+Linearization cuts added at root node:         92
+Linearization cuts added in total:             92  (separation time: 0.000288s)
+Total solve time:                         0.06329s (0.063289s in branch-and-bound)
+Lower bound:                             -249.036
+Upper bound:                             -249.036  (gap: 0.00%)
+Branch-and-bound nodes:                         0
+Stats: /tmp/jl_cDvmPY/model.nl   30 [var]   10 [int]   31 [con]   22 [aux]     92 [root]       92 [tot] 0.000288 [sep] 0.063292 [time] 0.063458 [bb]        -2.490356e+02 [lower]        -2.490356e+02 [upper]       0 [nodes]
+Performance of                           FBBT:	    0.00046s,       16 runs. fix:      0.375 shrnk:    18.9333 ubd:          0 2ubd:          1 infeas:          0
+Performance of                           OBBT:	   0.007018s,        1 runs. fix:          1 shrnk:    19.9211 ubd:          0 2ubd:          1 infeas:          0
+primal_bound = -249.03555575804648, dual_bound = 0.0, gap = 100.0, time = 4.7

@@ -1,0 +1,51 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 10 8 square
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Couenne: new cutoff value -4.4650475023e+01 (0.005164 seconds)
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1         OPT -219.48353      306 0.296388
+NLP0014I             2         OPT -219.48353       14 0.011679
+Couenne: new cutoff value -2.1948352559e+02 (0.314857 seconds)
+Loaded instance "/tmp/jl_vAdaCj/model.nl"
+Constraints:           31
+Variables:             30 (10 integer)
+Auxiliaries:           12 (0 integer)
+
+Coin0506I Presolve 61 (-11) rows, 30 (-12) columns and 139 (-22) elements
+Clp0006I 0  Obj -348.14309 Primal inf 6693.6837 (10)
+Clp0006I 30  Obj -219.98944
+Clp0000I Optimal - objective value -219.98944
+Clp0032I Optimal objective -219.9894425 - 30 iterations time 0.002, Presolve 0.00
+Clp0000I Optimal - objective value -219.98944
+NLP Heuristic: NLP0014I             3         OPT -209.57571       13 0.011493
+no solution.
+Clp0000I Optimal - objective value -219.98944
+Optimality Based BT: 14 improved bounds
+Probing: 4 improved bounds
+NLP Heuristic: time limit reached.
+Cbc0031I 4 added rows had average density of 2
+Cbc0013I At root node, 4 cuts changed objective from -219.98944 to -219.48354 in 6 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 8 row cuts average 2.0 elements, 30 column cuts (30 active)
+Cbc0010I After 0 nodes, 1 on tree, 1e+50 best solution, best possible -1.7976931e+308 (0.04 seconds)
+Optimality Based BT: 13 improved bounds
+Cbc0001I Search completed - best objective 1e+50, took 12 iterations and 2 nodes (0.05 seconds)
+Cbc0035I Maximum depth 0, 0 variables fixed on reduced cost
+
+ 	"Finished"
+
+Linearization cuts added at root node:         72
+Linearization cuts added in total:             72  (separation time: 0.000169s)
+Total solve time:                        0.047913s (0.047912s in branch-and-bound)
+Lower bound:                             -219.484
+Upper bound:                             -219.484  (gap: 0.00%)
+Branch-and-bound nodes:                         2
+Stats: /tmp/jl_vAdaCj/model.nl   30 [var]   10 [int]   31 [con]   12 [aux]     72 [root]       72 [tot] 0.000169 [sep] 0.047915 [time] 0.048019 [bb]        -2.194835e+02 [lower]        -2.194835e+02 [upper]       2 [nodes]
+Performance of                           FBBT:	     0.0002s,       10 runs. fix:          0 shrnk:    29.0413 ubd:          0 2ubd:          1 infeas:          0
+Performance of                           OBBT:	   0.016846s,        2 runs. fix:        0.5 shrnk:    102.316 ubd:          0 2ubd:          1 infeas:          0
+primal_bound = -219.48352559062212, dual_bound = 0.0, gap = 100.0, time = 3.55

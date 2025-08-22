@@ -1,0 +1,102 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 10 10 divexp
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 51 rows, 70 columns and 110 nonzeros
+Model fingerprint: 0xaf8fdac9
+Model has 20 function constraints treated as nonlinear
+  10 EXP, 10 POW
+Variable types: 60 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [3e-09, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+02, 1e+10]
+  RHS range        [3e-09, 3e+04]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 40 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 103 rows, 41 columns, 210 nonzeros
+Presolved model has 8 bilinear constraint(s)
+Presolved model has 12 nonlinear constraint(s)
+Warning: Model contains variables with very large bounds participating
+         in nonlinear terms.
+         Presolve was not able to compute smaller bounds for these variables.
+         Consider bounding these variables or reformulating the model.
+
+
+Solving non-convex MINLP
+
+Variable types: 41 continuous, 0 integer (0 binary)
+
+Root relaxation: objective -2.664490e+02, 38 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -266.44898    0   13          - -266.44898      -     -    0s
+     0     0 -266.44713    0   17          - -266.44713      -     -    0s
+     0     0 -266.44631    0   18          - -266.44631      -     -    0s
+     0     0 -266.44631    0   18          - -266.44631      -     -    0s
+     0     0 -266.44628    0   18          - -266.44628      -     -    0s
+     0     0 -266.44627    0   18          - -266.44627      -     -    0s
+H    0     0                    -228.3426442 -266.44627  16.7%     -    0s
+     0     2 -266.42951    0   16 -228.34264 -266.42951  16.7%     -    0s
+H   62    32                    -237.9986430 -258.16453  8.47%   5.6    0s
+H   70    32                    -238.0009205 -258.16453  8.47%   5.4    0s
+H   78    28                    -238.0873030 -258.16453  8.43%   5.4    0s
+H  107    43                    -238.0891986 -256.78895  7.85%   5.7    0s
+H  161    55                    -238.3452841 -256.68002  7.69%   5.6    0s
+H  188    71                    -240.7055851 -256.68002  6.64%   4.9    0s
+H  215    94                    -240.7086342 -256.68002  6.64%   4.5    0s
+H  242    44                    -244.4936513 -256.67932  4.98%   4.6    0s
+H  352    73                    -245.4854154 -256.52498  4.50%   4.3    0s
+H  406    94                    -246.1541851 -254.84804  3.53%   4.0    0s
+H  487   138                    -246.2732140 -254.84697  3.48%   3.7    0s
+H  543   150                    -246.9963286 -254.84675  3.18%   3.7    0s
+H  543   141                    -247.6873508 -254.84675  2.89%   3.7    0s
+H  570   154                    -247.9399358 -254.79894  2.77%   3.6    0s
+H  597   161                    -247.9627222 -254.77868  2.75%   3.6    0s
+H 1035   200                    -248.3339689 -253.91154  2.25%   4.0    0s
+H 1035   200                    -248.4851212 -253.91154  2.18%   4.0    0s
+
+Explored 1037 nodes (4278 simplex iterations) in 0.37 seconds (0.09 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 10: -248.485 -248.334 -247.963 ... -244.494
+No other solutions better than -248.485
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective -2.484851211970e+02, best bound -2.484851211970e+02, gap 0.0000%
+
+User-callback calls 2541, time in user-callback 0.01 sec
+expr 1, 1 = 18.817479 / (1 + 55.26827 * exp(-0.178869 * (x + -28.888088)))
+expr 1, 2 = 24.635565 / (1 + 49.914295 * exp(-0.152834 * (x + -24.138408)))
+expr 1, 3 = 62.824909 / (1 + 12.567862 * exp(-0.152425 * (x + -73.274016)))
+expr 1, 4 = 16.971782 / (1 + 65.396906 * exp(-0.189416 * (x + -95.965274)))
+expr 1, 5 = 15.973518 / (1 + 81.322419 * exp(-0.184057 * (x + -5.575866)))
+expr 1, 6 = 83.577895 / (1 + 91.733787 * exp(-0.183555 * (x + -61.518942)))
+expr 1, 7 = 49.651251 / (1 + 57.669045 * exp(-0.167043 * (x + -92.874202)))
+expr 1, 8 = 43.688922 / (1 + 60.803415 * exp(-0.131638 * (x + -6.282841)))
+expr 1, 9 = 28.130455 / (1 + 44.480838 * exp(-0.136571 * (x + -63.361677)))
+expr 1, 10 = 94.865529 / (1 + 80.920702 * exp(-0.132769 * (x + -83.685169)))
+primal_bound = -248.48512119695448, dual_bound = 0.0, gap = 100.0, time = 0.65

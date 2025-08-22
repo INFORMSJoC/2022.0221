@@ -1,0 +1,79 @@
+
+Note: the module "julia" cannot be unloaded because it was not loaded.
+
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nldep gunluk ../../../../../instances/uflp/gunluk/gunluk-20-40-7.txt exp
+The latest version of Julia in the `1.10` channel is 1.10.6+0.x64.linux.gnu. You currently have `1.10.5+0.x64.linux.gnu` installed. Run:
+
+  juliaup update
+
+in your terminal shell to install Julia 1.10.6+0.x64.linux.gnu and update the `1.10` channel to that version.
+presolving:
+(round 1, fast)       20 del vars, 20 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 20 del vars, 20 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 800 upgd conss, 0 impls, 0 clqs
+   (0.0s) probing cycle finished: starting next cycle
+   (0.0s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (0.0s) no symmetry present (symcode time: 0.00)
+presolving (3 rounds: 3 fast, 2 medium, 2 exhaustive):
+ 20 deleted vars, 20 deleted constraints, 0 added constraints, 20 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 820 implications, 0 cliques
+presolved problem has 840 variables (20 bin, 0 int, 0 impl, 820 cont) and 860 constraints
+    800 constraints of type <varbound>
+     40 constraints of type <linear>
+     20 constraints of type <nonlinear>
+Presolving Time: 0.03
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+p 0.0s|     1 |     0 |   180 |     - |shiftand|   0 | 920 | 860 |1000 |   0 |  0 |   0 |   0 |-7.629395e-05 | 1.560826e+03 |    Inf | unknown
+t 0.0s|     1 |     0 |   180 |     - |  trysol|   0 | 920 | 860 |1000 |   0 |  0 |   0 |   0 |-7.629395e-05 | 7.629266e+02 |    Inf | unknown
+  0.1s|     1 |     0 |   414 |     - |    10M |   0 | 920 | 860 |1000 |   0 |  0 |   0 |   0 | 4.422426e+02 | 7.629266e+02 |  72.51%| unknown
+L 0.1s|     1 |     0 |   414 |     - |  subnlp|   0 | 920 | 860 |1000 |   0 |  0 |   0 |   0 | 4.422426e+02 | 4.427051e+02 |   0.10%| unknown
+  0.1s|     1 |     0 |   420 |     - |    10M |   0 | 920 | 860 |1005 |   5 |  1 |   0 |   0 | 4.422426e+02 | 4.427051e+02 |   0.10%| unknown
+  0.1s|     1 |     0 |   421 |     - |    10M |   0 | 920 | 860 |1005 |   5 |  1 |   0 |   0 | 4.422426e+02 | 4.427051e+02 |   0.10%| unknown
+  0.1s|     1 |     0 |   422 |     - |    10M |   0 | 920 | 860 |1005 |   5 |  1 |   0 |   0 | 4.422426e+02 | 4.427051e+02 |   0.10%| unknown
+  0.1s|     1 |     0 |   429 |     - |    10M |   0 | 920 | 860 | 974 |  10 |  2 |   0 |   0 | 4.422439e+02 | 4.427051e+02 |   0.10%| unknown
+  0.1s|     1 |     0 |   438 |     - |    10M |   0 | 920 | 860 | 979 |  15 |  3 |   0 |   0 | 4.422575e+02 | 4.427051e+02 |   0.10%| unknown
+  0.1s|     1 |     0 |   439 |     - |    10M |   0 | 920 | 860 | 980 |  16 |  4 |   0 |   0 | 4.422577e+02 | 4.427051e+02 |   0.10%| unknown
+  0.4s|     1 |     0 |  5474 |     - |    17M |   0 | 920 | 620 | 980 |  16 |  5 |   0 |   0 | 4.425163e+02 | 4.427051e+02 |   0.04%| unknown
+  0.4s|     1 |     0 |  5506 |     - |    17M |   0 | 920 | 620 | 985 |  21 |  6 |   0 |   0 | 4.425937e+02 | 4.427051e+02 |   0.03%| unknown
+  0.5s|     1 |     0 |  5513 |     - |    17M |   0 | 920 | 620 | 989 |  25 |  7 |   0 |   0 | 4.426003e+02 | 4.427051e+02 |   0.02%| unknown
+  0.7s|     1 |     0 |  7676 |     - |    23M |   0 | 920 | 620 | 989 |  25 |  8 |   0 |   0 | 4.426280e+02 | 4.427051e+02 |   0.02%| unknown
+  0.7s|     1 |     0 |  7684 |     - |    23M |   0 | 920 | 620 | 880 |  30 |  9 |   0 |   0 | 4.426804e+02 | 4.427051e+02 |   0.01%| unknown
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  0.7s|     1 |     0 |  7689 |     - |    23M |   0 | 920 | 620 | 885 |  35 | 10 |   0 |   0 | 4.426913e+02 | 4.427051e+02 |   0.00%| unknown
+(run 1, node 1) restarting after 6 global fixings of integer variables
+
+presolving:
+(round 1, fast)       126 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 560 chg coeffs, 1 upgd conss, 820 impls, 0 clqs
+(round 2, fast)       126 del vars, 1 del conss, 0 add conss, 1 chg bounds, 0 chg sides, 560 chg coeffs, 1 upgd conss, 820 impls, 0 clqs
+(round 3, fast)       127 del vars, 1 del conss, 0 add conss, 1 chg bounds, 0 chg sides, 560 chg coeffs, 1 upgd conss, 820 impls, 0 clqs
+presolving (4 rounds: 4 fast, 1 medium, 1 exhaustive):
+ 127 deleted vars, 1 deleted constraints, 0 added constraints, 1 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 820 implications, 0 cliques
+presolved problem has 793 variables (14 bin, 0 int, 0 impl, 779 cont) and 619 constraints
+    560 constraints of type <varbound>
+     40 constraints of type <linear>
+     19 constraints of type <nonlinear>
+Presolving Time: 0.04
+transformed 1/4 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  1.0s|     1 |     0 |  7914 |     - |    24M |   0 | 869 | 619 | 749 |   0 |  0 |   0 |   0 | 4.426913e+02 | 4.427051e+02 |   0.00%| unknown
+t 1.1s|     1 |     0 |  7914 |     - |  trysol|   0 | 869 | 619 | 749 |   0 |  0 |   0 |   0 | 4.426913e+02 | 4.427051e+02 |   0.00%| unknown
+  1.1s|     1 |     0 |  7917 |     - |    24M |   0 | 869 | 619 | 751 |   2 |  1 |   0 |   0 | 4.426913e+02 | 4.427051e+02 |   0.00%| unknown
+  1.3s|     1 |     0 | 13687 |     - |    30M |   0 | 869 | 619 | 751 |   2 |  2 |   0 |   0 | 4.426913e+02 | 4.427051e+02 |   0.00%| unknown
+  1.4s|     1 |     2 | 13687 |     - |    30M |   0 | 869 | 619 | 751 |   2 |  3 |   0 |   0 | 4.426913e+02 | 4.427051e+02 |   0.00%| unknown
+L 1.5s|     2 |     3 | 13716 |6569.5 |  subnlp|   1 | 869 | 619 | 656 |  10 |  2 |   0 |   0 | 4.426913e+02 | 4.427051e+02 |   0.00%| unknown
+
+SCIP Status        : solving was interrupted [gap limit reached]
+Solving Time (sec) : 1.54
+Solving Nodes      : 3 (total of 4 nodes in 2 runs)
+Primal Bound       : +4.42705071360466e+02 (6 solutions)
+Dual Bound         : +4.42705033045061e+02
+Gap                : 0.00 %
+solution violates original bounds of variable <f[6]> [0,2414] solution value <-4.21074e-06>
+best solution is not feasible in original problem
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-20-40-7.txt
+primal_bound = 442.70507136046615, dual_bound = 442.7050330450614, gap = 8.654837553058228e-6, time = 3.75

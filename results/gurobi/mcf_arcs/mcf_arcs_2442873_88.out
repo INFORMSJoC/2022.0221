@@ -1,0 +1,95 @@
+solving instance mcf arcs c25_100_10_V_L_5 3 6 sqrt
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 700 rows, 1550 columns and 4775 nonzeros
+Model fingerprint: 0xc56fcf81
+Model has 100 function constraints treated as nonlinear
+  100 POW
+Variable types: 1425 continuous, 125 integer (125 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 6e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-16, 1e+10]
+  RHS range        [1e+00, 5e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Warning: Completing partial solution with 125 unfixed non-continuous variables out of 125
+User MIP start did not produce a new incumbent solution
+
+Presolve removed 326 rows and 350 columns
+Presolve time: 0.01s
+Presolved: 874 rows, 1201 columns, 5090 nonzeros
+Presolved model has 100 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 1201 continuous, 0 integer (0 binary)
+
+Root relaxation: objective 1.863400e+04, 1289 iterations, 0.03 seconds (0.02 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 18634.0006    0   20          - 18634.0006      -     -    1s
+H    0     0                    25070.631152 18634.0006  25.7%     -    1s
+     0     0 19810.6238    0   20 25070.6312 19810.6238  21.0%     -    1s
+     0     2 19810.6238    0   20 25070.6312 19810.6238  21.0%     -    4s
+H  107    81                    24936.364648 20721.6818  16.9%  55.4    4s
+   136   110 23304.6269   17   21 24936.3646 20721.6818  16.9%  52.3    5s
+H  185   147                    24855.477819 20721.6818  16.6%  46.0    5s
+H  591   399                    24771.505722 22126.0493  10.7%  44.9    6s
+H  591   399                    24771.504351 22126.0493  10.7%  44.9    6s
+H  620   429                    24708.601520 22126.0493  10.5%  44.5    7s
+  NLP heuristic elapsed time = 5.01s
+   622   431 23300.7983   15    0 24708.6015 22126.0493  10.5%  44.3   14s
+  NLP heuristic elapsed time = 5.00s
+  NLP heuristic elapsed time = 10.03s
+   625   433 22387.8737    9    0 24708.6015 22126.0493  10.5%  44.1   27s
+H  981   524                    24708.599790 22932.8459  7.19%  42.4   28s
+  1317   648     cutoff   30      24708.5998 23106.1275  6.49%  40.8   30s
+H 1975   718                    24708.596861 23496.4350  4.91%  38.7   32s
+  2830   909 23841.2034   18   20 24708.5969 23660.3286  4.24%  37.3   35s
+H 3063   972                    24708.592206 23681.7371  4.16%  37.3   35s
+  4259  1270 24616.8900   20   23 24708.5922 23777.3298  3.77%  36.2   40s
+  5727  1454     cutoff   20      24708.5922 23852.8316  3.46%  36.0   45s
+  7170  1661 24495.8449   24   23 24708.5922 23913.2488  3.22%  35.7   50s
+  8653  1750 24191.0414   26   19 24708.5922 23965.9755  3.01%  35.8   55s
+ 10117  1778 24187.6736   21   20 24708.5922 24019.2285  2.79%  35.4   60s
+ 11749  1778     cutoff   21      24708.5922 24069.6515  2.59%  34.8   65s
+ 13291  1736     cutoff   25      24708.5922 24115.5355  2.40%  34.5   70s
+ 14799  1646 24324.6751   25   22 24708.5922 24165.8931  2.20%  34.2   75s
+ 16366  1519 24515.9839   23   15 24708.5922 24219.6322  1.98%  33.9   80s
+ 17935  1310     cutoff   21      24708.5922 24291.0053  1.69%  33.6   85s
+ 19475   962     cutoff   25      24708.5922 24378.0595  1.34%  33.5   90s
+ 21058   515     cutoff   28      24708.5922 24518.6760  0.77%  33.2   95s
+*21758   137              33    24708.582248 24653.9641  0.22%  33.0   97s
+
+Explored 21902 nodes (722344 simplex iterations) in 97.52 seconds (38.94 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 5: 24708.6 24771.5 24855.5 ... 25070.6
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 2.470858224823e+04, best bound 2.470858224823e+04, gap 0.0000%
+
+User-callback calls 79954, time in user-callback 0.06 sec
+primal_bound = 24708.582248225845, dual_bound = 24708.582248225845, gap = 0.0, time = 97.53

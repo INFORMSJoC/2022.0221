@@ -1,0 +1,37 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nlass holmberg 9 sqrt
+presolving:
+(round 1, fast)       500 del vars, 500 del conss, 0 add conss, 500 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 500 del vars, 500 del conss, 0 add conss, 500 chg bounds, 0 chg sides, 0 chg coeffs, 500 upgd conss, 0 impls, 0 clqs
+   (0.1s) probing cycle finished: starting next cycle
+   (0.1s) symmetry computation started: requiring (bin +, int -, cont -), (fixed: bin -, int +, cont +)
+   (0.1s) no symmetry present
+presolving (3 rounds: 3 fast, 2 medium, 2 exhaustive):
+ 500 deleted vars, 500 deleted constraints, 0 added constraints, 500 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 500 implications, 0 cliques
+presolved problem has 1010 variables (10 bin, 0 int, 0 impl, 1000 cont) and 1050 constraints
+    500 constraints of type <varbound>
+     50 constraints of type <linear>
+    500 constraints of type <nonlinear>
+Presolving Time: 0.06
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  0.1s|     1 |     0 |  3863 |     - |    23M |   0 |2010 |1050 |1550 |   0 |  0 |   0 |   0 | 8.332000e+03 |      --      |    Inf | unknown
+L 0.2s|     1 |     0 |  3863 |     - |undercov|   0 |2010 |1050 |1550 |   0 |  0 |   0 |   0 | 8.332000e+03 | 8.332085e+03 |   0.00%| unknown
+  3.2s|     1 |     0 |  3863 |     - |    24M |   0 |2010 |1050 |1550 |   0 |  2 |   0 |   0 | 8.332000e+03 | 8.332085e+03 |   0.00%| unknown
+  3.2s|     1 |     2 |  3863 |     - |    24M |   0 |2010 |1050 |1550 |   0 |  4 |   0 |   0 | 8.332000e+03 | 8.332085e+03 |   0.00%| unknown
+* 3.3s|    29 |    16 |  3876 |  75.5 |    LP  |  24 |2010 |1000 |1548 |   0 |  3 |   3 |   0 | 8.332000e+03 | 8.332000e+03 |   0.00%|   0.56%
+
+SCIP Status        : solving was interrupted [gap limit reached]
+Solving Time (sec) : 3.33
+Solving Nodes      : 29
+Primal Bound       : +8.33200000021747e+03 (2 solutions)
+Dual Bound         : +8.33200000000000e+03
+Gap                : 0.00 %
+reading holmberg data file ../../../../../instances/uflp/holmberg/p9
+primal_bound = 8332.000000217475, dual_bound = 8332.0, gap = 2.6101144395518386e-9, time = 6.0

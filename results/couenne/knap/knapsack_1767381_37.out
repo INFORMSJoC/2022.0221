@@ -1,0 +1,94 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 10 4 divexp
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Couenne: new cutoff value 0.0000000000e+00 (0.006176 seconds)
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1         OPT -334.22594      284 0.323428
+NLP0014I             2         OPT -334.22593       14 0.011945
+Couenne: new cutoff value -3.3422592964e+02 (0.34947 seconds)
+Loaded instance "/tmp/jl_s1ULZr/model.nl"
+Constraints:           31
+Variables:             30 (10 integer)
+Auxiliaries:           72 (0 integer)
+
+Coin0506I Presolve 119 (-44) rows, 48 (-54) columns and 268 (-95) elements
+Clp0006I 0  Obj -397.98002 Primal inf 104546.11 (87)
+Clp0006I 50  Obj -397.98002 Primal inf 121.71737 (28)
+Clp0006I 69  Obj -397.98002 Primal inf 117.05755 (20)
+Clp0006I 76  Obj -397.98002 Primal inf 34.004571 (19)
+Clp0006I 89  Obj -397.96674
+Clp0000I Optimal - objective value -397.96674
+Clp0006I 0  Obj -397.96674 Primal inf 4.1848241e-07 (1) Dual inf 1.7356765e-06 (2)
+Clp0006I 0  Obj -397.96674 Primal inf 8.1848241e-07 (1) Dual inf 1.4813281e+15 (3)
+Clp0006I 1  Obj -397.96674 Dual inf 2.5356765e-06 (2)
+Clp0006I 3  Obj -397.96675
+Clp0000I Optimal - objective value -397.96675
+Clp0032I Optimal objective -397.9667457 - 92 iterations time 0.002, Presolve 0.00
+Clp0000I Optimal - objective value -397.96675
+NLP Heuristic: NLP0014I             3         OPT -385.83817       68 0.071135
+no solution.
+Clp0000I Optimal - objective value -397.96675
+Optimality Based BT: 9 improved bounds
+Probing: 3 improved bounds
+NLP Heuristic: time limit reached.
+Cbc0031I 12 added rows had average density of 2
+Cbc0013I At root node, 12 cuts changed objective from -397.96675 to -388.30075 in 10 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 87 row cuts average 2.0 elements, 2 column cuts (2 active)
+Cbc0010I After 0 nodes, 1 on tree, 1e+50 best solution, best possible -1.7976931e+308 (0.25 seconds)
+Optimality Based BT: 10 improved bounds
+Optimality Based BT: 10 improved bounds
+Optimality Based BT: 1 improved bounds
+Optimality Based BT: 5 improved bounds
+Optimality Based BT: 9 improved bounds
+Cbc0010I After 100 nodes, 50 on tree, 1e+50 best solution, best possible -388.30075 (2.19 seconds)
+Couenne: new cutoff value -3.7110941404e+02 (2.79475 seconds)
+Cbc0004I Integer solution of -371.10941 found after 3376 iterations and 190 nodes (2.44 seconds)
+Optimality Based BT: 0 improved bounds
+Cbc0010I After 200 nodes, 48 on tree, -371.10941 best solution, best possible -388.30075 (2.98 seconds)
+Optimality Based BT: Couenne: new cutoff value -3.8583816283e+02 (3.3488 seconds)
+Couenne: new cutoff value -3.8583816612e+02 (3.3515 seconds)
+0 improved bounds
+Couenne: new cutoff value -3.8583817208e+02 (3.37536 seconds)
+Cbc0004I Integer solution of -385.83817 found after 3707 iterations and 210 nodes (3.02 seconds)
+Optimality Based BT: 0 improved bounds
+Cbc0001I Search completed - best objective -385.8381720802589, took 4260 iterations and 240 nodes (3.15 seconds)
+Cbc0035I Maximum depth 95, 0 variables fixed on reduced cost
+
+ 	"Finished"
+
+Linearization cuts added at root node:        163
+Linearization cuts added in total:            163  (separation time: 0.000582s)
+Total solve time:                         3.15603s (3.15603s in branch-and-bound)
+Lower bound:                             -385.838
+Upper bound:                             -385.838  (gap: 0.00%)
+Branch-and-bound nodes:                       240
+Stats: /tmp/jl_s1ULZr/model.nl   30 [var]   10 [int]   31 [con]   72 [aux]    163 [root]      163 [tot] 0.000582 [sep]  3.15603 [time]   3.1562 [bb]        -3.858382e+02 [lower]        -3.858382e+02 [upper]     240 [nodes]
+Performance of                           FBBT:	   0.036718s,      400 runs. fix:   0.078561 shrnk:    16.8892 ubd:          0 2ubd:   0.980591 infeas:         11
+Performance of                           OBBT:	    0.25023s,        9 runs. fix:          0 shrnk: 0.00571271 ubd:          0 2ubd:          1 infeas:          0
+expr 1, 1 = 84.584224 / (1 + 4.377848 * exp(-0.121489 * (x + -75.891873)))
+expr 1, 2 = 98.549399 / (1 + 89.075689 * exp(-0.171688 * (x + -14.910251)))
+expr 1, 3 = 74.045952 / (1 + 93.91555 * exp(-0.193411 * (x + -37.404451)))
+expr 1, 4 = 35.813342 / (1 + 89.767075 * exp(-0.16503 * (x + -99.113142)))
+expr 1, 5 = 42.435927 / (1 + 60.318413 * exp(-0.156646 * (x + -85.272461)))
+expr 1, 6 = 5.634582 / (1 + 94.126035 * exp(-0.178119 * (x + -36.314288)))
+expr 1, 7 = 60.096204 / (1 + 40.16565 * exp(-0.185129 * (x + -44.484773)))
+expr 1, 8 = 35.612257 / (1 + 6.898806 * exp(-0.145731 * (x + -78.003466)))
+expr 1, 9 = 10.749888 / (1 + 84.933521 * exp(-0.172424 * (x + -61.71491)))
+expr 1, 10 = 98.85584 / (1 + 45.321881 * exp(-0.1614 * (x + -76.914166)))
+f0 = 0.0019134260726501498
+f0 = 0.08545996654455267
+f0 = 0.0005687042368782504
+f0 = 3.1428849889612e-8
+f0 = 1.1121315960933015e-6
+f0 = 9.289944667001191e-5
+f0 = 0.00039663519050909526
+f0 = 5.9699718260832584e-5
+f0 = 3.0264948233227984e-6
+f0 = 8.859025439989753e-6
+primal_bound = -385.838172080259, dual_bound = 0.0, gap = 100.0, time = 7.08

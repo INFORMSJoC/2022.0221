@@ -1,0 +1,124 @@
+solving instance uflp nldep gunluk ../../../../../instances/uflp/gunluk/gunluk-10-20-2.txt pardivexp
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 260 rows, 270 columns and 880 nonzeros
+Model fingerprint: 0xe41b1335
+Model has 20 function constraints treated as nonlinear
+  10 EXP, 10 POW
+Variable types: 260 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [4e-03, 9e+01]
+  Objective range  [1e+00, 5e+01]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [4e-03, 3e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 20 rows and 20 columns
+Presolve time: 0.00s
+Presolved: 330 rows, 251 columns, 1010 nonzeros
+Presolved model has 10 bilinear constraint(s)
+Presolved model has 10 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 241 continuous, 10 integer (10 binary)
+Found heuristic solution: objective 480.2412546
+
+Root relaxation: objective 1.620124e+02, 62 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  162.01244    0   18  480.24125  162.01244  66.3%     -    0s
+H    0     0                     378.9647289  162.01244  57.2%     -    0s
+     0     0  162.01251    0   18  378.96473  162.01251  57.2%     -    0s
+H    0     0                     165.1009252  162.01251  1.87%     -    0s
+H    0     0                     165.0391873  162.01251  1.83%     -    0s
+     0     1  162.09761    0   18  165.03919  162.09761  1.78%     -    0s
+H    3     2                     164.4278617  162.10593  1.41%   1.0    0s
+*   67     2              17     164.4278608  164.42337  0.00%   2.9    0s
+
+Explored 70 nodes (260 simplex iterations) in 0.09 seconds (0.03 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 6: 164.428 164.428 165.039 ... 480.241
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 1.644278608162e+02, best bound 1.644278608162e+02, gap 0.0000%
+
+User-callback calls 549, time in user-callback 0.00 sec
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-10-20-2.txt
+primal_bound = 164.4278608162163, dual_bound = 164.42786081621628, gap = 1.7285215102428055e-14, time = 0.1
+OPTIMAL LOCATIONS:
+y[1] = 1.0
+y[3] = 1.0
+y[4] = 1.0
+y[5] = 1.0
+y[6] = 1.0
+y[7] = 1.0
+y[8] = 1.0
+y[9] = 1.0
+y[10] = 1.0
+OPTIMAL WAREHOUSING:
+f[1] = 167.0
+f[3] = 167.0
+f[4] = 97.0
+f[5] = 33.0
+f[6] = 32.0
+f[7] = 97.0
+f[8] = 115.0
+f[9] = 73.0
+f[10] = 94.0
+OPTIMAL WAREHOUSING COSTS:
+nlobj[1] = 0.0634999988622172
+nlobj[2] = 0.0
+nlobj[3] = 1.2223744579801312
+nlobj[4] = 0.1805197542880488
+nlobj[5] = 0.07826657527724705
+nlobj[6] = 0.03230593423229765
+nlobj[7] = 0.20902303723146867
+nlobj[8] = 0.17512096903343083
+nlobj[9] = 0.05014700142092436
+nlobj[10] = 0.23452256100435817
+OPTIMAL ASSIGNMENTS:
+x[1, 2] = 1.0
+x[1, 9] = 1.0
+x[1, 17] = 1.0
+x[3, 3] = 1.0
+x[3, 6] = 1.0
+x[3, 8] = 1.0
+x[3, 10] = 1.0
+x[4, 11] = 1.0
+x[4, 13] = 1.0
+x[4, 15] = 1.0
+x[5, 1] = 1.0
+x[6, 20] = 1.0
+x[7, 4] = 1.0
+x[7, 14] = 1.0
+x[8, 16] = 1.0
+x[8, 19] = 1.0
+x[9, 12] = 1.0
+x[9, 18] = 1.0
+x[10, 5] = 1.0
+x[10, 7] = 1.0
+fixed costs = 329.0
+assignment costs = 162.18208052688618
+warehousing costs = 2.2457802893301237
+total cost = 164.4278608162163

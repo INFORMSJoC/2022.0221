@@ -1,0 +1,62 @@
+solving instance uflp nlass gunluk ../../../../../instances/uflp/gunluk/gunluk-40-80-6.txt log
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 12880 rows, 16040 columns and 28800 nonzeros
+Model fingerprint: 0x8591e15b
+Model has 3200 function constraints treated as nonlinear
+  3200 LOG
+Variable types: 12800 continuous, 3240 integer (3240 binary)
+Coefficient statistics:
+  Matrix range     [2e-01, 2e+01]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+00, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Warning: x < 1e-10 in domain of log(x).
+         Setting lower bound to 1e-10.
+Presolve removed 9600 rows and 9600 columns
+Presolve time: 0.06s
+Presolved: 19280 rows, 6441 columns, 41600 nonzeros
+Presolved model has 3200 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 6401 continuous, 40 integer (40 binary)
+Found heuristic solution: objective 2377.7738696
+
+Root relaxation: objective 6.347745e+02, 3392 iterations, 0.09 seconds (0.06 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     634.7745127  634.77451  0.00%     -    0s
+
+Explored 1 nodes (3392 simplex iterations) in 0.22 seconds (0.11 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 2: 634.775 2377.77 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 6.347745126664e+02, best bound 6.347745126664e+02, gap 0.0000%
+
+User-callback calls 274, time in user-callback 0.00 sec
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-40-80-6.txt
+primal_bound = 634.7745126663891, dual_bound = 634.7745126663888, gap = 5.372939624374856e-14, time = 0.24

@@ -1,0 +1,25 @@
+solving instance mcf nodes c52 3 6 sincos
+presolving:
+(round 1, fast)       517 del vars, 517 del conss, 0 add conss, 30 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       1034 del vars, 517 del conss, 0 add conss, 30 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, fast)       1034 del vars, 517 del conss, 0 add conss, 30 chg bounds, 517 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 4, exhaustive) 1034 del vars, 517 del conss, 0 add conss, 30 chg bounds, 517 chg sides, 0 chg coeffs, 30 upgd conss, 0 impls, 0 clqs
+   (1.1s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (1.2s) no symmetry present (symcode time: 0.04)
+presolving (5 rounds: 5 fast, 2 medium, 2 exhaustive):
+ 1059 deleted vars, 517 deleted constraints, 0 added constraints, 30 tightened bounds, 0 added holes, 517 changed sides, 0 changed coefficients
+ 30 implications, 0 cliques
+presolved problem has 51765 variables (5 bin, 0 int, 0 impl, 51760 cont) and 3607 constraints
+     30 constraints of type <varbound>
+   3547 constraints of type <linear>
+     30 constraints of type <nonlinear>
+Presolving Time: 1.09
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t23.2s|     1 |     0 | 28011 |     - |  trysol|   0 |  51k|3582 |3762 |   0 |  0 |   0 |   0 |-1.162418e+03 | 5.842432e+03 |    Inf | unknown
+ 34.2s|     1 |     0 | 44872 |     - |   307M |   0 |  51k|3582 |3762 |   0 |  0 |   0 |   0 | 1.397203e+03 | 5.842432e+03 | 318.15%| unknown
+ 34.9s|     1 |     0 | 45035 |     - |   318M |   0 |  51k|3582 |3773 |  11 |  1 |   0 |   0 | 1.407467e+03 | 5.842432e+03 | 315.10%| unknown
+ 35.1s|     1 |     0 | 45078 |     - |   318M |   0 |  51k|3582 |3779 |  17 |  2 |   0 |   0 | 1.410893e+03 | 5.842432e+03 | 314.09%| unknown
+ 35.2s|     1 |     0 | 45088 |     - |   319M |   0 |  51k|3582 |3786 |  24 |  3 |   0 |   0 | 1.416207e+03 | 5.842432e+03 | 312.54%| unknown
+script.sh : ligne 3 : 397391 Processus arrêté      julia +1.10 --project=/scratch/ccontard/julia-ipwlb script.jl ${BASE}/$1.csv ${BASE}/$1Commod.csv ${BASE}/infoNodes/nodes_$1_0$2.csv $3 $4
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=1888583.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.

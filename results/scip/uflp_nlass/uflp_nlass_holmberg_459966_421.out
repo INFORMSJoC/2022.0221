@@ -1,0 +1,50 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nlass holmberg 43 exp
+presolving:
+(round 1, fast)       0 del vars, 0 del conss, 0 add conss, 2100 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 2100 clqs
+(round 2, exhaustive) 0 del vars, 0 del conss, 0 add conss, 2100 chg bounds, 0 chg sides, 0 chg coeffs, 4200 upgd conss, 0 impls, 2100 clqs
+   (1.3s) probing: 1000/2130 (46.9%) - 0 fixings, 0 aggregations, 999 implications, 0 bound changes
+   (1.3s) probing: 1001/2130 (47.0%) - 0 fixings, 0 aggregations, 1000 implications, 0 bound changes
+   (1.3s) probing aborted: 1000/1000 successive useless probings
+   (1.3s) symmetry computation started: requiring (bin +, int -, cont -), (fixed: bin -, int +, cont +)
+   (1.4s) no symmetry present
+presolving (3 rounds: 3 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 2100 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 3100 implications, 2100 cliques
+presolved problem has 6330 variables (2130 bin, 0 int, 0 impl, 4200 cont) and 6370 constraints
+   2100 constraints of type <varbound>
+   2100 constraints of type <setppc>
+     70 constraints of type <linear>
+   2100 constraints of type <nonlinear>
+Presolving Time: 1.31
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+p 1.8s|     1 |     0 |  2063 |     - |  clique|   0 |  12k|6370 |  18k|   0 |  0 |   0 |   0 |-8.010864e-03 | 1.732622e+04 |    Inf | unknown
+  3.0s|     1 |     0 | 13912 |     - |   158M |   0 |  12k|6370 |  18k|   0 |  0 |2100 |   0 | 5.931480e+03 | 1.732622e+04 | 192.11%| unknown
+  6.4s|     1 |     0 | 19158 |     - |   167M |   0 |  12k|6370 |  19k| 476 |  1 |2100 |   0 | 7.601053e+03 | 1.732622e+04 | 127.94%| unknown
+  7.7s|     1 |     0 | 21033 |     - |   170M |   0 |  12k|6370 |  19k| 647 |  2 |2100 |   0 | 7.882688e+03 | 1.732622e+04 | 119.80%| unknown
+  8.3s|     1 |     0 | 21763 |     - |   175M |   0 |  12k|6370 |  19k| 723 |  3 |2100 |   0 | 7.942018e+03 | 1.732622e+04 | 118.16%| unknown
+  8.8s|     1 |     0 | 21982 |     - |   181M |   0 |  12k|6370 |  19k| 770 |  4 |2100 |   0 | 7.957278e+03 | 1.732622e+04 | 117.74%| unknown
+  9.1s|     1 |     0 | 22152 |     - |   183M |   0 |  12k|6370 |  19k| 802 |  5 |2100 |   0 | 7.975864e+03 | 1.732622e+04 | 117.23%| unknown
+  9.4s|     1 |     0 | 22250 |     - |   186M |   0 |  12k|6370 |  19k| 816 |  6 |2100 |   0 | 7.993298e+03 | 1.732622e+04 | 116.76%| unknown
+  9.5s|     1 |     0 | 22310 |     - |   188M |   0 |  12k|6370 |  19k| 824 |  7 |2100 |   0 | 7.996174e+03 | 1.732622e+04 | 116.68%| unknown
+  9.8s|     1 |     0 | 22329 |     - |   194M |   0 |  12k|6370 |  19k| 833 |  8 |2100 |   0 | 7.996304e+03 | 1.732622e+04 | 116.68%| unknown
+ 10.0s|     1 |     0 | 22353 |     - |   199M |   0 |  12k|6370 |  19k| 836 |  9 |2100 |   0 | 7.996426e+03 | 1.732622e+04 | 116.67%| unknown
+ 10.2s|     1 |     0 | 22392 |     - |   201M |   0 |  12k|6370 |9600 | 853 | 10 |2100 |   0 | 7.996699e+03 | 1.732622e+04 | 116.67%| unknown
+ 10.2s|     1 |     0 | 22405 |     - |   202M |   0 |  12k|6370 |9604 | 857 | 11 |2100 |   0 | 7.996748e+03 | 1.732622e+04 | 116.67%| unknown
+ 10.3s|     1 |     0 | 22409 |     - |   203M |   0 |  12k|6370 |9607 | 860 | 12 |2100 |   0 | 7.996748e+03 | 1.732622e+04 | 116.67%| unknown
+o61.7s|     1 |     0 |175176 |     - |feaspump|   0 |  12k|6370 |9607 | 860 | 14 |2100 |   0 | 7.996748e+03 | 7.996750e+03 |   0.00%| unknown
+
+SCIP Status        : solving was interrupted [gap limit reached]
+Solving Time (sec) : 61.66
+Solving Nodes      : 1
+Primal Bound       : +7.99675011056607e+03 (2 solutions)
+Dual Bound         : +7.99674793901721e+03
+Gap                : 0.00 %
+reading holmberg data file ../../../../../instances/uflp/holmberg/p43
+primal_bound = 7996.750110566071, dual_bound = 7996.747939017214, gap = 2.7155392220338375e-5, time = 64.94

@@ -1,0 +1,55 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance transportation 2 3 exp
+presolving:
+(round 1, fast)       4 del vars, 4 del conss, 0 add conss, 8 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 4 del vars, 5 del conss, 0 add conss, 8 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, fast)       5 del vars, 6 del conss, 0 add conss, 8 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 4, exhaustive) 5 del vars, 6 del conss, 0 add conss, 8 chg bounds, 0 chg sides, 0 chg coeffs, 2 upgd conss, 0 impls, 0 clqs
+   (0.0s) probing cycle finished: starting next cycle
+   (0.0s) symmetry computation started: requiring (bin +, int -, cont -), (fixed: bin -, int +, cont +)
+   (0.0s) no symmetry present
+presolving (5 rounds: 5 fast, 3 medium, 3 exhaustive):
+ 5 deleted vars, 6 deleted constraints, 0 added constraints, 8 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 8 implications, 1 cliques
+presolved problem has 7 variables (2 bin, 0 int, 0 impl, 5 cont) and 6 constraints
+      2 constraints of type <varbound>
+      4 constraints of type <nonlinear>
+Presolving Time: 0.00
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t 0.0s|     1 |     0 |     0 |     - | trivial|   0 |   7 |   6 |   0 |   0 |  0 |   0 |   0 | 7.532425e+01 | 4.000000e+10 |  Large | unknown
+p 0.0s|     1 |     0 |     2 |     - |  clique|   0 |  19 |   6 |  30 |   0 |  0 |   0 |   0 | 7.532425e+01 | 1.977189e+02 | 162.49%| unknown
+  0.0s|     1 |     0 |    51 |     - |   888k |   0 |  19 |   6 |  30 |   0 |  0 |   0 |   0 | 1.126392e+02 | 1.977189e+02 |  75.53%| unknown
+  0.0s|     1 |     0 |    59 |     - |   949k |   0 |  19 |   6 |  31 |   2 |  1 |   0 |   0 | 1.306352e+02 | 1.977189e+02 |  51.35%| unknown
+(run 1, node 1) restarting after 1 global fixings of integer variables
+
+presolving:
+(round 1, fast)       13 del vars, 0 del conss, 0 add conss, 1 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 8 impls, 0 clqs
+(round 2, fast)       13 del vars, 0 del conss, 0 add conss, 4 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 8 impls, 0 clqs
+presolving (3 rounds: 3 fast, 1 medium, 1 exhaustive):
+ 13 deleted vars, 0 deleted constraints, 0 added constraints, 4 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 8 implications, 0 cliques
+presolved problem has 6 variables (1 bin, 0 int, 0 impl, 5 cont) and 5 constraints
+      1 constraints of type <varbound>
+      4 constraints of type <nonlinear>
+Presolving Time: 0.00
+transformed 1/2 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  0.1s|     1 |     0 |   129 |     - |   986k |   0 |  18 |   5 |  29 |   0 |  0 |   0 |   0 | 1.306352e+02 | 1.977189e+02 |  51.35%| unknown
+  0.1s|     1 |     0 |   135 |     - |   989k |   0 |  18 |   5 |  30 |   1 |  1 |   0 |   0 | 1.321419e+02 | 1.977189e+02 |  49.63%| unknown
+  0.1s|     1 |     0 |   136 |     - |   989k |   0 |  18 |   5 |  31 |   2 |  2 |   0 |   0 | 1.323855e+02 | 1.977189e+02 |  49.35%| unknown
+  0.2s|     1 |     2 |   171 |     - |   989k |   0 |  18 |   5 |  31 |   2 |  4 |   0 |   0 | 1.323855e+02 | 1.977189e+02 |  49.35%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 0.17
+Solving Nodes      : 5 (total of 6 nodes in 2 runs)
+Primal Bound       : +1.97718925280627e+02 (2 solutions)
+Dual Bound         : +1.97718925280627e+02
+Gap                : 0.00 %
+primal_bound = 197.7189252806273, dual_bound = 197.7189252806273, gap = 0.0, time = 3.21

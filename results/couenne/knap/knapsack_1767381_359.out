@@ -1,0 +1,67 @@
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.3
+solving instance knapsack 100 6 square
+Couenne 0.5.8 -- an Open-Source solver for Mixed Integer Nonlinear Optimization
+Mailing list: couenne@list.coin-or.org
+Instructions: http://www.coin-or.org/Couenne
+couenne: 
+ANALYSIS TEST: Couenne: new cutoff value -3.3936938625e+01 (0.021186 seconds)
+NLP0012I 
+              Num      Status      Obj             It       time                 Location
+NLP0014I             1      FAILED -2525.0307     3000 13.711133
+NLP0014I             1      FAILED -2525.0307     3000 13.507612   resolve robustness
+NLP3006W Warning : continuing branching, while there are unrecovered failures at nodes
+Loaded instance "/tmp/jl_mlACRm/model.nl"
+Constraints:          301
+Variables:            300 (100 integer)
+Auxiliaries:          102 (0 integer)
+
+Coin0506I Presolve 602 (-100) rows, 301 (-101) columns and 1401 (-200) elements
+Clp0006I 0  Obj -3525.031 Primal inf 32456.673 (100)
+Clp0006I 83  Obj -3525.031 Primal inf 21381.587 (76)
+Clp0006I 170  Obj -3525.031 Primal inf 19976.377 (48)
+Clp0006I 257  Obj -2993.6551 Primal inf 77.451882 (3)
+Clp0006I 263  Obj -2993.0138
+Clp0000I Optimal - objective value -2993.0138
+Clp0032I Optimal objective -2993.01381 - 263 iterations time 0.012, Presolve 0.00
+Clp0000I Optimal - objective value -2993.0138
+NLP Heuristic: NLP0014I             3         OPT -2990.1799       61 0.288435
+no solution.
+Clp0000I Optimal - objective value -2993.0138
+Optimality Based BT: 0 improved bounds
+Probing: Couenne: new cutoff value -2.9902293879e+03 (27.8212 seconds)
+0 improved bounds
+NLP Heuristic: no solution.
+Cbc0013I At root node, 0 cuts changed objective from -2993.0138 to -2993.0138 in 1 passes
+Cbc0014I Cut generator 0 (Couenne convexifier cuts) - 0 row cuts average 0.0 elements, 40 column cuts (40 active)
+Cbc0010I After 0 nodes, 1 on tree, 1e+50 best solution, best possible -1.7976931e+308 (1.17 seconds)
+Optimality Based BT: 22 improved bounds
+Optimality Based BT: 14 improved bounds
+Optimality Based BT: Couenne: new cutoff value -2.9903886818e+03 (30.091 seconds)
+50 improved bounds
+Optimality Based BT: 46 improved bounds
+Cbc0004I Integer solution of -2990.3887 found after 39 iterations and 9 nodes (4.60 seconds)
+Optimality Based BT: 48 improved bounds
+Optimality Based BT: 48 improved bounds
+Optimality Based BT: 51 improved bounds
+Couenne: new cutoff value -2.9908024529e+03 (35.377 seconds)
+Cbc0004I Integer solution of -2990.8025 found after 390 iterations and 46 nodes (8.14 seconds)
+Optimality Based BT: 0 improved bounds
+Couenne: new cutoff value -2.9908495524e+03 (37.3062 seconds)
+Cbc0004I Integer solution of -2990.8496 found after 698 iterations and 66 nodes (10.05 seconds)
+Cbc0001I Search completed - best objective -2990.849552351239, took 702 iterations and 68 nodes (10.06 seconds)
+Cbc0035I Maximum depth 19, 0 variables fixed on reduced cost
+
+ 	"Finished"
+
+Linearization cuts added at root node:        702
+Linearization cuts added in total:            702  (separation time: 0.001601s)
+Total solve time:                         10.0677s (10.0677s in branch-and-bound)
+Lower bound:                             -2990.85
+Upper bound:                             -2990.85  (gap: 0.00%)
+Branch-and-bound nodes:                        68
+Stats: /tmp/jl_mlACRm/model.nl  300 [var]  100 [int]  301 [con]  102 [aux]    702 [root]      702 [tot] 0.001601 [sep]  10.0677 [time]  10.0681 [bb]        -2.990850e+03 [lower]        -2.990850e+03 [upper]      68 [nodes]
+Performance of                           FBBT:	   0.032346s,      187 runs. fix:          0 shrnk:     35.443 ubd:          0 2ubd:          1 infeas:          0
+Performance of                           OBBT:	    2.43065s,        9 runs. fix:    3.87898 shrnk:     63.161 ubd:          0 2ubd:   0.955414 infeas:          1
+primal_bound = -2990.849552351241, dual_bound = 0.0, gap = 100.0, time = 41.54

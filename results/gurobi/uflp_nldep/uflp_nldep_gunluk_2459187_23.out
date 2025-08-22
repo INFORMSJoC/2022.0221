@@ -1,0 +1,126 @@
+solving instance uflp nldep gunluk ../../../../../instances/uflp/gunluk/gunluk-10-20-2.txt sinabc1
+Set parameter TokenServer to value "licences.gerad.lan"
+Set parameter MIPGap to value 1e-06
+Set parameter FuncPieceError to value 1e-06
+Set parameter Threads to value 1
+Set parameter FuncPieces to value -2
+Set parameter TimeLimit to value 3600
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "AlmaLinux 9.6 (Sage Margay)")
+
+CPU model: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 56 physical cores, 56 logical processors, using up to 1 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-06
+Threads  1
+FuncPieces  -2
+FuncPieceError  1e-06
+
+Optimize a model with 260 rows, 270 columns and 880 nonzeros
+Model fingerprint: 0xc7ac5950
+Model has 20 function constraints treated as nonlinear
+  10 POW, 10 SIN
+Variable types: 260 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [1e-03, 9e+01]
+  Objective range  [1e+00, 5e+01]
+  Bounds range     [1e+00, 1e+10]
+  RHS range        [1e+00, 1e+00]
+Warning: Model contains large bounds
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 220 rows and 40 columns
+Presolve time: 0.00s
+Presolved: 90 rows, 231 columns, 540 nonzeros
+Presolved model has 10 quadratic objective terms
+Presolved model has 10 nonlinear constraint(s)
+
+Solving non-convex MINLP
+
+Variable types: 231 continuous, 0 integer (0 binary)
+Found heuristic solution: objective 173.6693076
+
+Root relaxation: objective 1.673950e+02, 104 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  167.39495    0    9  173.66931  167.39495  3.61%     -    0s
+     0     0  171.23711    0    9  173.66931  171.23711  1.40%     -    0s
+     0     0  172.55980    0    9  173.66931  172.55980  0.64%     -    0s
+     0     2  173.48729    0    9  173.66931  173.48729  0.10%     -    0s
+H   33     9                     173.6693074  173.66505  0.00%   5.4    0s
+*   52     4              16     173.6692972  173.66896  0.00%   4.6    0s
+
+Explored 55 nodes (365 simplex iterations) in 0.04 seconds (0.02 work units)
+Thread count was 1 (of 56 available processors)
+
+Solution count 2: 173.669 173.669 
+
+Optimal solution found (tolerance 1.00e-06)
+Best objective 1.736692972445e+02, best bound 1.736692520241e+02, gap 0.0000%
+
+User-callback calls 456, time in user-callback 0.00 sec
+Generating Gunluk and Lee data file ../../../../../instances/uflp/gunluk/gunluk-10-20-2.txt
+primal_bound = 173.6692972445352, dual_bound = 173.66925202410783, gap = 2.6038239383910864e-5, time = 0.05
+OPTIMAL LOCATIONS:
+y[1] = 1.0
+y[2] = 1.0
+y[3] = 1.0
+y[4] = 1.0
+y[5] = 1.0
+y[6] = 1.0
+y[7] = 1.0
+y[8] = 1.0
+y[9] = 1.0
+y[10] = 1.0
+OPTIMAL WAREHOUSING:
+f[1] = 167.0
+f[3] = 108.04067463586635
+f[4] = 77.84517428273762
+f[5] = 52.15482571726238
+f[6] = 32.0
+f[7] = 82.51382647122244
+f[8] = 115.0
+f[9] = 146.4454988929112
+f[10] = 94.0
+OPTIMAL WAREHOUSING COSTS:
+nlobj[1] = 0.3482561584961436
+nlobj[2] = 0.0
+nlobj[3] = 2.8592772614973883
+nlobj[4] = 0.7373430218542268
+nlobj[5] = 0.43718553839184476
+nlobj[6] = 0.06925994598431401
+nlobj[7] = 0.9584077451347843
+nlobj[8] = 1.1338820483882799
+nlobj[9] = 1.0792712284326182
+nlobj[10] = 1.466499422304684
+OPTIMAL ASSIGNMENTS:
+x[1, 2] = 1.0
+x[1, 9] = 1.0
+x[1, 17] = 1.0
+x[3, 3] = 0.359137767781156
+x[3, 6] = 1.0
+x[3, 8] = 1.0
+x[3, 10] = 1.0
+x[4, 11] = 1.0
+x[4, 13] = 1.0
+x[4, 15] = 0.6517304415043204
+x[5, 1] = 1.0
+x[5, 15] = 0.3482695584956797
+x[6, 20] = 1.0
+x[7, 4] = 1.0
+x[7, 14] = 0.7159573817886754
+x[8, 16] = 1.0
+x[8, 19] = 1.0
+x[9, 3] = 0.640862232218844
+x[9, 12] = 1.0
+x[9, 14] = 0.2840426182113246
+x[9, 18] = 1.0
+x[10, 5] = 1.0
+x[10, 7] = 1.0
+fixed costs = 389.0
+assignment costs = 164.5799148740509
+warehousing costs = 9.089382370484284
+total cost = 173.6692972445352

@@ -1,0 +1,36 @@
+2023/05/23
+Julia is now 1.9.0
+previous version was 1.7.2
+2023/11/29
+gurobi is now 11.0.0
+previous version was 10.0.2
+solving instance uflp nldep holmberg 53 square
+presolving:
+(round 1, fast)       40 del vars, 2020 del conss, 0 add conss, 20 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+   (3.1s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (3.4s) no symmetry present
+presolving (2 rounds: 2 fast, 1 medium, 1 exhaustive):
+ 40 deleted vars, 2020 deleted constraints, 0 added constraints, 20 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 2020 variables (0 bin, 0 int, 0 impl, 2020 cont) and 120 constraints
+    100 constraints of type <linear>
+     20 constraints of type <nonlinear>
+Presolving Time: 3.54
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  4.5s|     1 |     0 |   114 |     - |   308M |   0 |2040 | 120 | 200 |   0 |  0 |   0 |   0 | 4.955505e+03 |      --      |    Inf | unknown
+L13.2s|     1 |     0 |   114 |     - |undercov|   0 |2040 | 120 | 200 |   0 |  0 |   0 |   0 | 4.955505e+03 | 4.962546e+03 |   0.14%| unknown
+L22.3s|     1 |     0 |   114 |     - |undercov|   0 |2040 | 120 | 200 |   0 |  0 |   0 |   0 | 4.955505e+03 | 4.962274e+03 |   0.14%| unknown
+ 32.3s|     1 |     0 |   135 |     - |   325M |   0 |2040 | 120 | 220 |  20 |  1 |   0 |   0 | 4.962125e+03 | 4.962274e+03 |   0.00%| unknown
+ 32.3s|     1 |     0 |   135 |     - |   325M |   0 |2040 | 120 | 220 |  20 |  1 |   0 |   0 | 4.962125e+03 | 4.962274e+03 |   0.00%| unknown
+ 32.4s|     1 |     0 |   140 |     - |   325M |   0 |2040 | 120 | 224 |  24 |  2 |   0 |   0 | 4.962274e+03 | 4.962274e+03 |   0.00%| unknown
+ 32.4s|     1 |     0 |   140 |     - |   325M |   0 |2040 | 120 | 224 |  24 |  2 |   0 |   0 | 4.962274e+03 | 4.962274e+03 |   0.00%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 32.37
+Solving Nodes      : 1
+Primal Bound       : +4.96227370013075e+03 (2 solutions)
+Dual Bound         : +4.96227370013075e+03
+Gap                : 0.00 %
+reading holmberg data file ../../../../../instances/uflp/holmberg/p53
+primal_bound = 4962.273700130748, dual_bound = 4962.273700130748, gap = 0.0, time = 35.5
